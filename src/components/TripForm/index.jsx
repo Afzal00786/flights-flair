@@ -292,7 +292,7 @@ const Contact = ({ styling }) => {
                   <>
                     <div
                       style={{
-                        position: "relative",
+                        position: styling ? "relative" : "fixed",
                         marginTop: 30,
                         backgroundColor: "white",
                         width: 300,

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import MenuIcon from "@mui/icons-material/Menu";
 import "./pakistanFlights.css";
 // Import Swiper styles
 import "swiper/css";
@@ -68,7 +69,7 @@ function PakistanFlights() {
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: responsive ? "flex" : "",
@@ -83,7 +84,7 @@ function PakistanFlights() {
                   class="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -105,7 +106,7 @@ function PakistanFlights() {
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -120,7 +121,7 @@ function PakistanFlights() {
                   class="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -142,7 +143,7 @@ function PakistanFlights() {
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -157,7 +158,7 @@ function PakistanFlights() {
                   class="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -179,7 +180,7 @@ function PakistanFlights() {
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -194,7 +195,7 @@ function PakistanFlights() {
                   class="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -216,7 +217,7 @@ function PakistanFlights() {
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -231,7 +232,7 @@ function PakistanFlights() {
                   class="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "100%",
-                    height: responsive ? "80vh" : "40vh",
+                    height: responsive ? "60vh" : "40vh",
                   }}
                 ></div>
                 <div

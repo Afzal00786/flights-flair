@@ -87,7 +87,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
           </div>
           <div
             style={{
-              position: "relative",
+              position: styling ? "relative" : "fixed",
               zIndex: 1,
             }}
             ref={refOne}
