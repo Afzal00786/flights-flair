@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
