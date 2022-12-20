@@ -1,0 +1,44 @@
+.bookNow_wrapper {
+  background: url("../../asstes/images/airplane.jpg");
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  height: 1100px;
+}
+.field_text_wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+.text_wrapper {
+  width: 40%;
+  background-color: #07172f;
+  color: white;
+  border: 1px solid white;
+  padding: 40px;
+  line-height: 30px;
+}
+.field_wrapper {
+  width: 40%;
+}
+@media (width< 900px) {
+  .text_wrapper {
+    width: 100%;
+  }
+  .field_wrapper {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .field_text_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .bookNow_wrapper {
+    background: url("../../asstes/images/airplane.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 2550px;
+  }
+}
