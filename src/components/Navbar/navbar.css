@@ -1,0 +1,26 @@
+.nav_bar_wrapper{
+	background-color: white;
+}
+.nav_bar_inner{
+	max-width: 1440px;
+	padding: 0px 20px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+}
+.nav_logo{
+	font-size: 25px;
+	color: blue;
+}
+.nav_right_sec{
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+.nav_items{
+	font-size: 18px;
+	font-weight: 500px;
+	cursor: pointer;
+}

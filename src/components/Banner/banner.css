@@ -1,0 +1,88 @@
+.banner_wrapper{
+	background: url("../../asstes/images/banner1.jpg");
+	background-size: cover;
+	width: 100%;
+padding-top: 150px;
+	background-position: center;
+	height: 400px;
+}
+.inqury_form_wraper{
+	margin: auto;
+padding: 20px 0px;
+	border: 2px solid black;
+	max-width: 1440px;
+}
+.action_box{
+	display: flex;
+	
+}
+.action_item{
+	display: flex;
+	height: 40px;
+	width: 140px;
+	font-size: 20px;
+	font-weight: 700;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.active_action_item{
+	display: flex;
+	height: 40px;
+	width: 140px;
+	font-size: 20px;
+	font-weight: 700;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.form_box_round_trip{
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.action_box_conten{
+	display: flex;
+	gap: 20px;
+	height: 70px;
+	padding: 0px 30px;
+	background-color: white;
+	align-items: center;
+}
+.inq_form_items{
+	font-size: 20px;
+	height: 40px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	width: 250px;
+	border: 1px solid black;
+}
+.form_ele_wraper{
+	height: 40px;
+	width: 400px;
+	border: 0px solid #c9c1c1;
+}
+.inq_form_search_btn{
+	display: flex;
+	height: 40px;
+	width: 150px;
+	font-size: 18px;
+	display: flex;
+	background-color: #007597;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.slectDepa{
+	border: none;
+	outline: none;
+	height: 100%;
+	font-size: 18px;
+	padding-left: 20px;
+	width: 100%;
+}
