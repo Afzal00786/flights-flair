@@ -46,9 +46,33 @@ background-color: #575757;
 	text-decoration: underline;
 	cursor: pointer;
 }
+.footer_copyrights{
+	font-size: 14px;
+	color: white;
+}
+.f_socail_items{
+	height: 35px;
+	width: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50%;
+	background-color: #007597;
+	cursor: pointer;
+}
+.footer_socoal_icons{
+	display: flex;
+	gap: 30px;
+	font-size: 20px;
+}
 .footer_social_container{
 	max-width: 1440px;
 	margin: auto;
+	justify-content: space-between;
+	display: flex;
+	padding: 0px 20px;
+	align-items: center;
 	height: 60px;
 }
 .f_social_box{
@@ -59,4 +83,47 @@ background-color: #575757;
 	color: white;
 	font-size: 16px;
 	color: white;
+}
+@media screen and (max-width:1200px){
+	.footer_des_items{
+		max-width: 400px;
+		color: white;
+		font-size: 16px;
+		color: white;
+	}
+}
+@media screen and (max-width:985px){
+	.footer_inner_box{
+		max-width: 1440px;
+		margin: auto;
+		flex-direction: column;
+		display: flex;
+		gap: 40px;
+		align-items: center;
+		padding-top: 30px;
+		justify-content: center;
+	}
+
+}
+@media screen and (max-width:768px){
+	.footer_service_wraper{
+		padding: 0px 10px;
+			width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+}
+@media screen and (max-width:475px){
+	.footer_social_container{
+		max-width: 1440px;
+		margin: auto;
+		gap: 20px;
+		justify-content: space-between;
+		flex-direction: column;
+		display: flex;
+		padding: 20px 20px;
+		align-items: center;
+		height: auto;
+	}
 }
