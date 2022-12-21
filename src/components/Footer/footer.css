@@ -1,0 +1,62 @@
+.footer_wrapper{
+padding: 30px 20px;
+
+	border-top: 2px solid #007597;
+background-color: #575757;
+}
+.footer_inner_box{
+	max-width: 1440px;
+	margin: auto;
+	display: flex;
+	padding-top: 50px;
+	justify-content: space-between;
+}
+.footer_contact{
+	font-size: 20px;
+	color: white;
+
+	font-weight: 500;
+
+}
+.footer_phone{
+	font-size: 18px;
+	padding-top: 20px;
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.footer_servives_items{
+	font-size: 16px;
+	padding-top: 15px;
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.footer_service_wraper{
+	width:330px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.footer_email{
+	font-size: 18px;
+	padding-top: 15px;
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.footer_social_container{
+	max-width: 1440px;
+	margin: auto;
+	height: 60px;
+}
+.f_social_box{
+	background-color:#999999 ;
+}
+.footer_des_items{
+	max-width: 500px;
+	color: white;
+	font-size: 16px;
+	color: white;
+}
