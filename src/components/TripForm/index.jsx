@@ -190,7 +190,10 @@ const Contact = ({ styling }) => {
               backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
               alignItems: "center",
               width: "100%",
-              paddingBottom: 20,
+              paddingBottom: 15,
+              paddingTop: 15,
+              paddingLeft: 10,
+              paddingRight: 10,
             }}
           >
             <Grid

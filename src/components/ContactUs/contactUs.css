@@ -1,0 +1,159 @@
+.booking_terms_upper_Image {
+  background: url("../../asstes/images/upperImage.png");
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  height: 500px;
+}
+.booking_terms_Inner_Image {
+  background: url("../../asstes/images/contactUsImage.jpg");
+
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  height: 500px;
+  opacity: 0.8;
+  padding-top: 250px;
+}
+.booking_text_styling {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: white;
+  font-weight: 700;
+}
+.booking_terms_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.booking_terms_left_wrapper {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.booking_terms_right_wrapper {
+  margin: 10px;
+}
+.booking_terms_userSide {
+  background-color: #020422;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.booking_terms_serviceSide {
+  background-color: #4e96ba;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  padding-left: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.booking_terms_dropdown_text {
+  color: #8e91aa;
+  padding: 10px;
+  line-height: 25px;
+}
+.iconStyling {
+  background-color: #4e96ba;
+  border-radius: 50%;
+  padding: 20px;
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_us_ways_wrapper {
+  display: flex;
+  align-items: center;
+}
+.contact_us_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.contactUsWaysText {
+  margin-left: 20px;
+}
+.call_us_text {
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.hear_from_you_text {
+  font-weight: 600;
+  color: #8f93ad;
+
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.call_us_phone {
+  color: #8f93ad;
+}
+.contact_us_header_text {
+  font-weight: 700;
+  font-size: 50px;
+}
+.name_form_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.name_fields {
+  display: flex;
+}
+.name_text {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #9294ad;
+  font-weight: 600;
+}
+.submit_styling {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  font-weight: 600;
+  border-width: 0;
+  background-color: #4e96ba;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+
+  padding-right: 40px;
+  border-radius: 7px;
+}
+.text_heading {
+  color: #9294ad;
+  font-weight: 600;
+}
+.input_Field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid lightgray;
+}
+.input_field_wrapper {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.text {
+  color: #aeb0c2;
+  font-size: 15px;
+}
+.form-error {
+  font-size: 15px;
+  color: #a32d2c;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
