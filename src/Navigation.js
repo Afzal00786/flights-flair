@@ -2,18 +2,30 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import BookNow from "../src/components/BookNow";
 import BookNowFlightDetails from "./components/BookNow/BookNowFlightDetails";
+import BookNow from "../src/components/BookNow";
+import BookingTerms from "./components/BookingTerms";
+import Flights from "./components/Flights";
+import ContactUs from "./components/ContactUs";
+import WhatWeDo from "./components/WhatWeDo";
 
+// import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
+// import BookingTerms from "./components/BookingTerms/BookingTerms";
+// import Flights from "./components/Flights/Flights";
+// import ContactUs from "./components/ContactUs/ContactUs";
 function Navigation() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/BookNowFlightDetails"
+          path="/booknowflightdetails"
           element={<BookNowFlightDetails />}
         />
+        <Route path="/WhatWeDo" element={<WhatWeDo />} />
+        <Route path="/BookingTerms" element={<BookingTerms />} />
+        <Route path="/Flights" element={<Flights />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
     </Router>
   );

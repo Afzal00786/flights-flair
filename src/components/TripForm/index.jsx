@@ -1,6 +1,7 @@
 import { Input } from "@material-ui/core";
 import React, { useState } from "react";
 import DateRangeComp from "./DateRangeComp";
+import Grid from "@mui/material/Grid";
 
 const Contact = ({ styling }) => {
   const [count, setCount] = useState(1);
@@ -40,7 +41,27 @@ const Contact = ({ styling }) => {
   const handleTripSelect = (type) => {
     setSelectTripDate(type);
   };
-
+  const Adultdecrease = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    } else {
+      setCount(1);
+    }
+  };
+  const Childdecrease = () => {
+    if (count1 > 0) {
+      setCount1(count1 - 1);
+    } else {
+      setCount1(0);
+    }
+  };
+  const Infantdecrease = () => {
+    if (count2 > 0) {
+      setCount2(count2 - 1);
+    } else {
+      setCount2(0);
+    }
+  };
   const [autoCompleteFrom, setAutoCompleteFrom] = useState(false);
   const [autoCompleteTo, setAutoCompleteTo] = useState(false);
   const [fromField, setFromField] = useState("");
@@ -90,8 +111,8 @@ const Contact = ({ styling }) => {
           <div
             style={{
               display: "flex",
-              marginLeft: styling ? 20 : "",
-              marginTop: styling ? 20 : "",
+              marginLeft: 20,
+              marginTop: 20,
             }}
           >
             <div
@@ -113,7 +134,6 @@ const Contact = ({ styling }) => {
                 paddingRight: 15,
                 paddingTop: 15,
                 paddingBottom: 15,
-
                 backgroundColor: selectTripDate === "One Way" ? "white" : "",
                 color: "black",
               }}
@@ -126,8 +146,6 @@ const Contact = ({ styling }) => {
           <div
             style={{
               display: "flex",
-              marginLeft: styling ? 20 : "",
-              marginTop: styling ? 20 : "",
             }}
           >
             <div
@@ -137,7 +155,7 @@ const Contact = ({ styling }) => {
                 paddingTop: 15,
                 paddingBottom: 15,
                 backgroundColor:
-                  selectTripDate === "Round Trip" ? "rgba(85,105,109,0.7)" : "",
+                  selectTripDate === "Round Trip" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
               }}
               onClick={() => handleTripSelect("Round Trip")}
@@ -151,7 +169,7 @@ const Contact = ({ styling }) => {
                 paddingTop: 15,
                 paddingBottom: 15,
                 backgroundColor:
-                  selectTripDate === "One Way" ? "rgba(85,105,109,0.7)" : "",
+                  selectTripDate === "One Way" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
               }}
               onClick={() => handleTripSelect("One Way")}
@@ -161,26 +179,32 @@ const Contact = ({ styling }) => {
           </div>
         )}
 
-        <div
-          style={{
-            marginLeft: styling ? 20 : "",
-            marginRight: styling ? 20 : "",
-
-            backgroundColor: styling ? "white" : "",
-            padding: styling ? 5 : "",
-          }}
-        >
-          <div
+        <div className={styling ? "form_bookNow_wrapper" : ""}>
+          <Grid
+            container
+            md={12}
+            sm={12}
+            xs={12}
             style={{
               display: styling ? "" : "flex",
-              backgroundColor: styling ? "" : "rgba(85,105,109,0.7)",
+              backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
               alignItems: "center",
+              width: "100%",
+              paddingBottom: 20,
             }}
           >
-            <div className={styling ? "bookNowContainer" : "container"}>
+            <Grid
+              md={styling ? 12 : 1.7}
+              sm={3.7}
+              xs={11.6}
+              className={styling ? "bookNowContainer" : "container"}
+            >
               <legend>FROM WHERE</legend>
               <Input
-                style={{ color: styling ? "black" : "white", fontSize: 12 }}
+                style={{
+                  color: styling ? "black" : "white",
+                  fontSize: 12,
+                }}
                 name="name"
                 type="text"
                 disableUnderline
@@ -204,9 +228,14 @@ const Contact = ({ styling }) => {
                   ></div>
                 </>
               ) : null}
-            </div>
+            </Grid>
 
-            <div className={styling ? "bookNowContainer" : "container"}>
+            <Grid
+              md={styling ? 12 : 1.7}
+              sm={3.7}
+              xs={11.6}
+              className={styling ? "bookNowContainer" : "container"}
+            >
               <legend>WHERE TO</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
@@ -234,14 +263,21 @@ const Contact = ({ styling }) => {
                   ></div>
                 </>
               ) : null}
-            </div>
-            <DateRangeComp
-              styling={styling}
-              selectTripDate={selectTripDate}
-              setDateField={setDateField}
-              dateField={dateField}
-            />
-            <div className={styling ? "bookNowContainer" : "container"}>
+            </Grid>
+            <Grid md={styling ? 12 : 1.7} sm={3.7} xs={5.8}>
+              <DateRangeComp
+                styling={styling}
+                selectTripDate={selectTripDate}
+                setDateField={setDateField}
+                dateField={dateField}
+              />
+            </Grid>
+            <Grid
+              md={styling ? 12 : 1.7}
+              sm={3.7}
+              xs={5.8}
+              className={styling ? "bookNowContainer" : "container"}
+            >
               <legend>PASSENGERS</legend>
               <div onClick={handleOpen}>
                 <input
@@ -250,7 +286,7 @@ const Contact = ({ styling }) => {
                   autoComplete="off"
                   style={{
                     color: "white",
-                    backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
+                    backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
                     fontSize: 12,
                     borderWidth: 0,
                     marginTop: 5,
@@ -263,259 +299,84 @@ const Contact = ({ styling }) => {
               {open ? (
                 <>
                   <div
+                    className="mainPassengers"
                     style={{
                       position: styling ? "relative" : "absolute",
-                      marginTop: 30,
-                      backgroundColor: "white",
-                      width: 300,
-                      boxShadow: "1px 2px 9px #468DC7",
-                      zIndex: 1,
                     }}
                   >
-                    <div
-                      style={{
-                        color: "#468DC7",
-                        alignItems: "center",
-                        display: "flex",
-                        justifyContent: "center",
-                        fontSize: 20,
-                      }}
-                    >
-                      Passengers
-                    </div>
-                    <div
-                      style={{
-                        backgroundColor: "gray",
-                        width: "100%",
-                        height: 1,
-                        marginTop: 10,
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div style={{ padding: 15, color: "#468DC7" }}>Adult</div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-around",
-                          padding: 10,
-                        }}
-                      >
+                    <div className="textPassenger">Passengers</div>
+                    <div className="divider"></div>
+                    <div className="adultContainer">
+                      <div className="passengerCategory">Adult</div>
+                      <div className="Adultbutton">
                         <button
-                          onClick={decrease}
-                          style={{
-                            marginRight: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
+                          className="counterStyle"
+                          onClick={Adultdecrease}
                         >
                           -
                         </button>
-                        <h1
-                          style={{
-                            fontSize: 20,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            display: "flex",
-                            color: "gray",
-                          }}
-                        >
-                          {count}
-                        </h1>
+                        <h1 className="countText">{count}</h1>
                         <button
                           onClick={() => setCount(count + 1)}
-                          style={{
-                            marginLeft: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
+                          className="AdultIncrease"
                         >
                           +
                         </button>
                       </div>
                     </div>
-                    <div
-                      style={{
-                        backgroundColor: "gray",
-                        width: "100%",
-                        height: 1,
-                        marginTop: 10,
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div style={{ padding: 15, color: "#468DC7" }}>Child</div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-around",
-                          padding: 10,
-                        }}
-                      >
+                    <div className="divider"></div>
+                    <div className="ChildContainer">
+                      <div className="passengerCategory">Child</div>
+                      <div className="Childbutton">
                         <button
-                          onClick={decrease1}
-                          style={{
-                            marginRight: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
+                          onClick={Childdecrease}
+                          className="counterStyle"
                         >
                           -
                         </button>
-                        <h1
-                          style={{
-                            fontSize: 20,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            display: "flex",
-                            color: "gray",
-                          }}
-                        >
-                          {count1}
-                        </h1>
+                        <h1 className="count1Text">{count1}</h1>
                         <button
                           onClick={() => setCount1(count1 + 1)}
-                          style={{
-                            marginLeft: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
+                          className="ChildIncrease"
                         >
                           +
                         </button>
                       </div>
                     </div>
-                    <div
-                      style={{
-                        backgroundColor: "gray",
-                        width: "100%",
-                        height: 1,
-                        marginTop: 10,
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div style={{ padding: 15, color: "#468DC7" }}>
-                        {" "}
-                        Infant
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-around",
-                          padding: 10,
-                        }}
-                      >
-                        <button
-                          onClick={decrease2}
-                          style={{
-                            marginRight: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
-                        >
+                    <div className="divider"></div>
+                    <div className="InfantContainer">
+                      <div className="passengerCategory">Infant</div>
+                      <div className="Infantbutton">
+                        <button onClick={decrease2} className="counterStyle">
                           -
                         </button>
-                        <h1
-                          style={{
-                            fontSize: 20,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            display: "flex",
-                            color: "gray",
-                          }}
-                        >
-                          {count2}
-                        </h1>
+                        <h1 className="count2Text">{count2}</h1>
                         <button
                           onClick={() => setCount2(count2 + 1)}
-                          style={{
-                            marginLeft: 10,
-                            backgroundColor: "#468DC7",
-                            borderRadius: 30,
-                            width: 30,
-                            height: 30,
-                            color: "white",
-                            borderWidth: 0,
-                          }}
+                          className="InfantIncrease"
                         >
                           +
                         </button>
                       </div>
                     </div>
+                    <div className="divider"></div>
                     <div
                       onClick={() => setOpen(!open)}
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
+                      className="doneContainer"
                     >
-                      <button
-                        style={{
-                          cursor: "pointer",
-                          backgroundColor: "#468DC7",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          borderRadius: 5,
-                          padding: 12,
-                          color: "white",
-                          marginTop: 10,
-                          marginBottom: 20,
-                          textTransform: "none",
-                          borderWidth: 0,
-                          fontSize: 15,
-                          width: "90%",
-                        }}
-                      >
-                        Done
-                      </button>
+                      <button className="doneButtonStyle">Done</button>
                     </div>
                   </div>
                 </>
               ) : null}
-            </div>
+            </Grid>
 
-            <div className={styling ? "bookNowContainer" : "container"}>
+            <Grid
+              md={styling ? 12 : 1.7}
+              sm={3.7}
+              xs={5.8}
+              className={styling ? "bookNowContainer" : "container"}
+            >
               <legend>*PHONE</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
@@ -528,9 +389,14 @@ const Contact = ({ styling }) => {
                 id={styling ? "bookNow" : "text"}
                 placeholder="+44-XXXX-XXXX"
               />
-            </div>
+            </Grid>
 
-            <div className={styling ? "bookNowContainer" : "container"}>
+            <Grid
+              md={styling ? 12 : 1.7}
+              sm={3.7}
+              xs={5.8}
+              className={styling ? "bookNowContainer" : "container"}
+            >
               <legend>Email</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
@@ -542,30 +408,11 @@ const Contact = ({ styling }) => {
                 id={styling ? "bookNow" : "text"}
                 placeholder="john@xyz.com (Optional)"
               />
-            </div>
-
-            <button
-              style={{
-                cursor: "pointer",
-                backgroundColor: styling ? "#4E96BA" : "yellow",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: 12,
-                // color: "white",
-                textTransform: "none",
-                borderWidth: 0,
-                fontSize: 16,
-                width: styling ? "30%" : "60%",
-                height: 50,
-                marginLeft: 10,
-                marginRight: 10,
-                fontWeight: 600,
-              }}
-            >
-              Find Now
-            </button>
-          </div>
+            </Grid>
+            <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
+              <button className="find_now_button">Find Now</button>
+            </Grid>
+          </Grid>
         </div>
         {styling && (
           <img

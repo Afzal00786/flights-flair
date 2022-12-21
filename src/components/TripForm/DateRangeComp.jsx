@@ -119,7 +119,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
               </div>
               <input
                 style={{
-                  backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
+                  backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
                   color: styling ? "black" : "white",
                   borderWidth: 0,
                   marginTop: 5,
