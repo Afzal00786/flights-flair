@@ -226,12 +226,13 @@ const Contact = ({ styling }) => {
                   <>
                     <div
                       style={{
-                        position: "fixed",
+                        position: "absolute",
                         marginTop: 30,
                         backgroundColor: "red",
                         width: 300,
                         height: 300,
                         boxShadow: "1px 2px 9px #468DC7",
+                        zIndex: 1,
                       }}
                     ></div>
                   </>
@@ -255,12 +256,14 @@ const Contact = ({ styling }) => {
                   <>
                     <div
                       style={{
-                        position: "fixed",
+                        // position: "fixed",
+                        position: "absolute",
                         marginTop: 30,
                         backgroundColor: "blue",
                         width: 300,
                         height: 300,
                         boxShadow: "1px 2px 9px #468DC7",
+                        zIndex: 1,
                       }}
                     ></div>
                   </>
@@ -292,7 +295,7 @@ const Contact = ({ styling }) => {
                   <>
                     <div
                       style={{
-                        position: styling ? "relative" : "fixed",
+                        position: styling ? "relative" : "absolute",
                         marginTop: 30,
                         backgroundColor: "white",
                         width: 300,

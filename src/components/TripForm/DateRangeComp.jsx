@@ -87,7 +87,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
           </div>
           <div
             style={{
-              position: styling ? "relative" : "fixed",
+              position: "absolute",
               zIndex: 1,
             }}
             ref={refOne}
@@ -132,7 +132,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
                 onClick={() => setOpen((open) => !open)}
               />
             </div>
-            <div style={{ position: "fixed" }}>
+            <div style={{ position: "absolute", zIndex: 1 }}>
               {open && (
                 <Calendar
                   minDate={new Date()}
