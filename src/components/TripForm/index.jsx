@@ -29,10 +29,8 @@ const Contact = ({ styling }) => {
     }
   };
   const [open, setOpen] = useState(false);
-  const handleOpen = (e) => {
-    if (e) {
-      setOpen(!open);
-    }
+  const handleOpen = () => {
+    setOpen(!open);
   };
   const handleClose = () => {
     setOpen(false);
@@ -102,13 +100,12 @@ const Contact = ({ styling }) => {
                 paddingRight: 15,
                 paddingTop: 15,
                 paddingBottom: 15,
-
                 backgroundColor: selectTripDate === "Round Trip" ? "white" : "",
                 color: "black",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
-              round trip
+              Round trip
             </div>
             <div
               style={{
@@ -122,7 +119,7 @@ const Contact = ({ styling }) => {
               }}
               onClick={() => handleTripSelect("One Way")}
             >
-              one way
+              One way
             </div>
           </div>
         ) : (
@@ -139,14 +136,13 @@ const Contact = ({ styling }) => {
                 paddingRight: 15,
                 paddingTop: 15,
                 paddingBottom: 15,
-
                 backgroundColor:
-                  selectTripDate === "Round Trip" ? "#55696D" : "",
+                  selectTripDate === "Round Trip" ? "rgba(85,105,109,0.7)" : "",
                 color: "white",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
-              round trip
+              Round trip
             </div>
             <div
               style={{
@@ -154,13 +150,13 @@ const Contact = ({ styling }) => {
                 paddingRight: 15,
                 paddingTop: 15,
                 paddingBottom: 15,
-
-                backgroundColor: selectTripDate === "One Way" ? "#55696D" : "",
+                backgroundColor:
+                  selectTripDate === "One Way" ? "rgba(85,105,109,0.7)" : "",
                 color: "white",
               }}
               onClick={() => handleTripSelect("One Way")}
             >
-              one way
+              One way
             </div>
           </div>
         )}
@@ -174,407 +170,402 @@ const Contact = ({ styling }) => {
             padding: styling ? 5 : "",
           }}
         >
-          <form>
-            <div
-              style={{
-                display: styling ? "" : "flex",
-                backgroundColor: styling ? "" : "#55696d",
-                alignItems: "center",
-              }}
-            >
-              <div className={styling ? "bookNowContainer" : "container"}>
-                <legend>FROM WHERE</legend>
-                <Input
-                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
-                  name="name"
-                  type="text"
-                  disableUnderline
-                  id={styling ? "bookNow" : "text"}
-                  autoComplete="off"
-                  onChange={(e) => handleDropDown(e)}
-                  placeholder="Departure"
-                />
-                {autoCompleteFrom ? (
-                  <>
-                    <div
-                      style={{
-                        position: "absolute",
-                        marginTop: 30,
-                        backgroundColor: "red",
-                        width: 300,
-                        height: 300,
-                        boxShadow: "1px 2px 9px #468DC7",
-                        zIndex: 1,
-                      }}
-                    ></div>
-                  </>
-                ) : null}
-              </div>
-
-              <div className={styling ? "bookNowContainer" : "container"}>
-                <legend>WHERE TO</legend>
-                <Input
-                  style={{ color: "white", fontSize: 12 }}
-                  name="text1"
-                  type="text"
-                  disableUnderline
-                  id={styling ? "bookNow" : "text"}
-                  autoComplete="off"
-                  onChange={(e) => handleDropDownTo(e)}
-                  placeholder="Arrival"
-                />
-                {autoCompleteTo ? (
-                  <>
-                    <div
-                      style={{
-                        // position: "fixed",
-                        position: "absolute",
-                        marginTop: 30,
-                        backgroundColor: "blue",
-                        width: 300,
-                        height: 300,
-                        boxShadow: "1px 2px 9px #468DC7",
-                        zIndex: 1,
-                      }}
-                    ></div>
-                  </>
-                ) : null}
-              </div>
-              <DateRangeComp
-                styling={styling}
-                selectTripDate={selectTripDate}
-                setDateField={setDateField}
-                dateField={dateField}
+          <div
+            style={{
+              display: styling ? "" : "flex",
+              backgroundColor: styling ? "" : "rgba(85,105,109,0.7)",
+              alignItems: "center",
+            }}
+          >
+            <div className={styling ? "bookNowContainer" : "container"}>
+              <legend>FROM WHERE</legend>
+              <Input
+                style={{ color: styling ? "black" : "white", fontSize: 12 }}
+                name="name"
+                type="text"
+                disableUnderline
+                id={styling ? "bookNow" : "text"}
+                autoComplete="off"
+                onChange={(e) => handleDropDown(e)}
+                placeholder="Departure"
               />
-              <div className={styling ? "bookNowContainer" : "container"}>
-                <legend>PASSENGERS</legend>
+              {autoCompleteFrom ? (
+                <>
+                  <div
+                    style={{
+                      position: "absolute",
+                      marginTop: 30,
+                      backgroundColor: "red",
+                      width: 300,
+                      height: 300,
+                      boxShadow: "1px 2px 9px #468DC7",
+                      zIndex: 1,
+                    }}
+                  ></div>
+                </>
+              ) : null}
+            </div>
+
+            <div className={styling ? "bookNowContainer" : "container"}>
+              <legend>WHERE TO</legend>
+              <Input
+                style={{ color: "white", fontSize: 12 }}
+                name="text1"
+                type="text"
+                disableUnderline
+                id={styling ? "bookNow" : "text"}
+                autoComplete="off"
+                onChange={(e) => handleDropDownTo(e)}
+                placeholder="Arrival"
+              />
+              {autoCompleteTo ? (
+                <>
+                  <div
+                    style={{
+                      // position: "fixed",
+                      position: "absolute",
+                      marginTop: 30,
+                      backgroundColor: "blue",
+                      width: 300,
+                      height: 300,
+                      boxShadow: "1px 2px 9px #468DC7",
+                      zIndex: 1,
+                    }}
+                  ></div>
+                </>
+              ) : null}
+            </div>
+            <DateRangeComp
+              styling={styling}
+              selectTripDate={selectTripDate}
+              setDateField={setDateField}
+              dateField={dateField}
+            />
+            <div className={styling ? "bookNowContainer" : "container"}>
+              <legend>PASSENGERS</legend>
+              <div onClick={handleOpen}>
                 <input
+                  disabled={true}
                   id={styling ? "bookNow" : "text"}
+                  autoComplete="off"
                   style={{
                     color: "white",
-                    backgroundColor: styling ? "white" : "#55696d",
+                    backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
                     fontSize: 12,
                     borderWidth: 0,
                     marginTop: 5,
                     width: "100%",
                   }}
-                  onClick={(e) => handleOpen(e)}
                   placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                   color="white"
                 />
-                {open ? (
-                  <>
+              </div>
+              {open ? (
+                <>
+                  <div
+                    style={{
+                      position: styling ? "relative" : "absolute",
+                      marginTop: 30,
+                      backgroundColor: "white",
+                      width: 300,
+                      boxShadow: "1px 2px 9px #468DC7",
+                      zIndex: 1,
+                    }}
+                  >
                     <div
                       style={{
-                        position: styling ? "relative" : "absolute",
-                        marginTop: 30,
-                        backgroundColor: "white",
-                        width: 300,
-                        boxShadow: "1px 2px 9px #468DC7",
-                        zIndex: 1,
+                        color: "#468DC7",
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "center",
+                        fontSize: 20,
                       }}
                     >
-                      <div
-                        style={{
-                          color: "#468DC7",
-                          alignItems: "center",
-                          display: "flex",
-                          justifyContent: "center",
-                          fontSize: 20,
-                        }}
-                      >
-                        Passengers
-                      </div>
-                      <div
-                        style={{
-                          backgroundColor: "gray",
-                          width: "100%",
-                          height: 1,
-                          marginTop: 10,
-                        }}
-                      ></div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <div style={{ padding: 15, color: "#468DC7" }}>
-                          Adult
-                        </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-around",
-                            padding: 10,
-                          }}
-                        >
-                          <button
-                            onClick={decrease}
-                            style={{
-                              marginRight: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            -
-                          </button>
-                          <h1
-                            style={{
-                              fontSize: 20,
-                              alignItems: "center",
-                              justifyContent: "center",
-                              display: "flex",
-                              color: "gray",
-                            }}
-                          >
-                            {count}
-                          </h1>
-                          <button
-                            onClick={() => setCount(count + 1)}
-                            style={{
-                              marginLeft: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          backgroundColor: "gray",
-                          width: "100%",
-                          height: 1,
-                          marginTop: 10,
-                        }}
-                      ></div>
+                      Passengers
+                    </div>
+                    <div
+                      style={{
+                        backgroundColor: "gray",
+                        width: "100%",
+                        height: 1,
+                        marginTop: 10,
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <div style={{ padding: 15, color: "#468DC7" }}>Adult</div>
                       <div
                         style={{
                           display: "flex",
                           flexDirection: "row",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <div style={{ padding: 15, color: "#468DC7" }}>
-                          {" "}
-                          Child{" "}
-                        </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-around",
-                            padding: 10,
-                          }}
-                        >
-                          <button
-                            onClick={decrease1}
-                            style={{
-                              marginRight: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            -
-                          </button>
-                          <h1
-                            style={{
-                              fontSize: 20,
-                              alignItems: "center",
-                              justifyContent: "center",
-                              display: "flex",
-                              color: "gray",
-                            }}
-                          >
-                            {count1}
-                          </h1>
-                          <button
-                            onClick={() => setCount1(count1 + 1)}
-                            style={{
-                              marginLeft: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          backgroundColor: "gray",
-                          width: "100%",
-                          height: 1,
-                          marginTop: 10,
-                        }}
-                      ></div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <div style={{ padding: 15, color: "#468DC7" }}>
-                          {" "}
-                          Infant
-                        </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-around",
-                            padding: 10,
-                          }}
-                        >
-                          <button
-                            onClick={decrease2}
-                            style={{
-                              marginRight: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            -
-                          </button>
-                          <h1
-                            style={{
-                              fontSize: 20,
-                              alignItems: "center",
-                              justifyContent: "center",
-                              display: "flex",
-                              color: "gray",
-                            }}
-                          >
-                            {count2}
-                          </h1>
-                          <button
-                            onClick={() => setCount2(count2 + 1)}
-                            style={{
-                              marginLeft: 10,
-                              backgroundColor: "#468DC7",
-                              borderRadius: 30,
-                              width: 30,
-                              height: 30,
-                              color: "white",
-                              borderWidth: 0,
-                            }}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-                      <div
-                        onClick={() => setOpen(!open)}
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
+                          justifyContent: "space-around",
+                          padding: 10,
                         }}
                       >
                         <button
+                          onClick={decrease}
                           style={{
-                            cursor: "pointer",
+                            marginRight: 10,
                             backgroundColor: "#468DC7",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            borderRadius: 5,
-                            padding: 12,
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
                             color: "white",
-                            marginTop: 10,
-                            marginBottom: 20,
-                            textTransform: "none",
                             borderWidth: 0,
-                            fontSize: 15,
-                            width: "90%",
                           }}
                         >
-                          Done
+                          -
+                        </button>
+                        <h1
+                          style={{
+                            fontSize: 20,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                            color: "gray",
+                          }}
+                        >
+                          {count}
+                        </h1>
+                        <button
+                          onClick={() => setCount(count + 1)}
+                          style={{
+                            marginLeft: 10,
+                            backgroundColor: "#468DC7",
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
+                            color: "white",
+                            borderWidth: 0,
+                          }}
+                        >
+                          +
                         </button>
                       </div>
                     </div>
-                  </>
-                ) : null}
-              </div>
-
-              <div className={styling ? "bookNowContainer" : "container"}>
-                <legend>*PHONE</legend>
-                <Input
-                  style={{ color: "white", fontSize: 12 }}
-                  type="phone"
-                  disableUnderline
-                  fullWidth
-                  name="phone"
-                  autoComplete="off"
-                  onChange={(e) => handlePhone(e)}
-                  id={styling ? "bookNow" : "text"}
-                  placeholder="+44-XXXX-XXXX"
-                />
-              </div>
-
-              <div className={styling ? "bookNowContainer" : "container"}>
-                <legend>Email</legend>
-                <Input
-                  style={{ color: "white", fontSize: 12 }}
-                  type="email"
-                  disableUnderline
-                  name="email"
-                  autoComplete="off"
-                  onChange={(e) => handleEmail(e)}
-                  id={styling ? "bookNow" : "text"}
-                  placeholder="john@xyz.com (Optional)"
-                />
-              </div>
-
-              <button
-                type="submit"
-                style={{
-                  cursor: "pointer",
-                  backgroundColor: styling ? "#4E96BA" : "yellow",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: 12,
-                  // color: "white",
-                  textTransform: "none",
-                  borderWidth: 0,
-                  fontSize: 16,
-                  width: styling ? "30%" : "60%",
-                  height: 50,
-                  marginLeft: 10,
-                  marginRight: 10,
-                  fontWeight: 600,
-                }}
-              >
-                Find Now
-              </button>
+                    <div
+                      style={{
+                        backgroundColor: "gray",
+                        width: "100%",
+                        height: 1,
+                        marginTop: 10,
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <div style={{ padding: 15, color: "#468DC7" }}>Child</div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-around",
+                          padding: 10,
+                        }}
+                      >
+                        <button
+                          onClick={decrease1}
+                          style={{
+                            marginRight: 10,
+                            backgroundColor: "#468DC7",
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
+                            color: "white",
+                            borderWidth: 0,
+                          }}
+                        >
+                          -
+                        </button>
+                        <h1
+                          style={{
+                            fontSize: 20,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                            color: "gray",
+                          }}
+                        >
+                          {count1}
+                        </h1>
+                        <button
+                          onClick={() => setCount1(count1 + 1)}
+                          style={{
+                            marginLeft: 10,
+                            backgroundColor: "#468DC7",
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
+                            color: "white",
+                            borderWidth: 0,
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        backgroundColor: "gray",
+                        width: "100%",
+                        height: 1,
+                        marginTop: 10,
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <div style={{ padding: 15, color: "#468DC7" }}>
+                        {" "}
+                        Infant
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-around",
+                          padding: 10,
+                        }}
+                      >
+                        <button
+                          onClick={decrease2}
+                          style={{
+                            marginRight: 10,
+                            backgroundColor: "#468DC7",
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
+                            color: "white",
+                            borderWidth: 0,
+                          }}
+                        >
+                          -
+                        </button>
+                        <h1
+                          style={{
+                            fontSize: 20,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                            color: "gray",
+                          }}
+                        >
+                          {count2}
+                        </h1>
+                        <button
+                          onClick={() => setCount2(count2 + 1)}
+                          style={{
+                            marginLeft: 10,
+                            backgroundColor: "#468DC7",
+                            borderRadius: 30,
+                            width: 30,
+                            height: 30,
+                            color: "white",
+                            borderWidth: 0,
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      onClick={() => setOpen(!open)}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <button
+                        style={{
+                          cursor: "pointer",
+                          backgroundColor: "#468DC7",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          borderRadius: 5,
+                          padding: 12,
+                          color: "white",
+                          marginTop: 10,
+                          marginBottom: 20,
+                          textTransform: "none",
+                          borderWidth: 0,
+                          fontSize: 15,
+                          width: "90%",
+                        }}
+                      >
+                        Done
+                      </button>
+                    </div>
+                  </div>
+                </>
+              ) : null}
             </div>
-          </form>
+
+            <div className={styling ? "bookNowContainer" : "container"}>
+              <legend>*PHONE</legend>
+              <Input
+                style={{ color: "white", fontSize: 12 }}
+                type="phone"
+                disableUnderline
+                fullWidth
+                name="phone"
+                autoComplete="off"
+                onChange={(e) => handlePhone(e)}
+                id={styling ? "bookNow" : "text"}
+                placeholder="+44-XXXX-XXXX"
+              />
+            </div>
+
+            <div className={styling ? "bookNowContainer" : "container"}>
+              <legend>Email</legend>
+              <Input
+                style={{ color: "white", fontSize: 12 }}
+                type="email"
+                disableUnderline
+                name="email"
+                autoComplete="off"
+                onChange={(e) => handleEmail(e)}
+                id={styling ? "bookNow" : "text"}
+                placeholder="john@xyz.com (Optional)"
+              />
+            </div>
+
+            <button
+              style={{
+                cursor: "pointer",
+                backgroundColor: styling ? "#4E96BA" : "yellow",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: 12,
+                // color: "white",
+                textTransform: "none",
+                borderWidth: 0,
+                fontSize: 16,
+                width: styling ? "30%" : "60%",
+                height: 50,
+                marginLeft: 10,
+                marginRight: 10,
+                fontWeight: 600,
+              }}
+            >
+              Find Now
+            </button>
+          </div>
         </div>
         {styling && (
           <img
