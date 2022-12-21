@@ -1,35 +1,8 @@
 import { Input } from "@material-ui/core";
-import { useFormik } from "formik";
 import React, { useState } from "react";
-import * as Yup from "yup";
 import DateRangeComp from "./DateRangeComp";
 
-export const signUpSchema = Yup.object({
-  // name: Yup.string().min(2).max(25).required("Please enter your name"),
-  // text1: Yup.string().min(2).max(25).required("Please enter your text1"),
-  // text2: Yup.string().min(2).max(25).required("Please enter your text2"),
-  // email: Yup.string().email().required("Please enter your email"),
-  // phone: Yup.string().min(6).required("Please enter your phone"),
-});
-
-const initialValues = {
-  name: "",
-  text1: "",
-  text2: "",
-  email: "",
-  phone: "",
-  passengers: "",
-};
 const Contact = ({ styling }) => {
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues,
-      validationSchema: signUpSchema,
-      onSubmit: (values, action) => {
-        console.log("form submitted", values);
-        action.resetForm();
-      },
-    });
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -201,7 +174,7 @@ const Contact = ({ styling }) => {
             padding: styling ? 5 : "",
           }}
         >
-          <form onSubmit={handleSubmit}>
+          <form>
             <div
               style={{
                 display: styling ? "" : "flex",
@@ -219,19 +192,19 @@ const Contact = ({ styling }) => {
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
                   onChange={(e) => handleDropDown(e)}
-                  onBlur={handleBlur}
                   placeholder="Departure"
                 />
                 {autoCompleteFrom ? (
                   <>
                     <div
                       style={{
-                        position: "fixed",
+                        position: "absolute",
                         marginTop: 30,
                         backgroundColor: "red",
                         width: 300,
                         height: 300,
                         boxShadow: "1px 2px 9px #468DC7",
+                        zIndex: 1,
                       }}
                     ></div>
                   </>
@@ -248,19 +221,20 @@ const Contact = ({ styling }) => {
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
                   onChange={(e) => handleDropDownTo(e)}
-                  onBlur={handleBlur}
                   placeholder="Arrival"
                 />
                 {autoCompleteTo ? (
                   <>
                     <div
                       style={{
-                        position: "fixed",
+                        // position: "fixed",
+                        position: "absolute",
                         marginTop: 30,
                         backgroundColor: "blue",
                         width: 300,
                         height: 300,
                         boxShadow: "1px 2px 9px #468DC7",
+                        zIndex: 1,
                       }}
                     ></div>
                   </>
@@ -292,7 +266,7 @@ const Contact = ({ styling }) => {
                   <>
                     <div
                       style={{
-                        position: "relative",
+                        position: styling ? "relative" : "absolute",
                         marginTop: 30,
                         backgroundColor: "white",
                         width: 300,
