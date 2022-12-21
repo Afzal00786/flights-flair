@@ -9,7 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 function PakistanFlights() {
-  const responsive = window.innerWidth > 949;
+  const responsive = window.innerWidth > 700;
+  const responsive1 = window.innerWidth > 560;
   const [swiperRef, setSwiperRef] = useState(null);
 
   let appendNumber = 4;
@@ -40,6 +41,41 @@ function PakistanFlights() {
       '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
     ]);
   };
+
+  // const myJsmedia = (widthSize) => {
+  //   if (widthSize.matches) {
+  //     <Swiper
+  //       style={{ paddingLeft: responsive ? 80 : "80" }}
+  //       onSwiper={setSwiperRef}
+  //       slidesPerView={3}
+  //       spaceBetween={30}
+  //       pagination={{
+  //         type: "fraction",
+  //       }}
+  //       navigation={true}
+  //       modules={[Pagination, Navigation]}
+  //       className="mySwiper"
+  //     ></Swiper>;
+  //   } else {
+  //     <Swiper
+  //       style={{ paddingLeft: responsive ? 80 : "80" }}
+  //       onSwiper={setSwiperRef}
+  //       slidesPerView={2}
+  //       spaceBetween={30}
+  //       pagination={{
+  //         type: "fraction",
+  //       }}
+  //       navigation={true}
+  //       modules={[Pagination, Navigation]}
+  //       className="mySwiper"
+  //     ></Swiper>;
+  //   }
+  // };
+
+  // const widthSize = window.matchMedia("(max-width: 780px)");
+
+  // myJsmedia(widthSize);
+  // widthSize.addEventListener("change", myJsmedia);
 
   return (
     <>
