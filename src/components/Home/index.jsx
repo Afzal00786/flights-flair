@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <NavBar />
       <Banner />
-      <h1>Today's Lowest Fare</h1>
+  
       <BookNow />
       <PakistanFlights />
       <Footer/>
