@@ -12,7 +12,7 @@
   align-self: center;
   width: 100%;
 }
-.book_card_items{
+.book_card_items {
   height: 260px;
   width: 300px;
   padding: 20px 20px;
@@ -25,28 +25,28 @@
   box-shadow: 1px 2px 9px gray;
   background-color: white;
 }
-.book_now_container{
+.book_now_container {
   padding: 30px 20px;
   background-color: whiteSmoke;
 }
-.from_box{
+.from_box {
   display: flex;
   gap: 20px;
   padding: 10px 0px;
   justify-content: space-between;
   align-items: center;
 }
-.card_date{
+.card_date {
   font-size: 12px;
 }
-.card_img1{
+.card_img1 {
   width: 100%;
 }
-.book_Card_price{
+.book_Card_price {
   color: #007597;
   font-size: 20px;
 }
-.book_Card_order{
+.book_Card_order {
   color: #007597;
   font-size: 16px;
 }
@@ -58,15 +58,15 @@ font-size: 40px;
 font-weight: 700;
 margin: 30px 0px;
 }
-.book_Card_img{
+.book_Card_img {
   height: 50px;
   width: 80px;
 }
-.from_line{
+.from_line {
   width: 70px;
   border: 1px solid black;
 }
-.book_now_wrapper{
+.book_now_wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -86,8 +86,8 @@ margin: 30px 0px;
 .field_wrapper {
   width: 40%;
 }
-@media screen and (max-width:659px){
-  .book_now_wrapper{
+@media screen and (max-width: 659px) {
+  .book_now_wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;

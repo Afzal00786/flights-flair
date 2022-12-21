@@ -3,8 +3,10 @@ import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Box from "@mui/material/Box";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ styling }) => {
+  const navigation = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleMobileOpen = () => {
@@ -34,17 +36,37 @@ const NavBar = ({ styling }) => {
           width: "100%",
           flexDirection: "row-reverse",
           marginRight: 5,
+          
         }}
       >
         <div className={styling ? "" : "nav_bar_wrapper"}>
           <div className="nav_bar_inner">
             <div className="nav_logo">FlightsFlair</div>
             <div className="nav_right_sec">
-              <div className="nav_items">Home</div>
-              <div className="nav_items">What We Do</div>
-              <div className="nav_items">Booking Terms</div>
-              <div className="nav_items">Flights</div>
-              <div className="">Contact Us</div>
+              <div className="nav_items" onClick={() => navigation("/")}>
+                Home
+              </div>
+              <div
+                className="nav_items"
+                onClick={() => navigation("/WhatWeDo")}
+              >
+                What We Do
+              </div>
+              <div
+                className="nav_items"
+                onClick={() => navigation("/BookingTerms")}
+              >
+                Booking Terms
+              </div>
+              <div className="nav_items" onClick={() => navigation("/Flights")}>
+                Flights
+              </div>
+              <div
+                className="nav_items"
+                onClick={() => navigation("/ContactUs")}
+              >
+                Contact Us
+              </div>
             </div>
           </div>
         </div>

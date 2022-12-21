@@ -4,7 +4,6 @@ import "./bookNow.css";
 import amazon from "../../asstes/images/amazon.jpeg";
 
 function BookNow() {
-  const responsive = window.innerWidth > 984;
   const navigate = useNavigate();
   const bookCard = [
     {
@@ -55,23 +54,24 @@ function BookNow() {
         <div className="book_now_wrapper">
           {bookCard.map((data) => {
             return (
-              <>
-                <div className="book_card_items">
-                  <div className="book_Card_img">
-                    <img src={data.img} className="card_img1" />
-                  </div>
-                  <div>{data.title1}</div>
-                  <div>{data.title2}</div>
-                  <div className="card_date">{data.date}</div>
-                  <div className="from_box">
-                    <div className="from_line"></div>
-                    <div>From</div>
-                    <div className="from_line"></div>
-                  </div>
-                  <div className="book_Card_price">{data.price}</div>
-                  <div className="book_Card_order">{data.order}</div>
+              <div
+                onClick={() => navigate("/booknowflightdetails")}
+                className="book_card_items"
+              >
+                <div className="book_Card_img">
+                  <img src={data.img} className="card_img1" />
                 </div>
-              </>
+                <div>{data.title1}</div>
+                <div>{data.title2}</div>
+                <div className="card_date">{data.date}</div>
+                <div className="from_box">
+                  <div className="from_line"></div>
+                  <div>From</div>
+                  <div className="from_line"></div>
+                </div>
+                <div className="book_Card_price">{data.price}</div>
+                <div className="book_Card_order">{data.order}</div>
+              </div>
             );
           })}
         </div>
