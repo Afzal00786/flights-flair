@@ -196,7 +196,7 @@ const NavBar = ({ styling }) => {
       >
         <div className={styling ? "nav_bar" : "nav_bar_wrapper"}>
           <div className="nav_bar_inner">
-            <div className="nav_logo">
+            <div className="nav_logo" onClick={() => navigation("/")}>
               <img
                 width={120}
                 height={80}
@@ -219,17 +219,60 @@ const NavBar = ({ styling }) => {
               >
                 Booking Terms
               </div>
-              <div
-                style={{ display: "flex", flexDirection: "row" }}
-                className="nav_items"
-                onMouseEnter={handlePopoverOpen}
-                onClick={handleOpenModal}
-              >
-                <div className="overlay"></div>
-                <div className="FiightText">
-                  <div>Flights</div>
-                  <div style={{ marginBottom: -5 }}>
+              <div>
+                <div
+                  style={{ display: "flex", flexDirection: "row" }}
+                  className="nav_items"
+                  onMouseEnter={handlePopoverOpen}
+                  onClick={handleOpenModal}
+                >
+                  <div className="overlay"></div>
+                  <div className="FiightText">
+                    <div>Flights</div>
+                    {/* <div style={{ marginBottom: -5 }}>
                     <ArrowDropDownIcon />
+                  </div> */}
+                  </div>
+                  <div>
+                    {flightsOpen ? (
+                      <div
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          paddingLeft: 10,
+                          paddingRight: 10,
+                        }}
+                      >
+                        <div
+                          onClick={handleFlightsClose}
+                          style={{
+                            color: "black",
+                          }}
+                        >
+                          <ArrowDropUpIcon />
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          paddingLeft: 10,
+                          paddingRight: 10,
+                        }}
+                      >
+                        <div
+                          onClick={handleFlightsOpen}
+                          style={{
+                            color: "black",
+                          }}
+                        >
+                          <ArrowDropDownOutlinedIcon />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -238,6 +281,26 @@ const NavBar = ({ styling }) => {
                 onClick={() => navigation("/ContactUs")}
               >
                 Contact Us
+              </div>
+            </div>
+            <div style={{ marginTop: 20 }}>
+              <div className="nav_bar_rig_title">
+                Call Our Travel Experts On
+              </div>
+              <div
+                className="nav_bar_phone"
+                style={{
+                  fontSize: 20,
+                  color: "#5DA5C2",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  padding: 5,
+                }}
+              >
+                0208-004-4475
+              </div>
+              <div className="nav_bar_rig_title2">
+                Lines Open 8AM T0 10PM 7 Days A Week
               </div>
             </div>
           </div>
