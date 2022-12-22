@@ -1,8 +1,13 @@
 import { Input } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
+import data from "./dummyData.jsx";
+import data2 from "./dummyData2.jsx";
+
+console.log(data, "datadata");
 import "./form.css";
+import Search from "./Search";
 const Contact = ({ styling }) => {
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
@@ -69,15 +74,44 @@ const Contact = ({ styling }) => {
   const [dateField, setDateField] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [email, setEmail] = useState("");
+  const [validationTo, setValidationTo] = useState(false);
+  const [validationFrom, setValidationFrom] = useState(false);
+  const [validationDate, setValidationDate] = useState(false);
+  const [validationPhone, setValidationPhone] = useState(false);
 
-  console.log(fromField, "fromField");
-  console.log(whereField, "whereField");
-  console.log(dateField, "dateField");
-  console.log(count, "count");
-  console.log(count1, "count1");
-  console.log(count2, "count2");
-  console.log(phoneNo, "phoneNo");
-  console.log(email, "email");
+  const handleFind = () => {
+    if (value === "") {
+      setValidationTo(true);
+    } else {
+      setValidationTo(false);
+    }
+    if (valueTo === "") {
+      setValidationFrom(true);
+    } else {
+      setValidationFrom(false);
+    }
+    if (dateField === "") {
+      setValidationDate(true);
+    } else {
+      setValidationDate(false);
+    }
+    if (phoneNo === "") {
+      setValidationPhone(true);
+    } else {
+      setValidationPhone(false);
+    }
+    if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
+      console.log(value, "value");
+      console.log(valueTo, "valueTo");
+      console.log(dateField, "dateField");
+      console.log(count, "count");
+      console.log(count1, "count1");
+      console.log(count2, "count2");
+      console.log(phoneNo, "phoneNo");
+      console.log(email, "email");
+    }
+  };
+  const refOne = useRef(null);
 
   const handlePhone = (e) => {
     setPhoneNo(e.target.value);
@@ -85,13 +119,7 @@ const Contact = ({ styling }) => {
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
-  const handleDropDown = (e) => {
-    setFromField(e.target.value);
-    if (e) {
-      setAutoCompleteFrom(true);
-      setAutoCompleteTo(false);
-    }
-  };
+
   const handleDropDownTo = (e) => {
     setWhereField(e.target.value);
 
@@ -100,7 +128,49 @@ const Contact = ({ styling }) => {
       setAutoCompleteFrom(false);
     }
   };
+  useEffect(() => {
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setAutoCompleteFrom(false);
+      setAutoCompleteTo(false);
+      setOpen(false);
+    }
+  };
   console.log(autoCompleteFrom, "autoComplete");
+
+  const [value, setValue] = useState("");
+  const [valueTo, setValueTo] = useState("");
+
+  const onChangeWhere = (e) => {
+    if (e) {
+      setAutoCompleteFrom(true);
+    }
+    setValue(e.target.value);
+  };
+  console.log(data, "dummyData");
+  const onSearch = (searchTerm) => {
+    setValue(searchTerm);
+    // our api to fetch the search result
+    console.log("search ", searchTerm);
+  };
+  /////////////////
+
+  const onChangeTo = (e) => {
+    if (e) {
+      setAutoCompleteTo(true);
+    }
+    setValueTo(e.target.value);
+  };
+  console.log(data, "dummyData");
+  const onSearchTo = (searchTerm) => {
+    setValueTo(searchTerm);
+    // our api to fetch the search result
+    console.log("search ", searchTerm);
+  };
+  //////////////
+
   return (
     <div className="mainContainer">
       <div
@@ -203,6 +273,7 @@ const Contact = ({ styling }) => {
               className={styling ? "bookNowContainer" : "container"}
             >
               <legend>FROM WHERE</legend>
+              {/* <Search /> */}
               <Input
                 style={{
                   color: styling ? "black" : "white",
@@ -211,15 +282,41 @@ const Contact = ({ styling }) => {
                 name="name"
                 type="text"
                 disableUnderline
+                value={value}
                 id={styling ? "bookNow" : "text"}
                 autoComplete="off"
-                onChange={(e) => handleDropDown(e)}
+                onChange={(e) => onChangeWhere(e)}
                 placeholder="Departure"
               />
+              {validationTo && (
+                <div className="error">This field is required.</div>
+              )}
               {autoCompleteFrom ? (
-                <>
-                  <div className="auto_complete_form"></div>
-                </>
+                <div ref={refOne} className="auto_complete_form">
+                  {data
+                    .filter((item) => {
+                      const searchTerm = value.toLowerCase();
+                      const fullName = item.full_name.toLowerCase();
+                      if (fullName === searchTerm) {
+                        setAutoCompleteFrom(false);
+                      }
+                      return (
+                        searchTerm &&
+                        fullName.startsWith(searchTerm) &&
+                        fullName !== searchTerm
+                      );
+                    })
+                    .slice(0, 10)
+                    .map((item) => (
+                      <div
+                        onClick={() => onSearch(item.full_name)}
+                        className="dropdown-row"
+                        key={item.full_name}
+                      >
+                        {item.full_name}
+                      </div>
+                    ))}
+                </div>
               ) : null}
             </Grid>
 
@@ -234,21 +331,49 @@ const Contact = ({ styling }) => {
                 style={{ color: "white", fontSize: 12 }}
                 name="text1"
                 type="text"
+                value={valueTo}
                 disableUnderline
                 id={styling ? "bookNow" : "text"}
                 autoComplete="off"
-                onChange={(e) => handleDropDownTo(e)}
+                onChange={(e) => onChangeTo(e)}
                 placeholder="Arrival"
               />
+
+              {validationFrom && (
+                <div className="error">This field is required.</div>
+              )}
               {autoCompleteTo ? (
-                <>
-                  <div className="auto_complete_form"></div>
-                </>
+                <div ref={refOne} className="auto_complete_form">
+                  {data2
+                    .filter((item) => {
+                      const searchTerm = valueTo.toLowerCase();
+                      const fullName = item.full_name.toLowerCase();
+                      if (fullName === searchTerm) {
+                        setAutoCompleteTo(false);
+                      }
+                      return (
+                        searchTerm &&
+                        fullName.startsWith(searchTerm) &&
+                        fullName !== searchTerm
+                      );
+                    })
+                    .slice(0, 10)
+                    .map((item) => (
+                      <div
+                        onClick={() => onSearchTo(item.full_name)}
+                        className="dropdown-row"
+                        key={item.full_name}
+                      >
+                        {item.full_name}
+                      </div>
+                    ))}
+                </div>
               ) : null}
             </Grid>
             <Grid md={styling ? 12 : 1.7} sm={3.7} xs={5.8}>
               <DateRangeComp
                 styling={styling}
+                validationDate={validationDate}
                 selectTripDate={selectTripDate}
                 setDateField={setDateField}
                 dateField={dateField}
@@ -281,6 +406,7 @@ const Contact = ({ styling }) => {
               {open ? (
                 <>
                   <div
+                    ref={refOne}
                     className="mainPassengers"
                     style={{
                       position: styling ? "relative" : "absolute",
@@ -362,7 +488,7 @@ const Contact = ({ styling }) => {
               <legend>*PHONE</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
-                type="phone"
+                type="number"
                 disableUnderline
                 fullWidth
                 name="phone"
@@ -371,6 +497,9 @@ const Contact = ({ styling }) => {
                 id={styling ? "bookNow" : "text"}
                 placeholder="+44-XXXX-XXXX"
               />
+              {validationPhone && (
+                <div className="error">This field is required.</div>
+              )}
             </Grid>
 
             <Grid
@@ -392,7 +521,9 @@ const Contact = ({ styling }) => {
               />
             </Grid>
             <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
-              <button className="find_now_button">Find Now</button>
+              <button onClick={handleFind} className="find_now_button">
+                Find Now
+              </button>
             </Grid>
           </Grid>
         </div>
