@@ -6,7 +6,12 @@ import "./form.css";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
-const DateRangeComp = ({ selectTripDate, styling }) => {
+const DateRangeComp = ({
+  selectTripDate,
+  styling,
+  setDateField,
+  validationDate,
+}) => {
   console.log(styling, "styling");
   // date state
   const [range, setRange] = useState([
@@ -16,7 +21,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
       key: "selection",
     },
   ]);
-
+  console.log(range, "range");
   // open close
   const [open, setOpen] = useState(false);
   // one way state
@@ -25,6 +30,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
 
   const handleSelect = (date) => {
     // console.log(date)
+    setDateField(date);
     // console.log(format(date, 'MM/dd/yyyy'))
     setCalendar(format(date, "MM/dd/yyyy"));
   };
@@ -84,6 +90,11 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
               className="inputBox"
               onClick={() => setOpen((open) => !open)}
             />
+            {validationDate && (
+              <div style={{ marginTop: 20 }} className="error">
+                This field is required.
+              </div>
+            )}
           </div>
           <div
             style={{
@@ -94,15 +105,17 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
           >
             {open && (
               <DateRange
-                style={{ width: styling ? 260 : "" }}
+                className={"date_field"}
                 minDate={new Date()}
-                onChange={(item) => setRange([item.selection])}
+                onChange={(item) => {
+                  setRange([item.selection]);
+                  setDateField(range);
+                }}
                 editableDateInputs={true}
                 moveRangeOnFirstSelection={false}
                 ranges={range}
                 months={2}
                 direction="horizontal"
-                className="calendarElement"
               />
             )}
           </div>
@@ -131,6 +144,11 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
                 className="inputBox"
                 onClick={() => setOpen((open) => !open)}
               />
+              {validationDate && (
+                <div style={{ marginTop: 20 }} className="error">
+                  This field is required.
+                </div>
+              )}
             </div>
             <div style={{ position: "absolute", zIndex: 1 }}>
               {open && (
@@ -139,7 +157,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
                   date={new Date()}
                   editableDateInputs={true}
                   onChange={handleSelect}
-                  className="calendarElement"
+                  className={"date_field"}
                 />
               )}
             </div>

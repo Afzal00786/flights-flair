@@ -12,7 +12,7 @@
   border: 0.1rem solid #c9c9c9;
   width: 100%;
   font-size: 0.7rem;
-  /* font-family: "work sans"; */
+  /* font-family: work sans; */
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 5px;
@@ -25,7 +25,7 @@
   width: 100%;
   font-size: 0.7rem;
   color: black;
-  /* font-family: "work sans"; */
+  /* font-family: work sans; */
   margin-top: 10px;
   margin-bottom: 10px;
   height: 50px;
@@ -47,7 +47,7 @@
   color: red;
 }
 .mainInput {
-  color: "white";
+  color: white;
   font-size: 12;
 }
 .calendarWrap {
@@ -249,4 +249,131 @@
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 600;
+}
+/* .auto_complete_form {
+  position: absolute;
+  margin-top: 30px;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  box-shadow: 1px 2px 9px #468dc7;
+  z-index: 1;
+} */
+.date_field {
+  width: 400px;
+}
+@media screen and (width<600px) {
+  .auto_complete_form {
+    position: absolute;
+    max-width: 300px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 1px 2px 9px #468dc7;
+    z-index: 1;
+  }
+}
+@media screen and (width<350px) {
+  .auto_complete_form {
+    position: absolute;
+    max-width: 250px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 1px 2px 9px #468dc7;
+    z-index: 1;
+  }
+}
+@media screen and (width<901px) {
+  .date_field {
+    width: 400px;
+    margin-left: -180px;
+  }
+}
+@media screen and (width<600px) {
+  .date_field {
+    width: 350px;
+    margin-left: 0px;
+  }
+  .mainPassengers {
+    margin-top: 30px;
+    background-color: white;
+    width: 300px;
+    border: 0.2rem solid #468dc7;
+    z-index: 1;
+    margin-left: -150px;
+  }
+}
+@media screen and (width<400px) {
+  .date_field {
+    width: 320px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  /* width: 300px;
+  height: 300px; */
+}
+.auto_complete_form {
+  position: absolute;
+  margin-top: 30px;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  box-shadow: 1px 2px 9px #468dc7;
+  z-index: 1;
+  overflow-y: scroll;
+}
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  color: black;
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+  font-size: 16px;
+  padding: 5px;
+}
+.dropdown-row:hover {
+  background-color: lightgray;
+}
+input {
+  width: 220px;
+}
+
+.search-inner {
+  display: flex;
+}
+.error {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  color: red;
 }

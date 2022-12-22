@@ -2,6 +2,10 @@
   background-color: white;
   width: 100%;
 }
+.nav_bar{
+  background-color: #4B7FA7;
+  width: 100%;
+}
 .nav_bar_inner {
   max-width: 100%;
   padding: 0px 20px;
@@ -38,3 +42,54 @@
 .nav_items1 {
   padding: 10px;
 }
+.FiightText{
+display: flex;
+flex-direction: row;
+position: relative;
+overflow: hidden;
+}
+.overlay{
+
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(3rem);
+  transition: all 0.3s linear;
+  border-radius: 7px;
+}
+.drowpDownBoxStyle{
+  position: absolute;
+  top: 80px;
+  left: 69%;
+  height: 163px;
+  width: 21vw;
+  background-color: white;
+  z-index: 1;
+}
+.box{
+  position: absolute;
+  top: -76px;
+  height: 75px;
+  width: 21vw;
+  z-index: 1;
+}
+.dropdownText{
+  font-size: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.dropdownText:hover{
+  background-color: #5DA5C2;
+  cursor: pointer;
+}
+
+
