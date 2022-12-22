@@ -4,11 +4,11 @@ import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
 import data1 from "./dummyData.jsx";
 import data2 from "./dummyData2.jsx";
-
-console.log(data1, "datadata");
 import "./form.css";
 import Search from "./Search";
 import { useLocation } from "react-router-dom";
+
+console.log(data1, "datadata");
 const Contact = ({ fromImg, styling }) => {
   const location = useLocation();
   console.log(fromImg, "fromImg");
@@ -306,13 +306,16 @@ const Contact = ({ fromImg, styling }) => {
                       if (fullName === searchTerm) {
                         setAutoCompleteFrom(false);
                       }
-                      return (
-                        searchTerm &&
-                        fullName.startsWith(searchTerm) &&
-                        fullName !== searchTerm
-                      );
+                      if (searchTerm === "") {
+                        return fullName;
+                      } else {
+                        return (
+                          searchTerm &&
+                          fullName.includes(searchTerm) &&
+                          fullName !== searchTerm
+                        );
+                      }
                     })
-                    .slice(0, 140)
                     .map((item) => (
                       <div
                         onClick={() => onSearch(item.full_name)}
@@ -334,7 +337,7 @@ const Contact = ({ fromImg, styling }) => {
             >
               <legend className="main_text">WHERE TO</legend>
               <Input
-                style={{ color: "white", fontSize: 12 }}
+                style={{ color: styling ? "black" : "white", fontSize: 12 }}
                 name="text1"
                 type="text"
                 value={valueTo}
@@ -357,11 +360,16 @@ const Contact = ({ fromImg, styling }) => {
                       if (fullName === searchTerm) {
                         setAutoCompleteTo(false);
                       }
-                      return (
-                        searchTerm &&
-                        fullName.startsWith(searchTerm) &&
-                        fullName !== searchTerm
-                      );
+
+                      if (searchTerm === "") {
+                        return fullName;
+                      } else {
+                        return (
+                          searchTerm &&
+                          fullName.includes(searchTerm) &&
+                          fullName !== searchTerm
+                        );
+                      }
                     })
                     .slice(0, 10)
                     .map((item) => (
@@ -420,7 +428,7 @@ const Contact = ({ fromImg, styling }) => {
                   >
                     <div className="textPassenger">Passengers</div>
                     <div className="divider"></div>
-                    <div className="adultContainer">
+                    <div className="categoryContainer">
                       <div className="passengerCategory">Adult</div>
                       <div className="Adultbutton">
                         <button
@@ -439,7 +447,7 @@ const Contact = ({ fromImg, styling }) => {
                       </div>
                     </div>
                     <div className="divider"></div>
-                    <div className="ChildContainer">
+                    <div className="categoryContainer">
                       <div className="passengerCategory">Child</div>
                       <div className="Childbutton">
                         <button
@@ -458,7 +466,7 @@ const Contact = ({ fromImg, styling }) => {
                       </div>
                     </div>
                     <div className="divider"></div>
-                    <div className="InfantContainer">
+                    <div className="categoryContainer">
                       <div className="passengerCategory">Infant</div>
                       <div className="Infantbutton">
                         <button onClick={decrease2} className="counterStyle">

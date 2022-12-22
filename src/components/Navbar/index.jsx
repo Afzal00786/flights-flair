@@ -3,6 +3,8 @@ import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 
@@ -17,9 +19,15 @@ const NavBar = ({ styling }) => {
 
   const navigation = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const [flightsOpen, setFlightsOpen] = React.useState(false);
   const handleOpenModal = () => {
     navigation("/Flights");
+  };
+  const handleFlightsOpen = () => {
+    setFlightsOpen(!flightsOpen);
+  };
+  const handleFlightsClose = () => {
+    setFlightsOpen(!flightsOpen);
   };
 
   const handleMobileOpen = () => {
@@ -84,28 +92,76 @@ const NavBar = ({ styling }) => {
         <>
           <div style={{ display: "flex" }}>
             <div className="Mobille_navbar">
-              <div onClick={() => navigation("/")} className="nav_items1">
-                Home
+              <div className="nav_items1">Home</div>
+              <div className="nav_items1">What We Do</div>
+              <div className="nav_items1">Booking Terms</div>
+              <div className="nav_items1">
+                <div className="FiightText1">
+                  <div>Flights</div>
+                  <div>
+                    {flightsOpen ? (
+                      <div
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          paddingLeft: 10,
+                          paddingRight: 10,
+                        }}
+                      >
+                        <div
+                          onClick={handleFlightsClose}
+                          style={{
+                            color: "black",
+                          }}
+                        >
+                          <ArrowDropUpIcon />
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          paddingLeft: 10,
+                          paddingRight: 10,
+                        }}
+                      >
+                        <div
+                          onClick={handleFlightsOpen}
+                          style={{
+                            color: "black",
+                          }}
+                        >
+                          <ArrowDropDownOutlinedIcon />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {flightsOpen && (
+                  <div style={{ position: "absolute", width: "90%" }}>
+                    {bookCard.map((data) => {
+                      return (
+                        <div
+                          className="mobiledropdownContainer"
+                          onClick={() =>
+                            navigation("/BookNowFlightDetails", {
+                              state: data,
+                            })
+                          }
+                        >
+                          <div className="mobiledropdownText">
+                            {data.mainTitle}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
-              <div
-                onClick={() => navigation("/WhatWeDo")}
-                className="nav_items1"
-              >
-                What We Do
-              </div>
-              <div
-                onClick={() => navigation("/BookingTerms")}
-                className="nav_items1"
-              >
-                Booking Terms
-              </div>
-              <div className="nav_items1">Flights</div>
-              <div
-                onClick={() => navigation("/ContactUs")}
-                className="nav_items1"
-              >
-                Contact Us
-              </div>
+              <div className="nav_items1">Contact Us</div>
             </div>
           </div>
         </>
@@ -140,7 +196,13 @@ const NavBar = ({ styling }) => {
       >
         <div className={styling ? "nav_bar" : "nav_bar_wrapper"}>
           <div className="nav_bar_inner">
-            <div className="nav_logo">FlightsFlair</div>
+            <div className="nav_logo">
+              <img
+                width={120}
+                height={80}
+                src={require("../../asstes/images/logo.png")}
+              />
+            </div>
             <div className="nav_right_sec">
               <div className="nav_items" onClick={() => navigation("/")}>
                 Home
@@ -165,8 +227,8 @@ const NavBar = ({ styling }) => {
               >
                 <div className="overlay"></div>
                 <div className="FiightText">
-                  Flights
-                  <div style={{ height: 10, marginBottom: 5 }}>
+                  <div>Flights</div>
+                  <div style={{ marginBottom: -5 }}>
                     <ArrowDropDownIcon />
                   </div>
                 </div>

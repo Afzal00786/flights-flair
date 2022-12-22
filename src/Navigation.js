@@ -8,6 +8,7 @@ import BookingTerms from "./components/BookingTerms";
 import Flights from "./components/Flights";
 import ContactUs from "./components/ContactUs";
 import WhatWeDo from "./components/WhatWeDo";
+import InstantFlight from "./components/InstantFlights";
 
 // import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
 // import BookingTerms from "./components/BookingTerms/BookingTerms";
@@ -27,6 +28,7 @@ function Navigation() {
         <Route path="/Flights" element={<Flights />} />
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
+      <InstantFlight />
     </Router>
   );
 }
