@@ -7,8 +7,12 @@ import "./pakistanFlights.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Box from "@mui/material/Box";
+import { useNavigate } from "react-router-dom";
 
 function PakistanFlights() {
+  const navigation = useNavigate();
+
   const responsive = window.innerWidth > 700;
   const responsive1 = window.innerWidth > 560;
   const [swiperRef, setSwiperRef] = useState(null);
@@ -42,40 +46,54 @@ function PakistanFlights() {
     ]);
   };
 
-  // const myJsmedia = (widthSize) => {
-  //   if (widthSize.matches) {
-  //     <Swiper
-  //       style={{ paddingLeft: responsive ? 80 : "80" }}
-  //       onSwiper={setSwiperRef}
-  //       slidesPerView={3}
-  //       spaceBetween={30}
-  //       pagination={{
-  //         type: "fraction",
-  //       }}
-  //       navigation={true}
-  //       modules={[Pagination, Navigation]}
-  //       className="mySwiper"
-  //     ></Swiper>;
-  //   } else {
-  //     <Swiper
-  //       style={{ paddingLeft: responsive ? 80 : "80" }}
-  //       onSwiper={setSwiperRef}
-  //       slidesPerView={2}
-  //       spaceBetween={30}
-  //       pagination={{
-  //         type: "fraction",
-  //       }}
-  //       navigation={true}
-  //       modules={[Pagination, Navigation]}
-  //       className="mySwiper"
-  //     ></Swiper>;
-  //   }
-  // };
+  const karachi =
+    "Flights Flair is one of the best travel agency in London, UK that has hands on experience in dealing with their respected customers. Flights Flair offers some of the best and Cheap Flights to Pakistan and Cheap Flights to Islamabad at the most economical rates. Now travelling is no more a hassle as Flights Flair has sorted it all for you. Whether you are planning to aboard Lahore or Karachi, Flights Flair will take care of all the essentials one require to travel. Now booking Cheap Flights to Lahore or Cheap Flights to Islamabad is not an issue, just log on and select the dates as per your choice and we shall guide you with the best possible rates in your budget. Our highly qualified travel agents are always on their toes to help the customers and to provide them with the best and Cheap Flights to Pakistan. Flights Flair tries its level best to provide affordable flight deals that are not heavy on anyone’s pocket. So now travelling to Pakistan is no more a stress, we are your one stop solution to provide Cheap Flights to Islamabad and Cheap Flights to Karachi as well. So book your tickets with Flights Flair and get the most relaxing and effervescent experience of travelling. Book your Cheap Flights to Pakistan and get enthralled with the majestic views of beautiful cities of Pakistan. Whether you want to book Cheap Flights to Lahore or Cheap Flights to Karachi, we will give you the rates that no one can match. So hurry up! Flights Flair Awaits to make your dreamy journey a memorable one. Book your Cheap Flights to Pakistan today and enjoy the dreamy, historical and royal locations of beautiful cities of Pakistan. So if you are looking for the best and Cheap Flights to Islamabad, Cheap Flights to Lahore, Cheap Flights to Karachi, Cheap Flights to Sialkot, Cheap Flights to Peshawar or Anywhere in Pakistan, contact Flights Flair!";
+  const Lahore =
+    "Flights Flair is one of the best travel agency in London, UK that has hands on experience in dealing with their respected customers. Flights Flair offers some of the best and Cheap Flights to Pakistan and Cheap Flights to Islamabad at the most economical rates. Now travelling is no more a hassle as Flights Flair has sorted it all for you. Whether you are planning to aboard Lahore or Karachi, Flights Flair will take care of all the essentials one require to travel. Now booking Cheap Flights to Lahore or Cheap Flights to Islamabad is not an issue, just log on and select the dates as per your choice and we shall guide you with the best possible rates in your budget. Our highly qualified travel agents are always on their toes to help the customers and to provide them with the best and Cheap Flights to Pakistan. Flights Flair tries its level best to provide affordable flight deals that are not heavy on anyone’s pocket. So now travelling to Pakistan is no more a stress, we are your one stop solution to provide Cheap Flights to Islamabad and Cheap Flights to Karachi as well. So book your tickets with Flights Flair and get the most relaxing and effervescent experience of travelling. Book your Cheap Flights to Pakistan and get enthralled with the majestic views of beautiful cities of Pakistan. Whether you want to book Cheap Flights to Lahore or Cheap Flights to Karachi, we will give you the rates that no one can match. So hurry up! Flights Flair Awaits to make your dreamy journey a memorable one. Book your Cheap Flights to Pakistan today and enjoy the dreamy, historical and royal locations of beautiful cities of Pakistan. So if you are looking for the best and Cheap Flights to Islamabad, Cheap Flights to Lahore, Cheap Flights to Karachi, Cheap Flights to Sialkot, Cheap Flights to Peshawar or Anywhere in Pakistan, contact Flights Flair!";
 
-  // const widthSize = window.matchMedia("(max-width: 780px)");
+  const Islamabad =
+    "Flights Flair is one of the best travel agency in London, UK that has hands on experience in dealing with their respected customers. Flights Flair offers some of the best and Cheap Flights to Pakistan and Cheap Flights to Islamabad at the most economical rates. Now travelling is no more a hassle as Flights Flair has sorted it all for you. Whether you are planning to aboard Lahore or Karachi, Flights Flair will take care of all the essentials one require to travel. Now booking Cheap Flights to Lahore or Cheap Flights to Islamabad is not an issue, just log on and select the dates as per your choice and we shall guide you with the best possible rates in your budget. Our highly qualified travel agents are always on their toes to help the customers and to provide them with the best and Cheap Flights to Pakistan. Flights Flair tries its level best to provide affordable flight deals that are not heavy on anyone’s pocket. So now travelling to Pakistan is no more a stress, we are your one stop solution to provide Cheap Flights to Islamabad and Cheap Flights to Karachi as well. So book your tickets with Flights Flair and get the most relaxing and effervescent experience of travelling. Book your Cheap Flights to Pakistan and get enthralled with the majestic views of beautiful cities of Pakistan. Whether you want to book Cheap Flights to Lahore or Cheap Flights to Karachi, we will give you the rates that no one can match. So hurry up! Flights Flair Awaits to make your dreamy journey a memorable one. Book your Cheap Flights to Pakistan today and enjoy the dreamy, historical and royal locations of beautiful cities of Pakistan. So if you are looking for the best and Cheap Flights to Islamabad, Cheap Flights to Lahore, Cheap Flights to Karachi, Cheap Flights to Sialkot, Cheap Flights to Peshawar or Anywhere in Pakistan, contact Flights Flair!";
 
-  // myJsmedia(widthSize);
-  // widthSize.addEventListener("change", myJsmedia);
+  const Peshawar =
+    "Flights Flair is one of the best travel agency in London, UK that has hands on experience in dealing with their respected customers. Flights Flair offers some of the best and Cheap Flights to Pakistan and Cheap Flights to Islamabad at the most economical rates. Now travelling is no more a hassle as Flights Flair has sorted it all for you. Whether you are planning to aboard Lahore or Karachi, Flights Flair will take care of all the essentials one require to travel. Now booking Cheap Flights to Lahore or Cheap Flights to Islamabad is not an issue, just log on and select the dates as per your choice and we shall guide you with the best possible rates in your budget. Our highly qualified travel agents are always on their toes to help the customers and to provide them with the best and Cheap Flights to Pakistan. Flights Flair tries its level best to provide affordable flight deals that are not heavy on anyone’s pocket. So now travelling to Pakistan is no more a stress, we are your one stop solution to provide Cheap Flights to Islamabad and Cheap Flights to Karachi as well. So book your tickets with Flights Flair and get the most relaxing and effervescent experience of travelling. Book your Cheap Flights to Pakistan and get enthralled with the majestic views of beautiful cities of Pakistan. Whether you want to book Cheap Flights to Lahore or Cheap Flights to Karachi, we will give you the rates that no one can match. So hurry up! Flights Flair Awaits to make your dreamy journey a memorable one. Book your Cheap Flights to Pakistan today and enjoy the dreamy, historical and royal locations of beautiful cities of Pakistan. So if you are looking for the best and Cheap Flights to Islamabad, Cheap Flights to Lahore, Cheap Flights to Karachi, Cheap Flights to Sialkot, Cheap Flights to Peshawar or Anywhere in Pakistan, contact Flights Flair!";
+
+  const Sialkot =
+    "Flights Flair is one of the best travel agency in London, UK that has hands on experience in dealing with their respected customers. Flights Flair offers some of the best and Cheap Flights to Pakistan and Cheap Flights to Islamabad at the most economical rates. Now travelling is no more a hassle as Flights Flair has sorted it all for you. Whether you are planning to aboard Lahore or Karachi, Flights Flair will take care of all the essentials one require to travel. Now booking Cheap Flights to Lahore or Cheap Flights to Islamabad is not an issue, just log on and select the dates as per your choice and we shall guide you with the best possible rates in your budget. Our highly qualified travel agents are always on their toes to help the customers and to provide them with the best and Cheap Flights to Pakistan. Flights Flair tries its level best to provide affordable flight deals that are not heavy on anyone’s pocket. So now travelling to Pakistan is no more a stress, we are your one stop solution to provide Cheap Flights to Islamabad and Cheap Flights to Karachi as well. So book your tickets with Flights Flair and get the most relaxing and effervescent experience of travelling. Book your Cheap Flights to Pakistan and get enthralled with the majestic views of beautiful cities of Pakistan. Whether you want to book Cheap Flights to Lahore or Cheap Flights to Karachi, we will give you the rates that no one can match. So hurry up! Flights Flair Awaits to make your dreamy journey a memorable one. Book your Cheap Flights to Pakistan today and enjoy the dreamy, historical and royal locations of beautiful cities of Pakistan. So if you are looking for the best and Cheap Flights to Islamabad, Cheap Flights to Lahore, Cheap Flights to Karachi, Cheap Flights to Sialkot, Cheap Flights to Peshawar or Anywhere in Pakistan, contact Flights Flair!";
+  const data = {
+    id: 1,
+    description: karachi,
+    mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+    fromImg:
+      "https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg",
+  };
+  const data2 = {
+    id: 2,
+    description: Lahore,
+    mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+    fromImg:
+      "https://sastiparwaaz.com/wp-content/uploads/2022/10/pbrqvukjqf8_400x500-e1666871984683.jpg",
+  };
+  const data3 = {
+    id: 3,
+    description: Islamabad,
+    mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
+    fromImg:
+      "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
+  };
+  const data4 = {
+    id: 4,
+    description: Peshawar,
+    mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
+    fromImg:
+      "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
+  };
+  const data5 = {
+    id: 5,
+    description: Sialkot,
+    mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+    fromImg:
+      "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
+  };
 
   return (
     <>
@@ -101,7 +119,19 @@ function PakistanFlights() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div>
+              <div
+                onClick={() =>
+                  navigation("/BookNowFlightDetails", {
+                    state: {
+                      id: 1,
+                      description: karachi,
+                      mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+                      fromImg:
+                        "https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg",
+                    },
+                  })
+                }
+              >
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
@@ -138,7 +168,19 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                onClick={() =>
+                  navigation("/BookNowFlightDetails", {
+                    state: {
+                      id: 2,
+                      description: Islamabad,
+                      mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
+                      fromImg:
+                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
+                    },
+                  })
+                }
+              >
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
@@ -175,7 +217,19 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                onClick={() =>
+                  navigation("/BookNowFlightDetails", {
+                    state: {
+                      id: 3,
+                      description: Lahore,
+                      mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+                      fromImg:
+                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/pbrqvukjqf8_400x500-e1666871984683.jpg",
+                    },
+                  })
+                }
+              >
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
@@ -212,7 +266,19 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                onClick={() =>
+                  navigation("/BookNowFlightDetails", {
+                    state: {
+                      id: 4,
+                      description: Sialkot,
+                      mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+                      fromImg:
+                        "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
+                    },
+                  })
+                }
+              >
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
@@ -249,7 +315,19 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                onClick={() =>
+                  navigation("/BookNowFlightDetails", {
+                    state: {
+                      id: 5,
+                      description: Peshawar,
+                      mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
+                      fromImg:
+                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
+                    },
+                  })
+                }
+              >
                 <img
                   style={{
                     width: responsive ? "80%" : "100%",
@@ -286,138 +364,6 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
           </Swiper>
-          {/* {data.map((item, index) => (
-                <div
-                  key={index}
-                  style={{
-                    height: 220,
-                    width: "100%",
-                    backgroundColor: "white",
-                    boxShadow: "1px 2px 9px gray",
-                    cursor: "pointer",
-                    margin: 20,
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img width={60} height={25} src={item.img} />
-                  </div>
-                  <div
-                    style={{
-                      alignItems: "center",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <h1 style={{ margin: 8, fontSize: 13, fontWeight: "600" }}>
-                      {item.title1}
-                    </h1>
-                  </div>
-                  <div
-                    style={{
-                      alignItems: "center",
-                      display: "flex",
-                      justifyContent: "center",
-                      marginBottom: 10,
-                    }}
-                  >
-                    <h2 style={{ fontSize: 13, fontWeight: "570" }}>
-                      {" "}
-                      {item.title2}
-                    </h2>
-                  </div>
-                  <div
-                    style={{
-                      alignItems: "center",
-                      display: "flex",
-                      justifyContent: "center",
-                      margin: 20,
-                      fontSize: 13,
-                      fontWeight: "500",
-                    }}
-                  >
-                    {item.date}
-                  </div>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-around" }}
-                  >
-                    <div
-                      style={{
-                        backgroundColor: "black",
-                        width: "35%",
-                        height: 1,
-                        marginTop: 6,
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        alignItems: "center",
-                        display: "flex",
-                        justifyContent: "center",
-                        fontSize: 13,
-                        fontWeight: "500",
-                      }}
-                    >
-                      {item.title3}
-                    </div>
-                    <div
-                      style={{
-                        backgroundColor: "black",
-                        width: "35%",
-                        height: 1,
-                        marginTop: 6,
-                      }}
-                    ></div>
-                  </div>
-
-                  <div
-                    style={{
-                      alignItems: "center",
-                      display: "flex",
-                      justifyContent: "center",
-                      marginTop: 14,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "#007597",
-                        fontSize: 27,
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {item.price}
-                    </span>
-                    <div
-                      style={{
-                        marginTop: 10,
-                        fontSize: 14,
-                        fontWeight: "600",
-                        color: "#007597",
-                      }}
-                    >
-                      PP
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      marginTop: 10,
-                      fontSize: 14,
-                      fontWeight: "500",
-                      color: "#007597",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    {item.order}
-                  </div>
-                </div>
-              ))} */}
         </div>
       </div>
     </>
