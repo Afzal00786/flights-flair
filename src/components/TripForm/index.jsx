@@ -2,13 +2,19 @@ import { Input } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
 import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
-import data from "./dummyData.jsx";
+import data1 from "./dummyData.jsx";
 import data2 from "./dummyData2.jsx";
 
-console.log(data, "datadata");
+console.log(data1, "datadata");
 import "./form.css";
 import Search from "./Search";
-const Contact = ({ styling }) => {
+import { useLocation } from "react-router-dom";
+const Contact = ({ fromImg, styling }) => {
+  const location = useLocation();
+  console.log(fromImg, "fromImg");
+  console.log("hello");
+  console.log(location.state, "dataroute");
+  let data = location.state;
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -293,8 +299,8 @@ const Contact = ({ styling }) => {
               )}
               {autoCompleteFrom ? (
                 <div ref={refOne} className="auto_complete_form">
-                  {data
-                    .filter((item) => {
+                  {data1
+                    ?.filter((item) => {
                       const searchTerm = value.toLowerCase();
                       const fullName = item.full_name.toLowerCase();
                       if (fullName === searchTerm) {
@@ -531,7 +537,7 @@ const Contact = ({ styling }) => {
           <img
             width={"91.5%"}
             style={{ marginLeft: 20, marginTop: 50 }}
-            src="https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg"
+            src={fromImg}
           />
         )}
       </div>
