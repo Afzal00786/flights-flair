@@ -64,7 +64,7 @@ background-color: #575757;
 .footer_socoal_icons{
 	display: flex;
 	gap: 30px;
-	font-size: 20px;
+	font-size: 16px;
 }
 .footer_social_container{
 	max-width: 1440px;
