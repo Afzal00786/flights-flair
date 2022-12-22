@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Footer from "../Footer";
 import NavBar from "../Navbar";
 import TripForm from "../TripForm";
 
@@ -20,6 +21,8 @@ function BookNowFlightDetails() {
           <TripForm fromImg={data.fromImg} styling />
         </div>
       </div>
+      <div style={{ marginTop: 80 }} />
+      <Footer />
     </div>
   );
 }

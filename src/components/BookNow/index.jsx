@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./bookNow.css";
 import amazon from "../../asstes/images/amazon.jpeg";
+import Footer from "../Footer";
 
 function BookNow() {
   const navigate = useNavigate();

@@ -157,3 +157,9 @@
   margin-top: 5px;
   margin-bottom: 3px;
 }
+@media screen and (width<400px) {
+  .contact_us_header_text {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}

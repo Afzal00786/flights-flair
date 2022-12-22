@@ -84,11 +84,28 @@ const NavBar = ({ styling }) => {
         <>
           <div style={{ display: "flex" }}>
             <div className="Mobille_navbar">
-              <div className="nav_items1">Home</div>
-              <div className="nav_items1">What We Do</div>
-              <div className="nav_items1">Booking Terms</div>
+              <div onClick={() => navigation("/")} className="nav_items1">
+                Home
+              </div>
+              <div
+                onClick={() => navigation("/WhatWeDo")}
+                className="nav_items1"
+              >
+                What We Do
+              </div>
+              <div
+                onClick={() => navigation("/BookingTerms")}
+                className="nav_items1"
+              >
+                Booking Terms
+              </div>
               <div className="nav_items1">Flights</div>
-              <div className="nav_items1">Contact Us</div>
+              <div
+                onClick={() => navigation("/ContactUs")}
+                className="nav_items1"
+              >
+                Contact Us
+              </div>
             </div>
           </div>
         </>

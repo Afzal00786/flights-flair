@@ -2,8 +2,8 @@
   background-color: white;
   width: 100%;
 }
-.nav_bar{
-  background-color: #4B7FA7;
+.nav_bar {
+  background-color: #4b7fa7;
   width: 100%;
 }
 .nav_bar_inner {
@@ -41,15 +41,15 @@
 }
 .nav_items1 {
   padding: 10px;
+  cursor: pointer;
 }
-.FiightText{
-display: flex;
-flex-direction: row;
-position: relative;
-overflow: hidden;
+.FiightText {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
 }
-.overlay{
-
+.overlay {
   background: -webkit-linear-gradient(
     0deg,
     rgb(132 144 255) 0%,
@@ -63,7 +63,7 @@ overflow: hidden;
   transition: all 0.3s linear;
   border-radius: 7px;
 }
-.drowpDownBoxStyle{
+.drowpDownBoxStyle {
   position: absolute;
   top: 80px;
   left: 69%;
@@ -72,14 +72,14 @@ overflow: hidden;
   background-color: white;
   z-index: 1;
 }
-.box{
+.box {
   position: absolute;
   top: -76px;
   height: 75px;
   width: 21vw;
   z-index: 1;
 }
-.dropdownText{
+.dropdownText {
   font-size: 11px;
   padding-left: 15px;
   padding-right: 15px;
@@ -87,9 +87,7 @@ overflow: hidden;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
 }
-.dropdownText:hover{
-  background-color: #5DA5C2;
+.dropdownText:hover {
+  background-color: #5da5c2;
   cursor: pointer;
 }
-
-

@@ -70,7 +70,10 @@ const DateRangeComp = ({
             className={styling ? "bookNowContainer" : "container"}
             style={{ height: 50 }}
           >
-            <div style={{ color: styling ? "black" : "white" }}>
+            <div
+              className="main_text"
+              style={{ color: styling ? "black" : "white" }}
+            >
               DEPARTURE-RETURN DATE
             </div>
             <input
@@ -127,7 +130,10 @@ const DateRangeComp = ({
               className={styling ? "bookNowContainer" : "container"}
               style={{ height: 50 }}
             >
-              <div style={{ color: styling ? "black" : "white" }}>
+              <div
+                className="main_text"
+                style={{ color: styling ? "black" : "white" }}
+              >
                 DEPARTURE DATE
               </div>
               <input

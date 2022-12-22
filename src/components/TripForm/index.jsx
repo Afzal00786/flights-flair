@@ -278,7 +278,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={11.6}
               className={styling ? "bookNowContainer" : "container"}
             >
-              <legend>FROM WHERE</legend>
+              <legend className="main_text">FROM WHERE</legend>
               {/* <Search /> */}
               <Input
                 style={{
@@ -312,7 +312,7 @@ const Contact = ({ fromImg, styling }) => {
                         fullName !== searchTerm
                       );
                     })
-                    .slice(0, 10)
+                    .slice(0, 140)
                     .map((item) => (
                       <div
                         onClick={() => onSearch(item.full_name)}
@@ -332,7 +332,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={11.6}
               className={styling ? "bookNowContainer" : "container"}
             >
-              <legend>WHERE TO</legend>
+              <legend className="main_text">WHERE TO</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
                 name="text1"
@@ -391,7 +391,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={5.8}
               className={styling ? "bookNowContainer" : "container"}
             >
-              <legend>PASSENGERS</legend>
+              <legend className="main_text">PASSENGERS</legend>
               <div onClick={handleOpen}>
                 <input
                   disabled={true}
@@ -491,7 +491,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={5.8}
               className={styling ? "bookNowContainer" : "container"}
             >
-              <legend>*PHONE</legend>
+              <legend className="main_text">*PHONE</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
                 type="number"
@@ -514,7 +514,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={5.8}
               className={styling ? "bookNowContainer" : "container"}
             >
-              <legend>Email</legend>
+              <legend className="main_text">Email</legend>
               <Input
                 style={{ color: "white", fontSize: 12 }}
                 type="email"
