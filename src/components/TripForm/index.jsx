@@ -2,7 +2,7 @@ import { Input } from "@material-ui/core";
 import React, { useState } from "react";
 import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
-
+import "./form.css";
 const Contact = ({ styling }) => {
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
@@ -218,17 +218,7 @@ const Contact = ({ styling }) => {
               />
               {autoCompleteFrom ? (
                 <>
-                  <div
-                    style={{
-                      position: "absolute",
-                      marginTop: 30,
-                      backgroundColor: "red",
-                      width: 300,
-                      height: 300,
-                      boxShadow: "1px 2px 9px #468DC7",
-                      zIndex: 1,
-                    }}
-                  ></div>
+                  <div className="auto_complete_form"></div>
                 </>
               ) : null}
             </Grid>
@@ -252,18 +242,7 @@ const Contact = ({ styling }) => {
               />
               {autoCompleteTo ? (
                 <>
-                  <div
-                    style={{
-                      // position: "fixed",
-                      position: "absolute",
-                      marginTop: 30,
-                      backgroundColor: "blue",
-                      width: 300,
-                      height: 300,
-                      boxShadow: "1px 2px 9px #468DC7",
-                      zIndex: 1,
-                    }}
-                  ></div>
+                  <div className="auto_complete_form"></div>
                 </>
               ) : null}
             </Grid>

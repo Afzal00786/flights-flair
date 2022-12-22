@@ -95,6 +95,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
             {open && (
               <DateRange
                 style={{ width: styling ? 260 : "" }}
+                className={styling ? "date_field_book" : "date_field"}
                 minDate={new Date()}
                 onChange={(item) => setRange([item.selection])}
                 editableDateInputs={true}
@@ -102,7 +103,7 @@ const DateRangeComp = ({ selectTripDate, styling }) => {
                 ranges={range}
                 months={2}
                 direction="horizontal"
-                className="calendarElement"
+                // className="calendarElement"
               />
             )}
           </div>

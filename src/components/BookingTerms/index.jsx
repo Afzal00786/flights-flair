@@ -110,13 +110,7 @@ function BookingTerms() {
       </div>
 
       <Grid container md={12} xs={12} className="booking_terms_wrapper">
-        <Grid
-          style={{ margin: 10 }}
-          item
-          md={5}
-          xs={12}
-          className="booking_terms_left_wrapper"
-        >
+        <Grid style={{ margin: 10 }} item md={5} xs={12}>
           <div
             onClick={() => handleDropDown(1)}
             className="booking_terms_userSide"
