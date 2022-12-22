@@ -4,11 +4,11 @@ import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
 import data1 from "./dummyData.jsx";
 import data2 from "./dummyData2.jsx";
-
-console.log(data1, "datadata");
 import "./form.css";
 import Search from "./Search";
 import { useLocation } from "react-router-dom";
+
+console.log(data1, "datadata");
 const Contact = ({ fromImg, styling }) => {
   const location = useLocation();
   console.log(fromImg, "fromImg");
@@ -334,7 +334,7 @@ const Contact = ({ fromImg, styling }) => {
             >
               <legend>WHERE TO</legend>
               <Input
-                style={{ color: "white", fontSize: 12 }}
+                style={{ color: styling ? "black" : "white", fontSize: 12 }}
                 name="text1"
                 type="text"
                 value={valueTo}
