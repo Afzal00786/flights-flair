@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
 import "./form.css";
-const Contact = ({ styling }) => {
+import { useLocation } from "react-router-dom";
+const Contact = ({ fromImg, styling }) => {
+  const location = useLocation();
+  console.log(fromImg, "fromImg");
+  console.log("hello");
+  console.log(location.state, "dataroute");
+  let data = location.state;
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -400,7 +406,7 @@ const Contact = ({ styling }) => {
           <img
             width={"91.5%"}
             style={{ marginLeft: 20, marginTop: 50 }}
-            src="https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg"
+            src={fromImg}
           />
         )}
       </div>

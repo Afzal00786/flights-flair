@@ -65,14 +65,20 @@ overflow: hidden;
 }
 .drowpDownBoxStyle{
   position: absolute;
-  top: 81px;
-  left: 70%;
+  top: 80px;
+  left: 69%;
   height: 163px;
   width: 21vw;
   background-color: white;
   z-index: 1;
 }
-
+.box{
+  position: absolute;
+  top: -76px;
+  height: 75px;
+  width: 21vw;
+  z-index: 1;
+}
 .dropdownText{
   font-size: 11px;
   padding-left: 15px;
