@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import Box from "@mui/material/Box";
@@ -253,7 +252,6 @@ const NavBar = ({ styling }) => {
                   onMouseEnter={handlePopoverOpen}
                   onClick={handleOpenModal}
                 >
-                  <div className="overlay"></div>
                   <div className="FiightText">
                     <div>Flights</div>
                     {/* <div style={{ marginBottom: -5 }}>

@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Footer from "../Footer";
 import NavBar from "../Navbar";
 import TripForm from "../TripForm";
 
 import "./bookNow.css";
 function BookNowFlightDetails() {
   const location = useLocation();
-  console.log("hello");
-  console.log(location.state, "dataroute");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   let data = location.state;
 
   return (
@@ -20,6 +24,8 @@ function BookNowFlightDetails() {
           <TripForm fromImg={data.fromImg} styling />
         </div>
       </div>
+      <div style={{ marginTop: 80 }} />
+      <Footer />
     </div>
   );
 }

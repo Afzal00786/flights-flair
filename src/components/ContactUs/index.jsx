@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "../Navbar";
 import Grid from "@mui/material/Grid";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+import EmailIcon from "@mui/icons-material/Email";
 import "./contactUs.css";
 import Footer from "../Footer";
 import ContactUsForm from "./ContactUsForm";
@@ -38,7 +39,7 @@ function WhatWeDo() {
               </div>
               <div className="contact_us_ways_wrapper">
                 <div className="iconStyling">
-                  <PhoneEnabledIcon />
+                  <EmailIcon />
                 </div>
                 <div className="contactUsWaysText">
                   <div className="call_us_text">Email us</div>

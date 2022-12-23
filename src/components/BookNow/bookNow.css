@@ -3,7 +3,7 @@
   background-size: cover;
   width: 100%;
   background-position: center;
-  height: 1300px;
+  height: 100%;
 }
 
 .field_text_wrapper {
@@ -50,13 +50,12 @@
   color: #007597;
   font-size: 16px;
 }
-.book_now_heading{
-
-margin: auto;
-text-align: center;
-font-size: 40px;
-font-weight: 700;
-margin: 30px 0px;
+.book_now_heading {
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 30px 0px;
 }
 .book_Card_img {
   /* height: 50px; */
@@ -75,15 +74,15 @@ margin: 30px 0px;
   margin: auto;
   justify-content: center;
 }
-.title_wrapper{
+.title_wrapper {
   width: 100%;
   color: white;
-  padding-top:  30px;
+  padding-top: 30px;
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size:50px;
+  font-size: 50px;
 }
 .text_wrapper {
   width: 40%;
@@ -105,14 +104,14 @@ margin: 30px 0px;
     margin: auto;
     justify-content: center;
   }
-  .title_wrapper{
+  .title_wrapper {
     width: 100%;
     color: white;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:50px;
+    font-size: 50px;
   }
 }
 @media (width< 900px) {
@@ -127,14 +126,14 @@ margin: 30px 0px;
     display: flex;
     flex-direction: column;
   }
-  .title_wrapper{
+  .title_wrapper {
     width: 100%;
     color: white;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:50px;
+    font-size: 50px;
   }
   .bookNow_wrapper {
     background: url("../../asstes/images/airplane.jpg");
@@ -144,10 +143,11 @@ margin: 30px 0px;
     height: 2550px;
   }
   .book_now_heading{
+
     margin: auto;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin: 30px 0px;
-    }
+  }
 }

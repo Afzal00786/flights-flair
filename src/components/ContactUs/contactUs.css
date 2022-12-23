@@ -36,33 +36,6 @@
 .booking_terms_right_wrapper {
   margin: 10px;
 }
-.booking_terms_userSide {
-  background-color: #020422;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  border-bottom: 1px solid white;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-.booking_terms_serviceSide {
-  background-color: #4e96ba;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid white;
-  padding-left: 10px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-.booking_terms_dropdown_text {
-  color: #8e91aa;
-  padding: 10px;
-  line-height: 25px;
-}
 .iconStyling {
   background-color: #4e96ba;
   border-radius: 50%;
@@ -156,4 +129,10 @@
   color: #a32d2c;
   margin-top: 5px;
   margin-bottom: 3px;
+}
+@media screen and (width<400px) {
+  .contact_us_header_text {
+    font-weight: 700;
+    font-size: 30px;
+  }
 }

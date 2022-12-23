@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./bookNow.css";
 import amazon from "../../asstes/images/amazon.jpeg";
+import Footer from "../Footer";
 
 function BookNow() {
   const navigate = useNavigate();
@@ -96,7 +97,6 @@ function BookNow() {
         <div className="book_now_heading"> Today's Lowest Fare</div>
         <div className="book_now_wrapper">
           {bookCard.map((data) => {
-            console.log(data, "data");
             return (
               <div
                 onClick={() =>
@@ -108,7 +108,6 @@ function BookNow() {
                   {/* <img src={data.img} className="card_img1" /> */}
                 </div>
                 <div>{data.title1}</div>
-                {/* <div>{data.title2}</div> */}
                 <div className="card_date">{data.date}</div>
                 <div className="from_box">
                   <div className="from_line"></div>

@@ -12,7 +12,7 @@ const DateRangeComp = ({
   setDateField,
   validationDate,
 }) => {
-  console.log(styling, "styling");
+  // console.log(styling, "styling");
   // date state
   const [range, setRange] = useState([
     {
@@ -21,7 +21,7 @@ const DateRangeComp = ({
       key: "selection",
     },
   ]);
-  console.log(range, "range");
+  // console.log(range, "range");
   // open close
   const [open, setOpen] = useState(false);
   // one way state
@@ -70,7 +70,10 @@ const DateRangeComp = ({
             className={styling ? "bookNowContainer" : "container"}
             style={{ height: 50 }}
           >
-            <div style={{ color: styling ? "black" : "white" }}>
+            <div
+              className="main_text"
+              style={{ color: styling ? "black" : "white" }}
+            >
               DEPARTURE-RETURN DATE
             </div>
             <input
@@ -80,7 +83,6 @@ const DateRangeComp = ({
                 borderWidth: 0,
                 marginTop: 5,
                 fontSize: 12,
-                minWidth: 180,
               }}
               value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
                 range[0].endDate,
@@ -89,6 +91,7 @@ const DateRangeComp = ({
               readOnly
               className="inputBox"
               onClick={() => setOpen((open) => !open)}
+              name="date"
             />
             {validationDate && (
               <div style={{ marginTop: 20 }} className="error">
@@ -116,6 +119,7 @@ const DateRangeComp = ({
                 ranges={range}
                 months={2}
                 direction="horizontal"
+                name="date"
               />
             )}
           </div>
@@ -127,7 +131,10 @@ const DateRangeComp = ({
               className={styling ? "bookNowContainer" : "container"}
               style={{ height: 50 }}
             >
-              <div style={{ color: styling ? "black" : "white" }}>
+              <div
+                className="main_text"
+                style={{ color: styling ? "black" : "white" }}
+              >
                 DEPARTURE DATE
               </div>
               <input

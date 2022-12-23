@@ -3,8 +3,8 @@
   width: 100%;
   height: 100px;
 }
-.nav_bar{
-  background-color: #4B7FA7;
+.nav_bar {
+  background-color: #4b7fa7;
   width: 100%;
 }
 .nav_bar_inner {
@@ -58,43 +58,26 @@
   height: 300px;
   width: 100%;
 }
-.mobiledropdownContainer{
+.mobiledropdownContainer {
   width: 100%;
-  height:100%;
+  height: 100%;
   background-color: whitesmoke;
 }
 .nav_items1 {
   padding: 10px;
-  border-bottom: 1px solid gray;
-
+  cursor: pointer;
 }
-.FiightText1{
+.FiightText1 {
   display: flex;
   align-items: center;
-justify-content: space-between;
+  justify-content: space-between;
 }
-.FiightText{
+.FiightText {
   display: flex;
   align-items: center;
-justify-content: space-between;
-
+  justify-content: space-between;
 }
-.overlay{
-
-  background: -webkit-linear-gradient(
-    0deg,
-    rgb(132 144 255) 0%,
-    rgb(98 189 252) 100%
-  );
-  opacity: 0.8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(3rem);
-  transition: all 0.3s linear;
-  border-radius: 7px;
-}
-.drowpDownBoxStyle{
+.drowpDownBoxStyle {
   position: absolute;
   top: 101px;
   left: 37%;
@@ -103,7 +86,7 @@ justify-content: space-between;
   background-color: white;
   z-index: 1;
 }
-.box{
+.box {
   position: absolute;
   top: -76px;
   left: 60%;
@@ -111,15 +94,7 @@ justify-content: space-between;
   width: 10vw;
   z-index: 1;
 }
-.mobiledropdownText{
- font-size: 11px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid gray;
-}
-.dropdownText{
+.mobiledropdownText {
   font-size: 11px;
   padding-left: 15px;
   padding-right: 15px;
@@ -127,9 +102,15 @@ justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
 }
-.dropdownText:hover{
-  background-color: #5DA5C2;
+.dropdownText {
+  font-size: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.dropdownText:hover {
+  background-color: #5da5c2;
   cursor: pointer;
 }
-
-
