@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../Footer";
+import MetaData from "../Helmet";
 import NavBar from "../Navbar";
 import TripForm from "../TripForm";
 
@@ -16,6 +17,8 @@ function BookNowFlightDetails() {
 
   return (
     <div className="bookNow_wrapper">
+      <MetaData title={data?.mainTitle} />
+
       <NavBar styling />
       <div className="title_wrapper">{data?.mainTitle}</div>
       <div className="field_text_wrapper">

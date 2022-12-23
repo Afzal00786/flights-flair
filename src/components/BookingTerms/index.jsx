@@ -5,6 +5,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import "./whatWeDo.css";
 import Footer from "../Footer";
+import MetaData from "../Helmet";
 const text1 =
   "Please take the time to read and understand the General terms & conditions set out below prior to booking a trip with us. We strongly recommend that you carefully read all information relating to your trip on our website or the confirmation letter we sent prior to the ticket issuance to ensure that you understand the itinerary, level of comfort and physical demands of the trip you are undertaking.";
 const text2 =
@@ -100,8 +101,10 @@ function BookingTerms() {
       setShowDropDown15(!showDropDown15);
     }
   };
+  const newLocal = "Booking Terms - FlightsFlair ";
   return (
     <div>
+      <MetaData title={newLocal} />
       <NavBar />
       <div className="booking_terms_upper_Image">
         <div className="booking_terms_Inner_Image">
