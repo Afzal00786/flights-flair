@@ -2,10 +2,14 @@ import React from "react";
 import NavBar from "../Navbar";
 import "./whatwedo.css";
 import Footer from "../Footer";
+import MetaData from "../Helmet";
 
 function WhatWeDo() {
+  const newLocal = "What we do - FlightsFlair ";
   return (
     <div>
+      <MetaData title={newLocal} />
+
       <NavBar />
       <div className="what_banner_wrapper">
         <div>Our Flight Services</div>

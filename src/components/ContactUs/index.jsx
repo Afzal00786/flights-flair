@@ -6,9 +6,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import "./contactUs.css";
 import Footer from "../Footer";
 import ContactUsForm from "./ContactUsForm";
+import MetaData from "../Helmet";
 function WhatWeDo() {
+  const newLocal = "Contact Us - FlightsFlair ";
   return (
     <div>
+      <MetaData title={newLocal} />
       <NavBar />
       <div className="booking_terms_upper_Image">
         <div className="booking_terms_Inner_Image">
