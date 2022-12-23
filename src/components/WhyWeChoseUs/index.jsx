@@ -30,7 +30,8 @@ const WhyWeChoseUs = () => {
               </div>
               <div className="why_card_heading">Workmanship Quality</div>
               <div className="why_card_text">
-			  24/7 assistance is available for our customers. Our flight experts will assist you to their best!
+                24/7 assistance is available for our customers. Our flight
+                experts will assist you to their best!
               </div>
             </div>
             <div className="why_chose_card">
@@ -39,16 +40,18 @@ const WhyWeChoseUs = () => {
               </div>
               <div className="why_card_heading">Low Deposits</div>
               <div className="why_card_text">
-			  Start your travel with minimum deposit costs whcih will hep you to explore further!
+                Start your travel with minimum deposit costs whcih will hep you
+                to explore further!
               </div>
             </div>
             <div className="why_chose_card">
               <div className="card_icon_box">
-                <SlLocationPin style={{color:"white"}}  />
+                <SlLocationPin style={{ color: "white" }} />
               </div>
               <div className="why_card_heading">Multiple Location</div>
               <div className="why_card_text">
-			  We provide multiple locations for you so you can start your journey from any of the mentioned ones.
+                We provide multiple locations for you so you can start your
+                journey from any of the mentioned ones.
               </div>
             </div>
             <div className="why_chose_card">
@@ -57,7 +60,8 @@ const WhyWeChoseUs = () => {
               </div>
               <div className="why_card_heading">Affordable Package</div>
               <div className="why_card_text">
-			  Best fares all over UK. You won't be disheartened by our fares which are very fair according to your needs
+                Best fares all over UK. You won't be disheartened by our fares
+                which are very fair according to your needs
               </div>
             </div>
             <div className="why_chose_card">
@@ -66,10 +70,10 @@ const WhyWeChoseUs = () => {
               </div>
               <div className="why_card_heading">Special Offer</div>
               <div className="why_card_text">
-			  Exclusive deals are available for you! Just visit or call us to get the specific details you are hoping for
+                Exclusive deals are available for you! Just visit or call us to
+                get the specific details you are hoping for
               </div>
             </div>
-     
           </div>
         </div>
       </div>

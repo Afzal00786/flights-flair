@@ -52,8 +52,8 @@ function InstantFlight() {
         <div
           style={{
             backgroundColor: "white",
-            width: 420,
-            height: 300,
+            width: 400,
+            height: 280,
             position: "fixed",
             left: 0,
             marginRight: 20,
@@ -64,11 +64,12 @@ function InstantFlight() {
         >
           <div style={{ display: "flex" }}>
             <img
-              width={"200px"}
-              height={"100px"}
-              src="https://sastiparwaaz.com/wp-content/uploads/2022/05/Sastiparwaaz-e1667990210114.png"
+              width={"400px"}
+              height={"150px"}
+              style={{ marginTop: -25 }}
+              src={require("../../asstes/images/logo.png")}
             />
-            <div style={{ fontSize: 15, color: "gray" }}>
+            <div style={{ fontSize: 15, color: "gray", marginTop: 20 }}>
               For a free & immediate callback, enter your number below and we
               will call you within 30 Seconds.
             </div>
