@@ -250,7 +250,7 @@ const Contact = ({ fromImg, styling }) => {
                   name="name"
                   type="text"
                   disableUnderline
-                  value={value}
+                  value={value.split(",")[0]}
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
                   onChange={(e) => onChangeWhere(e)}
@@ -284,7 +284,10 @@ const Contact = ({ fromImg, styling }) => {
                           className="dropdown-row"
                           key={item.full_name}
                         >
-                          {item.full_name}
+                          <spam style={{ fontWeight: "600" }}>
+                            {item.full_name.split(",")[0]},
+                          </spam>
+                          {item.full_name.split(",")[1]}
                         </div>
                       ))}
                   </div>
@@ -302,7 +305,7 @@ const Contact = ({ fromImg, styling }) => {
                   style={{ color: styling ? "black" : "white", fontSize: 12 }}
                   name="text1"
                   type="text"
-                  value={valueTo}
+                  value={valueTo.split(",")[0]}
                   disableUnderline
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
@@ -339,7 +342,10 @@ const Contact = ({ fromImg, styling }) => {
                           className="dropdown-row"
                           key={item.full_name}
                         >
-                          {item.full_name}
+                          <spam style={{ fontWeight: "600" }}>
+                            {item.full_name.split(",")[0]},
+                          </spam>
+                          {item.full_name.split(",")[1]}
                         </div>
                       ))}
                   </div>
@@ -458,7 +464,7 @@ const Contact = ({ fromImg, styling }) => {
                 xs={5.8}
                 className={styling ? "bookNowContainer" : "container"}
               >
-                <legend className="main_text">*PHONE</legend>
+                <legend className="main_text">PHONE</legend>
                 <Input
                   style={{ color: "white", fontSize: 12 }}
                   type="number"
@@ -481,7 +487,7 @@ const Contact = ({ fromImg, styling }) => {
                 xs={5.8}
                 className={styling ? "bookNowContainer" : "container"}
               >
-                <legend className="main_text">Email</legend>
+                <legend className="main_text">EMAIL</legend>
                 <Input
                   style={{ color: "white", fontSize: 12 }}
                   type="email"
