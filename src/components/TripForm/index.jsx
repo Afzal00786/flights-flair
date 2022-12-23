@@ -7,7 +7,7 @@ import data2 from "./dummyData2.jsx";
 import "./form.css";
 import Search from "./Search";
 import { useLocation } from "react-router-dom";
-
+import emailjs from "@emailjs/browser";
 console.log(data1, "datadata");
 const Contact = ({ fromImg, styling }) => {
   const location = useLocation();
@@ -84,7 +84,55 @@ const Contact = ({ fromImg, styling }) => {
   const [validationFrom, setValidationFrom] = useState(false);
   const [validationDate, setValidationDate] = useState(false);
   const [validationPhone, setValidationPhone] = useState(false);
-
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (value === "") {
+      setValidationTo(true);
+    } else {
+      setValidationTo(false);
+    }
+    if (valueTo === "") {
+      setValidationFrom(true);
+    } else {
+      setValidationFrom(false);
+    }
+    if (dateField === "") {
+      setValidationDate(true);
+    } else {
+      setValidationDate(false);
+    }
+    if (phoneNo === "") {
+      setValidationPhone(true);
+    } else {
+      setValidationPhone(false);
+    }
+    if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
+      console.log(value, "value");
+      console.log(valueTo, "valueTo");
+      console.log(dateField, "dateField");
+      console.log(count, "count");
+      console.log(count1, "count1");
+      console.log(count2, "count2");
+      console.log(phoneNo, "phoneNo");
+      console.log(email, "email");
+      emailjs
+        .sendForm(
+          "service_xls7aht",
+          "template_snswcdq",
+          form.current,
+          "7m6bYCmtfGWWA8CtZ"
+        )
+        .then(
+          (result) => {
+            console.log(result, "result");
+          },
+          (error) => {
+            console.log(error, "error");
+          }
+        );
+    }
+  };
+  const form = useRef();
   const handleFind = () => {
     if (value === "") {
       setValidationTo(true);
@@ -256,290 +304,290 @@ const Contact = ({ fromImg, styling }) => {
         )}
 
         <div className={styling ? "form_bookNow_wrapper" : ""}>
-          <Grid
-            container
-            md={12}
-            sm={12}
-            xs={12}
-            style={{
-              display: styling ? "" : "flex",
-              backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
-              alignItems: "center",
-              width: "100%",
-              paddingBottom: 15,
-              paddingTop: 15,
-              paddingLeft: 10,
-              paddingRight: 10,
-            }}
-          >
+          <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
             <Grid
-              md={styling ? 12 : 1.7}
-              sm={3.7}
-              xs={11.6}
-              className={styling ? "bookNowContainer" : "container"}
+              container
+              md={12}
+              sm={12}
+              xs={12}
+              style={{
+                display: styling ? "" : "flex",
+                backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
+                alignItems: "center",
+                width: "100%",
+                paddingBottom: 15,
+                paddingTop: 15,
+                paddingLeft: 10,
+                paddingRight: 10,
+              }}
             >
-              <legend className="main_text">FROM WHERE</legend>
-              {/* <Search /> */}
-              <Input
-                style={{
-                  color: styling ? "black" : "white",
-                  fontSize: 12,
-                }}
-                name="name"
-                type="text"
-                disableUnderline
-                value={value}
-                id={styling ? "bookNow" : "text"}
-                autoComplete="off"
-                onChange={(e) => onChangeWhere(e)}
-                placeholder="Departure"
-              />
-              {validationTo && (
-                <div className="error">This field is required.</div>
-              )}
-              {autoCompleteFrom ? (
-                <div ref={refOne} className="auto_complete_form">
-                  {data1
-                    ?.filter((item) => {
-                      const searchTerm = value.toLowerCase();
-                      const fullName = item.full_name.toLowerCase();
-                      if (fullName === searchTerm) {
-                        setAutoCompleteFrom(false);
-                      }
-                      if (searchTerm === "") {
-                        return fullName;
-                      } else {
-                        return (
-                          searchTerm &&
-                          fullName.includes(searchTerm) &&
-                          fullName !== searchTerm
-                        );
-                      }
-                    })
-                    .map((item) => (
-                      <div
-                        onClick={() => onSearch(item.full_name)}
-                        className="dropdown-row"
-                        key={item.full_name}
-                      >
-                        {item.full_name}
-                      </div>
-                    ))}
-                </div>
-              ) : null}
-            </Grid>
-
-            <Grid
-              md={styling ? 12 : 1.7}
-              sm={3.7}
-              xs={11.6}
-              className={styling ? "bookNowContainer" : "container"}
-            >
-              <legend className="main_text">WHERE TO</legend>
-              <Input
-                style={{ color: styling ? "black" : "white", fontSize: 12 }}
-                name="text1"
-                type="text"
-                value={valueTo}
-                disableUnderline
-                id={styling ? "bookNow" : "text"}
-                autoComplete="off"
-                onChange={(e) => onChangeTo(e)}
-                placeholder="Arrival"
-              />
-
-              {validationFrom && (
-                <div className="error">This field is required.</div>
-              )}
-              {autoCompleteTo ? (
-                <div ref={refOne} className="auto_complete_form">
-                  {data2
-                    .filter((item) => {
-                      const searchTerm = valueTo.toLowerCase();
-                      const fullName = item.full_name.toLowerCase();
-                      if (fullName === searchTerm) {
-                        setAutoCompleteTo(false);
-                      }
-
-                      if (searchTerm === "") {
-                        return fullName;
-                      } else {
-                        return (
-                          searchTerm &&
-                          fullName.includes(searchTerm) &&
-                          fullName !== searchTerm
-                        );
-                      }
-                    })
-                    .slice(0, 10)
-                    .map((item) => (
-                      <div
-                        onClick={() => onSearchTo(item.full_name)}
-                        className="dropdown-row"
-                        key={item.full_name}
-                      >
-                        {item.full_name}
-                      </div>
-                    ))}
-                </div>
-              ) : null}
-            </Grid>
-            <Grid md={styling ? 12 : 1.7} sm={3.7} xs={5.8}>
-              <DateRangeComp
-                styling={styling}
-                validationDate={validationDate}
-                selectTripDate={selectTripDate}
-                setDateField={setDateField}
-                dateField={dateField}
-              />
-            </Grid>
-            <Grid
-              md={styling ? 12 : 1.7}
-              sm={3.7}
-              xs={5.8}
-              className={styling ? "bookNowContainer" : "container"}
-            >
-              <legend className="main_text">PASSENGERS</legend>
-              <div onClick={handleOpen}>
-                <input
-                  disabled={true}
+              <Grid
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={11.6}
+                className={styling ? "bookNowContainer" : "container"}
+              >
+                <legend className="main_text">FROM WHERE</legend>
+                {/* <Search /> */}
+                <Input
+                  style={{
+                    color: styling ? "black" : "white",
+                    fontSize: 12,
+                  }}
+                  name="name"
+                  type="text"
+                  disableUnderline
+                  value={value}
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
-                  style={{
-                    color: "white",
-                    backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
-                    fontSize: 12,
-                    borderWidth: 0,
-                    marginTop: 5,
-                    width: "100%",
-                  }}
-                  placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
-                  color="white"
+                  onChange={(e) => onChangeWhere(e)}
+                  placeholder="Departure"
                 />
-              </div>
-              {open ? (
-                <>
-                  <div
-                    ref={refOne}
-                    className="mainPassengers"
-                    style={{
-                      position: styling ? "relative" : "absolute",
-                    }}
-                  >
-                    <div className="textPassenger">Passengers</div>
-                    <div className="divider"></div>
-                    <div className="categoryContainer">
-                      <div className="passengerCategory">Adult</div>
-                      <div className="Adultbutton">
-                        <button
-                          className="counterStyle"
-                          onClick={Adultdecrease}
+                {validationTo && (
+                  <div className="error">This field is required.</div>
+                )}
+                {autoCompleteFrom ? (
+                  <div ref={refOne} className="auto_complete_form">
+                    {data1
+                      ?.filter((item) => {
+                        const searchTerm = value.toLowerCase();
+                        const fullName = item.full_name.toLowerCase();
+                        if (fullName === searchTerm) {
+                          setAutoCompleteFrom(false);
+                        }
+                        if (searchTerm === "") {
+                          return fullName;
+                        } else {
+                          return (
+                            searchTerm &&
+                            fullName.includes(searchTerm) &&
+                            fullName !== searchTerm
+                          );
+                        }
+                      })
+                      .map((item) => (
+                        <div
+                          onClick={() => onSearch(item.full_name)}
+                          className="dropdown-row"
+                          key={item.full_name}
                         >
-                          -
-                        </button>
-                        <h1 className="countText">{count}</h1>
-                        <button
-                          onClick={() => setCount(count + 1)}
-                          className="AdultIncrease"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div className="divider"></div>
-                    <div className="categoryContainer">
-                      <div className="passengerCategory">Child</div>
-                      <div className="Childbutton">
-                        <button
-                          onClick={Childdecrease}
-                          className="counterStyle"
-                        >
-                          -
-                        </button>
-                        <h1 className="count1Text">{count1}</h1>
-                        <button
-                          onClick={() => setCount1(count1 + 1)}
-                          className="ChildIncrease"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div className="divider"></div>
-                    <div className="categoryContainer">
-                      <div className="passengerCategory">Infant</div>
-                      <div className="Infantbutton">
-                        <button onClick={decrease2} className="counterStyle">
-                          -
-                        </button>
-                        <h1 className="count2Text">{count2}</h1>
-                        <button
-                          onClick={() => setCount2(count2 + 1)}
-                          className="InfantIncrease"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div className="divider"></div>
-                    <div
-                      onClick={() => setOpen(!open)}
-                      className="doneContainer"
-                    >
-                      <button className="doneButtonStyle">Done</button>
-                    </div>
+                          {item.full_name}
+                        </div>
+                      ))}
                   </div>
-                </>
-              ) : null}
-            </Grid>
+                ) : null}
+              </Grid>
 
-            <Grid
-              md={styling ? 12 : 1.7}
-              sm={3.7}
-              xs={5.8}
-              className={styling ? "bookNowContainer" : "container"}
-            >
-              <legend className="main_text">*PHONE</legend>
-              <Input
-                style={{ color: "white", fontSize: 12 }}
-                type="number"
-                disableUnderline
-                fullWidth
-                name="phone"
-                autoComplete="off"
-                onChange={(e) => handlePhone(e)}
-                id={styling ? "bookNow" : "text"}
-                placeholder="+44-XXXX-XXXX"
-              />
-              {validationPhone && (
-                <div className="error">This field is required.</div>
-              )}
-            </Grid>
+              <Grid
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={11.6}
+                className={styling ? "bookNowContainer" : "container"}
+              >
+                <legend className="main_text">WHERE TO</legend>
+                <Input
+                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
+                  name="text1"
+                  type="text"
+                  value={valueTo}
+                  disableUnderline
+                  id={styling ? "bookNow" : "text"}
+                  autoComplete="off"
+                  onChange={(e) => onChangeTo(e)}
+                  placeholder="Arrival"
+                />
 
-            <Grid
-              md={styling ? 12 : 1.7}
-              sm={3.7}
-              xs={5.8}
-              className={styling ? "bookNowContainer" : "container"}
-            >
-              <legend className="main_text">Email</legend>
-              <Input
-                style={{ color: "white", fontSize: 12 }}
-                type="email"
-                disableUnderline
-                name="email"
-                autoComplete="off"
-                onChange={(e) => handleEmail(e)}
-                id={styling ? "bookNow" : "text"}
-                placeholder="john@xyz.com (Optional)"
-              />
+                {validationFrom && (
+                  <div className="error">This field is required.</div>
+                )}
+                {autoCompleteTo ? (
+                  <div ref={refOne} className="auto_complete_form">
+                    {data2
+                      .filter((item) => {
+                        const searchTerm = valueTo.toLowerCase();
+                        const fullName = item.full_name.toLowerCase();
+                        if (fullName === searchTerm) {
+                          setAutoCompleteTo(false);
+                        }
+                        if (searchTerm === "") {
+                          return fullName;
+                        } else {
+                          return (
+                            searchTerm &&
+                            fullName.includes(searchTerm) &&
+                            fullName !== searchTerm
+                          );
+                        }
+                      })
+                      .slice(0, 10)
+                      .map((item) => (
+                        <div
+                          onClick={() => onSearchTo(item.full_name)}
+                          className="dropdown-row"
+                          key={item.full_name}
+                        >
+                          {item.full_name}
+                        </div>
+                      ))}
+                  </div>
+                ) : null}
+              </Grid>
+              <Grid md={styling ? 12 : 1.7} sm={3.7} xs={5.8}>
+                <DateRangeComp
+                  styling={styling}
+                  validationDate={validationDate}
+                  selectTripDate={selectTripDate}
+                  setDateField={setDateField}
+                  dateField={dateField}
+                />
+              </Grid>
+              <Grid
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={5.8}
+                className={styling ? "bookNowContainer" : "container"}
+              >
+                <legend className="main_text">PASSENGERS</legend>
+                <div onClick={handleOpen}>
+                  <input
+                    disabled={true}
+                    id={styling ? "bookNow" : "text"}
+                    name="counter"
+                    autoComplete="off"
+                    style={{
+                      color: "white",
+                      backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
+                      fontSize: 12,
+                      borderWidth: 0,
+                      marginTop: 5,
+                      width: "100%",
+                    }}
+                    placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
+                    color="white"
+                  />
+                </div>
+                {open ? (
+                  <>
+                    <div
+                      ref={refOne}
+                      className="mainPassengers"
+                      style={{
+                        position: styling ? "relative" : "absolute",
+                      }}
+                    >
+                      <div className="textPassenger">Passengers</div>
+                      <div className="divider"></div>
+                      <div className="categoryContainer">
+                        <div className="passengerCategory">Adult</div>
+                        <div className="Adultbutton">
+                          <div className="counterStyle" onClick={Adultdecrease}>
+                            -
+                          </div>
+                          <h1 className="countText">{count}</h1>
+                          <div
+                            onClick={() => setCount(count + 1)}
+                            className="AdultIncrease"
+                          >
+                            +
+                          </div>
+                        </div>
+                      </div>
+                      <div className="divider"></div>
+                      <div className="categoryContainer">
+                        <div className="passengerCategory">Child</div>
+                        <div className="Childbutton">
+                          <div onClick={Childdecrease} className="counterStyle">
+                            -
+                          </div>
+                          <h1 className="count1Text">{count1}</h1>
+                          <div
+                            onClick={() => setCount1(count1 + 1)}
+                            className="AdultIncrease"
+                          >
+                            +
+                          </div>
+                        </div>
+                      </div>
+                      <div className="divider"></div>
+                      <div className="categoryContainer">
+                        <div className="passengerCategory">Infant</div>
+                        <div className="Infantbutton">
+                          <div onClick={decrease2} className="counterStyle">
+                            -
+                          </div>
+                          <h1 className="count2Text">{count2}</h1>
+                          <div
+                            onClick={() => setCount2(count2 + 1)}
+                            className="AdultIncrease"
+                          >
+                            +
+                          </div>
+                        </div>
+                      </div>
+                      <div className="divider" />
+                      <div
+                        onClick={() => setOpen(!open)}
+                        className="doneContainer"
+                      >
+                        <div className="doneButtonStyle">Done</div>
+                      </div>
+                    </div>
+                  </>
+                ) : null}
+              </Grid>
+
+              <Grid
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={5.8}
+                className={styling ? "bookNowContainer" : "container"}
+              >
+                <legend className="main_text">*PHONE</legend>
+                <Input
+                  style={{ color: "white", fontSize: 12 }}
+                  type="number"
+                  disableUnderline
+                  fullWidth
+                  name="phone"
+                  autoComplete="off"
+                  onChange={(e) => handlePhone(e)}
+                  id={styling ? "bookNow" : "text"}
+                  placeholder="+44-XXXX-XXXX"
+                />
+                {validationPhone && (
+                  <div className="error">This field is required.</div>
+                )}
+              </Grid>
+
+              <Grid
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={5.8}
+                className={styling ? "bookNowContainer" : "container"}
+              >
+                <legend className="main_text">Email</legend>
+                <Input
+                  style={{ color: "white", fontSize: 12 }}
+                  type="email"
+                  disableUnderline
+                  name="email"
+                  autoComplete="off"
+                  onChange={(e) => handleEmail(e)}
+                  id={styling ? "bookNow" : "text"}
+                  placeholder="john@xyz.com (Optional)"
+                />
+              </Grid>
+              <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
+                <button
+                  type="submit"
+                  // onClick={handleFind}
+                  className="find_now_button"
+                >
+                  Find Now
+                </button>
+              </Grid>
             </Grid>
-            <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
-              <button onClick={handleFind} className="find_now_button">
-                Find Now
-              </button>
-            </Grid>
-          </Grid>
+          </form>
         </div>
         {styling && (
           <img

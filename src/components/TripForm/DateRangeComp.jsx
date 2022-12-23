@@ -83,7 +83,6 @@ const DateRangeComp = ({
                 borderWidth: 0,
                 marginTop: 5,
                 fontSize: 12,
-                minWidth: 180,
               }}
               value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
                 range[0].endDate,
@@ -92,6 +91,7 @@ const DateRangeComp = ({
               readOnly
               className="inputBox"
               onClick={() => setOpen((open) => !open)}
+              name="date"
             />
             {validationDate && (
               <div style={{ marginTop: 20 }} className="error">
@@ -119,6 +119,7 @@ const DateRangeComp = ({
                 ranges={range}
                 months={2}
                 direction="horizontal"
+                name="date"
               />
             )}
           </div>

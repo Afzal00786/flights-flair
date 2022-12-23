@@ -5,6 +5,9 @@ import { Alert, Box, Grid, Modal } from "@mui/material";
 import * as Yup from "yup";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import PhoneInput from "react-phone-input-2";
+import emailjs from "@emailjs/browser";
+import "react-phone-input-2/lib/style.css";
 import { useRef } from "react";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 const loginSchema = Yup.object().shape({
@@ -46,6 +49,29 @@ function InstantFlight() {
   };
 
   const responsive = window.innerWidth > 500;
+  const [phoneValue, setPhoneValue] = useState("");
+  console.log(phoneValue, "phoneValue");
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (e && phoneValue != "" && phoneValue != "44") {
+      emailjs
+        .sendForm(
+          "service_xls7aht",
+          "template_snswcdq",
+          form.current,
+          "7m6bYCmtfGWWA8CtZ"
+        )
+        .then(
+          (result) => {
+            console.log(result, "result");
+          },
+          (error) => {
+            console.log(error, "error");
+          }
+        );
+    }
+  };
 
   return (
     <>
@@ -85,70 +111,57 @@ function InstantFlight() {
             item
             md={5}
           >
-            <Formik
-              innerRef={formref}
-              initialValues={{
-                name: "",
-                email: "",
-                message: "",
-                phone: "",
-              }}
-              validationSchema={loginSchema}
-              onSubmit={(values) => {
-                handleSubmit(values);
-              }}
-            >
-              <Form>
-                <div
+            <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
+              <div
+                style={{
+                  marginLeft: 10,
+                  marginRight: 10,
+                  marginBottom: 50,
+                  backgroundColor: "white",
+                  marginTop: -10,
+                  paddingTop: 3,
+                  paddingBottom: 3,
+                  paddingLeft: 10,
+                  paddingRight: 10,
+                  borderBottomLeftRadius: 10,
+                  borderBottomRightRadius: 10,
+                }}
+              >
+                <PhoneInput
+                  containerStyle={{ marginBottom: 20 }}
+                  placeholder="Número de Teléfono "
+                  value={phoneValue}
+                  onChange={setPhoneValue}
+                  inputStyle={{
+                    width: "96%",
+                    padding: 25,
+                    marginLeft: 20,
+                  }}
+                  buttonStyle={{}}
+                  country={"gb"}
+                />
+                <button
+                  type="submit"
                   style={{
-                    marginLeft: 10,
-                    marginRight: 10,
-                    marginBottom: 50,
-                    backgroundColor: "white",
-                    marginTop: -10,
-                    paddingTop: 3,
-                    paddingBottom: 3,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                    borderBottomLeftRadius: 10,
-                    borderBottomRightRadius: 10,
+                    cursor: "pointer",
+                    backgroundColor: "#4E96BA",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    borderRadius: 5,
+                    padding: 12,
+                    color: "white",
+                    marginTop: 10,
+                    marginBottom: 20,
+                    textTransform: "none",
+                    borderWidth: 0,
+                    fontSize: 18,
+                    width: "40%",
                   }}
                 >
-                  <Field
-                    style={{}}
-                    component={TextField}
-                    margin="normal"
-                    fullWidth
-                    name="phone"
-                    label="Phone"
-                    type="phone"
-                    id="phone"
-                    disabled={false}
-                    size="small"
-                  />
-                  <button
-                    type="submit"
-                    style={{
-                      cursor: "pointer",
-                      backgroundColor: "#4E96BA",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      borderRadius: 5,
-                      padding: 12,
-                      color: "white",
-                      marginTop: 10,
-                      marginBottom: 20,
-                      textTransform: "none",
-                      borderWidth: 0,
-                      fontSize: 18,
-                      width: "40%",
-                    }}
-                  >
-                    <div>Submit</div>
-                  </button>
-                </div>
-              </Form>
-            </Formik>
+                  Submit
+                </button>
+              </div>
+            </form>
           </Grid>
         </div>
       ) : (
