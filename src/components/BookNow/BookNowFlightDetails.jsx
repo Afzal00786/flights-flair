@@ -13,9 +13,6 @@ function BookNowFlightDetails() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-  // console.log("hello");
-  // console.log(location.state, "dataroute");
   let data = location.state;
 
   return (

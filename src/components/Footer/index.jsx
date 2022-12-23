@@ -96,24 +96,6 @@ const Footer = () => {
                 </div>
               );
             })}
-            {/* <div
-              className="footer_servives_items"
-              onClick={() => navigation("/BookNowFlightDetails")}
-            >
-              Cheap Flights to Peshawar, Pakistan from UK
-            </div>
-            <div className="footer_servives_items">
-              Cheap Flights to Islamabad, Pakistan from UK
-            </div>
-            <div className="footer_servives_items">
-              Cheap Flights to Karachi, Pakistan from UK
-            </div>
-            <div className="footer_servives_items">
-              Cheap Flights to Sialkot, Pakistan from UK
-            </div>
-            <div className="footer_servives_items">
-              Cheap Flights to Lahore, Pakistan from UK
-            </div> */}
           </div>
         </div>
       </div>

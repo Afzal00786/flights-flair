@@ -39,8 +39,8 @@
 }
 .nav_bar_phone{
   font-size: 20px;
-  color: #5DA5C2;
-  display: "flex";
+  color: #5DA7C3;
+  display: flex;
   justify-content: flex-end;
   padding: 5px;
 }
@@ -67,13 +67,6 @@
   padding: 10px;
   cursor: pointer;
 }
-.FiightText {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid gray;
-}
 .FiightText1 {
   display: flex;
   align-items: center;
@@ -83,20 +76,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.overlay {
-  background: -webkit-linear-gradient(
-    0deg,
-    rgb(132 144 255) 0%,
-    rgb(98 189 252) 100%
-  );
-  opacity: 0.8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(3rem);
-  transition: all 0.3s linear;
-  border-radius: 7px;
 }
 .drowpDownBoxStyle {
   position: absolute;

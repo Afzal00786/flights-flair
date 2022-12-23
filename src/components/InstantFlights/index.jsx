@@ -1,7 +1,5 @@
 import React from "react";
-import { Field, Formik, Form } from "formik";
-import { TextField } from "formik-material-ui";
-import { Alert, Box, Grid, Modal } from "@mui/material";
+import { Grid } from "@mui/material";
 import * as Yup from "yup";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -18,27 +16,7 @@ const loginSchema = Yup.object().shape({
 });
 function InstantFlight() {
   const [hide, setHide] = useState(false);
-  const formref = useRef();
 
-  const endPoint =
-    "https://public.herotofu.com/v1/d25bfba0-6f4a-11ed-a377-655c67143cec";
-  const handleSubmit = async (values) => {
-    console.log(values, "myValues");
-    fetch(endPoint, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    }).then((res) => {
-      console.log(res);
-      setHide(!hide);
-    });
-  };
-  const handleSend = () => {
-    setHide(!hide);
-  };
   const [anchorE3, setAnchorE3] = React.useState(false);
 
   const handleOpenModal = () => {
@@ -48,7 +26,6 @@ function InstantFlight() {
     setAnchorE3(false);
   };
 
-  const responsive = window.innerWidth > 500;
   const [phoneValue, setPhoneValue] = useState("");
   console.log(phoneValue, "phoneValue");
   const form = useRef();
@@ -63,12 +40,8 @@ function InstantFlight() {
           "7m6bYCmtfGWWA8CtZ"
         )
         .then(
-          (result) => {
-            // console.log(result, "result");
-          },
-          (error) => {
-            // console.log(error, "error");
-          }
+          (result) => {},
+          (error) => {}
         );
     }
   };
@@ -200,10 +173,10 @@ function InstantFlight() {
 
           <div style={{ color: "white" }}>
             <div style={{ fontSize: 14, fontWeight: 600 }}>
-              Emergency flight only{" "}
+              Emergency flight only
             </div>
             <div style={{ fontSize: 14, fontWeight: 600 }}>
-              (Free instant Callbacks){" "}
+              (Free instant Callbacks)
             </div>
           </div>
         </div>

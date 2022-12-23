@@ -8,11 +8,8 @@ export default function Search() {
   const onChange = (event) => {
     setValue(event.target.value);
   };
-  // console.log(data, "dummyData");
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
-    // our api to fetch the search result
-    // console.log("search ", searchTerm);
   };
 
   return (

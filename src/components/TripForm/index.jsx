@@ -5,7 +5,6 @@ import Grid from "@mui/material/Grid";
 import data1 from "./dummyData.jsx";
 import data2 from "./dummyData2.jsx";
 import "./form.css";
-import Search from "./Search";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 console.log(data1, "datadata");
@@ -18,34 +17,9 @@ const Contact = ({ fromImg, styling }) => {
   const [count, setCount] = useState(1);
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
-
-  const decrease = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    } else {
-      setCount(1);
-    }
-  };
-  const decrease1 = () => {
-    if (count1 > 0) {
-      setCount1(count1 - 1);
-    } else {
-      setCount1(0);
-    }
-  };
-  const decrease2 = () => {
-    if (count2 > 0) {
-      setCount2(count2 - 1);
-    } else {
-      setCount2(0);
-    }
-  };
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);
-  };
-  const handleClose = () => {
-    setOpen(false);
   };
   const [selectTripDate, setSelectTripDate] = useState("Round Trip");
 
@@ -75,7 +49,6 @@ const Contact = ({ fromImg, styling }) => {
   };
   const [autoCompleteFrom, setAutoCompleteFrom] = useState(false);
   const [autoCompleteTo, setAutoCompleteTo] = useState(false);
-  const [fromField, setFromField] = useState("");
   const [whereField, setWhereField] = useState("");
   const [dateField, setDateField] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
@@ -107,14 +80,6 @@ const Contact = ({ fromImg, styling }) => {
       setValidationPhone(false);
     }
     if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
-      // console.log(value, "value");
-      // console.log(valueTo, "valueTo");
-      // console.log(dateField, "dateField");
-      // console.log(count, "count");
-      // console.log(count1, "count1");
-      // console.log(count2, "count2");
-      // console.log(phoneNo, "phoneNo");
-      // console.log(email, "email");
       emailjs
         .sendForm(
           "service_xls7aht",
@@ -133,54 +98,12 @@ const Contact = ({ fromImg, styling }) => {
     }
   };
   const form = useRef();
-  const handleFind = () => {
-    if (value === "") {
-      setValidationTo(true);
-    } else {
-      setValidationTo(false);
-    }
-    if (valueTo === "") {
-      setValidationFrom(true);
-    } else {
-      setValidationFrom(false);
-    }
-    if (dateField === "") {
-      setValidationDate(true);
-    } else {
-      setValidationDate(false);
-    }
-    if (phoneNo === "") {
-      setValidationPhone(true);
-    } else {
-      setValidationPhone(false);
-    }
-    if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
-      // console.log(value, "value");
-      // console.log(valueTo, "valueTo");
-      // console.log(dateField, "dateField");
-      // console.log(count, "count");
-      // console.log(count1, "count1");
-      // console.log(count2, "count2");
-      // console.log(phoneNo, "phoneNo");
-      // console.log(email, "email");
-    }
-  };
   const refOne = useRef(null);
-
   const handlePhone = (e) => {
     setPhoneNo(e.target.value);
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
-  };
-
-  const handleDropDownTo = (e) => {
-    setWhereField(e.target.value);
-
-    if (e) {
-      setAutoCompleteTo(true);
-      setAutoCompleteFrom(false);
-    }
   };
   useEffect(() => {
     document.addEventListener("click", hideOnClickOutside, true);
@@ -192,8 +115,6 @@ const Contact = ({ fromImg, styling }) => {
       setOpen(false);
     }
   };
-  // console.log(autoCompleteFrom, "autoComplete");
-
   const [value, setValue] = useState("");
   const [valueTo, setValueTo] = useState("");
 
@@ -203,14 +124,9 @@ const Contact = ({ fromImg, styling }) => {
     }
     setValue(e.target.value);
   };
-  // console.log(data, "dummyData");
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
-    // our api to fetch the search result
-    // console.log("search ", searchTerm);
   };
-  /////////////////
-
   const onChangeTo = (e) => {
     if (e) {
       setAutoCompleteTo(true);
@@ -220,10 +136,8 @@ const Contact = ({ fromImg, styling }) => {
   console.log(data, "dummyData");
   const onSearchTo = (searchTerm) => {
     setValueTo(searchTerm);
-    // our api to fetch the search result
     console.log("search ", searchTerm);
   };
-  //////////////
 
   return (
     <div className="mainContainer">
@@ -328,7 +242,6 @@ const Contact = ({ fromImg, styling }) => {
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">FROM WHERE</legend>
-                {/* <Search /> */}
                 <Input
                   style={{
                     color: styling ? "black" : "white",
@@ -512,7 +425,10 @@ const Contact = ({ fromImg, styling }) => {
                       <div className="categoryContainer">
                         <div className="passengerCategory">Infant</div>
                         <div className="Infantbutton">
-                          <div onClick={decrease2} className="counterStyle">
+                          <div
+                            onClick={Infantdecrease}
+                            className="counterStyle"
+                          >
                             -
                           </div>
                           <h1 className="count2Text">{count2}</h1>
@@ -578,11 +494,7 @@ const Contact = ({ fromImg, styling }) => {
                 />
               </Grid>
               <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
-                <button
-                  type="submit"
-                  // onClick={handleFind}
-                  className="find_now_button"
-                >
+                <button type="submit" className="find_now_button">
                   Find Now
                 </button>
               </Grid>
