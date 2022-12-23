@@ -92,9 +92,21 @@ const NavBar = ({ styling }) => {
         <>
           <div style={{ display: "flex" }}>
             <div className="Mobille_navbar">
-              <div className="nav_items1">Home</div>
-              <div className="nav_items1">What We Do</div>
-              <div className="nav_items1">Booking Terms</div>
+              <div className="nav_items1" onClick={() => navigation("/")}>
+                Home
+              </div>
+              <div
+                className="nav_items1"
+                onClick={() => navigation("/WhatWeDo")}
+              >
+                What We Do
+              </div>
+              <div
+                className="nav_items1"
+                onClick={() => navigation("/BookingTerms")}
+              >
+                Booking Terms
+              </div>
               <div className="nav_items1">
                 <div className="FiightText1">
                   <div>Flights</div>
@@ -161,7 +173,12 @@ const NavBar = ({ styling }) => {
                   </div>
                 )}
               </div>
-              <div className="nav_items1">Contact Us</div>
+              <div
+                className="nav_items1"
+                onClick={() => navigation("/ContactUs")}
+              >
+                Contact Us
+              </div>
             </div>
           </div>
         </>
@@ -204,16 +221,22 @@ const NavBar = ({ styling }) => {
               />
             </div>
             <div className="nav_right_sec">
-              <div className="nav_items" onClick={() => navigation("/")}>
+              <div
+                style={{ color: styling ? "white" : "black" }}
+                className="nav_items"
+                onClick={() => navigation("/")}
+              >
                 Home
               </div>
               <div
+                style={{ color: styling ? "white" : "black" }}
                 className="nav_items"
                 onClick={() => navigation("/WhatWeDo")}
               >
                 What We Do
               </div>
               <div
+                style={{ color: styling ? "white" : "black" }}
                 className="nav_items"
                 onClick={() => navigation("/BookingTerms")}
               >
@@ -221,7 +244,11 @@ const NavBar = ({ styling }) => {
               </div>
               <div>
                 <div
-                  style={{ display: "flex", flexDirection: "row" }}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    color: styling ? "white" : "black",
+                  }}
                   className="nav_items"
                   onMouseEnter={handlePopoverOpen}
                   onClick={handleOpenModal}
@@ -247,7 +274,7 @@ const NavBar = ({ styling }) => {
                         <div
                           onClick={handleFlightsClose}
                           style={{
-                            color: "black",
+                            color: styling ? "white" : "black",
                           }}
                         >
                           <ArrowDropUpIcon />
@@ -266,7 +293,7 @@ const NavBar = ({ styling }) => {
                         <div
                           onClick={handleFlightsOpen}
                           style={{
-                            color: "black",
+                            color: styling ? "white" : "black",
                           }}
                         >
                           <ArrowDropDownOutlinedIcon />
@@ -277,6 +304,9 @@ const NavBar = ({ styling }) => {
                 </div>
               </div>
               <div
+                style={{
+                  color: styling ? "white" : "black",
+                }}
                 className="nav_items"
                 onClick={() => navigation("/ContactUs")}
               >
@@ -284,22 +314,21 @@ const NavBar = ({ styling }) => {
               </div>
             </div>
             <div style={{ marginTop: 20 }}>
-              <div className="nav_bar_rig_title">
+              <div
+                style={{
+                  color: styling ? "white" : "black",
+                }}
+                className="nav_bar_rig_title"
+              >
                 Call Our Travel Experts On
               </div>
+              <div className="nav_bar_phone">0208-004-4475</div>
               <div
-                className="nav_bar_phone"
                 style={{
-                  fontSize: 20,
-                  color: "#5DA5C2",
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  padding: 5,
+                  color: styling ? "white" : "black",
                 }}
+                className="nav_bar_rig_title2"
               >
-                0208-004-4475
-              </div>
-              <div className="nav_bar_rig_title2">
                 Lines Open 8AM T0 10PM 7 Days A Week
               </div>
             </div>
@@ -318,7 +347,13 @@ const NavBar = ({ styling }) => {
           paddingRight: 3,
         }}
       >
-        <div className="nav_logo">FlightsFlair</div>
+        <div className="nav_logo" onClick={() => navigation("/")}>
+          <img
+            width={120}
+            height={80}
+            src={require("../../asstes/images/logo.png")}
+          />
+        </div>
         {mobileOpen ? (
           <>
             <div onClick={handleMobileOpen}>
