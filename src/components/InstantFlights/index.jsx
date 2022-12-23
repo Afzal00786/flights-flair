@@ -64,10 +64,10 @@ function InstantFlight() {
         )
         .then(
           (result) => {
-            console.log(result, "result");
+            // console.log(result, "result");
           },
           (error) => {
-            console.log(error, "error");
+            // console.log(error, "error");
           }
         );
     }

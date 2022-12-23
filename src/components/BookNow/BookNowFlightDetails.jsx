@@ -13,8 +13,8 @@ function BookNowFlightDetails() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  console.log("hello");
-  console.log(location.state, "dataroute");
+  // console.log("hello");
+  // console.log(location.state, "dataroute");
   let data = location.state;
 
   return (

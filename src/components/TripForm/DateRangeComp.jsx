@@ -12,7 +12,7 @@ const DateRangeComp = ({
   setDateField,
   validationDate,
 }) => {
-  console.log(styling, "styling");
+  // console.log(styling, "styling");
   // date state
   const [range, setRange] = useState([
     {
@@ -21,7 +21,7 @@ const DateRangeComp = ({
       key: "selection",
     },
   ]);
-  console.log(range, "range");
+  // console.log(range, "range");
   // open close
   const [open, setOpen] = useState(false);
   // one way state

@@ -97,7 +97,7 @@ function BookNow() {
         <div className="book_now_heading"> Today's Lowest Fare</div>
         <div className="book_now_wrapper">
           {bookCard.map((data) => {
-            console.log(data, "data");
+            // console.log(data, "data");
             return (
               <div
                 onClick={() =>

@@ -107,14 +107,14 @@ const Contact = ({ fromImg, styling }) => {
       setValidationPhone(false);
     }
     if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
-      console.log(value, "value");
-      console.log(valueTo, "valueTo");
-      console.log(dateField, "dateField");
-      console.log(count, "count");
-      console.log(count1, "count1");
-      console.log(count2, "count2");
-      console.log(phoneNo, "phoneNo");
-      console.log(email, "email");
+      // console.log(value, "value");
+      // console.log(valueTo, "valueTo");
+      // console.log(dateField, "dateField");
+      // console.log(count, "count");
+      // console.log(count1, "count1");
+      // console.log(count2, "count2");
+      // console.log(phoneNo, "phoneNo");
+      // console.log(email, "email");
       emailjs
         .sendForm(
           "service_xls7aht",
@@ -155,14 +155,14 @@ const Contact = ({ fromImg, styling }) => {
       setValidationPhone(false);
     }
     if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
-      console.log(value, "value");
-      console.log(valueTo, "valueTo");
-      console.log(dateField, "dateField");
-      console.log(count, "count");
-      console.log(count1, "count1");
-      console.log(count2, "count2");
-      console.log(phoneNo, "phoneNo");
-      console.log(email, "email");
+      // console.log(value, "value");
+      // console.log(valueTo, "valueTo");
+      // console.log(dateField, "dateField");
+      // console.log(count, "count");
+      // console.log(count1, "count1");
+      // console.log(count2, "count2");
+      // console.log(phoneNo, "phoneNo");
+      // console.log(email, "email");
     }
   };
   const refOne = useRef(null);
@@ -192,7 +192,7 @@ const Contact = ({ fromImg, styling }) => {
       setOpen(false);
     }
   };
-  console.log(autoCompleteFrom, "autoComplete");
+  // console.log(autoCompleteFrom, "autoComplete");
 
   const [value, setValue] = useState("");
   const [valueTo, setValueTo] = useState("");
@@ -203,11 +203,11 @@ const Contact = ({ fromImg, styling }) => {
     }
     setValue(e.target.value);
   };
-  console.log(data, "dummyData");
+  // console.log(data, "dummyData");
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
     // our api to fetch the search result
-    console.log("search ", searchTerm);
+    // console.log("search ", searchTerm);
   };
   /////////////////
 
