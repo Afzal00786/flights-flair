@@ -76,11 +76,11 @@ function InstantFlight() {
           </div>
           <Grid
             style={{
-              backgroundColor: "whitesmoke",
+              backgroundColor: "white",
               width: "100%",
             }}
             item
-            md={5}
+            md={12}
           >
             <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
               <div
@@ -96,6 +96,7 @@ function InstantFlight() {
                   paddingRight: 10,
                   borderBottomLeftRadius: 10,
                   borderBottomRightRadius: 10,
+                  width: "100%",
                 }}
               >
                 <PhoneInput

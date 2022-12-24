@@ -217,7 +217,7 @@
 }
 @media screen and (width<600px) {
   .date_field {
-    width: 350px;
+    width: 360px;
     margin-left: 0px;
   }
   .mainPassengers {
@@ -231,7 +231,8 @@
 }
 @media screen and (width<400px) {
   .date_field {
-    width: 320px;
+    width: 330px;
+    margin-left: -25px;
   }
 }
 input::-webkit-outer-spin-button,

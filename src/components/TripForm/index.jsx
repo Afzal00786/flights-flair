@@ -63,10 +63,10 @@ const Contact = ({ fromImg, styling }) => {
   const [validationDate, setValidationDate] = useState(false);
   const [validationPhone, setValidationPhone] = useState(false);
   const [pass, setPass] = useState();
-  const handleCounter=(e)=>{
-    setPass(e.target.value)
-    console.log("passeger==>>>>>",e.target.value)
-      }
+  const handleCounter = (e) => {
+    setPass(e.target.value);
+    console.log("passeger==>>>>>", e.target.value);
+  };
   const sendEmail = (e) => {
     e.preventDefault();
     if (value === "") {
@@ -391,12 +391,12 @@ const Contact = ({ fromImg, styling }) => {
                 <div onClick={handleOpen}>
                   <input
                     //disabled={true}
-                    onChange={(e)=>handleCounter(e)}
+                    onChange={(e) => handleCounter(e)}
                     id={styling ? "bookNow" : "text"}
                     name="counter"
                     autoComplete="off"
                     style={{
-                      color: "white",
+                      color: styling ? "black" : "white",
                       backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
                       fontSize: 12,
                       borderWidth: 0,
