@@ -99,63 +99,56 @@ function BookNow() {
     },
   ];
   return (
-    <>
-      <div
-        className="book_now_container"
-        style={{
-          textAlign: responsive ? "" : "center",
-        }}
-      >
-        <div className="book_now_heading"> Today's Lowest Fare</div>
-        <div className="book_now_wrapper">
-          <div id="background">
-            <Swiper
-              style={{
-                paddingLeft: responsive ? 80 : 60,
-                paddingRight: responsive ? 30 : 20,
-              }}
-              onSwiper={setSwiperRef}
-              slidesPerView={responsive ? 4 : 1}
-              spaceBetween={30}
-              pagination={{
-                type: "fraction",
-              }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-            >
-              {bookCard.map((data) => {
-                return (
-                  <SwiperSlide>
-                    <div>
-                      <div
-                        onClick={() =>
-                          navigation("/booknowflightdetails", { state: data })
-                        }
-                        className="book_card_items"
-                      >
-                        <div className="book_Card_img">
-                          {/* <img src={data.img} className="card_img1" /> */}
-                        </div>
-                        <div>{data.title1}</div>
-                        <div className="card_date">{data.date}</div>
-                        <div className="from_box">
-                          <div className="from_line"></div>
-                          <div>From</div>
-                          <div className="from_line"></div>
-                        </div>
-                        <div className="book_Card_price">{data.price}</div>
-                        <div className="book_Card_order">{data.order}</div>
+    <div className="book_now_container">
+      <div className="book_now_heading"> Today's Lowest Fare</div>
+      <div className="book_now_wrapper">
+        <div className="background">
+          <Swiper
+            style={{
+              paddingLeft: responsive ? 80 : 60,
+              paddingRight: responsive ? 30 : 20,
+            }}
+            onSwiper={setSwiperRef}
+            slidesPerView={responsive ? 4 : 1}
+            spaceBetween={30}
+            pagination={{
+              type: "fraction",
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {bookCard.map((data) => {
+              return (
+                <SwiperSlide>
+                  <div>
+                    <div
+                      onClick={() =>
+                        navigation("/booknowflightdetails", { state: data })
+                      }
+                      className="book_card_items"
+                    >
+                      <div className="book_Card_img">
+                        {/* <img src={data.img} className="card_img1" /> */}
                       </div>
+                      <div>{data.title1}</div>
+                      <div className="card_date">{data.date}</div>
+                      <div className="from_box">
+                        <div className="from_line"></div>
+                        <div>From</div>
+                        <div className="from_line"></div>
+                      </div>
+                      <div className="book_Card_price">{data.price}</div>
+                      <div className="book_Card_order">{data.order}</div>
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

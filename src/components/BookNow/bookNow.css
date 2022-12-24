@@ -64,22 +64,18 @@
   width: 70px;
   border: 1px solid black;
 }
-#background {
+.background {
   width: 100%;
   height: 70vh;
-  background-image: url("https://www.flightcatchers.com/images/taj-mahel_1/whitaker_fluid_slideimage:1024/?m=nbf");
+  background-image: url("https://tribune-reloaded.s3.amazonaws.com/media/images/1008232-faisalmain-1450079992/1008232-faisalmain-1450079992.jpg");
   background-size: cover;
   background-position: center;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .book_now_wrapper {
   display: flex;
-  gap: 20px;
-
-  max-width: 1440px;
 }
 .title_wrapper {
   width: 100%;

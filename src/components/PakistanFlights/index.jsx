@@ -66,7 +66,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src="https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-scaled.jpg"
+                  src={require("../../asstes/images/image1.jpg")}
                 />
                 <div
                   onClick={() =>
@@ -119,7 +119,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src="https://flightsflair.com/wp-content/uploads/2022/10/mohammad-irfan-baloch-QEcvxkXWp0c-unsplash.jpg"
+                  src={require("../../asstes/images/image2.jpg")}
                 />
                 <div
                   onClick={() =>
@@ -173,7 +173,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src="https://flightsflair.com/wp-content/uploads/2022/10/abuzar-xheikh-va4P5Y8SDgY-unsplash.jpg"
+                  src={require("../../asstes/images/image3.jpg")}
                 />
                 <div
                   onClick={() =>
@@ -226,7 +226,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src="https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg"
+                  src={require("../../asstes/images/image4.jpg")}
                 />
                 <div
                   onClick={() =>
@@ -279,7 +279,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src="https://flightsflair.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg"
+                  src={require("../../asstes/images/image5.jpg")}
                 />
                 <div
                   onClick={() =>
