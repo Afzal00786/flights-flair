@@ -185,6 +185,10 @@
   margin-right: 10px;
   font-weight: 600;
 }
+.date_field {
+  width: 600px;
+  border: 0.1rem solid rgb(208, 208, 208);
+}
 @media screen and (width<600px) {
   .auto_complete_form {
     position: absolute;

@@ -78,11 +78,12 @@ const DateRangeComp = ({
             </div>
             <input
               style={{
-                backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
                 color: styling ? "black" : "white",
+                backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
+                fontSize: 12,
                 borderWidth: 0,
                 marginTop: 5,
-                fontSize: 12,
+                width: "100%",
               }}
               value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
                 range[0].endDate,

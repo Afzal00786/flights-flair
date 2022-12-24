@@ -7,8 +7,11 @@ import data2 from "./dummyData2.jsx";
 import "./form.css";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-console.log(data1, "datadata");
+
+import toast, { Toaster } from "react-hot-toast";
+
 const Contact = ({ fromImg, styling }) => {
+  const notify = (e) => toast(e);
   const location = useLocation();
   console.log(fromImg, "fromImg");
   console.log("hello");
@@ -50,7 +53,8 @@ const Contact = ({ fromImg, styling }) => {
   };
   const [autoCompleteFrom, setAutoCompleteFrom] = useState(false);
   const [autoCompleteTo, setAutoCompleteTo] = useState(false);
-  const [whereField, setWhereField] = useState("");
+  const [value, setValue] = useState("");
+  const [valueTo, setValueTo] = useState("");
   const [dateField, setDateField] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [email, setEmail] = useState("");
@@ -86,6 +90,14 @@ const Contact = ({ fromImg, styling }) => {
       setValidationPhone(false);
     }
     if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
+      setValue("");
+      setValueTo("");
+      setPhoneNo("");
+      setEmail("");
+      setCount(1);
+      setCount1(0);
+      setCount2(0);
+      notify("We will contact you soon");
       emailjs
         .sendForm(
           "service_xls7aht",
@@ -121,8 +133,6 @@ const Contact = ({ fromImg, styling }) => {
       setOpen(false);
     }
   };
-  const [value, setValue] = useState("");
-  const [valueTo, setValueTo] = useState("");
 
   const onChangeWhere = (e) => {
     if (e) {
@@ -147,6 +157,7 @@ const Contact = ({ fromImg, styling }) => {
 
   return (
     <div className="mainContainer">
+      <Toaster />
       <div
         style={{ backgroundColor: styling ? "#4E96BA" : "" }}
         className="fieldsContainer"
@@ -167,6 +178,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingBottom: 15,
                 backgroundColor: selectTripDate === "Round Trip" ? "white" : "",
                 color: "black",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
@@ -180,6 +192,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingBottom: 15,
                 backgroundColor: selectTripDate === "One Way" ? "white" : "",
                 color: "black",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("One Way")}
             >
@@ -201,6 +214,7 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor:
                   selectTripDate === "Round Trip" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
@@ -215,6 +229,7 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor:
                   selectTripDate === "One Way" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("One Way")}
             >
@@ -341,7 +356,6 @@ const Contact = ({ fromImg, styling }) => {
                           );
                         }
                       })
-                      .slice(0, 10)
                       .map((item) => (
                         <div
                           onClick={() => onSearchTo(item.full_name)}
@@ -370,6 +384,7 @@ const Contact = ({ fromImg, styling }) => {
                 md={styling ? 12 : 1.7}
                 sm={3.7}
                 xs={5.8}
+                // style={{ marginLeft: 10 }}
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">PASSENGERS</legend>
@@ -480,6 +495,7 @@ const Contact = ({ fromImg, styling }) => {
                   fullWidth
                   name="phone"
                   autoComplete="off"
+                  value={phoneNo}
                   onChange={(e) => handlePhone(e)}
                   id={styling ? "bookNow" : "text"}
                   placeholder="+44-XXXX-XXXX"
@@ -502,12 +518,13 @@ const Contact = ({ fromImg, styling }) => {
                   disableUnderline
                   name="email"
                   autoComplete="off"
+                  value={email}
                   onChange={(e) => handleEmail(e)}
                   id={styling ? "bookNow" : "text"}
                   placeholder="john@xyz.com (Optional)"
                 />
               </Grid>
-              <Grid md={styling ? 12 : 1.5} sm={3} xs={12}>
+              <Grid md={styling ? 12 : 1.4} sm={3} xs={12}>
                 <button type="submit" className="find_now_button">
                   Find Now
                 </button>

@@ -3,6 +3,7 @@ import NavBar from "../Navbar";
 import Banner from "../Banner";
 import BookNow from "../BookNow";
 import PakistanFlights from "../PakistanFlights";
+import DubaiHolidays from "../DubaiHolidays";
 import WhyWeChoseUs from "../WhyWeChoseUs";
 import Footer from "../Footer";
 import MetaData from "../Helmet";
@@ -17,6 +18,7 @@ const Home = () => {
       <BookNow />
       <WhyWeChoseUs />
       <PakistanFlights />
+      <DubaiHolidays />
       <Footer />
     </div>
   );
