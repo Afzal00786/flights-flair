@@ -391,7 +391,7 @@ const Contact = ({ fromImg, styling }) => {
                       ref={refOne}
                       className="mainPassengers"
                       style={{
-                        position: styling ? "relative" : "absolute",
+                        position: "absolute",
                       }}
                     >
                       <div className="textPassenger">Passengers</div>
@@ -466,7 +466,7 @@ const Contact = ({ fromImg, styling }) => {
               >
                 <legend className="main_text">PHONE</legend>
                 <Input
-                  style={{ color: "white", fontSize: 12 }}
+                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
                   type="number"
                   disableUnderline
                   fullWidth

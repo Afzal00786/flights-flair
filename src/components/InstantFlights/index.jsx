@@ -60,6 +60,7 @@ function InstantFlight() {
             bottom: 0,
             cursor: "pointer",
             paddingTop: 10,
+            zIndex: 1,
           }}
         >
           <div style={{ display: "flex" }}>
@@ -158,6 +159,7 @@ function InstantFlight() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            zIndex: 1,
           }}
         >
           <div

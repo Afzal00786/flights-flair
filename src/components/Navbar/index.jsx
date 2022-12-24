@@ -320,7 +320,16 @@ const NavBar = ({ styling }) => {
               >
                 Call Our Travel Experts On
               </div>
-              <div className="nav_bar_phone">0208-004-4475</div>
+              <div className="nav_bar_phone">
+                <a
+                  className="anchar"
+                  style={{ textDecoration: "none" }}
+                  href="tel:0208-004-4475
+"
+                >
+                  0208-004-4475
+                </a>
+              </div>
               <div
                 style={{
                   color: styling ? "white" : "black",
