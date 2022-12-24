@@ -26,6 +26,7 @@ const Contact = ({ fromImg, styling }) => {
   const handleTripSelect = (type) => {
     setSelectTripDate(type);
   };
+
   const Adultdecrease = () => {
     if (count > 1) {
       setCount(count - 1);
@@ -57,6 +58,11 @@ const Contact = ({ fromImg, styling }) => {
   const [validationFrom, setValidationFrom] = useState(false);
   const [validationDate, setValidationDate] = useState(false);
   const [validationPhone, setValidationPhone] = useState(false);
+  const [pass, setPass] = useState();
+  const handleCounter=(e)=>{
+    setPass(e.target.value)
+    console.log("passeger==>>>>>",e.target.value)
+      }
   const sendEmail = (e) => {
     e.preventDefault();
     if (value === "") {
@@ -369,7 +375,8 @@ const Contact = ({ fromImg, styling }) => {
                 <legend className="main_text">PASSENGERS</legend>
                 <div onClick={handleOpen}>
                   <input
-                    disabled={true}
+                    //disabled={true}
+                    onChange={(e)=>handleCounter(e)}
                     id={styling ? "bookNow" : "text"}
                     name="counter"
                     autoComplete="off"
@@ -381,6 +388,7 @@ const Contact = ({ fromImg, styling }) => {
                       marginTop: 5,
                       width: "100%",
                     }}
+                    value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                     placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                     color="white"
                   />
