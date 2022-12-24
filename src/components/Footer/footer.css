@@ -19,13 +19,13 @@ background-color: #575757;
 }
 .footer_phone{
 	font-size: 18px;
-	padding-top: 20px;
+	padding-top: 17px;
 	color: white;
 	text-decoration: underline;
 	cursor: pointer;
     padding-left: 15px;
-margin-top: -10px;
-text-decoration: none;
+    margin-top: -10px;
+    text-decoration: none;
 
 }
 .footer_servives_items{
@@ -37,7 +37,6 @@ text-decoration: none;
 }
 .footer_service_wraper{
 	width:330px;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -49,6 +48,8 @@ text-decoration: none;
 	text-decoration: underline;
 	cursor: pointer;
 	text-decoration: none;
+	padding-left: 15px;
+    margin-top: -10px;
 	
 }
 .iconStyling2 {
