@@ -31,20 +31,20 @@
   font-weight: 500px;
   cursor: pointer;
 }
-.nav_bar_rig_title{
+.nav_bar_rig_title {
   font-size: 12px;
   display: flex;
   justify-content: flex-end;
   padding: 5px;
 }
-.nav_bar_phone{
+.nav_bar_phone {
   font-size: 20px;
-  color: #5DA7C3;
+  color: #5da7c3;
   display: flex;
   justify-content: flex-end;
   padding: 5px;
 }
-.nav_bar_rig_title2{
+.nav_bar_rig_title2 {
   font-size: 12px;
   padding: 5px;
 }
@@ -113,4 +113,7 @@
 .dropdownText:hover {
   background-color: #5da5c2;
   cursor: pointer;
+}
+.anchar {
+  text-decoration: none;
 }

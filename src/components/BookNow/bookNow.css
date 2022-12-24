@@ -140,10 +140,9 @@
     background-size: cover;
     width: 100%;
     background-position: center;
-    height: 2550px;
+    height: 100%;
   }
-  .book_now_heading{
-
+  .book_now_heading {
     margin: auto;
     text-align: center;
     font-size: 30px;
