@@ -52,7 +52,7 @@ function InstantFlight() {
         <div
           style={{
             backgroundColor: "white",
-            width: 400,
+            width: 380,
             height: 280,
             position: "fixed",
             left: 0,
@@ -74,7 +74,7 @@ function InstantFlight() {
               For a free & immediate callback, enter your number below and we
               will call you within 30 Seconds.
             </div>
-            <div onClick={handleClose}>
+            <div style={{ marginRight: 10 }} onClick={handleClose}>
               <CloseIcon />
             </div>
           </div>

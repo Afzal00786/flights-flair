@@ -39,7 +39,8 @@
 }
 .nav_bar_phone {
   font-size: 20px;
-  color: #5da7c3;
+  color: #007597;
+  font-weight: 750;
   display: flex;
   justify-content: flex-end;
   padding: 5px;
@@ -116,4 +117,5 @@
 }
 .anchar {
   text-decoration: none;
+  color: #007597;
 }

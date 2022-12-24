@@ -350,7 +350,6 @@ const NavBar = ({ styling }) => {
           justifyContent: "space-between",
           height: 80,
           alignItems: "center",
-          paddingLeft: 3,
           paddingRight: 3,
         }}
       >
@@ -366,7 +365,7 @@ const NavBar = ({ styling }) => {
             <div onClick={handleMobileOpen}>
               <CloseIcon
                 style={{
-                  color: "black",
+                  color: styling ? "white" : "black",
                   fontSize: 25,
                 }}
               />
@@ -375,7 +374,9 @@ const NavBar = ({ styling }) => {
         ) : (
           <>
             <div onClick={handleMobileClose}>
-              <MenuIcon style={{ color: "black", fontSize: 25 }} />
+              <MenuIcon
+                style={{ color: styling ? "white" : "black", fontSize: 25 }}
+              />
             </div>
           </>
         )}

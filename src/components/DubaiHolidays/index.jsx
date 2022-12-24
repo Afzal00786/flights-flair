@@ -5,12 +5,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
-import "./bookNow.css";
+import "./DubaiHolidays.css";
 import amazon from "../../asstes/images/amazon.jpeg";
-import Footer from "../Footer";
 
 function BookNow() {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
   const responsive = window.innerWidth > 700;
   const [swiperRef, setSwiperRef] = useState(null);
   const karachi =
@@ -29,12 +28,13 @@ function BookNow() {
   const bookCard = [
     {
       id: 1,
-      img: amazon,
-      title1: "Flights To Karachi",
-      title2: "Islamabad (ISB)",
-      date: "Thu 23 Mar - Thu 30 Mar",
-      title3: "From",
-      price: "£325*",
+      img: "https://cdn-c.vibe.travel/hotelimg.php?hash=1a1c7578d4f32e5736770fd80be7d797&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
+      title1: "Signature Hotel... Dubai",
+      title2: "London Heathrow (LHR)",
+      title3: "Dubai (DXB)",
+      date: "11 Feb 2023 - 18 Feb 2023 ",
+      title4: "From",
+      price: "£823*",
       order: "Book Now",
       description: karachi,
       mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
@@ -43,12 +43,13 @@ function BookNow() {
     },
     {
       id: 2,
-      img: amazon,
-      title1: "Flights To Lahore",
-      title2: "Islamabad (ISB)",
-      date: "Wed 10 May - Wed 31 May",
+      img: "https://cdn-a.vibe.travel/hotelimg.php?hash=8aa36e080da0eb3af85acfdf544e3306&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
+      title1: "Stella Di Mare...Dubai",
+      title2: "London Heathrow (LHR)",
+      title3: "Dubai (DXB)",
+      date: "11 Feb 2023 - 18 Feb 2023 ",
       title3: "From",
-      price: "£325*",
+      price: "£1,010*",
       order: "Book Now",
       description: Lahore,
       mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
@@ -57,102 +58,80 @@ function BookNow() {
     },
     {
       id: 3,
-      img: amazon,
-      title1: "Flights To Islamabad",
-      title2: "Islamabad (ISB)",
-      date: "Tue 31 jan - Thu 16 Feb",
+      img: "https://cdn-b.vibe.travel/hotelimg.php?hash=9df3697de7d114a36c3e81d5d6acf470&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
+      title1: "Radisson Blu...Dubai",
+      title2: "London Heathrow (LHR)",
+      title3: "Dubai (DXB)",
+      date: "11 Feb 2023 - 18 Feb 2023 ",
       title3: "From",
-      price: " £377*",
+      price: " £1,023*",
       order: "Book Now",
       description: Islamabad,
       mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
       fromImg:
         "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
     },
-    {
-      id: 4,
-      img: amazon,
-      title1: "Flights To Peshawar",
-      title2: "Islamabad (ISB)",
-      date: "Thu 16 Mar - Mon 03 Apr",
-      title3: "From",
-      price: "£344*",
-      order: "Book Now",
-      description: Peshawar,
-      mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-      fromImg:
-        "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
-    },
-    {
-      id: 5,
-      img: amazon,
-      title1: "Flights To Sialkot",
-      title2: "Islamabad (ISB)",
-      date: "Thu 16 Mar - Mon 03 Apr",
-      title3: "From",
-      price: "£380*",
-      order: "Book Now",
-      description: Sialkot,
-      mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-      fromImg:
-        "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
-    },
   ];
   return (
     <>
       <div
-        className="book_now_container"
+        className="dubai_container"
         style={{
           textAlign: responsive ? "" : "center",
         }}
       >
-        <div className="book_now_heading"> Today's Lowest Fare</div>
-        <div className="book_now_wrapper">
-          <div id="background">
-            <Swiper
-              style={{
-                paddingLeft: responsive ? 80 : 60,
-                paddingRight: responsive ? 30 : 20,
-              }}
-              onSwiper={setSwiperRef}
-              slidesPerView={responsive ? 4 : 1}
-              spaceBetween={30}
-              pagination={{
-                type: "fraction",
-              }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-            >
-              {bookCard.map((data) => {
-                return (
-                  <SwiperSlide>
-                    <div>
-                      <div
-                        onClick={() =>
-                          navigation("/booknowflightdetails", { state: data })
-                        }
-                        className="book_card_items"
-                      >
-                        <div className="book_Card_img">
-                          {/* <img src={data.img} className="card_img1" /> */}
-                        </div>
-                        <div>{data.title1}</div>
-                        <div className="card_date">{data.date}</div>
-                        <div className="from_box">
-                          <div className="from_line"></div>
-                          <div>From</div>
-                          <div className="from_line"></div>
-                        </div>
-                        <div className="book_Card_price">{data.price}</div>
-                        <div className="book_Card_order">{data.order}</div>
-                      </div>
+        <div className="dubai_heading">Dubai Holidays</div>
+        <div
+          className="dubai_wrapper"
+          style={{
+            textAlign: responsive ? "" : "center",
+          }}
+        >
+          {bookCard.map((data) => {
+            return (
+              <div>
+                <div className="dubai_card_items">
+                  <div className="dubai_Card_img">
+                    <img src={data.img} className="card_img1" />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
+                      marginTop: 10,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: 15,
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {data.title1}
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                    <div
+                      style={{ fontSize: 13, marginTop: 20, fontWeight: "550" }}
+                    >
+                      {data.title2}
+                    </div>
+                    <div style={{ fontSize: 13, fontWeight: "550" }}>
+                      {data.title3}
+                    </div>
+                    <div className="dubai_date">{data.date}</div>
+                    <div className="from_box">
+                      <div className="from_line"></div>
+                      <div>From</div>
+                      <div className="from_line"></div>
+                    </div>
+                    <div className="book_Card_price">{data.price}</div>
+                    <div className="book_Card_order">{data.order}</div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

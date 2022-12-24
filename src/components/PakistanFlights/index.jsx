@@ -37,7 +37,7 @@ function PakistanFlights() {
       >
         <div id="background">
           <Swiper
-            style={{ paddingLeft: responsive ? 80 : "80" }}
+            style={{ paddingLeft: responsive ? 80 : 60 }}
             onSwiper={setSwiperRef}
             slidesPerView={responsive ? 3 : 1}
             spaceBetween={30}
@@ -49,14 +49,18 @@ function PakistanFlights() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div>
+              <div
+                style={{
+                  paddingTop: 25,
+                }}
+              >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
-                    display: responsive ? "flex" : "",
+                    display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     backgroundColor: "#000422",
@@ -78,8 +82,8 @@ function PakistanFlights() {
                   }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -89,7 +93,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>karachi</h3>
@@ -97,11 +102,15 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                style={{
+                  paddingTop: 25,
+                }}
+              >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -127,8 +136,8 @@ function PakistanFlights() {
                   }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -138,7 +147,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Islamabad</h3>
@@ -146,11 +156,15 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                style={{
+                  paddingTop: 25,
+                }}
+              >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -175,8 +189,8 @@ function PakistanFlights() {
                   }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -186,7 +200,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Lahore</h3>
@@ -194,11 +209,15 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                style={{
+                  paddingTop: 25,
+                }}
+              >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -223,8 +242,8 @@ function PakistanFlights() {
                   }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -234,7 +253,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Sialkot</h3>
@@ -242,11 +262,15 @@ function PakistanFlights() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div>
+              <div
+                style={{
+                  paddingTop: 25,
+                }}
+              >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -272,8 +296,8 @@ function PakistanFlights() {
                   }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -283,7 +307,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Peshawar</h3>

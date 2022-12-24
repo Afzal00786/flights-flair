@@ -161,6 +161,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingBottom: 15,
                 backgroundColor: selectTripDate === "Round Trip" ? "white" : "",
                 color: "black",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
@@ -174,6 +175,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingBottom: 15,
                 backgroundColor: selectTripDate === "One Way" ? "white" : "",
                 color: "black",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("One Way")}
             >
@@ -195,6 +197,7 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor:
                   selectTripDate === "Round Trip" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("Round Trip")}
             >
@@ -209,6 +212,7 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor:
                   selectTripDate === "One Way" ? "rgba(0,0,0,0.5)" : "",
                 color: "white",
+                cursor: "pointer",
               }}
               onClick={() => handleTripSelect("One Way")}
             >
