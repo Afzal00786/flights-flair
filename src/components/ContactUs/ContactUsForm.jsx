@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./contactUs.css";
-export const signUpSchema = Yup.object({
+import toast, { Toaster } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
+
+const signUpSchema = Yup.object({
   name: Yup.string().min(2).max(25).required("This field is required."),
   lastName: Yup.string().min(2).max(25).required("This field is required."),
 
@@ -17,19 +20,41 @@ const initialValues = {
 };
 
 const ContactUsForm = () => {
+  const form = useRef();
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: signUpSchema,
       onSubmit: (values, action) => {
         // console.log(values);
+
+        emailjs
+          .sendForm(
+            "service_xls7aht",
+            "template_r2j34sw",
+            form.current,
+            "7m6bYCmtfGWWA8CtZ"
+          )
+          .then(
+            (result) => {
+              console.log(result, "result");
+            },
+            (error) => {
+              console.log(error, "error");
+            }
+          );
+        notify("We will contact you soon");
+
         action.resetForm();
       },
     });
+  const notify = (e) => toast(e);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <Toaster />
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="name_form_wrapper">
           <label htmlFor="name" className="name_text">
             Name

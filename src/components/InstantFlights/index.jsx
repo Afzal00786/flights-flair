@@ -7,6 +7,8 @@ import PhoneInput from "react-phone-input-2";
 import emailjs from "@emailjs/browser";
 import "react-phone-input-2/lib/style.css";
 import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import "./instantFlights.css";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 const loginSchema = Yup.object().shape({
   name: Yup.string().required("This field is required"),
@@ -16,6 +18,7 @@ const loginSchema = Yup.object().shape({
 });
 function InstantFlight() {
   const [hide, setHide] = useState(false);
+  const notify = (e) => toast(e);
 
   const [anchorE3, setAnchorE3] = React.useState(false);
 
@@ -35,7 +38,7 @@ function InstantFlight() {
       emailjs
         .sendForm(
           "service_xls7aht",
-          "template_snswcdq",
+          "template_r2j34sw",
           form.current,
           "7m6bYCmtfGWWA8CtZ"
         )
@@ -48,21 +51,9 @@ function InstantFlight() {
 
   return (
     <>
+      <Toaster />
       {anchorE3 ? (
-        <div
-          style={{
-            backgroundColor: "white",
-            width: 400,
-            height: 280,
-            position: "fixed",
-            left: 0,
-            marginRight: 20,
-            bottom: 0,
-            cursor: "pointer",
-            paddingTop: 10,
-            zIndex: 1,
-          }}
-        >
+        <div className="instant_flight_modal_wrapper">
           <div style={{ display: "flex" }}>
             <img
               width={"400px"}
@@ -103,8 +94,9 @@ function InstantFlight() {
                 }}
               >
                 <PhoneInput
+                  name="phoneInstant"
                   containerStyle={{ marginBottom: 20 }}
-                  placeholder="Número de Teléfono "
+                  placeholder="Enter phone number"
                   value={phoneValue}
                   onChange={setPhoneValue}
                   inputStyle={{
@@ -112,7 +104,6 @@ function InstantFlight() {
                     padding: 25,
                     marginLeft: 20,
                   }}
-                  buttonStyle={{}}
                   country={"gb"}
                 />
                 <button
