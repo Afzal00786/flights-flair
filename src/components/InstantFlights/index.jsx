@@ -65,7 +65,7 @@ function InstantFlight() {
               For a free & immediate callback, enter your number below and we
               will call you within 30 Seconds.
             </div>
-            <div onClick={handleClose}>
+            <div style={{ marginRight: 10 }} onClick={handleClose}>
               <CloseIcon />
             </div>
           </div>

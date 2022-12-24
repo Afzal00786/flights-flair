@@ -320,16 +320,16 @@ const NavBar = ({ styling }) => {
               >
                 Call Our Travel Experts On
               </div>
-              <div className="nav_bar_phone">
-                <a
-                  className="anchar"
-                  style={{ textDecoration: "none" }}
-                  href="tel:0208-004-4475
+
+              <a
+                className={styling ? "nav_bar_phone_styling" : "nav_bar_phone"}
+                style={{ textDecoration: "none" }}
+                href="tel:0208-004-4475
 "
-                >
-                  0208-004-4475
-                </a>
-              </div>
+              >
+                0208-004-4475
+              </a>
+
               <div
                 style={{
                   color: styling ? "white" : "black",
@@ -350,7 +350,6 @@ const NavBar = ({ styling }) => {
           justifyContent: "space-between",
           height: 80,
           alignItems: "center",
-          paddingLeft: 3,
           paddingRight: 3,
         }}
       >
@@ -366,7 +365,7 @@ const NavBar = ({ styling }) => {
             <div onClick={handleMobileOpen}>
               <CloseIcon
                 style={{
-                  color: "black",
+                  color: styling ? "white" : "black",
                   fontSize: 25,
                 }}
               />
@@ -375,7 +374,9 @@ const NavBar = ({ styling }) => {
         ) : (
           <>
             <div onClick={handleMobileClose}>
-              <MenuIcon style={{ color: "black", fontSize: 25 }} />
+              <MenuIcon
+                style={{ color: styling ? "white" : "black", fontSize: 25 }}
+              />
             </div>
           </>
         )}

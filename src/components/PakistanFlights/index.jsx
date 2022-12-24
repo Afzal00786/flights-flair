@@ -37,7 +37,7 @@ function PakistanFlights() {
       >
         <div id="background">
           <Swiper
-            style={{ paddingLeft: responsive ? 80 : "80" }}
+            style={{ paddingLeft: responsive ? 80 : 60 }}
             onSwiper={setSwiperRef}
             slidesPerView={responsive ? 3 : 1}
             spaceBetween={30}
@@ -50,25 +50,17 @@ function PakistanFlights() {
           >
             <SwiperSlide>
               <div
-                onClick={() =>
-                  navigation("/BookNowFlightDetails", {
-                    state: {
-                      id: 1,
-                      description: karachi,
-                      mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-                      fromImg:
-                        "https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg",
-                    },
-                  })
-                }
+                style={{
+                  paddingTop: 25,
+                }}
               >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
-                    display: responsive ? "flex" : "",
+                    display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     backgroundColor: "#000422",
@@ -77,10 +69,21 @@ function PakistanFlights() {
                   src="https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-scaled.jpg"
                 />
                 <div
+                  onClick={() =>
+                    navigation("/BookNowFlightDetails", {
+                      state: {
+                        id: 1,
+                        description: karachi,
+                        mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+                        fromImg:
+                          "https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg",
+                      },
+                    })
+                  }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -90,7 +93,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>karachi</h3>
@@ -99,22 +103,14 @@ function PakistanFlights() {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                onClick={() =>
-                  navigation("/BookNowFlightDetails", {
-                    state: {
-                      id: 2,
-                      description: Islamabad,
-                      mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
-                      fromImg:
-                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
-                    },
-                  })
-                }
+                style={{
+                  paddingTop: 25,
+                }}
               >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -126,10 +122,22 @@ function PakistanFlights() {
                   src="https://flightsflair.com/wp-content/uploads/2022/10/mohammad-irfan-baloch-QEcvxkXWp0c-unsplash.jpg"
                 />
                 <div
+                  onClick={() =>
+                    navigation("/BookNowFlightDetails", {
+                      state: {
+                        id: 2,
+                        description: Islamabad,
+                        mainTitle:
+                          "Cheap Flights To Islamabad, Pakistan From UK",
+                        fromImg:
+                          "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
+                      },
+                    })
+                  }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -139,7 +147,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Islamabad</h3>
@@ -148,22 +157,14 @@ function PakistanFlights() {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                onClick={() =>
-                  navigation("/BookNowFlightDetails", {
-                    state: {
-                      id: 3,
-                      description: Lahore,
-                      mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-                      fromImg:
-                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/pbrqvukjqf8_400x500-e1666871984683.jpg",
-                    },
-                  })
-                }
+                style={{
+                  paddingTop: 25,
+                }}
               >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -175,10 +176,21 @@ function PakistanFlights() {
                   src="https://flightsflair.com/wp-content/uploads/2022/10/abuzar-xheikh-va4P5Y8SDgY-unsplash.jpg"
                 />
                 <div
+                  onClick={() =>
+                    navigation("/BookNowFlightDetails", {
+                      state: {
+                        id: 3,
+                        description: Lahore,
+                        mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+                        fromImg:
+                          "https://sastiparwaaz.com/wp-content/uploads/2022/10/pbrqvukjqf8_400x500-e1666871984683.jpg",
+                      },
+                    })
+                  }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -188,7 +200,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Lahore</h3>
@@ -197,22 +210,14 @@ function PakistanFlights() {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                onClick={() =>
-                  navigation("/BookNowFlightDetails", {
-                    state: {
-                      id: 4,
-                      description: Sialkot,
-                      mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-                      fromImg:
-                        "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
-                    },
-                  })
-                }
+                style={{
+                  paddingTop: 25,
+                }}
               >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -224,10 +229,21 @@ function PakistanFlights() {
                   src="https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg"
                 />
                 <div
+                  onClick={() =>
+                    navigation("/BookNowFlightDetails", {
+                      state: {
+                        id: 4,
+                        description: Sialkot,
+                        mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+                        fromImg:
+                          "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
+                      },
+                    })
+                  }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -237,7 +253,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Sialkot</h3>
@@ -246,22 +263,14 @@ function PakistanFlights() {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                onClick={() =>
-                  navigation("/BookNowFlightDetails", {
-                    state: {
-                      id: 5,
-                      description: Peshawar,
-                      mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-                      fromImg:
-                        "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
-                    },
-                  })
-                }
+                style={{
+                  paddingTop: 25,
+                }}
               >
                 <img
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                     backgroundPosition: "center",
                     zIndex: 1,
                     display: "flex",
@@ -273,10 +282,22 @@ function PakistanFlights() {
                   src="https://flightsflair.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg"
                 />
                 <div
+                  onClick={() =>
+                    navigation("/BookNowFlightDetails", {
+                      state: {
+                        id: 5,
+                        description: Peshawar,
+                        mainTitle:
+                          "Cheap Flights To Peshawar, Pakistan From UK",
+                        fromImg:
+                          "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
+                      },
+                    })
+                  }
                   class="elementor-background-overlay"
                   style={{
-                    width: responsive ? "80%" : "100%",
-                    height: responsive ? "60vh" : "40vh",
+                    width: responsive ? "80%" : "80%",
+                    height: responsive ? "40vh" : "40vh",
                   }}
                 ></div>
                 <div
@@ -286,7 +307,8 @@ function PakistanFlights() {
                     left: 0,
                     top: 0,
                     position: "absolute",
-                    padding: responsive ? 30 : 20,
+                    paddingTop: 60,
+                    paddingLeft: 20,
                   }}
                 >
                   <h3>Peshawar</h3>

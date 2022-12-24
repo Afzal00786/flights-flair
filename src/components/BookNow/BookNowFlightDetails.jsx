@@ -7,6 +7,7 @@ import TripForm from "../TripForm";
 
 import "./bookNow.css";
 function BookNowFlightDetails() {
+  const responsive = window.innerWidth > 700;
   const location = useLocation();
   const { pathname } = useLocation();
 
