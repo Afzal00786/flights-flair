@@ -35,16 +35,21 @@ function InstantFlight() {
   const sendEmail = (e) => {
     e.preventDefault();
     if (e && phoneValue != "" && phoneValue != "44") {
+      notify("we will contact you soon");
       emailjs
         .sendForm(
-          "service_xls7aht",
-          "template_r2j34sw",
+          "service_1pizmdh",
+          "template_9vawwsk",
           form.current,
-          "7m6bYCmtfGWWA8CtZ"
+          "_gShKaIWWnxzySOub"
         )
         .then(
-          (result) => {},
-          (error) => {}
+          (result) => {
+            console.log(result);
+          },
+          (error) => {
+            console.log(error);
+          }
         );
     }
   };
@@ -94,7 +99,9 @@ function InstantFlight() {
                 }}
               >
                 <PhoneInput
-                  name="phoneInstant"
+                  inputProps={{
+                    name: "phoneInstant",
+                  }}
                   containerStyle={{ marginBottom: 20 }}
                   placeholder="Enter phone number"
                   value={phoneValue}
