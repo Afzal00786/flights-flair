@@ -28,13 +28,14 @@ function BookNow() {
   const bookCard = [
     {
       id: 1,
-      img: "https://cdn-c.vibe.travel/hotelimg.php?hash=1a1c7578d4f32e5736770fd80be7d797&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
-      title1: "Signature Hotel... Dubai",
+      img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/411696557.jpg?k=179587685f7cdc2cb275ee99bc8a668d4e35a40b88e89a00d5da7a487bc67b92&o=&hp=1",
+      title1: "Rove La Mer Beach... Dubai",
       title2: "London Heathrow (LHR)",
-      title3: "Dubai (DXB)",
       date: "11 Feb 2023 - 18 Feb 2023 ",
       title4: "From",
-      price: "£823*",
+      price: "£955*",
+      title3: "From",
+
       order: "Book Now",
       description: karachi,
       mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
@@ -43,10 +44,9 @@ function BookNow() {
     },
     {
       id: 2,
-      img: "https://cdn-a.vibe.travel/hotelimg.php?hash=8aa36e080da0eb3af85acfdf544e3306&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
-      title1: "Stella Di Mare...Dubai",
+      img: "https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
+      title1: "Crowne Plaza Dubai Deira, an IHG Hotel...Dubai",
       title2: "London Heathrow (LHR)",
-      title3: "Dubai (DXB)",
       date: "11 Feb 2023 - 18 Feb 2023 ",
       title3: "From",
       price: "£1,010*",
@@ -58,13 +58,12 @@ function BookNow() {
     },
     {
       id: 3,
-      img: "https://cdn-b.vibe.travel/hotelimg.php?hash=9df3697de7d114a36c3e81d5d6acf470&i=0&host=www.flightcatchers.com&nbf=whitaker_offergroup_hotelimage",
-      title1: "Radisson Blu...Dubai",
+      img: "https://cf.bstatic.com/xdata/images/hotel/max500/407539893.jpg?k=29208cfb14cd70c40ecf442b90e3c7ec99f12922b7d8182c04a65d7d255a88b5&o=&hp=1",
+      title1: "Radisson Beach Resort Palm Jumeirah...Dubai",
       title2: "London Heathrow (LHR)",
-      title3: "Dubai (DXB)",
       date: "11 Feb 2023 - 18 Feb 2023 ",
       title3: "From",
-      price: " £1,023*",
+      price: " £1,050*",
       order: "Book Now",
       description: Islamabad,
       mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
@@ -92,7 +91,11 @@ function BookNow() {
               <div>
                 <div className="dubai_card_items">
                   <div className="dubai_Card_img">
-                    <img src={data.img} className="card_img1" />
+                    <img
+                      style={{ width: "100%", height: 180 }}
+                      src={data.img}
+                      className="card_img1"
+                    />
                   </div>
                   <div
                     style={{
@@ -107,6 +110,7 @@ function BookNow() {
                       style={{
                         fontSize: 15,
                         fontWeight: "bold",
+                        textAlign: "center",
                       }}
                     >
                       {data.title1}
