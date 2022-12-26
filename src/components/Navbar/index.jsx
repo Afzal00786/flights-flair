@@ -19,9 +19,7 @@ const NavBar = ({ styling }) => {
   const navigation = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [flightsOpen, setFlightsOpen] = React.useState(false);
-  const handleOpenModal = () => {
-    navigation("/Flights");
-  };
+
   const handleFlightsOpen = () => {
     setFlightsOpen(!flightsOpen);
   };
@@ -214,8 +212,8 @@ const NavBar = ({ styling }) => {
           <div className="nav_bar_inner">
             <div className="nav_logo" onClick={() => navigation("/")}>
               <img
-                width={200}
-                height={200}
+                className="logo_style"
+                style={{ marginLeft: -25 }}
                 src={require("../../asstes/images/logo.png")}
               />
             </div>
@@ -250,13 +248,9 @@ const NavBar = ({ styling }) => {
                   }}
                   className="nav_items"
                   onMouseEnter={handlePopoverOpen}
-                  onClick={handleOpenModal}
                 >
                   <div className="FiightText">
                     <div>Flights</div>
-                    {/* <div style={{ marginBottom: -5 }}>
-                    <ArrowDropDownIcon />
-                  </div> */}
                   </div>
                   <div>
                     {flightsOpen ? (
@@ -324,8 +318,7 @@ const NavBar = ({ styling }) => {
               <a
                 className={styling ? "nav_bar_phone_styling" : "nav_bar_phone"}
                 style={{ textDecoration: "none" }}
-                href="tel:0208-004-4475
-"
+                href="tel:0208-004-4475"
               >
                 0208-004-4475
               </a>
@@ -355,8 +348,9 @@ const NavBar = ({ styling }) => {
       >
         <div className="nav_logo" onClick={() => navigation("/")}>
           <img
-            width={250}
-            height={250}
+            width={200}
+            style={{ marginLeft: -20 }}
+            height={200}
             src={require("../../asstes/images/logo.png")}
           />
         </div>

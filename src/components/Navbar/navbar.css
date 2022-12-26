@@ -88,10 +88,14 @@
   align-items: center;
   justify-content: space-between;
 }
+.logo_style {
+  width: 200px;
+  height: 200px;
+}
 .drowpDownBoxStyle {
   position: absolute;
   top: 101px;
-  left: 37%;
+  left: 40%;
   height: 163px;
   width: 21vw;
   background-color: white;
