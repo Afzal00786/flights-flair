@@ -10,6 +10,20 @@
   padding-top: 10px;
   z-index: 1;
 }
+.instant_flight_button {
+  background-color: #5da5c2;
+  border-radius: 5px;
+  position: fixed;
+  left: 0;
+  bottom: 00;
+  width: 230px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 @media screen and (width<400px) {
   .instant_flight_modal_wrapper {
     background-color: white;
@@ -21,6 +35,20 @@
     bottom: 0px;
     cursor: pointer;
     padding-top: 10px;
+    z-index: 1;
+  }
+  .instant_flight_button {
+    background-color: #5da5c2;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
   }
 }

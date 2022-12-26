@@ -62,8 +62,8 @@ function InstantFlight() {
           <div style={{ display: "flex" }}>
             <img
               width={"400px"}
-              height={"150px"}
-              style={{ marginTop: -25 }}
+              height={"180px"}
+              style={{ marginTop: -35 }}
               src={require("../../asstes/images/logo.png")}
             />
             <div style={{ fontSize: 15, color: "gray", marginTop: 20 }}>
@@ -87,9 +87,9 @@ function InstantFlight() {
                 style={{
                   marginLeft: 10,
                   marginRight: 10,
-                  marginBottom: 50,
+                  marginBottom: 20,
                   backgroundColor: "white",
-                  marginTop: -10,
+                  marginTop: -30,
                   paddingTop: 3,
                   paddingBottom: 3,
                   paddingLeft: 10,
@@ -144,23 +144,7 @@ function InstantFlight() {
       {anchorE3 ? (
         <div></div>
       ) : (
-        <div
-          onClick={handleOpenModal}
-          style={{
-            backgroundColor: "#5DA5C2",
-            borderRadius: 10,
-            position: "fixed",
-            left: 0,
-            bottom: 0,
-            width: 230,
-            height: 80,
-            cursor: "pointer",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1,
-          }}
-        >
+        <div onClick={handleOpenModal} className="instant_flight_button">
           <div
             style={{
               backgroundColor: "white",

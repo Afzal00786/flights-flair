@@ -214,8 +214,8 @@ const NavBar = ({ styling }) => {
           <div className="nav_bar_inner">
             <div className="nav_logo" onClick={() => navigation("/")}>
               <img
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 src={require("../../asstes/images/logo.png")}
               />
             </div>
@@ -355,8 +355,8 @@ const NavBar = ({ styling }) => {
       >
         <div className="nav_logo" onClick={() => navigation("/")}>
           <img
-            width={150}
-            height={150}
+            width={250}
+            height={250}
             src={require("../../asstes/images/logo.png")}
           />
         </div>
