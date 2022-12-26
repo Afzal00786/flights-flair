@@ -66,10 +66,7 @@ const DateRangeComp = ({
     <div className="calendarWrap">
       {selectTripDate === "Round Trip" ? (
         <>
-          <div
-            className={styling ? "bookNowContainer" : "container"}
-            style={{ height: 50 }}
-          >
+          <div>
             <div
               className="main_text"
               style={{ color: styling ? "black" : "white" }}
@@ -90,12 +87,14 @@ const DateRangeComp = ({
                 "MM/dd/yyyy"
               )}`}
               readOnly
-              className="inputBox"
               onClick={() => setOpen((open) => !open)}
               name="date"
             />
             {validationDate && (
-              <div style={{ marginTop: 20 }} className="error">
+              <div
+                style={{ marginTop: 13 }}
+                className={styling ? "styling_error" : "error"}
+              >
                 This field is required.
               </div>
             )}
@@ -128,10 +127,7 @@ const DateRangeComp = ({
       ) : (
         <div ref={refOne}>
           <>
-            <div
-              className={styling ? "bookNowContainer" : "container"}
-              style={{ height: 50 }}
-            >
+            <div>
               <div
                 className="main_text"
                 style={{ color: styling ? "black" : "white" }}
@@ -145,7 +141,7 @@ const DateRangeComp = ({
                   borderWidth: 0,
                   marginTop: 5,
                   fontSize: 12,
-                  minWidth: 180,
+                  width: "100%",
                 }}
                 value={calendar}
                 readOnly
@@ -153,7 +149,10 @@ const DateRangeComp = ({
                 onClick={() => setOpen((open) => !open)}
               />
               {validationDate && (
-                <div style={{ marginTop: 20 }} className="error">
+                <div
+                  style={{ marginTop: 13 }}
+                  className={styling ? "styling_error" : "error"}
+                >
                   This field is required.
                 </div>
               )}

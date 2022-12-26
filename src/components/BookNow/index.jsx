@@ -118,29 +118,27 @@ function BookNow() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {bookCard.map((data) => {
+            {bookCard.map((data, index) => {
               return (
-                <SwiperSlide>
-                  <div>
-                    <div
-                      onClick={() =>
-                        navigation("/booknowflightdetails", { state: data })
-                      }
-                      className="book_card_items"
-                    >
-                      <div className="book_Card_img">
-                        {/* <img src={data.img} className="card_img1" /> */}
-                      </div>
-                      <div>{data.title1}</div>
-                      <div className="card_date">{data.date}</div>
-                      <div className="from_box">
-                        <div className="from_line"></div>
-                        <div>From</div>
-                        <div className="from_line"></div>
-                      </div>
-                      <div className="book_Card_price">{data.price}</div>
-                      <div className="book_Card_order">{data.order}</div>
+                <SwiperSlide key={index}>
+                  <div
+                    onClick={() =>
+                      navigation("/booknowflightdetails", { state: data })
+                    }
+                    className="book_card_items"
+                  >
+                    <div className="book_Card_img">
+                      {/* <img src={data.img} className="card_img1" /> */}
                     </div>
+                    <div>{data.title1}</div>
+                    <div className="card_date">{data.date}</div>
+                    <div className="from_box">
+                      <div className="from_line"></div>
+                      <div>From</div>
+                      <div className="from_line"></div>
+                    </div>
+                    <div className="book_Card_price">{data.price}</div>
+                    <div className="book_Card_order">{data.order}</div>
                   </div>
                 </SwiperSlide>
               );

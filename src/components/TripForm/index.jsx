@@ -252,14 +252,21 @@ const Contact = ({ fromImg, styling }) => {
                 width: "100%",
                 paddingBottom: 15,
                 paddingTop: 15,
-                paddingLeft: 10,
-                paddingRight: 10,
+                paddingLeft: 5,
+                paddingRight: 5,
               }}
             >
               <Grid
+                item
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
                 md={styling ? 12 : 1.7}
                 sm={3.7}
-                xs={11.6}
+                xs={11.9}
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">FROM WHERE</legend>
@@ -278,7 +285,9 @@ const Contact = ({ fromImg, styling }) => {
                   placeholder="Departure"
                 />
                 {validationTo && (
-                  <div className="error">This field is required.</div>
+                  <div className={styling ? "styling_error" : "error"}>
+                    This field is required.
+                  </div>
                 )}
                 {autoCompleteFrom ? (
                   <div ref={refOne} className="auto_complete_form">
@@ -316,9 +325,16 @@ const Contact = ({ fromImg, styling }) => {
               </Grid>
 
               <Grid
+                item
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
                 md={styling ? 12 : 1.7}
                 sm={3.7}
-                xs={11.6}
+                xs={11.9}
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">WHERE TO</legend>
@@ -335,7 +351,9 @@ const Contact = ({ fromImg, styling }) => {
                 />
 
                 {validationFrom && (
-                  <div className="error">This field is required.</div>
+                  <div className={styling ? "styling_error" : "error"}>
+                    This field is required.
+                  </div>
                 )}
                 {autoCompleteTo ? (
                   <div ref={refOne} className="auto_complete_form">
@@ -371,7 +389,20 @@ const Contact = ({ fromImg, styling }) => {
                   </div>
                 ) : null}
               </Grid>
-              <Grid md={styling ? 12 : 1.7} sm={3.7} xs={5.8}>
+              <Grid
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
+                className={styling ? "bookNowContainer" : "container"}
+                item
+                md={styling ? 12 : 1.7}
+                sm={3.7}
+                xs={styling ? 11.9 : 5.8}
+              >
                 <DateRangeComp
                   styling={styling}
                   validationDate={validationDate}
@@ -381,9 +412,16 @@ const Contact = ({ fromImg, styling }) => {
                 />
               </Grid>
               <Grid
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
+                item
                 md={styling ? 12 : 1.7}
                 sm={3.7}
-                xs={5.8}
+                xs={styling ? 11.9 : 5.8}
                 // style={{ marginLeft: 10 }}
                 className={styling ? "bookNowContainer" : "container"}
               >
@@ -412,7 +450,9 @@ const Contact = ({ fromImg, styling }) => {
                   <>
                     <div
                       ref={refOne}
-                      className="mainPassengers"
+                      className={
+                        styling ? "book_now_mainPassenger" : "mainPassengers"
+                      }
                       style={{
                         position: "absolute",
                       }}
@@ -482,9 +522,16 @@ const Contact = ({ fromImg, styling }) => {
               </Grid>
 
               <Grid
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
+                item
                 md={styling ? 12 : 1.7}
                 sm={3.7}
-                xs={5.8}
+                xs={styling ? 11.9 : 5.8}
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">PHONE</legend>
@@ -501,19 +548,28 @@ const Contact = ({ fromImg, styling }) => {
                   placeholder="+44-XXXX-XXXX"
                 />
                 {validationPhone && (
-                  <div className="error">This field is required.</div>
+                  <div className={styling ? "styling_error" : "error"}>
+                    This field is required.
+                  </div>
                 )}
               </Grid>
 
               <Grid
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                  marginRight: 2.5,
+                  marginLeft: 2.5,
+                }}
+                item
                 md={styling ? 12 : 1.7}
                 sm={3.7}
-                xs={5.8}
+                xs={styling ? 11.9 : 5.8}
                 className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">EMAIL</legend>
                 <Input
-                  style={{ color: "white", fontSize: 12 }}
+                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
                   type="email"
                   disableUnderline
                   name="email"
@@ -524,7 +580,16 @@ const Contact = ({ fromImg, styling }) => {
                   placeholder="john@xyz.com (Optional)"
                 />
               </Grid>
-              <Grid md={styling ? 12 : 1.4} sm={3} xs={12}>
+              <Grid
+                style={{
+                  marginBottom: 8,
+                  marginTop: 8,
+                }}
+                item
+                md={styling ? 12 : 1.4}
+                sm={3}
+                xs={11.9}
+              >
                 <button type="submit" className="find_now_button">
                   Find Now
                 </button>

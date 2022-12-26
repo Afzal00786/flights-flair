@@ -14,7 +14,6 @@ const Home = () => {
       <MetaData title="Flightsflair - Cheap flight from UK to Pakistan,Karachi,Lahore,Islamaba..." />
       <NavBar />
       <Banner />
-
       <BookNow />
       <PakistanFlights />
       <DubaiHolidays />

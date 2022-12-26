@@ -97,9 +97,10 @@ const Footer = () => {
             >
               Booking Terms
             </div>
-            {bookCard.map((data) => {
+            {bookCard.map((data, index) => {
               return (
                 <div
+                  key={index}
                   className="footer_servives_items"
                   onClick={() =>
                     navigation("/BookNowFlightDetails", { state: data })

@@ -80,7 +80,7 @@ function PakistanFlights() {
                       },
                     })
                   }
-                  class="elementor-background-overlay"
+                  className="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "80%",
                     height: responsive ? "40vh" : "40vh",
@@ -134,7 +134,7 @@ function PakistanFlights() {
                       },
                     })
                   }
-                  class="elementor-background-overlay"
+                  className="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "80%",
                     height: responsive ? "40vh" : "40vh",
@@ -187,7 +187,7 @@ function PakistanFlights() {
                       },
                     })
                   }
-                  class="elementor-background-overlay"
+                  className="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "80%",
                     height: responsive ? "40vh" : "40vh",
@@ -240,7 +240,7 @@ function PakistanFlights() {
                       },
                     })
                   }
-                  class="elementor-background-overlay"
+                  className="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "80%",
                     height: responsive ? "40vh" : "40vh",
@@ -294,7 +294,7 @@ function PakistanFlights() {
                       },
                     })
                   }
-                  class="elementor-background-overlay"
+                  className="elementor-background-overlay"
                   style={{
                     width: responsive ? "80%" : "80%",
                     height: responsive ? "40vh" : "40vh",
