@@ -56,6 +56,8 @@
 .nav_bar_rig_title2 {
   font-size: 12px;
   padding: 5px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .Mobille_navbar {
   background-color: lightblue;

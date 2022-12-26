@@ -336,7 +336,7 @@ const NavBar = ({ styling }) => {
                 }}
                 className="nav_bar_rig_title2"
               >
-                Lines Open 8AM T0 10PM 7 Days A Week
+                Lines open 24/7
               </div>
             </div>
           </div>

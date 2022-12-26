@@ -16,9 +16,9 @@ const Home = () => {
       <Banner />
 
       <BookNow />
-      <WhyWeChoseUs />
       <PakistanFlights />
       <DubaiHolidays />
+      <WhyWeChoseUs />
       <Footer />
     </div>
   );
