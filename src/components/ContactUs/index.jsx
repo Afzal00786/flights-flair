@@ -46,7 +46,7 @@ function WhatWeDo() {
                 </div>
                 <div className="contactUsWaysText">
                   <div className="call_us_text">Email us</div>
-                  <div className="call_us_phone">sales@flightsflair.com</div>
+                  <div className="call_us_phone">support@flightsflair.com</div>
                 </div>
               </div>
             </div>
