@@ -86,7 +86,7 @@ const Footer = () => {
               <div className="iconStyling2">
                 <EmailIcon />
               </div>
-              <div className="footer_email">sales@flightsflair.com</div>
+              <div className="footer_email">support@flightsflair.com</div>
             </div>
           </div>
           <div className="footer_service_wraper">
