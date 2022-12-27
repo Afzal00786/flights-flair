@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import "./contactUs.css";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import SuccessModal from "../SuccessModal";
 
 const signUpSchema = Yup.object({
   name: Yup.string().min(2).max(25).required("This field is required."),
@@ -28,7 +29,10 @@ const ContactUsForm = () => {
       validationSchema: signUpSchema,
       onSubmit: (values, action) => {
         // console.log(values);
-
+        setSuccessOpen(true);
+        setTimeout(() => {
+          setSuccessOpen(false);
+        }, 8000);
         emailjs
           .sendForm(
             "service_xls7aht",
@@ -49,11 +53,17 @@ const ContactUsForm = () => {
         action.resetForm();
       },
     });
-  const notify = (e) => toast(e);
-
+  const [successOpen, setSuccessOpen] = React.useState(false);
+  const handleCloseModal = () => {
+    setSuccessOpen(false);
+  };
   return (
     <div>
-      <Toaster />
+      <SuccessModal
+        successOpen={successOpen}
+        handleClose={handleCloseModal}
+        successText="contact"
+      />
       <form ref={form} onSubmit={handleSubmit}>
         <div className="name_form_wrapper">
           <label htmlFor="name" className="name_text">

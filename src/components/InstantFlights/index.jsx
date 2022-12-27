@@ -10,6 +10,7 @@ import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import "./instantFlights.css";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+import SuccessModal from "../SuccessModal";
 const loginSchema = Yup.object().shape({
   name: Yup.string().required("This field is required"),
   email: Yup.string().email().required("An email is required"),
@@ -35,7 +36,10 @@ function InstantFlight() {
   const sendEmail = (e) => {
     e.preventDefault();
     if (e && phoneValue != "" && phoneValue != "44") {
-      notify("we will contact you soon");
+      setSuccessOpen(true);
+      setTimeout(() => {
+        setSuccessOpen(false);
+      }, 8000);
       emailjs
         .sendForm(
           "service_1pizmdh",
@@ -53,10 +57,17 @@ function InstantFlight() {
         );
     }
   };
-
+  const [successOpen, setSuccessOpen] = React.useState(false);
+  const handleCloseModal = () => {
+    setSuccessOpen(false);
+  };
   return (
     <>
-      <Toaster />
+      <SuccessModal
+        successOpen={successOpen}
+        handleClose={handleCloseModal}
+        successText="contact"
+      />
       {anchorE3 ? (
         <div className="instant_flight_modal_wrapper">
           <div style={{ display: "flex" }}>

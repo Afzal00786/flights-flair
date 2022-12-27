@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 import toast, { Toaster } from "react-hot-toast";
+import SuccessModal from "../SuccessModal";
 
 const Contact = ({ fromImg, styling }) => {
   const notify = (e) => toast(e);
@@ -97,7 +98,10 @@ const Contact = ({ fromImg, styling }) => {
       setCount(1);
       setCount1(0);
       setCount2(0);
-      notify("We will contact you soon");
+      setSuccessOpen(true);
+      setTimeout(() => {
+        setSuccessOpen(false);
+      }, 8000);
       emailjs
         .sendForm(
           "service_xls7aht",
@@ -154,10 +158,18 @@ const Contact = ({ fromImg, styling }) => {
     setValueTo(searchTerm);
     console.log("search ", searchTerm);
   };
+  const [successOpen, setSuccessOpen] = React.useState(false);
+  const handleClose = () => {
+    setSuccessOpen(false);
+  };
 
   return (
     <div className="mainContainer">
-      <Toaster />
+      <SuccessModal
+        successOpen={successOpen}
+        handleClose={handleClose}
+        successText="trip"
+      />
       <div
         style={{ backgroundColor: styling ? "#4E96BA" : "" }}
         className="fieldsContainer"
