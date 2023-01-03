@@ -51,36 +51,41 @@ const NavBar = ({ styling }) => {
       id: 1,
       description: karachi,
       mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-      fromImg:
-        "https://flightsflair.com/wp-content/uploads/2022/10/kltyaksucnk_400x500-768x576.jpg",
+      fromImg: require("../../asstes/images/image1.jpg"),
+      width: "91.5%",
+      height: "35%",
     },
     {
       id: 2,
       description: Lahore,
       mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-      fromImg:
-        "https://sastiparwaaz.com/wp-content/uploads/2022/10/pbrqvukjqf8_400x500-e1666871984683.jpg",
+      fromImg: require("../../asstes/images/image7.jpg"),
+      width: "91.5%",
+      height: "38.5%",
     },
     {
       id: 3,
       description: Islamabad,
       mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
-      fromImg:
-        "https://sastiparwaaz.com/wp-content/uploads/2022/10/qasim-nagori-1x3qakkpzZU-unsplash-1.jpg",
+      fromImg: require("../../asstes/images/image6.jpg"),
+      width: "91.5%",
+      height: "35%",
     },
     {
       id: 4,
       description: Peshawar,
       mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-      fromImg:
-        "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
+      fromImg: require("../../asstes/images/image5.jpg"),
+      width: "91.5%",
+      height: "35%",
     },
     {
       id: 5,
       description: Sialkot,
       mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-      fromImg:
-        "https://flightsflair.com/wp-content/uploads/2022/10/nnzkznywhau_400x500.jpg",
+      fromImg: require("../../asstes/images/image4.jpg"),
+      width: "91.5%",
+      height: "35%",
     },
   ];
   return (
@@ -320,7 +325,7 @@ const NavBar = ({ styling }) => {
                 style={{ textDecoration: "none" }}
                 href="tel:0208-004-4475"
               >
-                0208-004-4475
+                0208-638-6789
               </a>
 
               <div

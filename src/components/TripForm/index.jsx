@@ -10,8 +10,10 @@ import emailjs from "@emailjs/browser";
 
 import toast, { Toaster } from "react-hot-toast";
 import SuccessModal from "../SuccessModal";
+import { height } from "@mui/system";
 
-const Contact = ({ fromImg, styling }) => {
+const Contact = ({ fromImg, styling, width, height }) => {
+  const responsive = window.innerWidth > 700;
   const notify = (e) => toast(e);
   const location = useLocation();
   console.log(fromImg, "fromImg");
@@ -611,8 +613,9 @@ const Contact = ({ fromImg, styling }) => {
         </div>
         {styling && (
           <img
-            width={"91.5%"}
-            style={{ marginLeft: 20, marginTop: 50 }}
+            width={width}
+            height={height}
+            style={{ marginLeft: responsive ? 20 : 15, marginTop: 50 }}
             src={fromImg}
           />
         )}

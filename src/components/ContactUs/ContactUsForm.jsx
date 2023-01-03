@@ -48,7 +48,7 @@ const ContactUsForm = () => {
               console.log(error, "error");
             }
           );
-        notify("We will contact you soon");
+        // notify("We will contact you soon");
 
         action.resetForm();
       },

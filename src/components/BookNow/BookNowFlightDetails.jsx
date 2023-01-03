@@ -24,7 +24,12 @@ function BookNowFlightDetails() {
       <div className="field_text_wrapper">
         <div className="text_wrapper">{data?.description}</div>
         <div className="field_wrapper">
-          <TripForm fromImg={data.fromImg} styling />
+          <TripForm
+            fromImg={data.fromImg}
+            width={data.width}
+            height={data.height}
+            styling
+          />
         </div>
       </div>
       <div style={{ marginTop: 80 }} />

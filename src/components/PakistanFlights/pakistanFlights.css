@@ -8,20 +8,20 @@ body {
 #background {
   width: 100%;
   height: 70vh;
-  background-image: url("https://www.flightcatchers.com/images/taj-mahel_1/whitaker_fluid_slideimage:1024/?m=nbf");
-  background-size: cover;
+  background-image: url("https://www.entiretest.com/wp-content/uploads/2017/12/Peshawar-University-Admission.jpg");
+  background-size:cover;
   background-position: center;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 .elementor-background-overlay {
   top: 0;
   left: 0;
   position: absolute;
   background-color: #000422;
-  opacity: 0.65;
+  opacity: 0.2;
   box-sizing: border-box;
   cursor: pointer;
   margin-top: 25px;
