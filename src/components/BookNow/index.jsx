@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import "./bookNow.css";
-import amazon from "../../asstes/images/amazon.jpeg";
 import Footer from "../Footer";
 
 function BookNow() {
@@ -29,7 +28,6 @@ function BookNow() {
   const bookCard = [
     {
       id: 1,
-      img: amazon,
       title1: "Flights To Karachi",
       title2: "Islamabad (ISB)",
       date: "Thu 23 Mar - Thu 30 Mar",
@@ -44,7 +42,6 @@ function BookNow() {
     },
     {
       id: 2,
-      img: amazon,
       title1: "Flights To Lahore",
       title2: "Islamabad (ISB)",
       date: "Wed 10 May - Wed 31 May",
@@ -59,7 +56,6 @@ function BookNow() {
     },
     {
       id: 3,
-      img: amazon,
       title1: "Flights To Islamabad",
       title2: "Islamabad (ISB)",
       date: "Tue 31 jan - Thu 16 Feb",
@@ -74,7 +70,6 @@ function BookNow() {
     },
     {
       id: 4,
-      img: amazon,
       title1: "Flights To Peshawar",
       title2: "Islamabad (ISB)",
       date: "Thu 16 Mar - Mon 03 Apr",
@@ -89,7 +84,6 @@ function BookNow() {
     },
     {
       id: 5,
-      img: amazon,
       title1: "Flights To Sialkot",
       title2: "Islamabad (ISB)",
       date: "Thu 16 Mar - Mon 03 Apr",
