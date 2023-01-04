@@ -55,7 +55,7 @@ function BookNow() {
       mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
       fromImg: require("../../asstes/images/image7.jpg"),
       width: "91.5%",
-      height: "40%",
+      height: "38.5%",
     },
     {
       id: 3,
@@ -105,7 +105,7 @@ function BookNow() {
   ];
   return (
     <div className="book_now_container">
-      <div className="book_now_heading"> Today's Lowest Fare</div>
+      <h1 className="book_now_heading"> Today's Lowest Fare</h1>
       <div className="book_now_wrapper">
         <div className="background">
           <Swiper

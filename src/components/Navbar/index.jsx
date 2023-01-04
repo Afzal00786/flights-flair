@@ -166,9 +166,9 @@ const NavBar = ({ styling }) => {
                             })
                           }
                         >
-                          <div className="mobiledropdownText">
+                          <h3 className="mobiledropdownText">
                             {data.mainTitle}
-                          </div>
+                          </h3>
                         </div>
                       );
                     })}

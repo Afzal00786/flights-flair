@@ -12,7 +12,7 @@ function WhatWeDo() {
 
       <NavBar />
       <div className="what_banner_wrapper">
-        <div>Our Flight Services</div>
+        <h3>Our Flight Services</h3>
       </div>
       <div className="about_us_container">
         <div className="about_content_text">

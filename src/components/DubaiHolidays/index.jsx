@@ -73,7 +73,7 @@ function BookNow() {
           textAlign: responsive ? "" : "center",
         }}
       >
-        <div className="dubai_heading">Dubai Holidays</div>
+        <h2 className="dubai_heading">Dubai Holidays</h2>
         <div
           className="dubai_wrapper"
           style={{

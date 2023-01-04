@@ -20,7 +20,7 @@ function BookNowFlightDetails() {
       <MetaData title={data?.mainTitle} />
 
       <NavBar styling />
-      <div className="title_wrapper">{data?.mainTitle}</div>
+      <h3 className="title_wrapper">{data?.mainTitle}</h3>
       <div className="field_text_wrapper">
         <div className="text_wrapper">{data?.description}</div>
         <div className="field_wrapper">
