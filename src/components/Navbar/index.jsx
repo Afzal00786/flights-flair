@@ -7,7 +7,7 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ styling }) => {
+const NavBar = () => {
   const [flights, setFlights] = useState(false);
   const handlePopoverOpen = (event) => {
     setFlights(event.currentTarget);
@@ -213,32 +213,33 @@ const NavBar = ({ styling }) => {
           marginRight: 5,
         }}
       >
-        <div className={styling ? "nav_bar" : "nav_bar_wrapper"}>
+        <div className={"nav_bar_wrapper"}>
           <div className="nav_bar_inner">
             <div className="nav_logo" onClick={() => navigation("/")}>
               <img
                 className="logo_style"
                 style={{ marginLeft: -25 }}
                 src={require("../../asstes/images/logo.png")}
+                alt="logo"
               />
             </div>
             <div className="nav_right_sec">
               <div
-                style={{ color: styling ? "white" : "black" }}
+                style={{ color: "black" }}
                 className="nav_items"
                 onClick={() => navigation("/")}
               >
                 Home
               </div>
               <div
-                style={{ color: styling ? "white" : "black" }}
+                style={{ color: "black" }}
                 className="nav_items"
                 onClick={() => navigation("/WhatWeDo")}
               >
                 What We Do
               </div>
               <div
-                style={{ color: styling ? "white" : "black" }}
+                style={{ color: "black" }}
                 className="nav_items"
                 onClick={() => navigation("/BookingTerms")}
               >
@@ -249,7 +250,7 @@ const NavBar = ({ styling }) => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    color: styling ? "white" : "black",
+                    color: "black",
                   }}
                   className="nav_items"
                   onMouseEnter={handlePopoverOpen}
@@ -271,7 +272,7 @@ const NavBar = ({ styling }) => {
                         <div
                           onClick={handleFlightsClose}
                           style={{
-                            color: styling ? "white" : "black",
+                            color: "black",
                           }}
                         >
                           <ArrowDropUpIcon />
@@ -290,7 +291,7 @@ const NavBar = ({ styling }) => {
                         <div
                           onClick={handleFlightsOpen}
                           style={{
-                            color: styling ? "white" : "black",
+                            color: "black",
                           }}
                         >
                           <ArrowDropDownOutlinedIcon />
@@ -302,7 +303,7 @@ const NavBar = ({ styling }) => {
               </div>
               <div
                 style={{
-                  color: styling ? "white" : "black",
+                  color: "black",
                 }}
                 className="nav_items"
                 onClick={() => navigation("/ContactUs")}
@@ -313,7 +314,7 @@ const NavBar = ({ styling }) => {
             <div style={{ marginTop: 20 }}>
               <div
                 style={{
-                  color: styling ? "white" : "black",
+                  color: "black",
                 }}
                 className="nav_bar_rig_title"
               >
@@ -321,7 +322,7 @@ const NavBar = ({ styling }) => {
               </div>
 
               <a
-                className={styling ? "nav_bar_phone_styling" : "nav_bar_phone"}
+                className={"nav_bar_phone"}
                 style={{ textDecoration: "none" }}
                 href="tel:0208-004-4475"
               >
@@ -330,7 +331,7 @@ const NavBar = ({ styling }) => {
 
               <div
                 style={{
-                  color: styling ? "white" : "black",
+                  color: "black",
                 }}
                 className="nav_bar_rig_title2"
               >
@@ -357,6 +358,7 @@ const NavBar = ({ styling }) => {
             style={{ marginLeft: -20 }}
             height={200}
             src={require("../../asstes/images/logo.png")}
+            alt="logo"
           />
         </div>
         {mobileOpen ? (
@@ -364,7 +366,7 @@ const NavBar = ({ styling }) => {
             <div onClick={handleMobileOpen}>
               <CloseIcon
                 style={{
-                  color: styling ? "white" : "black",
+                  color: "black",
                   fontSize: 25,
                 }}
               />
@@ -373,9 +375,7 @@ const NavBar = ({ styling }) => {
         ) : (
           <>
             <div onClick={handleMobileClose}>
-              <MenuIcon
-                style={{ color: styling ? "white" : "black", fontSize: 25 }}
-              />
+              <MenuIcon style={{ color: "black", fontSize: 25 }} />
             </div>
           </>
         )}
