@@ -12,8 +12,6 @@ const DateRangeComp = ({
   setDateField,
   validationDate,
 }) => {
-  // console.log(styling, "styling");
-  // date state
   const [range, setRange] = useState([
     {
       startDate: new Date(),
@@ -21,42 +19,28 @@ const DateRangeComp = ({
       key: "selection",
     },
   ]);
-  // console.log(range, "range");
-  // open close
   const [open, setOpen] = useState(false);
-  // one way state
   const [calendar, setCalendar] = useState("");
-  // on date change, store date in state
 
   const handleSelect = (date) => {
-    // console.log(date)
     setDateField(date);
-    // console.log(format(date, 'MM/dd/yyyy'))
     setCalendar(format(date, "MM/dd/yyyy"));
   };
-  // get the target element to toggle
   const refOne = useRef(null);
 
   useEffect(() => {
-    // set current date on component load
     setCalendar(format(new Date(), "MM/dd/yyyy"));
-    // event listeners
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
   }, []);
 
-  // hide dropdown on ESC press
   const hideOnEscape = (e) => {
-    // console.log(e.key)
     if (e.key === "Escape") {
       setOpen(false);
     }
   };
 
-  // Hide on outside click
   const hideOnClickOutside = (e) => {
-    // console.log(refOne.current)
-    // console.log(e.target)
     if (refOne.current && !refOne.current.contains(e.target)) {
       setOpen(false);
     }

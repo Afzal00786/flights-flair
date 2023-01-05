@@ -60,11 +60,6 @@ const Contact = ({ fromImg, styling, width, height }) => {
   const [validationFrom, setValidationFrom] = useState(false);
   const [validationDate, setValidationDate] = useState(false);
   const [validationPhone, setValidationPhone] = useState(false);
-  const [pass, setPass] = useState();
-  const handleCounter = (e) => {
-    setPass(e.target.value);
-    console.log("passeger==>>>>>", e.target.value);
-  };
   const sendEmail = (e) => {
     e.preventDefault();
     if (value === "") {
@@ -437,8 +432,6 @@ const Contact = ({ fromImg, styling, width, height }) => {
                 <legend className="main_text">PASSENGERS</legend>
                 <div onClick={handleOpen}>
                   <input
-                    //disabled={true}
-                    onChange={(e) => handleCounter(e)}
                     id={styling ? "bookNow" : "text"}
                     name="counter"
                     autoComplete="off"

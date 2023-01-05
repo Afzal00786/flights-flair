@@ -126,7 +126,7 @@ const Footer = () => {
           <div className="footer_socoal_icons">
             <a
               href="https://www.facebook.com/profile.php?id=100089312886036"
-              target="_blank"
+              target="_"
             >
               <div className="f_socail_items">
                 <BsFacebook />

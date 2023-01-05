@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "../Navbar";
 import Grid from "@mui/material/Grid";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
@@ -52,13 +52,7 @@ function WhatWeDo() {
             </div>
           </div>
         </Grid>
-        <Grid
-          style={{ margin: 10 }}
-          item
-          md={5}
-          xs={12}
-          //   className="booking_terms_right_wrapper"
-        >
+        <Grid style={{ margin: 10 }} item md={5} xs={12}>
           <ContactUsForm />
         </Grid>
       </Grid>

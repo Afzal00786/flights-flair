@@ -34,6 +34,7 @@ function PakistanFlights() {
           textAlign: responsive ? "" : "center",
         }}
       >
+        <h1 className="book_now_heading"> Popular Destination of Pakistan</h1>
         <div id="background">
           <Swiper
             style={{
@@ -66,7 +67,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image1.webp")}
+                  src={require("../../asstes/images/image1-mobile.webp")}
                   alt="karachi"
                 />
                 <div
@@ -121,7 +122,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image2.webp")}
+                  src={require("../../asstes/images/image2-mobile.webp")}
                   alt="Islamabad"
                 />
                 <div
@@ -177,7 +178,7 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image3.webp")}
+                  src={require("../../asstes/images/image3-mobile.webp")}
                   alt="Lahore"
                 />
                 <div

@@ -23,7 +23,6 @@ const text7 =
 
 const text8 =
   "If you have a complaint about your trip please inform us at 0208-638-6789 or call our representative at the time in order that they can attempt to rectify the matter. If satisfaction is not reached through these means then any further complaint should be put in writing to us within 30 days of the end of the trip";
-//
 const text9 =
   "We may cancel a trip at any time up to 30 days before departure, subject to clause 13. We may cancel a trip at any time prior to departure if, due to terrorism, natural disasters, political instability or other external events it is not viable for us to operate the planned itinerary. If we cancel your trip, you can transfer amounts paid to an alternate departure date or alternatively receive a full refund. In circumstances where the cancellation is due to external events outside our reasonable control refunds will be less any unrecoverable costs. We are not responsible for any incidental expenses that you may have incurred as a result of your booking including but not limited to visas, vaccinations, travel insurance excess or non-refundable flights. Please note that different cancellation conditions may apply to some styles of trips, your booking consultant will advise if differences apply.";
 
@@ -67,37 +66,37 @@ function BookingTerms() {
   const [showDropDown15, setShowDropDown15] = useState(false);
 
   const handleDropDown = (number) => {
-    if (number == 1) {
+    if (number === 1) {
       setShowDropDown(!showDropDown);
-    } else if (number == 2) {
+    } else if (number === 2) {
       setShowDropDown1(!showDropDown1);
-    } else if (number == 3) {
+    } else if (number === 3) {
       setShowDropDown2(!showDropDown2);
-    } else if (number == 4) {
+    } else if (number === 4) {
       setShowDropDown3(!showDropDown3);
-    } else if (number == 5) {
+    } else if (number === 5) {
       setShowDropDown4(!showDropDown4);
-    } else if (number == 6) {
+    } else if (number === 6) {
       setShowDropDown5(!showDropDown5);
-    } else if (number == 7) {
+    } else if (number === 7) {
       setShowDropDown6(!showDropDown6);
-    } else if (number == 8) {
+    } else if (number === 8) {
       setShowDropDown7(!showDropDown7);
-    } else if (number == 9) {
+    } else if (number === 9) {
       setShowDropDown8(!showDropDown8);
-    } else if (number == 10) {
+    } else if (number === 10) {
       setShowDropDown9(!showDropDown9);
-    } else if (number == 11) {
+    } else if (number === 11) {
       setShowDropDown10(!showDropDown10);
-    } else if (number == 12) {
+    } else if (number === 12) {
       setShowDropDown11(!showDropDown11);
-    } else if (number == 13) {
+    } else if (number === 13) {
       setShowDropDown12(!showDropDown12);
-    } else if (number == 14) {
+    } else if (number === 14) {
       setShowDropDown13(!showDropDown13);
-    } else if (number == 15) {
+    } else if (number === 15) {
       setShowDropDown14(!showDropDown14);
-    } else if (number == 16) {
+    } else if (number === 16) {
       setShowDropDown15(!showDropDown15);
     }
   };

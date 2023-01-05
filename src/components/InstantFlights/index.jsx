@@ -1,26 +1,15 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import * as Yup from "yup";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import PhoneInput from "react-phone-input-2";
 import emailjs from "@emailjs/browser";
 import "react-phone-input-2/lib/style.css";
 import { useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
 import "./instantFlights.css";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import SuccessModal from "../SuccessModal";
-const loginSchema = Yup.object().shape({
-  name: Yup.string().required("This field is required"),
-  email: Yup.string().email().required("An email is required"),
-  message: Yup.string().required("This field is required"),
-  phone: Yup.string().required("This field is required"),
-});
 function InstantFlight() {
-  const [hide, setHide] = useState(false);
-  const notify = (e) => toast(e);
-
   const [anchorE3, setAnchorE3] = React.useState(false);
 
   const handleOpenModal = () => {
@@ -35,7 +24,7 @@ function InstantFlight() {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    if (e && phoneValue != "" && phoneValue != "44") {
+    if (e && phoneValue !== "" && phoneValue !== "44") {
       setSuccessOpen(true);
       setTimeout(() => {
         setSuccessOpen(false);
@@ -76,6 +65,7 @@ function InstantFlight() {
               height={"180px"}
               style={{ marginTop: -35 }}
               src={require("../../asstes/images/logo.webp")}
+              alt="logo"
             />
             <div style={{ fontSize: 15, color: "gray", marginTop: 20 }}>
               For a free & immediate callback, enter your number below and we

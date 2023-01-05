@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./contactUs.css";
-import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import SuccessModal from "../SuccessModal";
 
@@ -27,8 +26,7 @@ const ContactUsForm = () => {
     useFormik({
       initialValues,
       validationSchema: signUpSchema,
-      onSubmit: (values, action) => {
-        // console.log(values);
+      onSubmit: (action) => {
         setSuccessOpen(true);
         setTimeout(() => {
           setSuccessOpen(false);
@@ -48,7 +46,6 @@ const ContactUsForm = () => {
               console.log(error, "error");
             }
           );
-        // notify("We will contact you soon");
 
         action.resetForm();
       },

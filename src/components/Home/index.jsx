@@ -11,7 +11,7 @@ import MetaData from "../Helmet";
 const Home = () => {
   return (
     <div>
-      <MetaData title="Flightsflair - Cheap flight from UK to Pakistan,Karachi,Lahore,Islamaba..." />
+      <MetaData title="Flightsflair | Cheap flights from UK to Pakistan" />
       <NavBar />
       <Banner />
       <BookNow />

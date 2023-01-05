@@ -123,9 +123,7 @@ function BookNow() {
                     }
                     className="book_card_items"
                   >
-                    <div className="book_Card_img">
-                      {/* <img src={data.img} className="card_img1" /> */}
-                    </div>
+                    <div className="book_Card_img"></div>
                     <h5>{data.title1}</h5>
                     <span className="card_date">{data.date}</span>
                     <div className="from_box">
