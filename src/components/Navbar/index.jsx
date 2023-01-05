@@ -51,7 +51,7 @@ const NavBar = () => {
       id: 1,
       description: karachi,
       mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-      fromImg: require("../../asstes/images/image1.jpg"),
+      fromImg: require("../../asstes/images/image1.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -59,7 +59,7 @@ const NavBar = () => {
       id: 2,
       description: Lahore,
       mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-      fromImg: require("../../asstes/images/image7.jpg"),
+      fromImg: require("../../asstes/images/image7.webp"),
       width: "91.5%",
       height: "38.5%",
     },
@@ -67,7 +67,7 @@ const NavBar = () => {
       id: 3,
       description: Islamabad,
       mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
-      fromImg: require("../../asstes/images/image6.jpg"),
+      fromImg: require("../../asstes/images/image6.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -75,7 +75,7 @@ const NavBar = () => {
       id: 4,
       description: Peshawar,
       mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-      fromImg: require("../../asstes/images/image5.jpg"),
+      fromImg: require("../../asstes/images/image5.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -83,7 +83,7 @@ const NavBar = () => {
       id: 5,
       description: Sialkot,
       mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-      fromImg: require("../../asstes/images/image4.jpg"),
+      fromImg: require("../../asstes/images/image4.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -219,7 +219,7 @@ const NavBar = () => {
               <img
                 className="logo_style"
                 style={{ marginLeft: -25 }}
-                src={require("../../asstes/images/logo.png")}
+                src={require("../../asstes/images/logo.webp")}
                 alt="logo"
               />
             </div>
@@ -357,7 +357,7 @@ const NavBar = () => {
             width={200}
             style={{ marginLeft: -20 }}
             height={200}
-            src={require("../../asstes/images/logo.png")}
+            src={require("../../asstes/images/logo.webp")}
             alt="logo"
           />
         </div>

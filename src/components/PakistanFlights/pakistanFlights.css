@@ -8,7 +8,7 @@ body {
 #background {
   width: 100%;
   height: 70vh;
-  background-image: url("https://www.entiretest.com/wp-content/uploads/2017/12/Peshawar-University-Admission.jpg");
+  background-image: url("../../asstes/images/peshawar.webp");
   background-size:cover;
   background-position: center;
   display: flex;
@@ -30,4 +30,3 @@ body {
   background-color: whitesmoke;
   width: 100%;
 }
-

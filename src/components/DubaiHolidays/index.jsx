@@ -81,7 +81,7 @@ function BookNow() {
                       style={{ width: "100%", height: 180 }}
                       src={data.img}
                       className="card_img1"
-                      alt=""
+                      alt="img"
                     />
                   </div>
                   <div
@@ -93,7 +93,7 @@ function BookNow() {
                       marginTop: 10,
                     }}
                   >
-                    <div
+                    <h5
                       style={{
                         fontSize: 15,
                         fontWeight: "bold",
@@ -101,23 +101,23 @@ function BookNow() {
                       }}
                     >
                       {data.title1}
-                    </div>
-                    <div
+                    </h5>
+                    <span
                       style={{ fontSize: 13, marginTop: 20, fontWeight: "550" }}
                     >
                       {data.title2}
-                    </div>
+                    </span>
                     <div style={{ fontSize: 13, fontWeight: "550" }}>
                       {data.title3}
                     </div>
-                    <div className="dubai_date">{data.date}</div>
+                    <span className="dubai_date">{data.date}</span>
                     <div className="from_box">
                       <div className="from_line"></div>
-                      <div>From</div>
+                      <span>From</span>
                       <div className="from_line"></div>
                     </div>
-                    <div className="book_Card_price">{data.price}</div>
-                    <div className="book_Card_order">{data.order}</div>
+                    <span className="book_Card_price">{data.price}</span>
+                    <span className="book_Card_order">{data.order}</span>
                   </div>
                 </div>
               </div>

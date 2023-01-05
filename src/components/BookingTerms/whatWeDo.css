@@ -1,12 +1,12 @@
 .booking_terms_upper_Image {
-  background: url("../../asstes/images/upperImage.png");
+  background: url("../../asstes/images/upperImage.webp");
   background-size: cover;
   width: 100%;
   background-position: center;
   height: 500px;
 }
 .booking_terms_Inner_Image {
-  background: url("../../asstes/images/airplane.jpg");
+  background: url("../../asstes/images/airplane.webp");
 
   background-size: cover;
   width: 100%;

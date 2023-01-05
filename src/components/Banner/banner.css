@@ -1,5 +1,5 @@
 .banner_wrapper {
-  background: url("../../asstes/images/banner1.jpg");
+  background: url("../../asstes/images/banner1.webp");
   background-size: cover;
   width: 100%;
   padding-top: 150px;
@@ -7,20 +7,12 @@
   height: 500px;
 }
 @media screen and (max-width: 659px) {
+
   .banner_wrapper {
-    background: url("../../asstes/images/banner1.jpg");
+    background: url("../../asstes/images/banner1-mobile.webp");
     background-size: cover;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 40px;
     background-position: center;
-    height: 680px;
-  }
-  .banner_wrapper {
-    background: url("../../asstes/images/banner1.jpg");
-    background-size: cover;
-    width: 100%;
-    padding-top: 80px;
-    background-position: center;
-    height: 700px;
   }
 }

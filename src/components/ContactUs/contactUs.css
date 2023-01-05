@@ -1,12 +1,12 @@
 .booking_terms_upper_Image {
-  background: url("../../asstes/images/upperImage.png");
+  background: url("../../asstes/images/upperImage.webp");
   background-size: cover;
   width: 100%;
   background-position: center;
   height: 500px;
 }
 .booking_terms_Inner_Image {
-  background: url("../../asstes/images/contactUsImage.jpg");
+  background: url("../../asstes/images/contactUsImage.webp");
 
   background-size: cover;
   width: 100%;
@@ -134,5 +134,14 @@ padding-left: 15px;
   .contact_us_header_text {
     font-weight: 700;
     font-size: 30px;
+  }
+  .booking_terms_Inner_Image {
+    background: url("../../asstes/images/contactUsImage-mobile.webp");
+  
+    background-size: cover;
+   
+    background-position: center;
+    opacity: 0.8;
+    padding-top: 250px;
   }
 }

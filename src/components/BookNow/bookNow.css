@@ -1,5 +1,5 @@
 .bookNow_wrapper {
-  background: url("../../asstes/images/airplane.jpg");
+  background: url("../../asstes/images/airplane.webp");
   background-size: cover;
   width: 100%;
   background-position: center;
@@ -67,7 +67,7 @@
 .background {
   width: 100%;
   height: 70vh;
-  background-image: url("https://tribune-reloaded.s3.amazonaws.com/media/images/1008232-faisalmain-1450079992/1008232-faisalmain-1450079992.jpg");
+  background-image: url("../../asstes/images/islamabad.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -99,17 +99,7 @@
   width: 40%;
 }
 @media screen and (max-width: 659px) {
-  #background {
-    width: 100%;
-    height: 70vh;
-    background-image: url("https://www.flightcatchers.com/images/taj-mahel_1/whitaker_fluid_slideimage:1024/?m=nbf");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   .book_now_wrapper {
     display: flex;
     gap: 20px;
@@ -117,17 +107,6 @@
   }
 }
 @media (width< 900px) {
-  #background {
-    width: 100%;
-    height: 70vh;
-    background-image: url("https://www.flightcatchers.com/images/taj-mahel_1/whitaker_fluid_slideimage:1024/?m=nbf");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .text_wrapper {
     width: 100%;
   }
@@ -139,9 +118,8 @@
     display: flex;
     flex-direction: column;
   }
-
   .bookNow_wrapper {
-    background: url("../../asstes/images/airplane.jpg");
+    background: url("../../asstes/images/airplane-mobile.webp");
     background-size: cover;
     width: 100%;
     background-position: center;
@@ -166,5 +144,18 @@
     align-items: center;
     font-size: 20px;
     text-align: center;
+  }
+
+}
+@media screen and (width<450px) {
+  .background {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../../asstes/images/islamabad-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

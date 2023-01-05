@@ -18,11 +18,12 @@ function BookNowFlightDetails() {
   return (
     <div className="bookNow_wrapper">
       <MetaData title={data?.mainTitle} />
-
-      <NavBar styling />
+      <div style={{ backgroundColor: "white" }}>
+        <NavBar />
+      </div>
       <h3 className="title_wrapper">{data?.mainTitle}</h3>
       <div className="field_text_wrapper">
-        <div className="text_wrapper">{data?.description}</div>
+        <p className="text_wrapper">{data?.description}</p>
         <div className="field_wrapper">
           <TripForm
             fromImg={data.fromImg}

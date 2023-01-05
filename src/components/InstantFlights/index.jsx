@@ -75,7 +75,7 @@ function InstantFlight() {
               width={"400px"}
               height={"180px"}
               style={{ marginTop: -35 }}
-              src={require("../../asstes/images/logo.png")}
+              src={require("../../asstes/images/logo.webp")}
             />
             <div style={{ fontSize: 15, color: "gray", marginTop: 20 }}>
               For a free & immediate callback, enter your number below and we

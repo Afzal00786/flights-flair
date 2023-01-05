@@ -34,7 +34,7 @@ function BookNow() {
       order: "Book Now",
       description: karachi,
       mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-      fromImg: require("../../asstes/images/image1.jpg"),
+      fromImg: require("../../asstes/images/image1.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -48,7 +48,7 @@ function BookNow() {
       order: "Book Now",
       description: Lahore,
       mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-      fromImg: require("../../asstes/images/image7.jpg"),
+      fromImg: require("../../asstes/images/image7.webp"),
       width: "91.5%",
       height: "38.5%",
     },
@@ -62,7 +62,7 @@ function BookNow() {
       order: "Book Now",
       description: Islamabad,
       mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
-      fromImg: require("../../asstes/images/image6.jpg"),
+      fromImg: require("../../asstes/images/image6.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -76,7 +76,7 @@ function BookNow() {
       order: "Book Now",
       description: Peshawar,
       mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-      fromImg: require("../../asstes/images/image5.jpg"),
+      fromImg: require("../../asstes/images/image5.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -90,7 +90,7 @@ function BookNow() {
       order: "Book Now",
       description: Sialkot,
       mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-      fromImg: require("../../asstes/images/image4.jpg"),
+      fromImg: require("../../asstes/images/image4.webp"),
       width: "91.5%",
       height: "35%",
     },
@@ -126,15 +126,15 @@ function BookNow() {
                     <div className="book_Card_img">
                       {/* <img src={data.img} className="card_img1" /> */}
                     </div>
-                    <div>{data.title1}</div>
-                    <div className="card_date">{data.date}</div>
+                    <h5>{data.title1}</h5>
+                    <span className="card_date">{data.date}</span>
                     <div className="from_box">
                       <div className="from_line"></div>
-                      <div>From</div>
+                      <span>From</span>
                       <div className="from_line"></div>
                     </div>
-                    <div className="book_Card_price">{data.price}</div>
-                    <div className="book_Card_order">{data.order}</div>
+                    <span className="book_Card_price">{data.price}</span>
+                    <span className="book_Card_order">{data.order}</span>
                   </div>
                 </SwiperSlide>
               );

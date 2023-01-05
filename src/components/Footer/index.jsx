@@ -26,7 +26,7 @@ const bookCard = [
     id: 1,
     description: karachi,
     mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-    fromImg: require("../../asstes/images/image1.jpg"),
+    fromImg: require("../../asstes/images/image1.webp"),
     width: "91.5%",
     height: "35%",
   },
@@ -34,7 +34,7 @@ const bookCard = [
     id: 2,
     description: Lahore,
     mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-    fromImg: require("../../asstes/images/image7.jpg"),
+    fromImg: require("../../asstes/images/image7.webp"),
     width: "91.5%",
     height: "38.5%",
   },
@@ -42,7 +42,7 @@ const bookCard = [
     id: 3,
     description: Islamabad,
     mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
-    fromImg: require("../../asstes/images/image6.jpg"),
+    fromImg: require("../../asstes/images/image6.webp"),
     width: "91.5%",
     height: "35%",
   },
@@ -50,7 +50,7 @@ const bookCard = [
     id: 4,
     description: Peshawar,
     mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
-    fromImg: require("../../asstes/images/image5.jpg"),
+    fromImg: require("../../asstes/images/image5.webp"),
     width: "91.5%",
     height: "35%",
   },
@@ -58,7 +58,7 @@ const bookCard = [
     id: 5,
     description: Sialkot,
     mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-    fromImg: require("../../asstes/images/image4.jpg"),
+    fromImg: require("../../asstes/images/image4.webp"),
     width: "91.5%",
     height: "35%",
   },
@@ -69,7 +69,7 @@ const Footer = () => {
     <>
       <div className="footer_wrapper">
         <div className="footer_inner_box">
-          <div className="footer_des_items">
+          <p className="footer_des_items">
             FlightsFlair LTD is a sub agent of ATOL Many of the flights and
             flight-inclusive holidays on this website are financially protected
             by the ATOL scheme. But ATOL protection does not apply to all
@@ -78,7 +78,7 @@ const Footer = () => {
             booking conditions for information, or for more information about
             financial protection and the ATOL Certificate go to
             www.atol.org.uk/ATOLCertificate.
-          </div>
+          </p>
           <div>
             <div className="footer_contact">Contact Info</div>
             <div className="footer_ways_wrapper">
@@ -124,9 +124,14 @@ const Footer = () => {
             Copyright © 2022 Flights Flair
           </div>
           <div className="footer_socoal_icons">
-            <div className="f_socail_items">
-              <BsFacebook />
-            </div>
+            <a
+              href="https://www.facebook.com/profile.php?id=100089312886036"
+              target="_blank"
+            >
+              <div className="f_socail_items">
+                <BsFacebook />
+              </div>
+            </a>
             <div className="f_socail_items">
               <AiOutlineTwitter />
             </div>

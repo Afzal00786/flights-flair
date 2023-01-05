@@ -66,8 +66,8 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image1.jpg")}
-                  alt="image1"
+                  src={require("../../asstes/images/image1.webp")}
+                  alt="karachi"
                 />
                 <div
                   onClick={() =>
@@ -76,7 +76,7 @@ function PakistanFlights() {
                         id: 1,
                         description: karachi,
                         mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
-                        fromImg: require("../../asstes/images/image1.jpg"),
+                        fromImg: require("../../asstes/images/image1.webp"),
                         width: "91.5%",
                         height: "35%",
                       },
@@ -121,8 +121,8 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image2.jpg")}
-                  alt="image2"
+                  src={require("../../asstes/images/image2.webp")}
+                  alt="Islamabad"
                 />
                 <div
                   onClick={() =>
@@ -132,7 +132,7 @@ function PakistanFlights() {
                         description: Islamabad,
                         mainTitle:
                           "Cheap Flights To Islamabad, Pakistan From UK",
-                        fromImg: require("../../asstes/images/image6.jpg"),
+                        fromImg: require("../../asstes/images/image6.webp"),
                         width: "91.5%",
                         height: "35%",
                       },
@@ -177,8 +177,8 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image3.jpg")}
-                  alt="image3"
+                  src={require("../../asstes/images/image3.webp")}
+                  alt="Lahore"
                 />
                 <div
                   onClick={() =>
@@ -187,7 +187,7 @@ function PakistanFlights() {
                         id: 3,
                         description: Lahore,
                         mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
-                        fromImg: require("../../asstes/images/image7.jpg"),
+                        fromImg: require("../../asstes/images/image7.webp"),
                         width: "91.5%",
                         height: "38.5%",
                       },
@@ -232,8 +232,8 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image4.jpg")}
-                  alt="image4"
+                  src={require("../../asstes/images/image4-mobile.webp")}
+                  alt="Sialkot"
                 />
                 <div
                   onClick={() =>
@@ -242,7 +242,7 @@ function PakistanFlights() {
                         id: 4,
                         description: Sialkot,
                         mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
-                        fromImg: require("../../asstes/images/image4.jpg"),
+                        fromImg: require("../../asstes/images/image4.webp"),
                         width: "91.5%",
                         height: "35%",
                       },
@@ -287,8 +287,8 @@ function PakistanFlights() {
                     backgroundColor: "#000422",
                     backgroundSize: "cover",
                   }}
-                  src={require("../../asstes/images/image5.jpg")}
-                  alt="image5"
+                  src={require("../../asstes/images/image5-mobile.webp")}
+                  alt="Peshawar"
                 />
                 <div
                   onClick={() =>
@@ -298,8 +298,7 @@ function PakistanFlights() {
                         description: Peshawar,
                         mainTitle:
                           "Cheap Flights To Peshawar, Pakistan From UK",
-                        fromImg:
-                          "https://sastiparwaaz.com/wp-content/uploads/2022/10/licensed-image-_1_.jpg",
+                        fromImg: require("../../asstes/images/image5.webp"),
                         width: "91.5%",
                         height: "35%",
                       },

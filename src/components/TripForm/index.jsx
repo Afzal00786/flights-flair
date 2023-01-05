@@ -7,14 +7,9 @@ import data2 from "./dummyData2.jsx";
 import "./form.css";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-
-import toast, { Toaster } from "react-hot-toast";
 import SuccessModal from "../SuccessModal";
-import { height } from "@mui/system";
-
 const Contact = ({ fromImg, styling, width, height }) => {
   const responsive = window.innerWidth > 700;
-  const notify = (e) => toast(e);
   const location = useLocation();
   console.log(fromImg, "fromImg");
   console.log("hello");
@@ -92,7 +87,7 @@ const Contact = ({ fromImg, styling, width, height }) => {
     } else {
       setValidationPhone(false);
     }
-    if (value != "" && valueTo != "" && dateField != "" && phoneNo != "") {
+    if (value !== "" && valueTo !== "" && dateField !== "" && phoneNo !== "") {
       setValue("");
       setValueTo("");
       setPhoneNo("");
@@ -617,6 +612,7 @@ const Contact = ({ fromImg, styling, width, height }) => {
             height={height}
             style={{ marginLeft: responsive ? 20 : 15, marginTop: 50 }}
             src={fromImg}
+            alt="fromImg"
           />
         )}
       </div>
