@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import EmailIcon from "@mui/icons-material/Email";
-import { bookCard } from "./BookCardDummy";
+import { bookCard } from "../BookingDummyData";
 
 const Footer = () => {
   const navigation = useNavigate();

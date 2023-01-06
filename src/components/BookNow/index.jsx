@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import "./bookNow.css";
-import { bookCard } from "./BookCardDummy";
+import { bookCard } from "../BookingDummyData";
 
 function BookNow() {
   const navigation = useNavigate();
