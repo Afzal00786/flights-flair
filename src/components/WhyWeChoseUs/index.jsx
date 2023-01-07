@@ -20,8 +20,8 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Flexible Prices</h4>
               <p className="why_card_text">
-                Price Beating Guarantee- Compare our flights with others and
-                you'll get to know the difference!
+                You won't find a better price than ours! Compare our flights
+                with those of others and find out for yourself!
               </p>
             </div>
             <div className="why_chose_card">
@@ -30,8 +30,9 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Workmanship Quality</h4>
               <p className="why_card_text">
-                24/7 assistance is available for our customers. Our flight
-                experts will assist you to their best!
+                We are available to assist our clients at any time. You can
+                count on our flight specialists to help you every step of the
+                way!
               </p>
             </div>
             <div className="why_chose_card">
@@ -40,8 +41,8 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Low Deposits</h4>
               <p className="why_card_text">
-                Start your travel with minimum deposit costs whcih will hep you
-                to explore further!
+                Don't forget to start your journey with a little deposit, as
+                this will allow you to explore further!
               </p>
             </div>
             <div className="why_chose_card">
@@ -50,8 +51,8 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Multiple Location</h4>
               <p className="why_card_text">
-                We provide multiple locations for you so you can start your
-                journey from any of the mentioned ones.
+                We provide various points of interest so you may begin your
+                adventure from any of the ones listed above.
               </p>
             </div>
             <div className="why_chose_card">
@@ -60,8 +61,8 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Affordable Package</h4>
               <p className="why_card_text">
-                Best fares all over UK. You won't be disheartened by our fares
-                which are very fair according to your needs
+                Best fares around the UK. You will not be disappointed by our
+                fares, which are quite reasonable in relation to your demands.
               </p>
             </div>
             <div className="why_chose_card">
@@ -70,8 +71,8 @@ const WhyWeChoseUs = () => {
               </div>
               <h4 className="why_card_heading">Special Offer</h4>
               <p className="why_card_text">
-                Exclusive deals are available for you! Just visit or call us to
-                get the specific details you are hoping for
+                You may take advantage of exclusive offers! Simply visit or
+                contact us to obtain the particular information you want.
               </p>
             </div>
           </div>
