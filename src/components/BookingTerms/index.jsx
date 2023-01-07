@@ -64,8 +64,10 @@ function BookingTerms() {
   const [showDropDown13, setShowDropDown13] = useState(false);
   const [showDropDown14, setShowDropDown14] = useState(false);
   const [showDropDown15, setShowDropDown15] = useState(false);
+  const check = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
   const handleDropDown = (number) => {
+    console.log(check[number], "value");
     if (number === 1) {
       setShowDropDown(!showDropDown);
     } else if (number === 2) {
