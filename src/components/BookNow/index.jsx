@@ -36,7 +36,7 @@ function BookNow() {
                 <SwiperSlide key={index}>
                   <div
                     onClick={() =>
-                      navigation("/booknowflightdetails", { state: data })
+                      navigation(`/${data.flightUrl}`, { state: data })
                     }
                     className="book_card_items"
                   >

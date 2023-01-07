@@ -17,11 +17,12 @@ function BookNowFlightDetails() {
 
   return (
     <div className="bookNow_wrapper">
-      <MetaData title={data?.mainTitle} />
+      <title>{data?.bookingTitle}</title>
+      <MetaData title={data?.bookingTitle} description={data?.metaDesc} />
       <div style={{ backgroundColor: "white" }}>
         <NavBar />
       </div>
-      <h3 className="title_wrapper">{data?.bookingTitle}</h3>
+      <h3 className="title_wrapper">{data?.mainTitle}</h3>
       <div className="field_text_wrapper">
         <p className="text_wrapper">{data?.description}</p>
         <div className="field_wrapper">

@@ -23,6 +23,10 @@ export const bookCard = [
     price: "£325*",
     order: "Book Now",
     description: karachi,
+    metaDesc:
+      "We provide the best cheap flights to Karachi Pakistan from UK at the most economical rates. Book your UK to Karachi flights with Flights Flair today!",
+
+    flightUrl: "cheapflightstokarachi",
     mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
     bookingTitle: "Cheap Flights to Karachi Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image1.webp"),
@@ -35,11 +39,15 @@ export const bookCard = [
     title1: "Flights To Lahore",
     title2: "Islamabad (ISB)",
     date: "Wed 10 May - Wed 31 May",
+    flightUrl: "cheapflightstolahore",
     title3: "From",
     title4: "Lahore",
     price: "£325*",
     order: "Book Now",
     description: Lahore,
+    metaDesc:
+      "We provide the best cheap flights to Lahore Pakistan from UK at the most economical rates. Book your UK to Lahore flights with Flights Flair today!",
+
     mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
     bookingTitle: "Cheap Flights to Lahore Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image7.webp"),
@@ -53,6 +61,10 @@ export const bookCard = [
     title2: "Islamabad (ISB)",
     date: "Tue 31 jan - Thu 16 Feb",
     title3: "From",
+    flightUrl: "cheapflightstoislamabad",
+    metaDesc:
+      "We provide the best cheap flights to Islamabad Pakistan from UK at the most economical rates. Book your UK to Islamabad flights with Flights Flair today!",
+
     title4: "Islamabad",
     price: " £377*",
     order: "Book Now",
@@ -69,11 +81,16 @@ export const bookCard = [
     title1: "Flights To Peshawar",
     title2: "Islamabad (ISB)",
     date: "Thu 16 Mar - Mon 03 Apr",
+    flightUrl: "cheapflightstopeshawar",
+
     title3: "From",
     title4: "Peshawar",
     price: "£344*",
     order: "Book Now",
     description: Peshawar,
+    metaDesc:
+      "We provide the best cheap flights to Peshawar Pakistan from UK at the most economical rates. Book your Manchester to Peshawar flights with Flights Flair today!",
+
     mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
     bookingTitle: "Cheap Flights to Peshawar Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image5.webp"),
@@ -86,11 +103,15 @@ export const bookCard = [
     title1: "Flights To Sialkot",
     title2: "Islamabad (ISB)",
     date: "Thu 16 Mar - Mon 03 Apr",
+    flightUrl: "cheapflightstosialkot",
+
     title3: "From",
     title4: "Sialkot",
     price: "£380*",
     order: "Book Now",
     description: Sialkot,
+    metaDesc:
+      "We provide the best cheap flights to Sialkot Pakistan from UK at the most economical rates. Book your London to Sialkot flights with Flights Flair today!",
     mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
     bookingTitle: "Cheap Flights to Sialkot Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image4.webp"),

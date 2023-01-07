@@ -55,7 +55,7 @@ const Footer = () => {
                   key={index}
                   className="footer_servives_items"
                   onClick={() =>
-                    navigation("/BookNowFlightDetails", { state: data })
+                    navigation(`/${data.flightUrl}`, { state: data })
                   }
                 >
                   {data.mainTitle}

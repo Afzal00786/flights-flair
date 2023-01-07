@@ -13,7 +13,7 @@ function Navigation() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/booknowflightdetails"
+          path="/:booknowflightdetails"
           element={<BookNowFlightDetails />}
         />
         <Route path="/WhatWeDo" element={<WhatWeDo />} />

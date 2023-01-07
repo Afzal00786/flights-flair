@@ -60,7 +60,7 @@ function PakistanFlights() {
                     />
                     <div
                       onClick={() =>
-                        navigation("/booknowflightdetails", { state: data })
+                        navigation(`/${data.flightUrl}`, { state: data })
                       }
                       className="elementor-background-overlay"
                       style={{

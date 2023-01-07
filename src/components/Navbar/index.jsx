@@ -107,7 +107,7 @@ const NavBar = () => {
                         <div
                           className="mobiledropdownContainer"
                           onClick={() =>
-                            navigation("/BookNowFlightDetails", {
+                            navigation(`/${data.flightUrl}`, {
                               state: data,
                             })
                           }
@@ -141,7 +141,7 @@ const NavBar = () => {
                 <div
                   className="dropdownTextContainer"
                   onClick={() =>
-                    navigation("/BookNowFlightDetails", { state: data })
+                    navigation(`/${data.flightUrl}`, { state: data })
                   }
                 >
                   <div className="dropdownText">{data.mainTitle}</div>
