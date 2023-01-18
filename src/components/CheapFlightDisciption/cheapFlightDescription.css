@@ -1,0 +1,42 @@
+.cheap_flights {
+  max-width: 1440px;
+  margin: auto;
+  padding: 40px 20px;
+  background-color: #333333;
+}
+.cheap_flight_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 500;
+  color: white;
+}
+.cheap_flight_card_box {
+  padding: 10px 50px 0px 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #878787;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+.highlight_word {
+  color: #685626;
+}
+
+@media screen and (max-width: 779px) {
+  .cheap_flight_card_box {
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .cheap_flight_heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+  }
+}

@@ -31,8 +31,8 @@ export const bookCard = [
     bookingTitle: "Cheap Flights to Karachi Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image1.webp"),
     mobileImg: require("../asstes/images/image1-mobile.webp"),
-    width: "91.5%",
-    height: "35%",
+    width: "92%",
+    height: "380px",
   },
   {
     id: 2,
@@ -52,8 +52,8 @@ export const bookCard = [
     bookingTitle: "Cheap Flights to Lahore Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image7.webp"),
     mobileImg: require("../asstes/images/image3-mobile.webp"),
-    width: "91.5%",
-    height: "38.5%",
+    width: "92%",
+    height: "380px",
   },
   {
     id: 3,
@@ -73,8 +73,8 @@ export const bookCard = [
     bookingTitle: "Cheap Flights to Islamabad Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image6.webp"),
     mobileImg: require("../asstes/images/image2-mobile.webp"),
-    width: "91.5%",
-    height: "35%",
+    width: "92%",
+    height: "380px",
   },
   {
     id: 4,
@@ -95,8 +95,8 @@ export const bookCard = [
     bookingTitle: "Cheap Flights to Peshawar Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image5.webp"),
     mobileImg: require("../asstes/images/image5-mobile.webp"),
-    width: "91.5%",
-    height: "35%",
+    width: "92%",
+    height: "380px",
   },
   {
     id: 5,
@@ -116,7 +116,7 @@ export const bookCard = [
     bookingTitle: "Cheap Flights to Sialkot Pakistan From UK | Flightsflair",
     fromImg: require("../asstes/images/image4.webp"),
     mobileImg: require("../asstes/images/image4-mobile.webp"),
-    width: "91.5%",
-    height: "35%",
+    width: "92%",
+    height: "380px",
   },
 ];

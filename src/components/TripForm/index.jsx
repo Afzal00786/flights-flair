@@ -599,25 +599,16 @@ const Contact = ({ fromImg, styling, width, height }) => {
             </Grid>
           </form>
         </div>
-        <div
-          style={{
-            display: "flex",
-            // flexDirection: "column-reverse",
-            backgroundColor: "red",
-            marginBottom: 20,
-            flex: 1,
-          }}
-        >
-          {styling && (
-            <img
-              width={width}
-              height={height}
-              style={{ marginLeft: responsive ? 20 : 15 }}
-              src={fromImg}
-              alt="fromImg"
-            />
-          )}
-        </div>
+
+        {styling && (
+          <img
+            width={width}
+            height={height}
+            style={{ marginLeft: responsive ? 20 : 15 }}
+            src={fromImg}
+            alt="fromImg"
+          />
+        )}
       </div>
     </div>
   );

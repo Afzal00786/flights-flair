@@ -7,6 +7,7 @@ import DubaiHolidays from "../DubaiHolidays";
 import WhyWeChoseUs from "../WhyWeChoseUs";
 import Footer from "../Footer";
 import MetaData from "../Helmet";
+import CheapFlightDescription from "../CheapFlightDisciption";
 
 const Home = () => {
   const description =
@@ -24,6 +25,7 @@ const Home = () => {
       <PakistanFlights />
       <DubaiHolidays />
       <WhyWeChoseUs />
+      <CheapFlightDescription />
       <Footer />
     </div>
   );
