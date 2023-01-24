@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../Navbar";
 import "./blog.css";
 import { dubaiCard } from "../DubaiHolidays/BookCardDummy";
+import Footer from "../Footer";
 
 function BookNow() {
   const responsive = window.innerWidth > 900;
@@ -52,6 +53,7 @@ function BookNow() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
