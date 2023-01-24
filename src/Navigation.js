@@ -6,6 +6,7 @@ import BookingTerms from "./components/BookingTerms";
 import ContactUs from "./components/ContactUs";
 import WhatWeDo from "./components/WhatWeDo";
 import InstantFlight from "./components/InstantFlights";
+import Blog from "./components/Blog";
 
 function Navigation() {
   return (
@@ -17,6 +18,7 @@ function Navigation() {
           element={<BookNowFlightDetails />}
         />
         <Route path="/WhatWeDo" element={<WhatWeDo />} />
+        <Route path="/Blog" element={<Blog />} />
         <Route path="/BookingTerms" element={<BookingTerms />} />
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>

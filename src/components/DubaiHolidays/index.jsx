@@ -1,5 +1,5 @@
 import React from "react";
-import { bookCard } from "./BookCardDummy";
+import { dubaiCard } from "./BookCardDummy";
 import "./DubaiHolidays.css";
 
 function BookNow() {
@@ -20,7 +20,7 @@ function BookNow() {
             textAlign: responsive ? "" : "center",
           }}
         >
-          {bookCard.map((data) => {
+          {dubaiCard.map((data) => {
             return (
               <div>
                 <div className="dubai_card_items">

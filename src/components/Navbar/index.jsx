@@ -55,6 +55,9 @@ const NavBar = () => {
               >
                 Booking Terms
               </div>
+              <div className="nav_items1" onClick={() => navigation("/Blog")}>
+                Blog
+              </div>
               <div className="nav_items1">
                 <div className="FiightText1">
                   <div>Flights</div>
@@ -190,6 +193,13 @@ const NavBar = () => {
                 onClick={() => navigation("/BookingTerms")}
               >
                 Booking Terms
+              </div>
+              <div
+                style={{ color: "black" }}
+                className="nav_items"
+                onClick={() => navigation("/Blog")}
+              >
+                Blog
               </div>
               <div>
                 <div

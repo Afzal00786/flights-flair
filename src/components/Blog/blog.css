@@ -1,0 +1,67 @@
+.blog_card_items {
+    height: 400px;
+    width: 80%;
+    margin: 20px;
+    box-shadow: 1px 2px 12px gray;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: "center";
+    align-items: "center";
+    border-radius: 10px;
+  }
+  .blog_container {
+    background-color: whiteSmoke;
+  }
+  
+  .book_Card_price {
+    color: #007597;
+    font-size: 20px;
+  }
+  .book_Card_order {
+    color: #007597;
+    font-size: 16px;
+  }
+  .blog_heading {
+    margin: auto;
+    text-align: center;
+    padding: 35px;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+  }
+  .blog_Card_img {
+    width: 100%;
+  }
+  .blog_des{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .from_line {
+    width: 70px;
+    border: 1px solid black;
+  }
+  .blog_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 659px) {
+    .blog_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media (width< 900px) {
+    .blog_heading {
+      margin: auto;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 30px 0px;
+      color: black;
+    }
+  }
+  
