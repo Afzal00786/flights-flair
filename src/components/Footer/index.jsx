@@ -17,14 +17,12 @@ const Footer = () => {
       <div className="footer_wrapper">
         <div className="footer_inner_box">
           <p className="footer_des_items">
-            FlightsFlair LTD is a sub agent of ATOL Many of the flights and
-            flight-inclusive holidays on this website are financially protected
-            by the ATOL scheme. But ATOL protection does not apply to all
-            holiday and travel services listed on this website. Please ask us to
-            confirm what protection may apply to your booking. Please see our
-            booking conditions for information, or for more information about
-            financial protection and the ATOL Certificate go to
-            www.atol.org.uk/ATOLCertificate.
+            FlightsFlair LTD is a sub agent of ATOL with financially protected
+            flights and holidays on the website. ATOL protection may not cover
+            all holidays and travel services listed on this website. Check with
+            us for applicable protection. Visit www.atol.org.uk/ATOLCertificate
+            for more information on financial protection and the ATOL
+            Certificate. See our booking conditions for details.
           </p>
           <div>
             <div className="footer_contact">Contact Info</div>

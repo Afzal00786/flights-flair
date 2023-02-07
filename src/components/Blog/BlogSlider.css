@@ -1,0 +1,45 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+#background {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../../asstes/images/peshawar.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.elementor-background-overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #000422;
+  opacity: 0.2;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.Slider {
+  background-color: white;
+  width: 100%;
+}
+@media screen and (max-width: 659px) {
+  #background {
+    width: 100%;
+    height: 65vh;
+    background-image: url("../../asstes/images/peshawar.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+}
