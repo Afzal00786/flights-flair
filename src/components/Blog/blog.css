@@ -1,7 +1,17 @@
 .blog_card_items {
-    height: 400px;
-    width: 80%;
+    /* height: 410px; */
     margin: 20px;
+    box-shadow: 1px 2px 12px gray;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: "center";
+    align-items: "center";
+    border-radius: 10px;
+  }
+  .blog_detail_items {
+    /* height: 360px; */
+    width: 90%;
+    margin: 10px;
     box-shadow: 1px 2px 12px gray;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -24,7 +34,7 @@
   .blog_heading {
     margin: auto;
     text-align: center;
-    padding: 35px;
+    padding:25px;
     font-size: 40px;
     font-weight: 700;
     color: black;
@@ -33,9 +43,9 @@
     width: 100%;
   }
   .blog_des{
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
   }
   .from_line {
     width: 70px;

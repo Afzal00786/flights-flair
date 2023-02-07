@@ -21,13 +21,14 @@ function BlogSlider() {
         }}
       >
         <h1 className="book_now_heading">Blog</h1>
-        <div id="background">
+        <div id="blogBackground">
           <Swiper
             style={{
-              paddingLeft: responsive ? 80 : 60,
+              paddingLeft: responsive ? 40 : 30,
+              color: "white",
             }}
             slidesPerView={responsive ? 3 : 1}
-            spaceBetween={30}
+            spaceBetween={5}
             pagination={{
               type: "fraction",
             }}
@@ -40,43 +41,53 @@ function BlogSlider() {
                 <SwiperSlide>
                   <div
                     onClick={() => navigation("/BlogDetails", { state: data })}
+                    className="blog_card_items"
                     style={{
-                      backgroundColor: "white",
                       width: responsive ? "80%" : "80%",
+                      cursor: "pointer",
+                      paddingBottom: 10,
                     }}
                   >
-                    <img
-                      style={{
-                        width: responsive ? "100%" : "80%",
-                        height: responsive ? "40vh" : "40vh",
-                        backgroundPosition: "center",
-                        zIndex: 1,
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "#000422",
-                        backgroundSize: "cover",
-                      }}
-                      src={data.img}
-                      alt="karachi"
-                    />
-                    <div style={{ padding: 5 }}>
-                      <div
+                    <div className="blog_Card_img">
+                      <img
                         style={{
-                          fontSize: responsive ? 18 : 13,
-                          color: "black",
+                          width: responsive ? "100%" : "100%",
+                          height: responsive ? "35vh" : "24vh",
+                          // width: "100%",
+                          // height: 200,
+                          borderTopLeftRadius: 10,
+                          borderTopRightRadius: 10,
+                          backgroundPosition: "center",
+                          // padding: 5,
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          backgroundColor: "white",
+                          backgroundSize: "cover",
                         }}
-                      >
-                        <h5>{data.title}</h5>
-                      </div>
-                      <div
-                        style={{
-                          fontSize: responsive ? 15 : 13,
-                          color: "black",
-                          marginTop: 3,
-                        }}
-                      >
-                        <div>{data.blogDes.slice(0, 200)}...</div>
+                        src={data.img}
+                        alt="karachi"
+                      />
+                      <div style={{ padding: 5 }}>
+                        <div
+                          className="blog_des"
+                          style={{
+                            fontSize: responsive ? 20 : 13,
+                            color: "black",
+                          }}
+                        >
+                          <h5>{data.title}</h5>
+                        </div>
+                        <div
+                          className="blog_des"
+                          style={{
+                            fontSize: responsive ? 15 : 13,
+                            color: "black",
+                            marginTop: 7,
+                          }}
+                        >
+                          <div> {data.blogDes.slice(0, 300)}...</div>
+                        </div>
                       </div>
                     </div>
                   </div>

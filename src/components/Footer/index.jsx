@@ -65,8 +65,14 @@ const Footer = () => {
       </div>
       <div className="f_social_box">
         <div className="footer_social_container">
-          <div className="footer_copyrights">
-            Copyright © 2022 Flights Flair
+          <div
+            className="footer_copyrights"
+            style={{
+              width: "60%",
+              textAlign: "center",
+            }}
+          >
+            All right reserved © 2023 flightsflair.com
           </div>
           <div className="footer_socoal_icons">
             <a

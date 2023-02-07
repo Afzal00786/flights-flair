@@ -42,6 +42,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .booking_terms_serviceSide {
   background-color: #4e96ba;
@@ -53,9 +54,11 @@
   font-weight: 600;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .booking_terms_dropdown_text {
   color: #8e91aa;
   padding: 10px;
   line-height: 25px;
+  
 }

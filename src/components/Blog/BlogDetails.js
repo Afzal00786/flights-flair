@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { dubaiCard } from "../DubaiHolidays/BookCardDummy";
+import NavBar from "../Navbar";
 
 const BlogDetails = () => {
   const responsive = window.innerWidth > 900;
@@ -8,51 +8,91 @@ const BlogDetails = () => {
   const params = location.state;
   console.log(location, "location");
   return (
-    <div
-      className="blog_container"
-      style={{
-        textAlign: responsive ? "" : "center",
-      }}
-    >
-      <h4 className="blog_heading">Blog Details</h4>
+    <>
+      <NavBar />
+
       <div
-        className="blog_wrapper"
+        className="blog_container"
         style={{
           textAlign: responsive ? "" : "center",
         }}
       >
+        <h4 className="blog_heading">Blog Details</h4>
         <div
+          className="blog_wrapper"
           style={{
-            width: "110%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            textAlign: responsive ? "" : "center",
           }}
         >
-          <div style={{ display: "flex" }} className="blog_card_items">
-            <div style={{ display: "flex" }} className="blog_Card_img">
-              <div>
-                <img
-                  style={{
-                    width: 300,
-                    height: 300,
-                    borderTopLeftRadius: 10,
-                    borderTopRightRadius: 10,
-                  }}
-                  src={params.img}
-                  alt="img"
-                />
-                <div className="blog_des">{params.title}</div>
-              </div>
+          <div
+            style={{
+              width: "110%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                display: responsive ? "flex" : "",
 
-              <div style={{ fontSize: 15 }} className="blog_des">
-                {params.blogDes}
+                height: responsive ? "96%" : "100%",
+              }}
+              className="blog_detail_items"
+            >
+              <div
+                style={{
+                  display: responsive ? "flex" : "",
+                }}
+                className="blog_Card_img"
+              >
+                <div>
+                  <div
+                    className="blog_des"
+                    style={{
+                      fontSize: 18,
+                      fontWeight: "600",
+                      color: "black",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {params.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 17,
+                      marginLeft: 30,
+                      marginRight: 30,
+                      paddingTop: 12,
+                      paddingBottom: 75,
+                      textAlign: "left",
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                    }}
+                    // className="blog_des"
+                  >
+                    {params.blogDes}
+                  </div>
+                </div>
+                <div>
+                  <img
+                    style={{
+                      width: 500,
+                      height: 350,
+                      borderTopRightRadius: 10,
+                    }}
+                    src={params.img}
+                    alt="img"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
