@@ -56,7 +56,7 @@ const NavBar = () => {
                 Booking Terms
               </div>
               <div className="nav_items1" onClick={() => navigation("/Blog")}>
-                Blog
+                Blogs
               </div>
               <div className="nav_items1">
                 <div className="FiightText1">
@@ -138,7 +138,6 @@ const NavBar = () => {
       {flights ? (
         <>
           <div onMouseLeave={handlePopoverClose} className="drowpDownBoxStyle">
-            <div className="box"></div>
             {bookCard.map((data) => {
               return (
                 <div
@@ -199,7 +198,7 @@ const NavBar = () => {
                 className="nav_items"
                 onClick={() => navigation("/Blog")}
               >
-                Blog
+                Blogs
               </div>
               <div>
                 <div

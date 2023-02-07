@@ -63,7 +63,7 @@
   background-color: lightblue;
   position: absolute;
   top: 70px;
-  z-index: 1;
+  z-index: 100;
   position: "absolute";
   transform: "translate(-50%; -50%)";
   height: 300px;
@@ -94,12 +94,12 @@
 }
 .drowpDownBoxStyle {
   position: absolute;
-  top: 101px;
-  left: 40%;
+  top: 80px;
+  left: 42%;
   height: 163px;
   width: 21vw;
   background-color: white;
-  z-index: 1;
+  z-index: 100;
 }
 .box {
   position: absolute;

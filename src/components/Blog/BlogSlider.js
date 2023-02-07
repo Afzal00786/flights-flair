@@ -20,12 +20,12 @@ function BlogSlider() {
           textAlign: responsive ? "" : "center",
         }}
       >
-        <h1 className="book_now_heading">Blog</h1>
+        <h1 className="book_now_heading">Blogs</h1>
         <div id="blogBackground">
           <Swiper
             style={{
               paddingLeft: responsive ? 40 : 30,
-              color: "white",
+              color: "black",
             }}
             slidesPerView={responsive ? 3 : 1}
             spaceBetween={5}
