@@ -45,6 +45,7 @@ function BlogSlider() {
                     style={{
                       width: responsive ? "80%" : "80%",
                       cursor: "pointer",
+                      marginBottom: 30,
                       paddingBottom: 10,
                     }}
                   >

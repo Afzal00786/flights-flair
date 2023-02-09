@@ -20,7 +20,7 @@ export const bookCard = [
     date: "Thu 23 Mar - Thu 30 Mar",
     title3: "From",
     title4: "Karachi",
-    price: "£325*",
+    price: "£388*",
     order: "Book Now",
     description: karachi,
     metaDesc:
@@ -42,7 +42,7 @@ export const bookCard = [
     flightUrl: "cheapflightstolahore",
     title3: "From",
     title4: "Lahore",
-    price: "£325*",
+    price: "£399*",
     order: "Book Now",
     description: Lahore,
     metaDesc:
@@ -66,7 +66,7 @@ export const bookCard = [
       "We provide the best cheap flights to Islamabad Pakistan from UK at the most economical rates. Book your UK to Islamabad flights with Flights Flair today!",
 
     title4: "Islamabad",
-    price: " £377*",
+    price: " £399*",
     order: "Book Now",
     description: Islamabad,
     mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
@@ -85,7 +85,7 @@ export const bookCard = [
 
     title3: "From",
     title4: "Peshawar",
-    price: "£344*",
+    price: "£375*",
     order: "Book Now",
     description: Peshawar,
     metaDesc:
@@ -107,7 +107,7 @@ export const bookCard = [
 
     title3: "From",
     title4: "Sialkot",
-    price: "£380*",
+    price: "£410*",
     order: "Book Now",
     description: Sialkot,
     metaDesc:

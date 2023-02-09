@@ -67,7 +67,7 @@ const BlogDetails = () => {
                       marginRight: 30,
                       paddingTop: 12,
                       paddingBottom: 75,
-                      textAlign: "center",
+                      textAlign: "left",
                       paddingLeft: 10,
                       paddingRight: 10,
                     }}
