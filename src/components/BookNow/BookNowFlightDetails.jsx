@@ -13,7 +13,7 @@ function BookNowFlightDetails() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  let data = location.state;
+  const data = location.state;
 
   return (
     <div className="bookNow_wrapper">
@@ -26,12 +26,7 @@ function BookNowFlightDetails() {
       <div className="field_text_wrapper">
         <p className="text_wrapper">{data?.description}</p>
         <div className="field_wrapper">
-          <TripForm
-            fromImg={data.fromImg}
-            width={data.width}
-            height={data.height}
-            styling
-          />
+          <TripForm fromImg={data.fromImg} styling />
         </div>
       </div>
       <div style={{ marginTop: 80 }} />

@@ -14,15 +14,11 @@ function Navigation() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/:booknowflightdetails"
-          element={<BookNowFlightDetails />}
-        />
+        <Route path="/:pageUrl" element={<BookNowFlightDetails />} />
         <Route path="/WhatWeDo" element={<WhatWeDo />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/BookingTerms" element={<BookingTerms />} />
         <Route path="/BlogDetails" element={<BlogDetails />} />
-
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
       <InstantFlight />

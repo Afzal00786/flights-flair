@@ -54,12 +54,9 @@ function BlogSlider() {
                         style={{
                           width: responsive ? "100%" : "100%",
                           height: responsive ? "35vh" : "24vh",
-                          // width: "100%",
-                          // height: 200,
                           borderTopLeftRadius: 10,
                           borderTopRightRadius: 10,
                           backgroundPosition: "center",
-                          // padding: 5,
                           display: "flex",
                           justifyContent: "center",
                           alignItems: "center",

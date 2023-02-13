@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import NavBar from "../Navbar";
-import Grid from "@mui/material/Grid";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import "./whatWeDo.css";
 import Footer from "../Footer";
 import MetaData from "../Helmet";

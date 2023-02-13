@@ -44,12 +44,12 @@ function BookNow() {
                     <h5>{data.title1}</h5>
                     <span className="card_date">{data.date}</span>
                     <div className="from_box">
-                      <div className="from_line"></div>
+                      <div className="from_line" />
                       <span>From</span>
-                      <div className="from_line"></div>
+                      <div className="from_line" />
                     </div>
                     <span className="book_Card_price">{data.price}</span>
-                    <span className="book_Card_order">{data.order}</span>
+                    <span className="book_Card_order">Book Now</span>
                   </div>
                 </SwiperSlide>
               );

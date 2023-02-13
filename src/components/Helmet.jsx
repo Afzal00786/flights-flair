@@ -1,6 +1,5 @@
 import React from "react";
 import DocumentMeta from "react-document-meta";
-import Helmet from "react-helmet";
 
 const MetaData = ({ title, description }) => {
   const meta = {
