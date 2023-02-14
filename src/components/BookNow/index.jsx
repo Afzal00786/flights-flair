@@ -5,9 +5,45 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
-import "./bookNow.css";
+import "../CheapFlights/bookNow.css";
 import { bookCard } from "../BookingDummyData";
-
+const dataCheapFlights = [
+  {
+    title1: "Flights To Karachi",
+    mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+    flightUrl: "cheapflightstokarachi",
+    date: "Thu 23 Mar - Thu 30 Mar",
+    price: "£388*",
+  },
+  {
+    title1: "Flights To Lahore",
+    mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+    flightUrl: "cheapflightstolahore",
+    date: "Wed 10 May - Wed 31 May",
+    price: "£399*",
+  },
+  {
+    title1: "Flights To Islamabad",
+    mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
+    flightUrl: "cheapflightstoislamabad",
+    date: "Tue 31 jan - Thu 16 Feb",
+    price: " £399*",
+  },
+  {
+    title1: "Flights To Peshawar",
+    flightUrl: "cheapflightstopeshawar",
+    mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
+    date: "Thu 16 Mar - Mon 03 Apr",
+    price: "£375*",
+  },
+  {
+    title1: "Flights To Sialkot",
+    flightUrl: "cheapflightstosialkot",
+    mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+    date: "Thu 16 Mar - Mon 03 Apr",
+    price: "£410*",
+  },
+];
 function BookNow() {
   const navigation = useNavigate();
   const responsive = window.innerWidth > 700;
@@ -31,13 +67,11 @@ function BookNow() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {bookCard.map((data, index) => {
+            {dataCheapFlights.map((data, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div
-                    onClick={() =>
-                      navigation(`/${data.flightUrl}`, { state: data })
-                    }
+                    onClick={() => navigation(`/${data.flightUrl}`)}
                     className="book_card_items"
                   >
                     <div className="book_Card_img"></div>

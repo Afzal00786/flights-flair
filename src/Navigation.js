@@ -8,13 +8,23 @@ import WhatWeDo from "./components/WhatWeDo";
 import InstantFlight from "./components/InstantFlights";
 import Blog from "./components/Blog";
 import BlogDetails from "./components/Blog/BlogDetails";
+import FlightKarachi from "./components/CheapFlights/FlightKarachi.jsx";
+import FlightLahore from "./components/CheapFlights/FlightLahore.jsx";
+import FlightIslamabad from "./components/CheapFlights/FlightIslamabad.jsx";
+import FlightPeshawar from "./components/CheapFlights/FlightPeshawar.jsx";
+import FlightSialkot from "./components/CheapFlights/FlightSialkot.jsx";
 
 function Navigation() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:pageUrl" element={<BookNowFlightDetails />} />
+        {/* <Route path="/:pageUrl" element={<BookNowFlightDetails />} /> */}
+        <Route path="/cheapflightstokarachi" element={<FlightKarachi />} />
+        <Route path="/cheapflightstolahore" element={<FlightLahore />} />
+        <Route path="/cheapflightstoislamabad" element={<FlightIslamabad />} />
+        <Route path="/cheapflightstopeshawar" element={<FlightPeshawar />} />
+        <Route path="/cheapflightstosialkot" element={<FlightSialkot />} />
         <Route path="/WhatWeDo" element={<WhatWeDo />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/BookingTerms" element={<BookingTerms />} />
