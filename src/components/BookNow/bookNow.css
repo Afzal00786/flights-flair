@@ -1,5 +1,5 @@
 .bookNow_wrapper {
-  background: url("../../asstes/images/airplane.webp");
+  background: url("../../asstes/images/airplane.jpg");
   background-size: cover;
   width: 100%;
   background-position: center;
@@ -65,7 +65,7 @@
 .background {
   width: 100%;
   height: 70vh;
-  background-image: url("../../asstes/images/islamabad.webp");
+  background-image: url("../../asstes/images/islamabad.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -116,7 +116,7 @@
     flex-direction: column;
   }
   .bookNow_wrapper {
-    background: url("../../asstes/images/airplane-mobile.webp");
+    background: url("../../asstes/images/airplane-mobile.jpg");
     background-size: cover;
     width: 100%;
     background-position: center;
@@ -147,7 +147,7 @@
   .background {
     width: 100%;
     height: 50vh;
-    background-image: url("../../asstes/images/islamabad-mobile.webp");
+    background-image: url("../../asstes/images/islamabad-mobile.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

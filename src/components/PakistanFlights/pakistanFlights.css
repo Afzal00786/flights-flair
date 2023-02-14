@@ -8,7 +8,7 @@ body {
 #background {
   width: 100%;
   height: 80vh;
-  background-image: url("../../asstes/images/peshawar.webp");
+  background-image: url("../../asstes/images/peshawar.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -34,7 +34,7 @@ body {
   #background {
     width: 100%;
     height: 65vh;
-    background-image: url("../../asstes/images/peshawar.webp");
+    background-image: url("../../asstes/images/peshawar.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

@@ -1,5 +1,5 @@
 .what_banner_wrapper{
-	background: url("../../asstes/images/airplane.webp");
+	background: url("../../asstes/images/airplane.jpg");
 	height: 500px;
 	background-size: cover;
 	background-position: center;
@@ -30,7 +30,7 @@ background-color: #007597;
 }
 @media screen and (max-width:768px){
 	.what_banner_wrapper{
-		background: url("../../asstes/images/airplane.webp");
+		background: url("../../asstes/images/airplane.jpg");
 		height: 400px;
 		background-size: cover;
 		background-position: center;

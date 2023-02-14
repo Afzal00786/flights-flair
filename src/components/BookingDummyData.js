@@ -26,8 +26,8 @@ export const bookCard = [
     flightUrl: "cheapflightstokarachi",
     mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
     bookingTitle: "Cheap Flights to Karachi Pakistan From UK | Flightsflair",
-    fromImg: require("../asstes/images/image1.webp"),
-    mobileImg: require("../asstes/images/image1-mobile.webp"),
+    fromImg: require("../asstes/images/image1.jpg"),
+    mobileImg: require("../asstes/images/image1-mobile.jpg"),
   },
   {
     id: 2,
@@ -42,8 +42,8 @@ export const bookCard = [
       "We provide the best cheap flights to Lahore Pakistan from UK at the most economical rates. Book your UK to Lahore flights with Flights Flair today!",
     mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
     bookingTitle: "Cheap Flights to Lahore Pakistan From UK | Flightsflair",
-    fromImg: require("../asstes/images/image7.webp"),
-    mobileImg: require("../asstes/images/image3-mobile.webp"),
+    fromImg: require("../asstes/images/image7.jpg"),
+    mobileImg: require("../asstes/images/image3-mobile.jpg"),
   },
   {
     id: 3,
@@ -58,8 +58,8 @@ export const bookCard = [
     description: Islamabad,
     mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
     bookingTitle: "Cheap Flights to Islamabad Pakistan From UK | Flightsflair",
-    fromImg: require("../asstes/images/image6.webp"),
-    mobileImg: require("../asstes/images/image2-mobile.webp"),
+    fromImg: require("../asstes/images/image6.jpg"),
+    mobileImg: require("../asstes/images/image2-mobile.jpg"),
   },
   {
     id: 4,
@@ -74,8 +74,8 @@ export const bookCard = [
       "We provide the best cheap flights to Peshawar Pakistan from UK at the most economical rates. Book your Manchester to Peshawar flights with Flights Flair today!",
     mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
     bookingTitle: "Cheap Flights to Peshawar Pakistan From UK | Flightsflair",
-    fromImg: require("../asstes/images/image5.webp"),
-    mobileImg: require("../asstes/images/image5-mobile.webp"),
+    fromImg: require("../asstes/images/image5.jpg"),
+    mobileImg: require("../asstes/images/image5-mobile.jpg"),
   },
   {
     id: 5,
@@ -90,7 +90,7 @@ export const bookCard = [
       "We provide the best cheap flights to Sialkot Pakistan from UK at the most economical rates. Book your London to Sialkot flights with Flights Flair today!",
     mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
     bookingTitle: "Cheap Flights to Sialkot Pakistan From UK | Flightsflair",
-    fromImg: require("../asstes/images/image4.webp"),
-    mobileImg: require("../asstes/images/image4-mobile.webp"),
+    fromImg: require("../asstes/images/image4.jpg"),
+    mobileImg: require("../asstes/images/image4-mobile.jpg"),
   },
 ];
