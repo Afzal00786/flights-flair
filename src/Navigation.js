@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import BookNowFlightDetails from "./components/BookNow/BookNowFlightDetails";
 import BookingTerms from "./components/BookingTerms";
 import ContactUs from "./components/ContactUs";
 import WhatWeDo from "./components/WhatWeDo";
@@ -19,7 +18,6 @@ function Navigation() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/:pageUrl" element={<BookNowFlightDetails />} /> */}
         <Route path="/cheapflightstokarachi" element={<FlightKarachi />} />
         <Route path="/cheapflightstolahore" element={<FlightLahore />} />
         <Route path="/cheapflightstoislamabad" element={<FlightIslamabad />} />

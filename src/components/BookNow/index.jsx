@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import "../CheapFlights/bookNow.css";
-import { bookCard } from "../BookingDummyData";
 const dataCheapFlights = [
   {
     title1: "Flights To Karachi",

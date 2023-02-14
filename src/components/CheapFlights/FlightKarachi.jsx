@@ -7,13 +7,11 @@ import TripForm from "../TripForm";
 
 import "./bookNow.css";
 const FlightKarachi = () => {
-  const location = useLocation();
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  const data = location.state;
   const metaDesc =
     "We provide the best cheap flights to Karachi Pakistan from UK at the most economical rates. Book your UK to Karachi flights with Flights Flair today!";
   const bookingTitle =

@@ -34,7 +34,7 @@ body {
   #blogBackground {
     width: 100%;
     height: 65vh;
-    background-image: url("../../asstes/images/ukBack.jpg");
+    background-image: url("../../asstes/images/ukBack-mobile.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

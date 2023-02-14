@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
-import { bookCard } from "../BookingDummyData";
 const dataCheapFlights = [
   {
     title4: "Karachi",
@@ -26,12 +25,12 @@ const dataCheapFlights = [
   {
     title4: "Peshawar",
     flightUrl: "cheapflightstopeshawar",
-    mobileImg: require("../../asstes/images/image5-mobile.jpg"),
+    mobileImg: require("../../asstes/images/image5.jpg"),
   },
   {
     title4: "Sialkot",
     flightUrl: "cheapflightstosialkot",
-    mobileImg: require("../../asstes/images/image4-mobile.jpg"),
+    mobileImg: require("../../asstes/images/image4.jpg"),
   },
 ];
 function PakistanFlights() {

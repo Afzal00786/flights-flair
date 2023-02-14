@@ -6,14 +6,12 @@ import NavBar from "../Navbar";
 import TripForm from "../TripForm";
 
 import "./bookNow.css";
-function BookNowFlightDetails() {
-  const location = useLocation();
+function FlightIslamabad() {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  const data = location.state;
   const mainTitle = "Cheap Flights To Islamabad, Pakistan From UK";
   const metaDesc =
     "We provide the best cheap flights to Islamabad Pakistan from UK at the most economical rates. Book your UK to Islamabad flights with Flights Flair today!";
@@ -45,4 +43,4 @@ function BookNowFlightDetails() {
   );
 }
 
-export default BookNowFlightDetails;
+export default FlightIslamabad;
