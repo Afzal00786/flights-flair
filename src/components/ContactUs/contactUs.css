@@ -6,7 +6,7 @@
   height: 500px;
 }
 .booking_terms_Inner_Image {
-  background: url("../../asstes/images/contactUsImage.jpg");
+  background: url("../../asstes/images/contactUsImage.webp");
 
   background-size: cover;
   width: 100%;
@@ -136,7 +136,7 @@
     font-size: 30px;
   }
   .booking_terms_Inner_Image {
-    background: url("../../asstes/images/contactUsImage-mobile.jpg");
+    background: url("../../asstes/images/contactUsImage-mobile.webp");
 
     background-size: cover;
 

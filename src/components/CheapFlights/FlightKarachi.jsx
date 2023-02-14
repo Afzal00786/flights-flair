@@ -32,7 +32,7 @@ const FlightKarachi = () => {
         <p className="text_wrapper">{karachi}</p>
         <div className="field_wrapper">
           <TripForm
-            fromImg={require("../../asstes/images/image1.jpg")}
+            fromImg={require("../../asstes/images/image1.webp")}
             styling
           />
         </div>

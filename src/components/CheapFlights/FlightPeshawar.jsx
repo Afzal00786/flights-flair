@@ -32,7 +32,7 @@ function FlightPeshawar() {
         <p className="text_wrapper">{Peshawar}</p>
         <div className="field_wrapper">
           <TripForm
-            fromImg={require("../../asstes/images/image5.jpg")}
+            fromImg={require("../../asstes/images/image5.webp")}
             styling
           />
         </div>

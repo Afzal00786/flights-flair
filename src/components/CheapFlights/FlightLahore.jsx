@@ -31,7 +31,7 @@ function FlightLahore() {
         <p className="text_wrapper">{Lahore}</p>
         <div className="field_wrapper">
           <TripForm
-            fromImg={require("../../asstes/images/image3.jpg")}
+            fromImg={require("../../asstes/images/image3.webp")}
             styling
           />
         </div>
