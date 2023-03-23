@@ -6,8 +6,33 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
-import { bookCard } from "../BookingDummyData";
-
+const dataCheapFlights = [
+  {
+    title4: "Karachi",
+    flightUrl: "cheapflightstokarachi",
+    mobileImg: require("../../asstes/images/image1-mobile.webp"),
+  },
+  {
+    title4: "Lahore",
+    flightUrl: "cheapflightstolahore",
+    mobileImg: require("../../asstes/images/image3-mobile.webp"),
+  },
+  {
+    title4: "Islamabad",
+    flightUrl: "cheapflightstoislamabad",
+    mobileImg: require("../../asstes/images/image2-mobile.webp"),
+  },
+  {
+    title4: "Peshawar",
+    flightUrl: "cheapflightstopeshawar",
+    mobileImg: require("../../asstes/images/image5.webp"),
+  },
+  {
+    title4: "Sialkot",
+    flightUrl: "cheapflightstosialkot",
+    mobileImg: require("../../asstes/images/image4.webp"),
+  },
+];
 function PakistanFlights() {
   const navigation = useNavigate();
 
@@ -35,7 +60,7 @@ function PakistanFlights() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {bookCard.map((data, index) => {
+            {dataCheapFlights.map((data, index) => {
               return (
                 <SwiperSlide>
                   <div
@@ -59,9 +84,7 @@ function PakistanFlights() {
                       alt="karachi"
                     />
                     <div
-                      onClick={() =>
-                        navigation(`/${data.flightUrl}`, { state: data })
-                      }
+                      onClick={() => navigation(`/${data.flightUrl}`)}
                       className="elementor-background-overlay"
                       style={{
                         width: responsive ? "80%" : "80%",

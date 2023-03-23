@@ -14,7 +14,6 @@ const Home = () => {
     "We provide the best cheap flights to Pakistan from UK at the most economical rates. Book your UK flights to Pakistan with Flights Flair today!";
   return (
     <div>
-      {/* <DocumentMeta {...meta} /> */}
       <MetaData
         description={description}
         title="Cheap Flights to Pakistan From UK With Special Fares 2023 "

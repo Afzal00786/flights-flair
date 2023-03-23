@@ -1,20 +1,3 @@
-.booking_terms_upper_Image {
-  background: url("../../asstes/images/upperImage.webp");
-  background-size: cover;
-  width: 100%;
-  background-position: center;
-  height: 500px;
-}
-.booking_terms_Inner_Image {
-  background: url("../../asstes/images/airplane.webp");
-
-  background-size: cover;
-  width: 100%;
-  background-position: center;
-  height: 500px;
-  opacity: 0.8;
-  padding-top: 250px;
-}
 .booking_text_styling {
   display: flex;
   justify-content: center;
@@ -29,36 +12,38 @@
   margin-bottom: 50px;
 }
 
-.booking_terms_right_wrapper {
-  margin: 10px;
-}
-.booking_terms_userSide {
-  background-color: #020422;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  border-bottom: 1px solid white;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.booking_terms_serviceSide {
-  background-color: #4e96ba;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid white;
-  padding-left: 10px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
 .booking_terms_dropdown_text {
   color: #8e91aa;
   padding: 10px;
   line-height: 25px;
-  
+}
+
+.booking_term_wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.booking_term_description {
+  color: #7a8292;
+  font-size: 14px;
+}
+.booking_term_title {
+  color: #575757;
+}
+@media screen and (max-width: 559px) {
+  .booking_term_wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .booking_term_description {
+    color: #7a8292;
+    font-size: 13px;
+  }
+  .booking_term_title {
+    color: #575757;
+    font-size: 14px;
+  }
 }

@@ -8,8 +8,30 @@ import { useNavigate } from "react-router-dom";
 
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import EmailIcon from "@mui/icons-material/Email";
-import { bookCard } from "../BookingDummyData";
+const dataCheapFlights = [
+  {
+    mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+    flightUrl: "cheapflightstokarachi",
+  },
+  {
+    mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+    flightUrl: "cheapflightstolahore",
+  },
+  {
+    mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
+    flightUrl: "cheapflightstoislamabad",
+  },
+  {
+    flightUrl: "cheapflightstopeshawar",
 
+    mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
+  },
+  {
+    flightUrl: "cheapflightstosialkot",
+
+    mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+  },
+];
 const Footer = () => {
   const navigation = useNavigate();
   return (
@@ -47,14 +69,12 @@ const Footer = () => {
             >
               Booking Terms
             </div>
-            {bookCard.map((data, index) => {
+            {dataCheapFlights.map((data, index) => {
               return (
                 <div
                   key={index}
                   className="footer_servives_items"
-                  onClick={() =>
-                    navigation(`/${data.flightUrl}`, { state: data })
-                  }
+                  onClick={() => navigation(`/${data.flightUrl}`)}
                 >
                   {data.mainTitle}
                 </div>

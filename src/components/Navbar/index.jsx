@@ -6,8 +6,30 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
-import { bookCard } from "../BookingDummyData";
+const dataCheapFlights = [
+  {
+    mainTitle: "Cheap Flights To Karachi, Pakistan From UK",
+    flightUrl: "cheapflightstokarachi",
+  },
+  {
+    mainTitle: "Cheap Flights To Lahore, Pakistan From UK",
+    flightUrl: "cheapflightstolahore",
+  },
+  {
+    mainTitle: "Cheap Flights To Islamabad, Pakistan From UK",
+    flightUrl: "cheapflightstoislamabad",
+  },
+  {
+    flightUrl: "cheapflightstopeshawar",
 
+    mainTitle: "Cheap Flights To Peshawar, Pakistan From UK",
+  },
+  {
+    flightUrl: "cheapflightstosialkot",
+
+    mainTitle: "Cheap Flights To Sialkot, Pakistan From UK",
+  },
+];
 const NavBar = () => {
   const [flights, setFlights] = useState(false);
   const handlePopoverOpen = (event) => {
@@ -56,7 +78,7 @@ const NavBar = () => {
                 Booking Terms
               </div>
               <div className="nav_items1" onClick={() => navigation("/Blog")}>
-                Blog
+                Blogs
               </div>
               <div className="nav_items1">
                 <div className="FiightText1">
@@ -105,15 +127,11 @@ const NavBar = () => {
                 </div>
                 {flightsOpen && (
                   <div style={{ position: "absolute", width: "90%" }}>
-                    {bookCard.map((data) => {
+                    {dataCheapFlights.map((data) => {
                       return (
                         <div
                           className="mobiledropdownContainer"
-                          onClick={() =>
-                            navigation(`/${data.flightUrl}`, {
-                              state: data,
-                            })
-                          }
+                          onClick={() => navigation(`/${data.flightUrl}`)}
                         >
                           <h3 className="mobiledropdownText">
                             {data.mainTitle}
@@ -138,14 +156,11 @@ const NavBar = () => {
       {flights ? (
         <>
           <div onMouseLeave={handlePopoverClose} className="drowpDownBoxStyle">
-            <div className="box"></div>
-            {bookCard.map((data) => {
+            {dataCheapFlights.map((data) => {
               return (
                 <div
                   className="dropdownTextContainer"
-                  onClick={() =>
-                    navigation(`/${data.flightUrl}`, { state: data })
-                  }
+                  onClick={() => navigation(`/${data.flightUrl}`)}
                 >
                   <div className="dropdownText">{data.mainTitle}</div>
                 </div>
@@ -199,7 +214,7 @@ const NavBar = () => {
                 className="nav_items"
                 onClick={() => navigation("/Blog")}
               >
-                Blog
+                Blogs
               </div>
               <div>
                 <div

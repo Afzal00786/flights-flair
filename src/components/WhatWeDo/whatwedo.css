@@ -1,55 +1,55 @@
-.what_banner_wrapper{
-	background: url("../../asstes/images/airplane.webp");
-	height: 500px;
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	font-size: 70px;
-	align-items: center;
-	color: white;
-	font-weight: 700;
+.what_banner_wrapper {
+  background: url("../../asstes/images/airplane.webp");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  align-items: center;
+  color: white;
+  font-weight: 700;
 }
-.about_us_container{
-	background-color: whitesmoke;
-	padding: 70px 20px;
+.about_us_container {
+  background-color: whitesmoke;
+  padding: 70px 20px;
 }
-.about_heading{
-	font-size: 30px;
-	font-weight: 700;
+.about_heading {
+  font-size: 30px;
+  font-weight: 700;
 }
-.about_content_text{
-	max-width: 1000px;
-	margin: auto;
-	padding: 50px 30px;
-font-size: 18px;
-	color: white;
-	line-height: 25px;
-border-radius: 4px;
-background-color: #007597;
+.about_content_text {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 30px;
+  font-size: 18px;
+  color: white;
+  line-height: 25px;
+  border-radius: 4px;
+  background-color: #007597;
 }
-@media screen and (max-width:768px){
-	.what_banner_wrapper{
-		background: url("../../asstes/images/airplane.webp");
-		height: 400px;
-		background-size: cover;
-		background-position: center;
-		display: flex;
-		justify-content: center;
-		font-size: 30px;
-		align-items: center;
-		color: white;
-		font-weight: 700;
-	}
-	.about_content_text{
-		max-width: 1000px;
-		margin: auto;
-		padding: 50px 20px;
-	font-size: 16px;
-		color: white;
-		text-align: justify;
-		line-height: 25px;
-	border-radius: 4px;
-	background-color: #007597;
-	}
+@media screen and (max-width: 768px) {
+  .what_banner_wrapper {
+    background: url("../../asstes/images/airplane.webp");
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+  }
+  .about_content_text {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+    font-size: 16px;
+    color: white;
+    text-align: justify;
+    line-height: 25px;
+    border-radius: 4px;
+    background-color: #007597;
+  }
 }

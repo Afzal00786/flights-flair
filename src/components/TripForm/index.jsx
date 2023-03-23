@@ -8,7 +8,7 @@ import "./form.css";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import SuccessModal from "../SuccessModal";
-const Contact = ({ fromImg, styling, width, height }) => {
+const Contact = ({ fromImg, styling }) => {
   const responsive = window.innerWidth > 700;
   const location = useLocation();
   console.log(fromImg, "fromImg");
@@ -602,8 +602,8 @@ const Contact = ({ fromImg, styling, width, height }) => {
 
         {styling && (
           <img
-            width={width}
-            height={height}
+            width={"92%"}
+            height={"380px"}
             style={{ marginLeft: responsive ? 20 : 15 }}
             src={fromImg}
             alt="fromImg"

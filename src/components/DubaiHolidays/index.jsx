@@ -22,7 +22,7 @@ function BookNow() {
         >
           {dubaiCard.map((data) => {
             return (
-              <div>
+              <div key={data.id}>
                 <div className="dubai_card_items">
                   <div className="dubai_Card_img">
                     <img
@@ -44,7 +44,6 @@ function BookNow() {
                     <h5
                       style={{
                         fontSize: 15,
-                        fontWeight: "bold",
                         textAlign: "center",
                       }}
                     >
@@ -55,17 +54,15 @@ function BookNow() {
                     >
                       {data.title2}
                     </span>
-                    <div style={{ fontSize: 13, fontWeight: "550" }}>
-                      {data.title3}
-                    </div>
+                    <div style={{ fontSize: 13, fontWeight: "550" }}>From</div>
                     <span className="dubai_date">{data.date}</span>
                     <div className="from_box">
-                      <div className="from_line"></div>
+                      <div className="from_line" />
                       <span>From</span>
-                      <div className="from_line"></div>
+                      <div className="from_line" />
                     </div>
                     <span className="book_Card_price">{data.price}</span>
-                    <span className="book_Card_order">{data.order}</span>
+                    <span className="book_Card_order">Book Now</span>
                   </div>
                 </div>
               </div>
