@@ -60,6 +60,9 @@
   display: flex;
   justify-content: center;
 }
+.blog_not_active_btn {
+  display: none;
+}
 .blog_btn {
   border: none;
   outline: none;
@@ -76,6 +79,7 @@
   border: 1px solid black;
   color: white;
 }
+
 @media screen and (max-width: 659px) {
   .blog_wrapper {
     display: flex;

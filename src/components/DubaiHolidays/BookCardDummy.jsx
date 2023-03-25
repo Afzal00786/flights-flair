@@ -9,7 +9,7 @@ export const dubaiCard = [
   },
   {
     id: 2,
-    img: "https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
+    img: " https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
     title1: "Crowne Plaza Dubai Deira, an IHG Hotel...Dubai",
     title2: "London Heathrow (LHR)",
     date: "11 Feb 2023 - 18 Feb 2023 ",
