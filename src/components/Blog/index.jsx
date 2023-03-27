@@ -1,80 +1,182 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Navbar";
 import "./blog.css";
 import BlogCard from "./BlogCard";
 import BlogSlider from "./BlogSlider";
+const dummyTags = ["HOLIDAY DESTINATIONS", "TRAVEL TIPS", "PILGRIMAGE"];
+const dummyBlogs = [
+  {
+    tagTitle: "HOLIDAY DESTINATIONS",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
+  },
+  {
+    tagTitle: "TRAVEL TIPS",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638144016262437477/638144016262437477VNyVTP.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
+  },
+  {
+    tagTitle: "PILGRIMAGE",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
+  },
+];
 
 function BookNow() {
-  let btns = document.getElementsByClassName("blog_btn");
-  for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      let current = document.getElementsByClassName("active");
-      if (current.length > 0) {
-        current[0].className = current[0].className.replace("active", "");
-      }
-      this.className += "active";
+  const [tagState, setTagState] = useState("");
+  const [selectedBlog, setSelectedBlog] = useState();
+
+  const [blogItems, setBlogItems] = useState(dummyBlogs);
+  const [filterApply, setFilterApply] = useState();
+  const filterItem = (value) => {
+    const updatedItems = dummyBlogs.filter((currElem) => {
+      return currElem.tagTitle === value;
     });
-  }
+    setTagState(value);
+    setBlogItems(updatedItems);
+    setFilterApply(updatedItems);
+  };
+  const filterItemReset = () => {
+    setBlogItems(dummyBlogs);
+    setFilterApply("");
+    setTagState("");
+  };
 
   return (
     <div style={{ marginBottom: 50 }}>
       <NavBar />
       <BlogSlider />
       <div class="blog_active_btn">
-        <button class="blog_btn ">HOLIDAY DESTINATIONS</button>
-        <button class="blog_btn ">TRAVEL TIPS/OTHERS</button>
-        <button class="blog_btn ">PILGRIMAGE</button>
+        {dummyTags.map((i) => (
+          <button
+            onClick={() => filterItem(i)}
+            className={i === tagState ? "blog_btn_active" : "blog_btn"}
+          >
+            {i}
+          </button>
+        ))}
+        {filterApply && (
+          <button onClick={() => filterItemReset()} class="blog_btn ">
+            reset
+          </button>
+        )}
       </div>
 
-      <BlogCard />
-      {/* <div className="blog_card_container">
-        <div className="blog_card_tag_type">HOLIDAY DESTINATIONS</div>
-        <img
-          width={"100%"}
-          height={208}
-          src="https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png"
-        />
-        <div style={{ padding: 20 }}>
-          <div className="blog_card_title_text">Best place to celebrate</div>
-          <div className="blog_small_details_container">
-            Easymytrpipi
-            <AccessTimeIcon style={{ fontSize: 14, color: "gray" }} />
-            February 23, 2023
-          </div>
-        </div>
-      </div>
-      <div className="blog_card_container">
-        <div className="blog_card_tag_type">TRAVEL TIPS/OTHERS</div>
-        <img
-          width={"100%"}
-          height={208}
-          src=" https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1"
-        />
-        <div style={{ padding: 20 }}>
-          <div className="blog_card_title_text">Best place to celebrate</div>
-          <div className="blog_small_details_container">
-            Easymytrpipi
-            <AccessTimeIcon style={{ fontSize: 14, color: "gray" }} />
-            February 23, 2023
-          </div>
-        </div>
-      </div>
-      <div className="blog_card_container">
-        <div className="blog_card_tag_type">PILGRIMAGE</div>
-        <img
-          width={"100%"}
-          height={208}
-          src="https://tse2.mm.bing.net/th?id=OIP.gmw2BhbIbh90Qo076RBHiAHaFL&pid=Api&P=0"
-        />
-        <div style={{ padding: 20 }}>
-          <div className="blog_card_title_text">Best place to celebrate</div>
-          <div className="blog_small_details_container">
-            Easymytrpipi
-            <AccessTimeIcon style={{ fontSize: 14, color: "gray" }} />
-            February 23, 2023
-          </div>
-        </div>
-      </div> */}
+      <BlogCard blogItems={blogItems} />
     </div>
   );
 }

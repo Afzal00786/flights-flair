@@ -59,9 +59,33 @@
 .blog_active_btn {
   display: flex;
   justify-content: center;
+  padding:20px 0px 20px 0px ;
 }
-.blog_not_active_btn {
-  display: none;
+.paginationBttn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  font-size: 1.2rem;
+  gap: 10px;
+}
+
+
+.blog_btn_active {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 20px;
+  background-color: #ff0000;
+  /* border: 1px solid black; */
+  color: white;
 }
 .blog_btn {
   border: none;
