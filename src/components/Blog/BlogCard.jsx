@@ -63,14 +63,15 @@ const BlogCard = ({ blogItems }) => {
               </div>
             ))}
           </div>
-
-          <ReactPaginate
-            previousLabel={"<"}
-            nextLabel={">"}
-            pageCount={pageCount}
-            onPageChange={(event) => handlePageClick(event, index)}
-            containerClassName={"paginationBttn"}
-          />
+          {blogItems[index].chdBlogs.length >= 9 && (
+            <ReactPaginate
+              previousLabel={"<"}
+              nextLabel={">"}
+              pageCount={pageCount}
+              onPageChange={(event) => handlePageClick(event, index)}
+              containerClassName={"paginationBttn"}
+            />
+          )}
         </>
       ))}
     </div>
