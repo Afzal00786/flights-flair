@@ -64,14 +64,29 @@
 .paginationBttn{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin-bottom:3rem;
+  margin-top: 4rem;
   font-size: 1.2rem;
   gap: 10px;
+  width: 90%;
 }
-
+.paginationBttn .page-num{
+  padding: 7px 13px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 400;
+  border: none;
+  background-color: #F6F7F8;
+}
+.paginationBttn .page-num:hover{
+background-color: #ff0000;
+color: white;
+}
+.paginationBttn .active{
+  background-color: #ff0000;
+  }
 
 .blog_btn_active {
   border: none;

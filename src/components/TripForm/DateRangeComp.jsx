@@ -65,7 +65,6 @@ const DateRangeComp = ({
                 color: "black",
                 backgroundColor: "white",
                 fontSize: 12,
-                borderWidth: 0,
                 marginTop: 5,
                 width: "100%",
               }}
@@ -73,6 +72,7 @@ const DateRangeComp = ({
                 range[0].endDate,
                 "MM/dd/yyyy"
               )}`}
+              disableUnderline
               readOnly
               onClick={() => setOpen((open) => !open)}
               name="date"
@@ -132,7 +132,6 @@ const DateRangeComp = ({
                 className={styling ? "bookNowContainer" : "container"}
                 style={{
                   color: "black",
-                  borderWidth: 0,
                   marginTop: 5,
                   fontSize: 12,
                   width: "100%",
@@ -140,6 +139,7 @@ const DateRangeComp = ({
                 }}
                 value={calendar}
                 readOnly
+                disableUnderline
                 // className="inputBox"
                 onClick={() => setOpen((open) => !open)}
                 startAdornment={

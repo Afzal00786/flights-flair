@@ -52,13 +52,27 @@ const Footer = () => {
               <div className="iconStyling2">
                 <PhoneEnabledIcon />
               </div>
-              <div className="footer_phone">0208-638-6789</div>
+              <div className="footer_phone">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="tel:0208-004-4475"
+                >
+                  0208-638-6789
+                </a>
+              </div>
             </div>
             <div className="footer_ways_wrapper">
               <div className="iconStyling2">
                 <EmailIcon />
               </div>
-              <div className="footer_email">support@flightsflair.com</div>
+              <div className="footer_email">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="mailto:support@flightsflair.com"
+                >
+                  support@flightsflair.com
+                </a>
+              </div>
             </div>
           </div>
           <div className="footer_service_wraper">
