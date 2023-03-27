@@ -354,11 +354,13 @@ const Contact = ({ fromImg, styling }) => {
                 sm={3.7}
                 xs={11.9}
               >
-                <legend className="main_text">Flying To</legend>
+                <legend className={styling ? "main" : "main_text"}>
+                  Flying To
+                </legend>
 
                 <Input
                   className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
+                  style={{ color: styling ? "white" : "black", fontSize: 12 }}
                   name="text1"
                   type="text"
                   value={valueTo.split(",")[0]}
@@ -450,7 +452,9 @@ const Contact = ({ fromImg, styling }) => {
                 xs={styling ? 11.9 : 5.8}
                 // style={{ marginLeft: 10 }}
               >
-                <legend className="main_text">PASSENGERS</legend>
+                <legend className={styling ? "main" : "main_text"}>
+                  PASSENGERS
+                </legend>
                 <div onClick={handleOpen}>
                   <input
                     className={styling ? "bookNowContainer" : "container"}
@@ -470,6 +474,11 @@ const Contact = ({ fromImg, styling }) => {
                     color="black"
                   />
                 </div>
+                {validationPhone && (
+                  <div className={styling ? "styling_error" : "error"}>
+                    This field is required.
+                  </div>
+                )}
                 {open ? (
                   <>
                     <div
@@ -557,10 +566,12 @@ const Contact = ({ fromImg, styling }) => {
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
               >
-                <legend className="main_text">PHONE</legend>
+                <legend className={styling ? "main" : "main_text"}>
+                  PHONE
+                </legend>
                 <Input
                   className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
+                  style={{ color: "black", fontSize: 12 }}
                   type="number"
                   disableUnderline
                   fullWidth
