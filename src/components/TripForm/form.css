@@ -13,11 +13,12 @@
   width: 100%;
   font-size: 0.7rem;
   /* font-family: work sans; */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 40px;
   padding-left: 3px;
-  color: white;
+  color: black;
+  background-color: #ffffff;
 }
 .bookNowContainer {
   border: 0.1rem solid #c9c9c9;
@@ -29,7 +30,7 @@
   padding-left: 3px;
 }
 #text::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 #bookNow::placeholder {
@@ -184,10 +185,11 @@
   border-width: 0;
   font-size: 16;
   width: 95%;
-  height: 50px;
+  height: 45px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 600;
+  border-radius: 20px;
 }
 .date_field {
   width: 550px;
@@ -327,4 +329,6 @@ input {
 }
 .main_text {
   padding-top: 5px;
+  color: white;
+  font-size: 0.8rem;
 }

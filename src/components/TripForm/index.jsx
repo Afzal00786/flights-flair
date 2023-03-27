@@ -1,4 +1,4 @@
-import { Input } from "@material-ui/core";
+import { Input, InputAdornment } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
 import DateRangeComp from "./DateRangeComp";
 import Grid from "@mui/material/Grid";
@@ -7,7 +7,9 @@ import data2 from "./dummyData2.jsx";
 import "./form.css";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import RoomIcon from "@mui/icons-material/Room";
 import SuccessModal from "../SuccessModal";
+import PhoneIcon from "@mui/icons-material/Phone";
 const Contact = ({ fromImg, styling }) => {
   const responsive = window.innerWidth > 700;
   const location = useLocation();
@@ -254,6 +256,7 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
                 alignItems: "center",
                 width: "100%",
+                // justifyContent: "center",
                 paddingBottom: 15,
                 paddingTop: 15,
                 paddingLeft: 5,
@@ -268,26 +271,37 @@ const Contact = ({ fromImg, styling }) => {
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
-                md={styling ? 12 : 1.7}
+                md={styling ? 12 : 1.9}
                 sm={3.7}
                 xs={11.9}
-                className={styling ? "bookNowContainer" : "container"}
               >
-                <legend className="main_text">FROM WHERE</legend>
-                <Input
-                  style={{
-                    color: styling ? "black" : "white",
-                    fontSize: 12,
-                  }}
-                  name="name"
-                  type="text"
-                  disableUnderline
-                  value={value.split(",")[0]}
-                  id={styling ? "bookNow" : "text"}
-                  autoComplete="off"
-                  onChange={(e) => onChangeWhere(e)}
-                  placeholder="Departure"
-                />
+                <legend className={styling ? "" : "main_text"}>
+                  Flying From
+                </legend>
+                <span>
+                  <Input
+                    className={styling ? "bookNowContainer" : "container"}
+                    style={{
+                      color: styling ? "white" : "black",
+                      fontSize: 12,
+                    }}
+                    name="name"
+                    type="text"
+                    disableUnderline
+                    value={value.split(",")[0]}
+                    id={styling ? "bookNow" : "text"}
+                    autoComplete="off"
+                    onChange={(e) => onChangeWhere(e)}
+                    placeholder="City or Airport"
+                    startAdornment={
+                      <InputAdornment position="start">
+                        <RoomIcon
+                          style={{ width: 20, height: 20, color: "#822E05" }}
+                        />
+                      </InputAdornment>
+                    }
+                  />
+                </span>
                 {validationTo && (
                   <div className={styling ? "styling_error" : "error"}>
                     This field is required.
@@ -336,13 +350,14 @@ const Contact = ({ fromImg, styling }) => {
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
-                md={styling ? 12 : 1.7}
+                md={styling ? 12 : 1.9}
                 sm={3.7}
                 xs={11.9}
-                className={styling ? "bookNowContainer" : "container"}
               >
-                <legend className="main_text">WHERE TO</legend>
+                <legend className="main_text">Flying To</legend>
+
                 <Input
+                  className={styling ? "bookNowContainer" : "container"}
                   style={{ color: styling ? "black" : "white", fontSize: 12 }}
                   name="text1"
                   type="text"
@@ -351,9 +366,15 @@ const Contact = ({ fromImg, styling }) => {
                   id={styling ? "bookNow" : "text"}
                   autoComplete="off"
                   onChange={(e) => onChangeTo(e)}
-                  placeholder="Arrival"
+                  placeholder="City or Airport"
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <RoomIcon
+                        style={{ width: 20, height: 20, color: "#822E05" }}
+                      />
+                    </InputAdornment>
+                  }
                 />
-
                 {validationFrom && (
                   <div className={styling ? "styling_error" : "error"}>
                     This field is required.
@@ -401,19 +422,20 @@ const Contact = ({ fromImg, styling }) => {
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
-                className={styling ? "bookNowContainer" : "container"}
                 item
-                md={styling ? 12 : 1.7}
+                md={styling ? 12 : 1.9}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
               >
-                <DateRangeComp
-                  styling={styling}
-                  validationDate={validationDate}
-                  selectTripDate={selectTripDate}
-                  setDateField={setDateField}
-                  dateField={dateField}
-                />
+                <div>
+                  <DateRangeComp
+                    styling={styling}
+                    validationDate={validationDate}
+                    selectTripDate={selectTripDate}
+                    setDateField={setDateField}
+                    dateField={dateField}
+                  />
+                </div>
               </Grid>
               <Grid
                 style={{
@@ -423,29 +445,29 @@ const Contact = ({ fromImg, styling }) => {
                   marginLeft: 2.5,
                 }}
                 item
-                md={styling ? 12 : 1.7}
+                md={styling ? 12 : 1.9}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
                 // style={{ marginLeft: 10 }}
-                className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">PASSENGERS</legend>
                 <div onClick={handleOpen}>
                   <input
+                    className={styling ? "bookNowContainer" : "container"}
                     id={styling ? "bookNow" : "text"}
                     name="counter"
                     autoComplete="off"
                     style={{
-                      color: styling ? "black" : "white",
-                      backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
+                      color: "black",
+                      backgroundColor: "white",
                       fontSize: 12,
-                      borderWidth: 0,
+                      // borderWidth: 0,
                       marginTop: 5,
                       width: "100%",
                     }}
                     value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                     placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
-                    color="white"
+                    color="black"
                   />
                 </div>
                 {open ? (
@@ -531,13 +553,13 @@ const Contact = ({ fromImg, styling }) => {
                   marginLeft: 2.5,
                 }}
                 item
-                md={styling ? 12 : 1.7}
+                md={styling ? 12 : 1.9}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
-                className={styling ? "bookNowContainer" : "container"}
               >
                 <legend className="main_text">PHONE</legend>
                 <Input
+                  className={styling ? "bookNowContainer" : "container"}
                   style={{ color: styling ? "black" : "white", fontSize: 12 }}
                   type="number"
                   disableUnderline
@@ -548,6 +570,13 @@ const Contact = ({ fromImg, styling }) => {
                   onChange={(e) => handlePhone(e)}
                   id={styling ? "bookNow" : "text"}
                   placeholder="+44-XXXX-XXXX"
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <PhoneIcon
+                        style={{ width: 20, height: 20, color: "#822E05" }}
+                      />
+                    </InputAdornment>
+                  }
                 />
                 {validationPhone && (
                   <div className={styling ? "styling_error" : "error"}>
@@ -559,41 +588,15 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
+                  marginTop: 25,
                 }}
                 item
-                md={styling ? 12 : 1.7}
-                sm={3.7}
-                xs={styling ? 11.9 : 5.8}
-                className={styling ? "bookNowContainer" : "container"}
-              >
-                <legend className="main_text">EMAIL</legend>
-                <Input
-                  style={{ color: styling ? "black" : "white", fontSize: 12 }}
-                  type="email"
-                  disableUnderline
-                  name="email"
-                  autoComplete="off"
-                  value={email}
-                  onChange={(e) => handleEmail(e)}
-                  id={styling ? "bookNow" : "text"}
-                  placeholder="john@xyz.com (Optional)"
-                />
-              </Grid>
-              <Grid
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
-                }}
-                item
-                md={styling ? 12 : 1.4}
+                md={styling ? 12 : 1.6}
                 sm={3}
                 xs={11.9}
               >
                 <button type="submit" className="find_now_button">
-                  Find Now
+                  Submit
                 </button>
               </Grid>
             </Grid>
