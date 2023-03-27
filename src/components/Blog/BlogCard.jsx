@@ -70,6 +70,10 @@ const BlogCard = ({ blogItems }) => {
               pageCount={pageCount}
               onPageChange={(event) => handlePageClick(event, index)}
               containerClassName={"paginationBttn"}
+              pageLinkClassName="page-num"
+              previousLinkClassName="page-num"
+              nextLinkClassName="page-num"
+              activeLinkClassName="active"
             />
           )}
         </>

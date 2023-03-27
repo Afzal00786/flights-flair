@@ -37,7 +37,17 @@ function WhatWeDo() {
                 </div>
                 <div className="contactUsWaysText">
                   <div className="call_us_text">Call us</div>
-                  <div className="call_us_phone">0208-638-6789</div>
+                  <div className="call_us_phone">
+                    <a
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                      href="tel:0208-004-4475"
+                    >
+                      0208-638-6789
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="contact_us_ways_wrapper">
@@ -46,7 +56,14 @@ function WhatWeDo() {
                 </div>
                 <div className="contactUsWaysText">
                   <div className="call_us_text">Email us</div>
-                  <div className="call_us_phone">support@flightsflair.com</div>
+                  <div className="call_us_phone">
+                    <a
+                      style={{ textDecoration: "none", color: "black" }}
+                      href="mailto:support@flightsflair.com"
+                    >
+                      support@flightsflair.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

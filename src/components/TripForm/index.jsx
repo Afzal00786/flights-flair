@@ -166,7 +166,7 @@ const Contact = ({ fromImg, styling }) => {
       />
       <div
         style={{ backgroundColor: styling ? "#4E96BA" : "" }}
-        className="fieldsContainer"
+        className={styling ? "" : "fieldsContainer"}
       >
         {styling ? (
           <div
@@ -275,7 +275,7 @@ const Contact = ({ fromImg, styling }) => {
                 sm={3.7}
                 xs={11.9}
               >
-                <legend className={styling ? "" : "main_text"}>
+                <legend className={styling ? "main" : "main_text"}>
                   Flying From
                 </legend>
                 <span>
@@ -474,11 +474,11 @@ const Contact = ({ fromImg, styling }) => {
                     color="black"
                   />
                 </div>
-                {validationPhone && (
+                {/* {validationPhone && (
                   <div className={styling ? "styling_error" : "error"}>
                     This field is required.
                   </div>
-                )}
+                )} */}
                 {open ? (
                   <>
                     <div
@@ -617,8 +617,12 @@ const Contact = ({ fromImg, styling }) => {
         {styling && (
           <img
             width={"92%"}
-            height={"380px"}
-            style={{ marginLeft: responsive ? 20 : 15 }}
+            height={"320px"}
+            style={{
+              marginLeft: responsive ? 20 : 15,
+              marginTop: responsive ? 10 : 15,
+              marginBottom: responsive ? 10 : 15,
+            }}
             src={fromImg}
             alt="fromImg"
           />
