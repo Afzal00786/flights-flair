@@ -4,32 +4,27 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ReactPaginate from "react-paginate";
 
 const BlogCard = ({ blogItems }) => {
+  console.log(blogItems, "blogItems");
   const [currentItems, setCurrentItems] = useState([]);
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   const itemsPerPage = 9;
-
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    const slicedItems = blogItems.map((i) => ({
-      ...i,
-      chdBlogs:
-        i.chdBlogs.length > itemsPerPage
-          ? i.chdBlogs.slice(itemOffset, endOffset)
-          : i.chdBlogs,
-    }));
-    setCurrentItems(slicedItems);
-    setPageCount(
-      Math.ceil(
-        blogItems.reduce(
-          (acc, curr) =>
-            acc +
-            (curr.chdBlogs.length > itemsPerPage ? curr.chdBlogs.length : 0),
-          0
-        ) / itemsPerPage
-      )
-    );
-  }, [itemOffset, itemsPerPage, blogItems]);
+    const updatedItems = blogItems.map((item) => {
+      const endOffset = itemOffset + itemsPerPage;
+      const slicedChdBlogs =
+        item.chdBlogs.length > itemsPerPage
+          ? item.chdBlogs.slice(itemOffset, endOffset)
+          : item.chdBlogs;
+      const pageCount = Math.ceil(item.chdBlogs.length / itemsPerPage);
+      return {
+        ...item,
+        chdBlogs: slicedChdBlogs,
+        pageCount: pageCount,
+      };
+    });
+    setCurrentItems(updatedItems);
+  }, [blogItems, itemOffset, itemsPerPage]);
   const handlePageClick = (event, blgIndex) => {
     const newOffset = event.selected * itemsPerPage;
     const endOffset = newOffset + itemsPerPage;
@@ -44,7 +39,7 @@ const BlogCard = ({ blogItems }) => {
   };
   return (
     <div>
-      {currentItems.map((blg, index) => (
+      {currentItems?.map((blg, index) => (
         <>
           <div className="blog_main_title">{blg.tagTitle}</div>
           <div className="blog_card_item_container">
@@ -63,11 +58,11 @@ const BlogCard = ({ blogItems }) => {
               </div>
             ))}
           </div>
-          {blogItems[index].chdBlogs.length >= 9 && (
+          {blg.pageCount > 1 && (
             <ReactPaginate
               previousLabel={"<"}
               nextLabel={">"}
-              pageCount={pageCount}
+              pageCount={blg.pageCount}
               onPageChange={(event) => handlePageClick(event, index)}
               containerClassName={"paginationBttn"}
             />

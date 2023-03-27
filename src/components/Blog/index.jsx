@@ -38,6 +38,30 @@ const dummyBlogs = [
         tripCompany: "Easymytrpipi",
       },
       {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
         img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
         title: "Best place to celebrate",
         created: "February 23, 2023",
