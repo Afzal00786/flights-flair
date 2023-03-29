@@ -156,6 +156,7 @@ const NavBar = () => {
       {flights ? (
         <>
           <div onMouseLeave={handlePopoverClose} className="drowpDownBoxStyle">
+            <div className="box"></div>
             {dataCheapFlights.map((data) => {
               return (
                 <div

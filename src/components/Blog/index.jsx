@@ -3,12 +3,14 @@ import NavBar from "../Navbar";
 import "./blog.css";
 import BlogCard from "./BlogCard";
 import BlogSlider from "./BlogSlider";
+import CloseIcon from "@mui/icons-material/Close";
 const dummyTags = [
   "HOLIDAY DESTINATIONS",
   "TRAVEL TIPS",
   "PILGRIMAGE",
   "BEST DAYS SPEND",
 ];
+const tags = ["Filter"];
 const dummyBlogs = [
   {
     tagTitle: "HOLIDAY DESTINATIONS",
@@ -255,19 +257,32 @@ function BookNow() {
       <NavBar />
       <BlogSlider />
       <div class="blog_active_btn">
-        {dummyTags.map((i) => (
-          <button
-            onClick={() => filterItem(i)}
-            className={i === tagState ? "blog_btn_active" : "blog_btn"}
-          >
-            {i}
-          </button>
-        ))}
-        {filterApply && (
-          <button onClick={() => filterItemReset()} class="blog_btn ">
-            reset
-          </button>
-        )}
+        <div>
+          {tags.map((i) => (
+            <button className={"tag_btn"}>{i}</button>
+          ))}
+        </div>
+        <div>
+          {dummyTags.map((i) => (
+            <button
+              onClick={() => filterItem(i)}
+              className={i === tagState ? "blog_btn_active" : "blog_btn"}
+            >
+              {i}
+            </button>
+          ))}
+          {filterApply && (
+            <button onClick={() => filterItemReset()} className="cross_btn ">
+              <CloseIcon
+                style={{
+                  width: 20,
+                  height: 20,
+                }}
+              />
+            </button>
+          )}
+        </div>
+        <div></div>
       </div>
 
       <BlogCard blogItems={blogItems} />

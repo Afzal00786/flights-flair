@@ -271,7 +271,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
-                md={styling ? 12 : 1.9}
+                md={styling ? 12 : 2.1}
                 sm={3.7}
                 xs={11.9}
               >
@@ -296,7 +296,7 @@ const Contact = ({ fromImg, styling }) => {
                     startAdornment={
                       <InputAdornment position="start">
                         <RoomIcon
-                          style={{ width: 20, height: 20, color: "#822E05" }}
+                          style={{ width: 20, height: 20, color: "black" }}
                         />
                       </InputAdornment>
                     }
@@ -350,7 +350,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
-                md={styling ? 12 : 1.9}
+                md={styling ? 12 : 2.1}
                 sm={3.7}
                 xs={11.9}
               >
@@ -372,7 +372,7 @@ const Contact = ({ fromImg, styling }) => {
                   startAdornment={
                     <InputAdornment position="start">
                       <RoomIcon
-                        style={{ width: 20, height: 20, color: "#822E05" }}
+                        style={{ width: 20, height: 20, color: "black" }}
                       />
                     </InputAdornment>
                   }
@@ -425,7 +425,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginLeft: 2.5,
                 }}
                 item
-                md={styling ? 12 : 1.9}
+                md={styling ? 12 : 2.1}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
               >
@@ -447,8 +447,8 @@ const Contact = ({ fromImg, styling }) => {
                   marginLeft: 2.5,
                 }}
                 item
-                md={styling ? 12 : 1.9}
-                sm={3.7}
+                md={styling ? 12 : 2.1}
+                sm={3.5}
                 xs={styling ? 11.9 : 5.8}
                 // style={{ marginLeft: 10 }}
               >
@@ -456,7 +456,7 @@ const Contact = ({ fromImg, styling }) => {
                   PASSENGERS
                 </legend>
                 <div onClick={handleOpen}>
-                  <input
+                  <Input
                     className={styling ? "bookNowContainer" : "container"}
                     id={styling ? "bookNow" : "text"}
                     name="counter"
@@ -465,8 +465,6 @@ const Contact = ({ fromImg, styling }) => {
                       color: "black",
                       backgroundColor: "white",
                       fontSize: 12,
-                      // borderWidth: 0,
-                      marginTop: 5,
                       width: "100%",
                     }}
                     value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
@@ -474,11 +472,15 @@ const Contact = ({ fromImg, styling }) => {
                     color="black"
                   />
                 </div>
-                {/* {validationPhone && (
-                  <div className={styling ? "styling_error" : "error"}>
-                    This field is required.
+                {validationPhone && (
+                  <div
+                    className={styling ? "styling_error" : "error"}
+                    style={{ color: "#47433c" }}
+                  >
+                    .
                   </div>
-                )} */}
+                )}
+
                 {open ? (
                   <>
                     <div
@@ -562,7 +564,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginLeft: 2.5,
                 }}
                 item
-                md={styling ? 12 : 1.9}
+                md={styling ? 12 : 2.1}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
               >
@@ -584,7 +586,7 @@ const Contact = ({ fromImg, styling }) => {
                   startAdornment={
                     <InputAdornment position="start">
                       <PhoneIcon
-                        style={{ width: 20, height: 20, color: "#822E05" }}
+                        style={{ width: 20, height: 20, color: "black" }}
                       />
                     </InputAdornment>
                   }
@@ -599,16 +601,19 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginTop: 25,
+                  marginTop: 20,
                 }}
                 item
-                md={styling ? 12 : 1.6}
+                md={styling ? 12 : 1}
                 sm={3}
                 xs={11.9}
               >
                 <button type="submit" className="find_now_button">
                   Submit
                 </button>
+                {validationPhone && (
+                  <div className={styling ? "styling_error" : "error"}>.</div>
+                )}
               </Grid>
             </Grid>
           </form>
