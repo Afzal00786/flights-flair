@@ -79,16 +79,13 @@ const DateRangeComp = ({
               startAdornment={
                 <InputAdornment position="start">
                   <CalendarMonthIcon
-                    style={{ width: 20, height: 20, color: "#822E05" }}
+                    style={{ width: 20, height: 20, color: "black" }}
                   />
                 </InputAdornment>
               }
             />
             {validationDate && (
-              <div
-                style={{ marginTop: 13 }}
-                className={styling ? "styling_error" : "error"}
-              >
+              <div className={styling ? "styling_error" : "error"}>
                 This field is required.
               </div>
             )}
@@ -145,16 +142,13 @@ const DateRangeComp = ({
                 startAdornment={
                   <InputAdornment position="start">
                     <CalendarMonthIcon
-                      style={{ width: 20, height: 20, color: "#822E05" }}
+                      style={{ width: 20, height: 20, color: "black" }}
                     />
                   </InputAdornment>
                 }
               />
               {validationDate && (
-                <div
-                  style={{ marginTop: 13 }}
-                  className={styling ? "styling_error" : "error"}
-                >
+                <div className={styling ? "styling_error" : "error"}>
                   This field is required.
                 </div>
               )}

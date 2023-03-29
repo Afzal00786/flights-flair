@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./blogCard.css";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ReactPaginate from "react-paginate";
-
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 const BlogCard = ({ blogItems }) => {
   console.log(blogItems, "blogItems");
   const [currentItems, setCurrentItems] = useState([]);
@@ -64,14 +66,18 @@ const BlogCard = ({ blogItems }) => {
           </div>
           {blogItems[index]?.chdBlogs?.length >= 9 && (
             <ReactPaginate
-              previousLabel={"<"}
-              nextLabel={">"}
+              previousLabel={
+                <KeyboardArrowLeftIcon style={{ width: 20, height: 20 }} />
+              }
+              nextLabel={
+                <KeyboardArrowRightIcon style={{ width: 20, height: 20 }} />
+              }
               pageCount={blg.pageCount}
               onPageChange={(event) => handlePageClick(event, index)}
               containerClassName={"paginationBttn"}
               pageLinkClassName="page-num"
-              previousLinkClassName="page-num"
-              nextLinkClassName="page-num"
+              previousLinkClassName="page-num2"
+              nextLinkClassName="page-num2"
               activeLinkClassName="active"
             />
           )}
