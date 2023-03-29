@@ -13,10 +13,10 @@ const BlogCard = ({ blogItems }) => {
     const updatedItems = blogItems.map((item) => {
       const endOffset = itemOffset + itemsPerPage;
       const slicedChdBlogs =
-        item.chdBlogs.length > itemsPerPage
+        item?.chdBlogs?.length > itemsPerPage
           ? item.chdBlogs.slice(itemOffset, endOffset)
           : item.chdBlogs;
-      const pageCount = Math.ceil(item.chdBlogs.length / itemsPerPage);
+      const pageCount = Math?.ceil(item.chdBlogs.length / itemsPerPage);
       return {
         ...item,
         chdBlogs: slicedChdBlogs,
@@ -29,18 +29,22 @@ const BlogCard = ({ blogItems }) => {
     const newOffset = event.selected * itemsPerPage;
     const endOffset = newOffset + itemsPerPage;
     const slicedChdBlogs =
-      blogItems[blgIndex].chdBlogs.length > itemsPerPage
-        ? blogItems[blgIndex].chdBlogs.slice(newOffset, endOffset)
-        : blogItems[blgIndex].chdBlogs;
+      blogItems[blgIndex]?.chdBlogs?.length > itemsPerPage
+        ? blogItems[blgIndex]?.chdBlogs?.slice(newOffset, endOffset)
+        : blogItems[blgIndex]?.chdBlogs;
+    const pageCount = Math?.ceil(
+      blogItems[blgIndex]?.chdBlogs?.length / itemsPerPage
+    );
     const updatedBlg = { ...blogItems[blgIndex], chdBlogs: slicedChdBlogs };
     const updatedItems = [...currentItems];
-    updatedItems.splice(blgIndex, 1, updatedBlg);
+    updatedItems?.splice(blgIndex, 1, { ...updatedBlg, pageCount });
     setCurrentItems(updatedItems);
   };
   return (
     <div>
       {currentItems?.map((blg, index) => (
         <>
+          {console.log(blg.pageCount, "pageCount")}
           <div className="blog_main_title">{blg.tagTitle}</div>
           <div className="blog_card_item_container">
             {blg?.chdBlogs?.map((blgItem) => (
@@ -58,7 +62,7 @@ const BlogCard = ({ blogItems }) => {
               </div>
             ))}
           </div>
-          {blg.pageCount > 1 && (
+          {blogItems[index]?.chdBlogs?.length >= 9 && (
             <ReactPaginate
               previousLabel={"<"}
               nextLabel={">"}
