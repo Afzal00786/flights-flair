@@ -42,9 +42,8 @@
 .blog_Card_img {
   width: 100%;
 }
-.blog_des {
-  margin-left: 12px;
-  margin-right: 12px;
+.blog_card_des {
+
   margin-top: 12px;
 }
 .from_line {
@@ -58,9 +57,9 @@
 
 .blog_active_btn {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding:20px 0px 20px 0px ;
+  /* padding:20px 0px 20px 0px ; */
 }
 .paginationBttn{
   display: flex;
@@ -126,12 +125,14 @@ color: white;
   outline: none;
   background-color: white;
   cursor: pointer;
-  padding: 9px 10px;
-  border-radius: 20px;
-  font-size: 20px;
+  padding-left: 25px;
+  padding-top: 20px;
+  font-size: 25px;
   font-weight: 600;
-  margin-right: 20px;
   color: black;
+  width: 14%;
+  display: flex;
+  justify-content: flex-end;
 
 }
 .blog_btn {

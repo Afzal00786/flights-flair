@@ -1,56 +1,220 @@
-export const dummyData = [
+export const dummyBlogs = [
   {
-    tags: "HOLIDAY DESTINATIONS",
-    children: {
-      image:
-        "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
+    tagTitle: "HOLIDAY DESTINATIONS",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
   },
   {
-    tags: "TRAVEL TIPS/OTHERS",
-    children: {
-      image:
-        "https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
+    tagTitle: "TRAVEL TIPS",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638144016262437477/638144016262437477VNyVTP.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
   },
   {
-    tags: "TRAVEL TIPS/OTHERS",
-    children: {
-      image:
-        "https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
+    tagTitle: "PILGRIMAGE",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
   },
   {
-    tags: "TRAVEL TIPS/OTHERS",
-    children: {
-      image:
-        "https://cf.bstatic.com/xdata/images/hotel/max300/256757105.jpg?k=b54096b81f4be9dd84052ecee997e626e32bcf95e87e158523081bafb02849ad&o=&hp=1",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
-  },
-  {
-    tags: "PILGRIMAGE",
-    children: {
-      image:
-        "https://tse2.mm.bing.net/th?id=OIP.gmw2BhbIbh90Qo076RBHiAHaFL&pid=Api&P=0",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
-  },
-  {
-    tags: "PILGRIMAGE",
-    children: {
-      image:
-        "https://tse2.mm.bing.net/th?id=OIP.gmw2BhbIbh90Qo076RBHiAHaFL&pid=Api&P=0",
-      title: "Best place to celebrate",
-      des: "Easymytrpipi February 23, 2023",
-    },
+    tagTitle: "BEST DAYS SPEND",
+    chdBlogs: [
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638134579086369115/638134579086369115lJNfxp.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/International/638130140539443227/638130140539443227yrSZnx.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/638146533187203914/638146533187203914r946k9.png",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+      {
+        img: "https://media.easemytrip.com/media/Blog/India/637973826324879492/637973826324879492twcfHY.jpg",
+        title: "Best place to celebrate",
+        created: "February 23, 2023",
+        tripCompany: "Easymytrpipi",
+      },
+    ],
   },
 ];
