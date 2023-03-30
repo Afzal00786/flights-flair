@@ -37,7 +37,7 @@ function BookNow() {
       <NavBar />
       <BlogSlider />
       <div>
-        <div className={"tag_btn"}>Filter</div>
+        <div className={"filter_title_text"}>Filter</div>
       </div>
       <div class="blog_active_btn">
         <div>

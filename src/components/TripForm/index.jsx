@@ -164,6 +164,7 @@ const Contact = ({ fromImg, styling }) => {
         handleClose={handleClose}
         successText="trip"
       />
+
       <div
         style={{ backgroundColor: styling ? "#4E96BA" : "" }}
         className={styling ? "" : "fieldsContainer"}
@@ -218,7 +219,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingTop: 15,
                 paddingBottom: 15,
                 backgroundColor:
-                  selectTripDate === "Round Trip" ? "rgba(0,0,0,0.5)" : "",
+                  selectTripDate === "Round Trip" ? "#0078c1" : "",
                 color: "white",
                 cursor: "pointer",
               }}
@@ -232,8 +233,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingRight: 15,
                 paddingTop: 15,
                 paddingBottom: 15,
-                backgroundColor:
-                  selectTripDate === "One Way" ? "rgba(0,0,0,0.5)" : "",
+                backgroundColor: selectTripDate === "One Way" ? "#0078c1" : "",
                 color: "white",
                 cursor: "pointer",
               }}
@@ -245,6 +245,19 @@ const Contact = ({ fromImg, styling }) => {
         )}
 
         <div className={styling ? "form_bookNow_wrapper" : ""}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              color: "white",
+              fontWeight: 700,
+              fontSize: 35,
+              backgroundColor: styling ? "" : "#0078c1",
+              paddingTop: 20,
+            }}
+          >
+            Let us Call you back!
+          </div>
           <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
             <Grid
               container
@@ -253,7 +266,7 @@ const Contact = ({ fromImg, styling }) => {
               xs={12}
               style={{
                 display: styling ? "" : "flex",
-                backgroundColor: styling ? "" : "rgba(0,0,0,0.5)",
+                backgroundColor: styling ? "" : "#0078c1",
                 alignItems: "center",
                 width: "100%",
                 // justifyContent: "center",
@@ -263,35 +276,112 @@ const Contact = ({ fromImg, styling }) => {
                 paddingRight: 5,
               }}
             >
-              <Grid
-                item
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
-                }}
-                md={styling ? 12 : 2.1}
-                sm={3.7}
-                xs={11.9}
-              >
-                <legend className={styling ? "main" : "main_text"}>
-                  Flying From
-                </legend>
-                <span>
+              <>
+                <Grid
+                  item
+                  style={{
+                    marginBottom: 8,
+                    marginTop: 8,
+                    marginRight: 2.5,
+                    marginLeft: 2.5,
+                  }}
+                  md={styling ? 12 : 2.1}
+                  sm={3.7}
+                  xs={11.9}
+                >
+                  <legend className={styling ? "main" : "main_text"}>
+                    FLYING FROM
+                  </legend>
+                  <span>
+                    <Input
+                      className={styling ? "bookNowContainer" : "container"}
+                      style={{
+                        color: styling ? "white" : "black",
+                        fontSize: 12,
+                      }}
+                      name="name"
+                      type="text"
+                      disableUnderline
+                      value={value.split(",")[0]}
+                      id={styling ? "bookNow" : "text"}
+                      autoComplete="off"
+                      onChange={(e) => onChangeWhere(e)}
+                      placeholder="City or Airport"
+                      startAdornment={
+                        <InputAdornment position="start">
+                          <RoomIcon
+                            style={{ width: 20, height: 20, color: "black" }}
+                          />
+                        </InputAdornment>
+                      }
+                    />
+                  </span>
+                  {validationTo && (
+                    <div className={styling ? "styling_error" : "error"}>
+                      This field is required.
+                    </div>
+                  )}
+                  {autoCompleteFrom ? (
+                    <div ref={refOne} className="auto_complete_form">
+                      {data1
+                        ?.filter((item) => {
+                          const searchTerm = value.toLowerCase();
+                          const fullName = item.full_name.toLowerCase();
+                          if (fullName === searchTerm) {
+                            setAutoCompleteFrom(false);
+                          }
+                          if (searchTerm === "") {
+                            return fullName;
+                          } else {
+                            return (
+                              searchTerm &&
+                              fullName.includes(searchTerm) &&
+                              fullName !== searchTerm
+                            );
+                          }
+                        })
+                        .map((item) => (
+                          <div
+                            onClick={() => onSearch(item.full_name)}
+                            className="dropdown-row"
+                            key={item.full_name}
+                          >
+                            <spam style={{ fontWeight: "600" }}>
+                              {item.full_name.split(",")[0]},
+                            </spam>
+                            {item.full_name.split(",")[1]}
+                          </div>
+                        ))}
+                    </div>
+                  ) : null}
+                </Grid>
+
+                <Grid
+                  item
+                  style={{
+                    marginBottom: 8,
+                    marginTop: 8,
+                    marginRight: 2.5,
+                    marginLeft: 2.5,
+                  }}
+                  md={styling ? 12 : 2.1}
+                  sm={3.7}
+                  xs={11.9}
+                >
+                  <legend className={styling ? "main" : "main_text"}>
+                    FLYING TO
+                  </legend>
+
                   <Input
                     className={styling ? "bookNowContainer" : "container"}
-                    style={{
-                      color: styling ? "white" : "black",
-                      fontSize: 12,
-                    }}
-                    name="name"
+                    style={{ color: styling ? "white" : "black", fontSize: 12 }}
+                    name="text1"
                     type="text"
+                    value={valueTo.split(",")[0]}
                     disableUnderline
-                    value={value.split(",")[0]}
                     id={styling ? "bookNow" : "text"}
                     autoComplete="off"
-                    onChange={(e) => onChangeWhere(e)}
+                    onChange={(e) => onChangeTo(e)}
                     placeholder="City or Airport"
                     startAdornment={
                       <InputAdornment position="start">
@@ -301,321 +391,252 @@ const Contact = ({ fromImg, styling }) => {
                       </InputAdornment>
                     }
                   />
-                </span>
-                {validationTo && (
-                  <div className={styling ? "styling_error" : "error"}>
-                    This field is required.
+                  {validationFrom && (
+                    <div className={styling ? "styling_error" : "error"}>
+                      This field is required.
+                    </div>
+                  )}
+                  {autoCompleteTo ? (
+                    <div ref={refOne} className="auto_complete_form">
+                      {data2
+                        .filter((item) => {
+                          const searchTerm = valueTo.toLowerCase();
+                          const fullName = item.full_name.toLowerCase();
+                          if (fullName === searchTerm) {
+                            setAutoCompleteTo(false);
+                          }
+                          if (searchTerm === "") {
+                            return fullName;
+                          } else {
+                            return (
+                              searchTerm &&
+                              fullName.includes(searchTerm) &&
+                              fullName !== searchTerm
+                            );
+                          }
+                        })
+                        .map((item) => (
+                          <div
+                            onClick={() => onSearchTo(item.full_name)}
+                            className="dropdown-row"
+                            key={item.full_name}
+                          >
+                            <spam style={{ fontWeight: "600" }}>
+                              {item.full_name.split(",")[0]},
+                            </spam>
+                            {item.full_name.split(",")[1]}
+                          </div>
+                        ))}
+                    </div>
+                  ) : null}
+                </Grid>
+                <Grid
+                  style={{
+                    marginBottom: 8,
+                    marginTop: 8,
+
+                    marginRight: 2.5,
+                    marginLeft: 2.5,
+                  }}
+                  item
+                  md={styling ? 12 : 2.1}
+                  sm={3.7}
+                  xs={styling ? 11.9 : 5.8}
+                >
+                  <div>
+                    <DateRangeComp
+                      styling={styling}
+                      validationDate={validationDate}
+                      selectTripDate={selectTripDate}
+                      setDateField={setDateField}
+                      dateField={dateField}
+                    />
                   </div>
-                )}
-                {autoCompleteFrom ? (
-                  <div ref={refOne} className="auto_complete_form">
-                    {data1
-                      ?.filter((item) => {
-                        const searchTerm = value.toLowerCase();
-                        const fullName = item.full_name.toLowerCase();
-                        if (fullName === searchTerm) {
-                          setAutoCompleteFrom(false);
+                </Grid>
+                <Grid
+                  style={{
+                    marginBottom: 8,
+                    marginTop: 8,
+                    marginRight: 2.5,
+                    marginLeft: 2.5,
+                  }}
+                  item
+                  md={styling ? 12 : 2.1}
+                  sm={3.5}
+                  xs={styling ? 11.9 : 5.8}
+                  // style={{ marginLeft: 10 }}
+                >
+                  <legend className={styling ? "main" : "main_text"}>
+                    PASSENGERS
+                  </legend>
+                  <div onClick={handleOpen}>
+                    <Input
+                      className={styling ? "bookNowContainer" : "container"}
+                      id={styling ? "bookNow" : "text"}
+                      name="counter"
+                      autoComplete="off"
+                      style={{
+                        color: "black",
+                        backgroundColor: "white",
+                        fontSize: 12,
+                        width: "100%",
+                      }}
+                      disableUnderline
+                      value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
+                      placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
+                      color="black"
+                    />
+                  </div>
+                  {validationPhone && (
+                    <div
+                      className={styling ? "styling_error" : "error"}
+                      style={{ color: "#47433c" }}
+                    >
+                      .
+                    </div>
+                  )}
+
+                  {open ? (
+                    <>
+                      <div
+                        ref={refOne}
+                        className={
+                          styling ? "book_now_mainPassenger" : "mainPassengers"
                         }
-                        if (searchTerm === "") {
-                          return fullName;
-                        } else {
-                          return (
-                            searchTerm &&
-                            fullName.includes(searchTerm) &&
-                            fullName !== searchTerm
-                          );
-                        }
-                      })
-                      .map((item) => (
-                        <div
-                          onClick={() => onSearch(item.full_name)}
-                          className="dropdown-row"
-                          key={item.full_name}
-                        >
-                          <spam style={{ fontWeight: "600" }}>
-                            {item.full_name.split(",")[0]},
-                          </spam>
-                          {item.full_name.split(",")[1]}
+                        style={{
+                          position: "absolute",
+                        }}
+                      >
+                        <div className="textPassenger">Passengers</div>
+                        <div className="divider"></div>
+                        <div className="categoryContainer">
+                          <div className="passengerCategory">Adult</div>
+                          <div className="Adultbutton">
+                            <div
+                              className="counterStyle"
+                              onClick={Adultdecrease}
+                            >
+                              -
+                            </div>
+                            <h1 className="countText">{count}</h1>
+                            <div
+                              onClick={() => setCount(count + 1)}
+                              className="AdultIncrease"
+                            >
+                              +
+                            </div>
+                          </div>
                         </div>
-                      ))}
-                  </div>
-                ) : null}
-              </Grid>
-
-              <Grid
-                item
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
-                }}
-                md={styling ? 12 : 2.1}
-                sm={3.7}
-                xs={11.9}
-              >
-                <legend className={styling ? "main" : "main_text"}>
-                  Flying To
-                </legend>
-
-                <Input
-                  className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: styling ? "white" : "black", fontSize: 12 }}
-                  name="text1"
-                  type="text"
-                  value={valueTo.split(",")[0]}
-                  disableUnderline
-                  id={styling ? "bookNow" : "text"}
-                  autoComplete="off"
-                  onChange={(e) => onChangeTo(e)}
-                  placeholder="City or Airport"
-                  startAdornment={
-                    <InputAdornment position="start">
-                      <RoomIcon
-                        style={{ width: 20, height: 20, color: "black" }}
-                      />
-                    </InputAdornment>
-                  }
-                />
-                {validationFrom && (
-                  <div className={styling ? "styling_error" : "error"}>
-                    This field is required.
-                  </div>
-                )}
-                {autoCompleteTo ? (
-                  <div ref={refOne} className="auto_complete_form">
-                    {data2
-                      .filter((item) => {
-                        const searchTerm = valueTo.toLowerCase();
-                        const fullName = item.full_name.toLowerCase();
-                        if (fullName === searchTerm) {
-                          setAutoCompleteTo(false);
-                        }
-                        if (searchTerm === "") {
-                          return fullName;
-                        } else {
-                          return (
-                            searchTerm &&
-                            fullName.includes(searchTerm) &&
-                            fullName !== searchTerm
-                          );
-                        }
-                      })
-                      .map((item) => (
-                        <div
-                          onClick={() => onSearchTo(item.full_name)}
-                          className="dropdown-row"
-                          key={item.full_name}
-                        >
-                          <spam style={{ fontWeight: "600" }}>
-                            {item.full_name.split(",")[0]},
-                          </spam>
-                          {item.full_name.split(",")[1]}
+                        <div className="divider"></div>
+                        <div className="categoryContainer">
+                          <div className="passengerCategory">Child</div>
+                          <div className="Childbutton">
+                            <div
+                              onClick={Childdecrease}
+                              className="counterStyle"
+                            >
+                              -
+                            </div>
+                            <h1 className="count1Text">{count1}</h1>
+                            <div
+                              onClick={() => setCount1(count1 + 1)}
+                              className="AdultIncrease"
+                            >
+                              +
+                            </div>
+                          </div>
                         </div>
-                      ))}
-                  </div>
-                ) : null}
-              </Grid>
-              <Grid
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
+                        <div className="divider"></div>
+                        <div className="categoryContainer">
+                          <div className="passengerCategory">Infant</div>
+                          <div className="Infantbutton">
+                            <div
+                              onClick={Infantdecrease}
+                              className="counterStyle"
+                            >
+                              -
+                            </div>
+                            <h1 className="count2Text">{count2}</h1>
+                            <div
+                              onClick={() => setCount2(count2 + 1)}
+                              className="AdultIncrease"
+                            >
+                              +
+                            </div>
+                          </div>
+                        </div>
+                        <div className="divider" />
+                        <div
+                          onClick={() => setOpen(!open)}
+                          className="doneContainer"
+                        >
+                          <div className="doneButtonStyle">Done</div>
+                        </div>
+                      </div>
+                    </>
+                  ) : null}
+                </Grid>
 
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
-                }}
-                item
-                md={styling ? 12 : 2.1}
-                sm={3.7}
-                xs={styling ? 11.9 : 5.8}
-              >
-                <div>
-                  <DateRangeComp
-                    styling={styling}
-                    validationDate={validationDate}
-                    selectTripDate={selectTripDate}
-                    setDateField={setDateField}
-                    dateField={dateField}
-                  />
-                </div>
-              </Grid>
-              <Grid
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
-                }}
-                item
-                md={styling ? 12 : 2.1}
-                sm={3.5}
-                xs={styling ? 11.9 : 5.8}
-                // style={{ marginLeft: 10 }}
-              >
-                <legend className={styling ? "main" : "main_text"}>
-                  PASSENGERS
-                </legend>
-                <div onClick={handleOpen}>
+                <Grid
+                  style={{
+                    marginBottom: 8,
+                    marginTop: 8,
+                    marginRight: 2.5,
+                    marginLeft: 2.5,
+                  }}
+                  item
+                  md={styling ? 12 : 2.1}
+                  sm={3.7}
+                  xs={styling ? 11.9 : 5.8}
+                >
+                  <legend className={styling ? "main" : "main_text"}>
+                    PHONE
+                  </legend>
                   <Input
                     className={styling ? "bookNowContainer" : "container"}
-                    id={styling ? "bookNow" : "text"}
-                    name="counter"
-                    autoComplete="off"
-                    style={{
-                      color: "black",
-                      backgroundColor: "white",
-                      fontSize: 12,
-                      width: "100%",
-                    }}
+                    style={{ color: "black", fontSize: 12 }}
+                    type="number"
                     disableUnderline
-                    value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
-                    placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
-                    color="black"
+                    fullWidth
+                    name="phone"
+                    autoComplete="off"
+                    value={phoneNo}
+                    onChange={(e) => handlePhone(e)}
+                    id={styling ? "bookNow" : "text"}
+                    placeholder="+44-XXXX-XXXX"
+                    startAdornment={
+                      <InputAdornment position="start">
+                        <PhoneIcon
+                          style={{ width: 20, height: 20, color: "black" }}
+                        />
+                      </InputAdornment>
+                    }
                   />
-                </div>
-                {validationPhone && (
-                  <div
-                    className={styling ? "styling_error" : "error"}
-                    style={{ color: "#47433c" }}
-                  >
-                    .
-                  </div>
-                )}
-
-                {open ? (
-                  <>
-                    <div
-                      ref={refOne}
-                      className={
-                        styling ? "book_now_mainPassenger" : "mainPassengers"
-                      }
-                      style={{
-                        position: "absolute",
-                      }}
-                    >
-                      <div className="textPassenger">Passengers</div>
-                      <div className="divider"></div>
-                      <div className="categoryContainer">
-                        <div className="passengerCategory">Adult</div>
-                        <div className="Adultbutton">
-                          <div className="counterStyle" onClick={Adultdecrease}>
-                            -
-                          </div>
-                          <h1 className="countText">{count}</h1>
-                          <div
-                            onClick={() => setCount(count + 1)}
-                            className="AdultIncrease"
-                          >
-                            +
-                          </div>
-                        </div>
-                      </div>
-                      <div className="divider"></div>
-                      <div className="categoryContainer">
-                        <div className="passengerCategory">Child</div>
-                        <div className="Childbutton">
-                          <div onClick={Childdecrease} className="counterStyle">
-                            -
-                          </div>
-                          <h1 className="count1Text">{count1}</h1>
-                          <div
-                            onClick={() => setCount1(count1 + 1)}
-                            className="AdultIncrease"
-                          >
-                            +
-                          </div>
-                        </div>
-                      </div>
-                      <div className="divider"></div>
-                      <div className="categoryContainer">
-                        <div className="passengerCategory">Infant</div>
-                        <div className="Infantbutton">
-                          <div
-                            onClick={Infantdecrease}
-                            className="counterStyle"
-                          >
-                            -
-                          </div>
-                          <h1 className="count2Text">{count2}</h1>
-                          <div
-                            onClick={() => setCount2(count2 + 1)}
-                            className="AdultIncrease"
-                          >
-                            +
-                          </div>
-                        </div>
-                      </div>
-                      <div className="divider" />
-                      <div
-                        onClick={() => setOpen(!open)}
-                        className="doneContainer"
-                      >
-                        <div className="doneButtonStyle">Done</div>
-                      </div>
+                  {validationPhone && (
+                    <div className={styling ? "styling_error" : "error"}>
+                      This field is required.
                     </div>
-                  </>
-                ) : null}
-              </Grid>
+                  )}
+                </Grid>
 
-              <Grid
-                style={{
-                  marginBottom: 8,
-                  marginTop: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
-                }}
-                item
-                md={styling ? 12 : 2.1}
-                sm={3.7}
-                xs={styling ? 11.9 : 5.8}
-              >
-                <legend className={styling ? "main" : "main_text"}>
-                  PHONE
-                </legend>
-                <Input
-                  className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: "black", fontSize: 12 }}
-                  type="number"
-                  disableUnderline
-                  fullWidth
-                  name="phone"
-                  autoComplete="off"
-                  value={phoneNo}
-                  onChange={(e) => handlePhone(e)}
-                  id={styling ? "bookNow" : "text"}
-                  placeholder="+44-XXXX-XXXX"
-                  startAdornment={
-                    <InputAdornment position="start">
-                      <PhoneIcon
-                        style={{ width: 20, height: 20, color: "black" }}
-                      />
-                    </InputAdornment>
-                  }
-                />
-                {validationPhone && (
-                  <div className={styling ? "styling_error" : "error"}>
-                    This field is required.
-                  </div>
-                )}
-              </Grid>
-
-              <Grid
-                style={{
-                  marginBottom: 8,
-                  marginTop: 20,
-                }}
-                item
-                md={styling ? 12 : 1}
-                sm={3}
-                xs={11.9}
-              >
-                <button type="submit" className="find_now_button">
-                  Submit
-                </button>
-                {validationPhone && (
-                  <div className={styling ? "styling_error" : "error"}>.</div>
-                )}
-              </Grid>
+                <Grid
+                  style={{
+                    marginBottom: 5,
+                    marginTop: 25,
+                  }}
+                  item
+                  md={styling ? 12 : 1}
+                  sm={3}
+                  xs={11.9}
+                >
+                  <button type="submit" className="find_now_button">
+                    Submit
+                  </button>
+                  {validationPhone && (
+                    <div className={styling ? "styling_error" : "error"}>.</div>
+                  )}
+                </Grid>
+              </>
             </Grid>
           </form>
         </div>
