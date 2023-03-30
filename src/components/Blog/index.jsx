@@ -4,6 +4,7 @@ import "./blog.css";
 import BlogCard from "./BlogCard";
 import BlogSlider from "./BlogSlider";
 import CloseIcon from "@mui/icons-material/Close";
+import { display } from "@mui/system";
 const dummyTags = [
   "HOLIDAY DESTINATIONS",
   "TRAVEL TIPS",
@@ -258,9 +259,7 @@ function BookNow() {
       <BlogSlider />
       <div class="blog_active_btn">
         <div>
-          {tags.map((i) => (
-            <button className={"tag_btn"}>{i}</button>
-          ))}
+          <div className={"tag_btn"}>Filter</div>
         </div>
         <div>
           {dummyTags.map((i) => (
@@ -273,12 +272,7 @@ function BookNow() {
           ))}
           {filterApply && (
             <button onClick={() => filterItemReset()} className="cross_btn ">
-              <CloseIcon
-                style={{
-                  width: 20,
-                  height: 20,
-                }}
-              />
+              <CloseIcon style={{}} />
             </button>
           )}
         </div>

@@ -8,10 +8,9 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 const BlogCard = ({ blogItems }) => {
   console.log(blogItems, "blogItems");
   const [currentItems, setCurrentItems] = useState([]);
-  const [itemOffset, setItemOffset] = useState(0);
-  const [pageCount, setPageCount] = useState(0);
   const itemsPerPage = 9;
   useEffect(() => {
+    let itemOffset = 0;
     const updatedItems = blogItems.map((item) => {
       const endOffset = itemOffset + itemsPerPage;
       const slicedChdBlogs =
@@ -26,7 +25,7 @@ const BlogCard = ({ blogItems }) => {
       };
     });
     setCurrentItems(updatedItems);
-  }, [blogItems, itemOffset, itemsPerPage]);
+  }, [blogItems, itemsPerPage]);
   const handlePageClick = (event, blgIndex) => {
     const newOffset = event.selected * itemsPerPage;
     const endOffset = newOffset + itemsPerPage;
