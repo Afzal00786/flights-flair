@@ -7,6 +7,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { useNavigate } from "react-router-dom";
 const BlogCard = ({ blogItems }) => {
+  const responsive = window.innerWidth > 700;
   const navigation = useNavigate();
   console.log(blogItems, "blogItems");
   const [currentItems, setCurrentItems] = useState([]);

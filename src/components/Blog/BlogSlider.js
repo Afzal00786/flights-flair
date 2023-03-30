@@ -1,10 +1,8 @@
 import React from "react";
-
 import "./BlogSlider.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useNavigate } from "react-router-dom";
 
 function BlogSlider() {
   const responsive = window.innerWidth > 700;
@@ -18,7 +16,10 @@ function BlogSlider() {
       >
         <div id="blogBackground">
           <div
-            style={{ marginLeft: 100, fontSize: 40 }}
+            style={{
+              marginLeft: responsive ? 100 : 0,
+              fontSize: responsive ? 40 : 20,
+            }}
             className="text_conatiner"
           >
             <div className="blog_img_text">Destination that are Meant to</div>

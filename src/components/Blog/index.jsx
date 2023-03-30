@@ -5,6 +5,7 @@ import BlogCard from "./BlogCard";
 import BlogSlider from "./BlogSlider";
 import CloseIcon from "@mui/icons-material/Close";
 import { RealDummyBlogs } from "./RealBlogData";
+
 const dummyTags = [
   "Pakistan Sector",
   // "TRAVEL TIPS",
@@ -13,9 +14,9 @@ const dummyTags = [
 ];
 
 function BookNow() {
+  const responsive = window.innerWidth > 700;
   const [tagState, setTagState] = useState("");
   const [selectedBlog, setSelectedBlog] = useState();
-
   const [blogItems, setBlogItems] = useState(RealDummyBlogs);
   const [filterApply, setFilterApply] = useState();
   const filterItem = (value) => {
@@ -33,32 +34,34 @@ function BookNow() {
   };
 
   return (
-    <div style={{ marginBottom: 50 }}>
-      <NavBar />
-      <BlogSlider />
-      <div>
-        <div className={"tag_btn"}>Filter</div>
-      </div>
-      <div class="blog_active_btn">
+    <>
+      <div style={{ marginBottom: 50, textAlign: responsive ? "" : "center" }}>
+        <NavBar />
+        <BlogSlider />
         <div>
-          {dummyTags.map((i) => (
-            <button
-              onClick={() => filterItem(i)}
-              className={i === tagState ? "blog_btn_active" : "blog_btn"}
-            >
-              {i}
-            </button>
-          ))}
+          <div className={"tag_btn"}>Filter</div>
         </div>
-        {filterApply && (
-          <button onClick={() => filterItemReset()} className="cross_btn ">
-            <CloseIcon style={{}} />
-          </button>
-        )}
-      </div>
+        <div class="blog_active_btn">
+          <div>
+            {dummyTags.map((i) => (
+              <button
+                onClick={() => filterItem(i)}
+                className={i === tagState ? "blog_btn_active" : "blog_btn"}
+              >
+                {i}
+              </button>
+            ))}
+          </div>
+          {filterApply && (
+            <button onClick={() => filterItemReset()} className="cross_btn ">
+              <CloseIcon />
+            </button>
+          )}
+        </div>
 
-      <BlogCard blogItems={blogItems} />
-    </div>
+        <BlogCard blogItems={blogItems} />
+      </div>
+    </>
   );
 }
 
