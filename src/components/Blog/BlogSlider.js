@@ -7,8 +7,6 @@ import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 
 function BlogSlider() {
-  const navigation = useNavigate();
-
   const responsive = window.innerWidth > 700;
   return (
     <>

@@ -467,6 +467,7 @@ const Contact = ({ fromImg, styling }) => {
                       fontSize: 12,
                       width: "100%",
                     }}
+                    disableUnderline
                     value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                     placeholder={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
                     color="black"
