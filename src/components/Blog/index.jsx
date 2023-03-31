@@ -35,7 +35,7 @@ function BookNow() {
 
   return (
     <>
-      <div style={{ marginBottom: 50, textAlign: responsive ? "" : "center" }}>
+      <div style={{ marginBottom: 50 }}>
         <NavBar />
         <BlogSlider />
         <div>
@@ -54,7 +54,7 @@ function BookNow() {
           </div>
           {filterApply && (
             <button onClick={() => filterItemReset()} className="cross_btn ">
-              <CloseIcon />
+              <CloseIcon style={{}} />
             </button>
           )}
         </div>

@@ -16,10 +16,7 @@ function BlogSlider() {
       >
         <div id="blogBackground">
           <div
-            style={{
-              marginLeft: responsive ? 100 : 0,
-              fontSize: responsive ? 40 : 20,
-            }}
+            style={{ marginLeft: 100, fontSize: 40 }}
             className="text_conatiner"
           >
             <div className="blog_img_text">Destination that are Meant to</div>

@@ -48,7 +48,6 @@ const BlogCard = ({ blogItems }) => {
     <div>
       {currentItems?.map((blg, index) => (
         <>
-          {console.log(blg.pageCount, "pageCount")}
           <div className="blog_main_title">{blg.tagTitle}</div>
           <div className="blog_card_item_container">
             {blg?.chdBlogs?.map((blgItem) => (

@@ -8,6 +8,12 @@
   align-items: "center";
   border-radius: 10px;
 }
+.filter_title_text {
+  padding: 9px 12px;
+  padding-left: 130px;
+  font-size: larger;
+  font-weight: 600;
+}
 .blog_detail_items {
   /* height: 360px; */
   width: 90%;
@@ -43,7 +49,6 @@
   width: 100%;
 }
 .blog_card_des {
-
   margin-top: 12px;
 }
 .from_line {
@@ -61,50 +66,50 @@
   align-items: center;
   /* padding:20px 0px 20px 0px ; */
 }
-.paginationBttn{
+.paginationBttn {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   list-style: none;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
   margin-top: 2.5rem;
   font-size: 1.2rem;
   gap: 5px;
   width: 90%;
 }
-.paginationBttn .page-num{
+.paginationBttn .page-num {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 10px ;
+  padding: 6px 10px;
   cursor: pointer;
   border-radius: 20px;
   font-weight: 300;
   border: none;
-  background-color: #F6F7F8;
+  background-color: #f6f7f8;
   font-size: 13px;
 }
-.page-num2{
+.page-num2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 4px ;
-  background-color: #F6F7F8;
+  padding: 4px 4px;
+  background-color: #f6f7f8;
   font-size: 13px;
   cursor: pointer;
   border-radius: 20px;
 }
-.paginationBttn .page-num:hover{
-background-color: #ff0000;
-color: white;
-}
-.paginationBttn .page-num2:hover{
+.paginationBttn .page-num:hover {
   background-color: #ff0000;
   color: white;
-  }
-.paginationBttn .active{
+}
+.paginationBttn .page-num2:hover {
   background-color: #ff0000;
-  }
+  color: white;
+}
+.paginationBttn .active {
+  background-color: #ff0000;
+}
 
 .blog_btn_active {
   border: none;
@@ -120,7 +125,7 @@ color: white;
   /* border: 1px solid black; */
   color: white;
 }
-.tag_btn{
+.tag_btn {
   border: none;
   outline: none;
   background-color: white;
@@ -133,12 +138,11 @@ color: white;
   width: 190px;
   display: flex;
   justify-content: flex-end;
-
 }
 .blog_btn {
   border: none;
   outline: none;
-  padding: 9px 12px ;
+  padding: 9px 12px;
   background-color: #ebebeb;
   cursor: pointer;
   border-radius: 20px;
@@ -147,7 +151,7 @@ color: white;
   margin-right: 20px;
   color: black;
 }
-.cross_btn{
+.cross_btn {
   border: none;
   outline: none;
   padding: 4px 8px;
@@ -210,5 +214,12 @@ color: white;
     display: flex;
     justify-content: flex-end;
   
+  }
+}
+@media screen and (width<901px) {
+  .filter_title_text {
+    padding: 20px 5px;
+    font-size: larger;
+    font-weight: 600;
   }
 }
