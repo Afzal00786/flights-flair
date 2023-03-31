@@ -21,6 +21,7 @@ const DateRangeComp = ({
       key: "selection",
     },
   ]);
+
   const [open, setOpen] = useState(false);
   const [calendar, setCalendar] = useState("");
 

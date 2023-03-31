@@ -11,7 +11,7 @@
   z-index: 1;
 }
 .instant_flight_button {
-  background-color: #5da5c2;
+  background-color: rgb(0, 122, 193);
   border-radius: 5px;
   position: fixed;
   left: 0;
@@ -38,7 +38,7 @@
     z-index: 1;
   }
   .instant_flight_button {
-    background-color: #5da5c2;
+    background-color: rgb(0, 122, 193);
     border-radius: 5px;
     position: fixed;
     left: 0;
