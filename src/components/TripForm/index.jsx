@@ -436,14 +436,13 @@ const Contact = ({ fromImg, styling }) => {
                 style={{
                   marginBottom: 8,
                   marginTop: 8,
-
                   marginRight: 2.5,
                   marginLeft: 2.5,
                 }}
                 item
                 md={styling ? 12 : 2.1}
                 sm={3.7}
-                xs={styling ? 11.9 : 5.8}
+                xs={11.9}
               >
                 <div>
                   <DateRangeComp
@@ -464,8 +463,8 @@ const Contact = ({ fromImg, styling }) => {
                 }}
                 item
                 md={styling ? 12 : 2.1}
-                sm={3.5}
-                xs={styling ? 11.9 : 5.8}
+                sm={3.7}
+                xs={11.9}
                 // style={{ marginLeft: 10 }}
               >
                 <legend className={styling ? "main" : "main_text"}>
