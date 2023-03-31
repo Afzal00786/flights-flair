@@ -11,7 +11,7 @@ import RoomIcon from "@mui/icons-material/Room";
 import SuccessModal from "../SuccessModal";
 import PhoneIcon from "@mui/icons-material/Phone";
 const Contact = ({ fromImg, styling }) => {
-  const responsive = window.innerWidth > 700;
+  const responsive = window.innerWidth > 900;
   const location = useLocation();
   console.log(fromImg, "fromImg");
   console.log("hello");
@@ -259,7 +259,7 @@ const Contact = ({ fromImg, styling }) => {
               paddingTop: 20,
             }}
           >
-            Book your flight
+            Book Your Flight
           </div>
           <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
             <Grid
@@ -286,6 +286,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
+                  height: 85,
                 }}
                 md={styling ? 12 : 2.1}
                 sm={3.7}
@@ -365,6 +366,8 @@ const Contact = ({ fromImg, styling }) => {
                   marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
+                  // backgroundColor: "red",
+                  height: 85,
                 }}
                 md={styling ? 12 : 2.1}
                 sm={3.7}
@@ -438,6 +441,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
+                  height: 85,
                 }}
                 item
                 md={styling ? 12 : 2.1}
@@ -460,6 +464,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
+                  height: 85,
                 }}
                 item
                 md={styling ? 12 : 2.1}
@@ -501,9 +506,7 @@ const Contact = ({ fromImg, styling }) => {
                   <>
                     <div
                       ref={refOne}
-                      className={
-                        styling ? "book_now_mainPassenger" : "mainPassengers"
-                      }
+                      className={"book_now_mainPassenger"}
                       style={{
                         position: "absolute",
                       }}
@@ -578,6 +581,7 @@ const Contact = ({ fromImg, styling }) => {
                   marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
+                  height: 85,
                 }}
                 item
                 md={styling ? 12 : 2.1}
@@ -617,7 +621,7 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 5,
-                  marginTop: 25,
+                  height: 45,
                 }}
                 item
                 md={styling ? 12 : 1}
