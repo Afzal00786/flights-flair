@@ -227,6 +227,13 @@
     width: 360px;
     margin-left: 0px;
   }
+  .departure_text {
+    padding-top: 5px;
+    color: white;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+  }
+
   .mainPassengers {
     margin-top: 20px;
     background-color: white;
@@ -330,11 +337,16 @@ input {
 .main_text {
   padding-top: 5px;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .main {
   padding-top: 5px;
   color: black;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 5px;
+}
+.departure_text {
+  padding-top: 5px;
+  color: white;
+  font-size: 0.8rem;
 }
