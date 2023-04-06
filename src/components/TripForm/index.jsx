@@ -219,9 +219,7 @@ const Contact = ({ fromImg, styling }) => {
                 paddingTop: 15,
                 paddingBottom: 15,
                 backgroundColor:
-                  selectTripDate === "Round Trip"
-                    ? "rgb(0, 122, 193,0.9) "
-                    : "",
+                  selectTripDate === "Round Trip" ? "rgb(0, 122, 193,0.9)" : "",
                 color: "white",
                 cursor: "pointer",
               }}
@@ -493,14 +491,6 @@ const Contact = ({ fromImg, styling }) => {
                     color="black"
                   />
                 </div>
-                {validationPhone && (
-                  <div
-                    className={styling ? "styling_error" : "error"}
-                    style={{ color: "#47433c" }}
-                  >
-                    .
-                  </div>
-                )}
 
                 {open ? (
                   <>
@@ -631,9 +621,6 @@ const Contact = ({ fromImg, styling }) => {
                 <button type="submit" className="find_now_button">
                   Submit
                 </button>
-                {validationPhone && (
-                  <div className={styling ? "styling_error" : "error"}>.</div>
-                )}
               </Grid>
             </Grid>
           </form>
