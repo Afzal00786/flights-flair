@@ -62,7 +62,10 @@ const Contact = ({ fromImg, styling }) => {
   const [validationFrom, setValidationFrom] = useState(false);
   const [validationDate, setValidationDate] = useState(false);
   const [validationPhone, setValidationPhone] = useState(false);
+  const form = useRef();
+  const refOne = useRef(null);
   const sendEmail = (e) => {
+    console.log(form.current, "form.current");
     e.preventDefault();
     if (value === "") {
       setValidationTo(true);
@@ -98,10 +101,10 @@ const Contact = ({ fromImg, styling }) => {
       }, 8000);
       emailjs
         .sendForm(
-          "service_xls7aht",
-          "template_snswcdq",
+          "service_524jcfc",
+          "template_c17sh2l",
           form.current,
-          "7m6bYCmtfGWWA8CtZ"
+          "L8E3OR3Pt0z9SXHOS"
         )
         .then(
           (result) => {
@@ -113,8 +116,7 @@ const Contact = ({ fromImg, styling }) => {
         );
     }
   };
-  const form = useRef();
-  const refOne = useRef(null);
+
   const handlePhone = (e) => {
     setPhoneNo(e.target.value);
   };
@@ -248,19 +250,9 @@ const Contact = ({ fromImg, styling }) => {
         )}
 
         <div className={styling ? "form_bookNow_wrapper" : ""}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              color: "white",
-              fontWeight: 700,
-              fontSize: 35,
-              backgroundColor: styling ? "" : "rgb(0, 122, 193,0.9)",
-              paddingTop: 20,
-            }}
-          >
-            Book Your Flight
-          </div>
+          {!styling && (
+            <div className="trip_form_header_text">Book Your Flight</div>
+          )}
           <form style={{ display: "flex" }} ref={form} onSubmit={sendEmail}>
             <Grid
               container
@@ -272,7 +264,6 @@ const Contact = ({ fromImg, styling }) => {
                 backgroundColor: styling ? "" : "rgb(0, 122, 193,0.9)",
                 alignItems: "center",
                 width: "100%",
-                // justifyContent: "center",
                 paddingBottom: 15,
                 paddingTop: 15,
                 paddingLeft: 5,
@@ -283,7 +274,6 @@ const Contact = ({ fromImg, styling }) => {
                 item
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
                   height: 85,
@@ -299,7 +289,7 @@ const Contact = ({ fromImg, styling }) => {
                   <Input
                     className={styling ? "bookNowContainer" : "container"}
                     style={{
-                      color: styling ? "white" : "black",
+                      color: "black",
                       fontSize: 12,
                     }}
                     name="name"
@@ -363,10 +353,8 @@ const Contact = ({ fromImg, styling }) => {
                 item
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
-                  // backgroundColor: "red",
                   height: 85,
                 }}
                 md={styling ? 12 : 2.1}
@@ -379,7 +367,7 @@ const Contact = ({ fromImg, styling }) => {
 
                 <Input
                   className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: styling ? "white" : "black", fontSize: 12 }}
+                  style={{ color: "black", fontSize: 12 }}
                   name="text1"
                   type="text"
                   value={valueTo.split(",")[0]}
@@ -438,7 +426,6 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
                   height: 85,
@@ -461,7 +448,6 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
                   height: 85,
@@ -470,7 +456,6 @@ const Contact = ({ fromImg, styling }) => {
                 md={styling ? 12 : 2.1}
                 sm={3.7}
                 xs={11.9}
-                // style={{ marginLeft: 10 }}
               >
                 <legend className={styling ? "main" : "main_text"}>
                   PASSENGERS
@@ -483,7 +468,6 @@ const Contact = ({ fromImg, styling }) => {
                     autoComplete="off"
                     style={{
                       color: "black",
-                      backgroundColor: "white",
                       fontSize: 12,
                       width: "100%",
                     }}
@@ -578,7 +562,6 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginTop: 8,
                   marginRight: 2.5,
                   marginLeft: 2.5,
                   height: 85,

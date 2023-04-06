@@ -8,6 +8,15 @@
   width: 93%;
   height: 158vh;
 }
+.trip_form_header_text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+  background-color: rgb(0, 122, 193, 0.9);
+  padding-top: 20px;
+}
 .container {
   border: 0.1rem solid #c9c9c9;
   width: 100%;
@@ -212,7 +221,6 @@
     font-weight: 100;
     width: 100%;
   }
-
 }
 
 @media screen and (width<350px) {
@@ -231,7 +239,6 @@
     font-weight: 100;
     width: 100%;
   }
-
 }
 @media screen and (width<901px) {
   .date_field {
@@ -245,7 +252,6 @@
     font-weight: 100;
     width: 100%;
   }
-  
 }
 @media screen and (width<600px) {
   .date_field {
@@ -258,7 +264,6 @@
     font-size: 0.7rem;
     margin-bottom: 15px;
   }
- 
 
   .mainPassengers {
     margin-top: 20px;
@@ -283,7 +288,6 @@
     font-weight: 100;
     width: 100%;
     height: 30px;
-  
   }
   .book_now_mainPassenger {
     background-color: white;
@@ -306,7 +310,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-/* input[type="number"] {
+/* input[type=number] {
   -moz-appearance: textfield;
 } */
 
@@ -323,7 +327,6 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
 }
-
 
 .dropdown {
   background-color: white;
@@ -347,7 +350,6 @@ input::-webkit-inner-spin-button {
   border: none;
 }
 
-
 .dropdown-row {
   color: black;
   cursor: pointer;
@@ -368,7 +370,6 @@ input {
 }
 .error {
   color: red;
-  
 }
 .styling_error {
   color: red;
