@@ -7,8 +7,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import { RealDummyBlogs } from "./RealBlogData";
 
 const dummyTags = [
-  "Pakistan Sector",
-  // "TRAVEL TIPS",
+  "Flight to Pakistan ",
+  "Vacations",
   // "PILGRIMAGE",
   // "BEST DAYS SPEND",
 ];

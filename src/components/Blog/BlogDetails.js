@@ -36,7 +36,7 @@ const BlogDetails = () => {
               style={{
                 display: responsive ? "flex" : "",
 
-                height: responsive ? "96%" : "100%",
+                height: responsive ? "99%" : "100%",
               }}
               className="blog_detail_items"
             >
@@ -66,7 +66,7 @@ const BlogDetails = () => {
                       marginLeft: 30,
                       marginRight: 30,
                       paddingTop: 12,
-                      paddingBottom: 75,
+                      paddingBottom: 20,
                       textAlign: "left",
                       paddingLeft: 10,
                       paddingRight: 10,
@@ -74,6 +74,130 @@ const BlogDetails = () => {
                     // className="blog_des"
                   >
                     {params.blogDes}
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                        paddingTop: 15,
+                        paddingBottom: 10,
+                      }}
+                    >
+                      {params.title1}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 12,
+                        paddingBottom: 20,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes1}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                      }}
+                    >
+                      {params.title2}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 12,
+                        paddingBottom: 20,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes2}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                      }}
+                    >
+                      {params.title3}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 12,
+                        paddingBottom: 20,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes3}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                        paddingTop: 15,
+                        paddingBottom: 10,
+                      }}
+                    >
+                      {params.title4}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 12,
+                        paddingBottom: 20,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes4}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                      }}
+                    >
+                      {params.title5}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 12,
+                        paddingBottom: 20,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes5}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black",
+                      }}
+                    >
+                      {params.title6}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 10,
+                        paddingBottom: 50,
+                        textAlign: "left",
+                      }}
+                    >
+                      {" "}
+                      {params.blogDes6}
+                    </div>
                   </div>
                 </div>
                 <div>
