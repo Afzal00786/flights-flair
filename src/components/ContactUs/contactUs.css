@@ -57,6 +57,7 @@
 }
 .contactUsWaysText {
   margin-left: 20px;
+  cursor: pointer;
 }
 .call_us_text {
   font-weight: 600;

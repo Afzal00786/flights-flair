@@ -6,30 +6,41 @@
 }
 .fieldsContainer {
   width: 93%;
-  height: 147vh;
+  height: 158vh;
+}
+.trip_form_header_text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+  background-color: rgb(0, 122, 193, 0.9);
+  padding-top: 20px;
 }
 .container {
   border: 0.1rem solid #c9c9c9;
   width: 100%;
   font-size: 0.7rem;
   /* font-family: work sans; */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 40px;
   padding-left: 3px;
-  color: white;
+  color: black;
+  background-color: #ffffff;
 }
+
 .bookNowContainer {
   border: 0.1rem solid #c9c9c9;
   width: 100%;
   font-size: 0.7rem;
   color: black;
   /* font-family: work sans; */
-  height: 50px;
+  height: 40px;
   padding-left: 3px;
 }
 #text::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 #bookNow::placeholder {
@@ -47,7 +58,7 @@
   z-index: 1;
 }
 .book_now_mainPassenger {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: white;
   width: 250px;
   border: 0.2rem solid #468dc7;
@@ -170,11 +181,11 @@
   margin-left: 20px;
   margin-right: 20px;
   background-color: white;
-  padding: 5px;
+  /* padding: 5px; */
 }
 .find_now_button {
   cursor: pointer;
-  background-color: #4e96ba;
+  background-color: #5caed7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,10 +195,11 @@
   border-width: 0;
   font-size: 16;
   width: 95%;
-  height: 50px;
+  height: 45px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 600;
+  border-radius: 20px;
 }
 .date_field {
   width: 550px;
@@ -202,7 +214,15 @@
     box-shadow: 1px 2px 9px #468dc7;
     z-index: 1;
   }
+  .main_text {
+    /* padding-top: 5px; */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 100%;
+  }
 }
+
 @media screen and (width<350px) {
   .auto_complete_form {
     position: absolute;
@@ -212,11 +232,25 @@
     box-shadow: 1px 2px 9px #468dc7;
     z-index: 1;
   }
+  .main_text {
+    /* padding-top: 5px; */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 100%;
+  }
 }
 @media screen and (width<901px) {
   .date_field {
     width: 400px;
     margin-left: -180px;
+  }
+  .main_text {
+    /* padding-top: 5px; */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 100%;
   }
 }
 @media screen and (width<600px) {
@@ -224,6 +258,13 @@
     width: 360px;
     margin-left: 0px;
   }
+  .departure_text {
+    padding-top: 5px;
+    color: white;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+  }
+
   .mainPassengers {
     margin-top: 20px;
     background-color: white;
@@ -237,12 +278,22 @@
     width: 100%;
     font-size: 0.7rem;
     /* font-family: work sans; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 3px;
-    height: 50px;
-    padding-left: 3px;
+    height: 35px;
     color: white;
+  }
+  .main_text {
+    /* padding-top: 5px; */
+    color: white;
+    font-size: 1rem;
+    font-weight: 100;
+    width: 100%;
+    height: 30px;
+  }
+  .book_now_mainPassenger {
+    background-color: white;
+    width: 90%;
+    border: 0.2rem solid #468dc7;
+    z-index: 1;
   }
 }
 
@@ -259,7 +310,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-/* input[type="number"] {
+/* input[type=number] {
   -moz-appearance: textfield;
 } */
 
@@ -318,13 +369,24 @@ input {
   display: flex;
 }
 .error {
-  margin-top: 5px;
   color: red;
 }
 .styling_error {
   color: red;
-  margin-top: 5px;
 }
 .main_text {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main {
+  /* padding-top: 5px; */
+  color: black;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+.departure_text {
   padding-top: 5px;
+  color: white;
+  font-size: 0.8rem;
 }

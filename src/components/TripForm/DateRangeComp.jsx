@@ -5,6 +5,8 @@ import { addDays } from "date-fns";
 import "./form.css";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { Input, InputAdornment } from "@material-ui/core";
 
 const DateRangeComp = ({
   selectTripDate,
@@ -19,6 +21,7 @@ const DateRangeComp = ({
       key: "selection",
     },
   ]);
+
   const [open, setOpen] = useState(false);
   const [calendar, setCalendar] = useState("");
 
@@ -57,12 +60,12 @@ const DateRangeComp = ({
             >
               DEPARTURE-RETURN DATE
             </div>
-            <input
+            <Input
+              className={styling ? "bookNowContainer" : "container"}
               style={{
-                color: styling ? "black" : "white",
-                backgroundColor: styling ? "white" : "rgba(85,105,109,0.1)",
+                color: "black",
+                backgroundColor: "white",
                 fontSize: 12,
-                borderWidth: 0,
                 marginTop: 5,
                 width: "100%",
               }}
@@ -70,15 +73,20 @@ const DateRangeComp = ({
                 range[0].endDate,
                 "MM/dd/yyyy"
               )}`}
+              disableUnderline
               readOnly
               onClick={() => setOpen((open) => !open)}
               name="date"
+              startAdornment={
+                <InputAdornment position="start">
+                  <CalendarMonthIcon
+                    style={{ width: 20, height: 20, color: "black" }}
+                  />
+                </InputAdornment>
+              }
             />
             {validationDate && (
-              <div
-                style={{ marginTop: 13 }}
-                className={styling ? "styling_error" : "error"}
-              >
+              <div className={styling ? "styling_error" : "error"}>
                 This field is required.
               </div>
             )}
@@ -118,25 +126,30 @@ const DateRangeComp = ({
               >
                 DEPARTURE DATE
               </div>
-              <input
+              <Input
+                className={styling ? "bookNowContainer" : "container"}
                 style={{
-                  backgroundColor: styling ? "white" : "rgba(0,0,0,0)",
-                  color: styling ? "black" : "white",
-                  borderWidth: 0,
+                  color: "black",
                   marginTop: 5,
                   fontSize: 12,
                   width: "100%",
+                  backgroundColor: "white",
                 }}
                 value={calendar}
                 readOnly
-                className="inputBox"
+                disableUnderline
+                // className="inputBox"
                 onClick={() => setOpen((open) => !open)}
+                startAdornment={
+                  <InputAdornment position="start">
+                    <CalendarMonthIcon
+                      style={{ width: 20, height: 20, color: "black" }}
+                    />
+                  </InputAdornment>
+                }
               />
               {validationDate && (
-                <div
-                  style={{ marginTop: 13 }}
-                  className={styling ? "styling_error" : "error"}
-                >
+                <div className={styling ? "styling_error" : "error"}>
                   This field is required.
                 </div>
               )}
