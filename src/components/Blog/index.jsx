@@ -9,8 +9,8 @@ import { RealDummyBlogs } from "./RealBlogData";
 const dummyTags = [
   "Flight to Pakistan ",
   "Vacations",
-  // "PILGRIMAGE",
-  // "BEST DAYS SPEND",
+  "Solo Travel",
+  "Stunning Beaches",
 ];
 
 function BookNow() {

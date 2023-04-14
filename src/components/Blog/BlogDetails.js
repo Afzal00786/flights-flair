@@ -14,14 +14,14 @@ const BlogDetails = () => {
       <div
         className="blog_container"
         style={{
-          textAlign: responsive ? "" : "center",
+          textAlign: responsive ? "" : "center"
         }}
       >
         <h4 className="blog_heading">Blog Details</h4>
         <div
           className="blog_wrapper"
           style={{
-            textAlign: responsive ? "" : "center",
+            textAlign: responsive ? "" : "center"
           }}
         >
           <div
@@ -29,20 +29,20 @@ const BlogDetails = () => {
               width: "110%",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "center"
             }}
           >
             <div
               style={{
                 display: responsive ? "flex" : "",
 
-                height: responsive ? "99%" : "100%",
+                height: responsive ? "99%" : "100%"
               }}
               className="blog_detail_items"
             >
               <div
                 style={{
-                  display: responsive ? "flex" : "",
+                  display: responsive ? "flex" : ""
                 }}
                 className="blog_Card_img"
               >
@@ -55,7 +55,7 @@ const BlogDetails = () => {
                       color: "black",
                       display: "flex",
                       justifyContent: "center",
-                      alignItems: "center",
+                      alignItems: "center"
                     }}
                   >
                     {params.title}
@@ -69,7 +69,7 @@ const BlogDetails = () => {
                       paddingBottom: 20,
                       textAlign: "left",
                       paddingLeft: 10,
-                      paddingRight: 10,
+                      paddingRight: 10
                     }}
                     // className="blog_des"
                   >
@@ -80,7 +80,7 @@ const BlogDetails = () => {
                         fontWeight: "600",
                         color: "black",
                         paddingTop: 15,
-                        paddingBottom: 10,
+                        paddingBottom: 10
                       }}
                     >
                       {params.title1}
@@ -90,17 +90,16 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 12,
                         paddingBottom: 20,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes1}
                     </div>
                     <div
                       style={{
                         fontSize: 18,
                         fontWeight: "600",
-                        color: "black",
+                        color: "black"
                       }}
                     >
                       {params.title2}
@@ -110,17 +109,16 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 12,
                         paddingBottom: 20,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes2}
                     </div>
                     <div
                       style={{
                         fontSize: 18,
                         fontWeight: "600",
-                        color: "black",
+                        color: "black"
                       }}
                     >
                       {params.title3}
@@ -130,10 +128,9 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 12,
                         paddingBottom: 20,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes3}
                     </div>
                     <div
@@ -142,7 +139,7 @@ const BlogDetails = () => {
                         fontWeight: "600",
                         color: "black",
                         paddingTop: 15,
-                        paddingBottom: 10,
+                        paddingBottom: 10
                       }}
                     >
                       {params.title4}
@@ -152,17 +149,16 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 12,
                         paddingBottom: 20,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes4}
                     </div>
                     <div
                       style={{
                         fontSize: 18,
                         fontWeight: "600",
-                        color: "black",
+                        color: "black"
                       }}
                     >
                       {params.title5}
@@ -172,17 +168,16 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 12,
                         paddingBottom: 20,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes5}
                     </div>
                     <div
                       style={{
                         fontSize: 18,
                         fontWeight: "600",
-                        color: "black",
+                        color: "black"
                       }}
                     >
                       {params.title6}
@@ -192,11 +187,48 @@ const BlogDetails = () => {
                         fontSize: 17,
                         paddingTop: 10,
                         paddingBottom: 50,
-                        textAlign: "left",
+                        textAlign: "left"
                       }}
                     >
-                      {" "}
                       {params.blogDes6}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black"
+                      }}
+                    >
+                      {params.title7}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 10,
+                        paddingBottom: 50,
+                        textAlign: "left"
+                      }}
+                    >
+                      {params.blogDes7}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "600",
+                        color: "black"
+                      }}
+                    >
+                      {params.title8}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 17,
+                        paddingTop: 10,
+                        paddingBottom: 50,
+                        textAlign: "left"
+                      }}
+                    >
+                      {params.blogDes8}
                     </div>
                   </div>
                 </div>
@@ -205,7 +237,7 @@ const BlogDetails = () => {
                     style={{
                       width: 500,
                       height: 350,
-                      borderTopRightRadius: 10,
+                      borderTopRightRadius: 10
                     }}
                     src={params.img}
                     alt="img"
