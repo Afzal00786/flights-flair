@@ -288,7 +288,7 @@ const Contact = ({ fromImg, styling }) => {
                     className={styling ? "bookNowContainer" : "container"}
                     style={{
                       color: "black",
-                      fontSize: 12,
+                      fontSize: 17,
                     }}
                     name="name"
                     type="text"
@@ -365,7 +365,7 @@ const Contact = ({ fromImg, styling }) => {
 
                 <Input
                   className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: "black", fontSize: 12 }}
+                  style={{ color: "black", fontSize: 17 }}
                   name="text1"
                   type="text"
                   value={valueTo.split(",")[0]}
@@ -447,7 +447,7 @@ const Contact = ({ fromImg, styling }) => {
                 style={{
                   marginBottom: 8,
                   marginRight: 2.5,
-                  marginLeft: 2.5,
+                  marginLeft: 25,
                   height: 85,
                 }}
                 item
@@ -466,8 +466,8 @@ const Contact = ({ fromImg, styling }) => {
                     autoComplete="off"
                     style={{
                       color: "black",
-                      fontSize: 12,
-                      width: "100%",
+                      fontSize: 17,
+                      width: 230,
                     }}
                     disableUnderline
                     value={`(${count}) Adult, (${count1}) Child, (${count2}) Infant`}
@@ -552,12 +552,12 @@ const Contact = ({ fromImg, styling }) => {
               <Grid
                 style={{
                   marginBottom: 8,
-                  marginRight: 2.5,
-                  marginLeft: 2.5,
+
+                  marginLeft: 15,
                   height: 85,
                 }}
                 item
-                md={styling ? 12 : 2.1}
+                md={styling ? 1.2 : 1.9}
                 sm={3.7}
                 xs={styling ? 11.9 : 5.8}
               >
@@ -566,12 +566,16 @@ const Contact = ({ fromImg, styling }) => {
                 </legend>
                 <Input
                   className={styling ? "bookNowContainer" : "container"}
-                  style={{ color: "black", fontSize: 12 }}
+                  style={{
+                    color: "black",
+                    fontSize: 17,
+                    // width: "100%",
+                  }}
                   type="number"
                   disableUnderline
-                  fullWidth
                   name="phone"
                   autoComplete="off"
+                  fullWidth
                   value={phoneNo}
                   onChange={(e) => handlePhone(e)}
                   id={styling ? "bookNow" : "text"}
@@ -593,12 +597,12 @@ const Contact = ({ fromImg, styling }) => {
 
               <Grid
                 style={{
-                  marginBottom: 5,
+                  marginBottom: 10,
                   height: 45,
                 }}
                 item
                 md={styling ? 12 : 1}
-                sm={3}
+                sm={12}
                 xs={11.9}
               >
                 <button type="submit" className="find_now_button">

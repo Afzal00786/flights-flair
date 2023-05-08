@@ -221,7 +221,7 @@
 }
 .date_field {
   width: 400px;
-  height:350px;
+  height: 350px;
   border-top: 0.1rem solid rgb(208, 208, 208);
   border-left: 0.1rem solid rgb(208, 208, 208);
   border-right: 0.1rem solid rgb(208, 208, 208);
@@ -234,18 +234,17 @@
   border-left: 0.1rem solid rgb(208, 208, 208);
   border-right: 0.1rem solid rgb(208, 208, 208);
   border-bottom: 0.1rem solid rgb(208, 208, 208);
- height:270px;
+  height: 270px;
 }
-.done_range{
+.done_range {
   border-left: 0.1rem solid rgb(208, 208, 208);
   border-right: 0.1rem solid rgb(208, 208, 208);
   border-bottom: 0.1rem solid rgb(208, 208, 208);
   background: white;
   margin-top: 0px;
-  height:40px;
-display: flex;
-justify-content: flex-end;
-
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (width<600px) {
   .auto_complete_form {

@@ -65,9 +65,9 @@ const DateRangeComp = ({
               style={{
                 color: "black",
                 backgroundColor: "white",
-                fontSize: 12,
+                fontSize: 17,
                 marginTop: 5,
-                width: "100%"
+                width: 240,
               }}
               value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
                 range[0].endDate,
@@ -94,7 +94,7 @@ const DateRangeComp = ({
           <div
             style={{
               position: "absolute",
-              zIndex: 1
+              zIndex: 1,
             }}
             ref={refOne}
           >
@@ -136,9 +136,9 @@ const DateRangeComp = ({
                 style={{
                   color: "black",
                   marginTop: 5,
-                  fontSize: 12,
+                  fontSize: 17,
                   width: "100%",
-                  backgroundColor: "white"
+                  backgroundColor: "white",
                 }}
                 value={calendar}
                 readOnly
