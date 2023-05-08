@@ -35,7 +35,6 @@ const BlogDetails = () => {
             <div
               style={{
                 display: responsive ? "flex" : "",
-
                 height: responsive ? "99%" : "100%"
               }}
               className="blog_detail_items"
@@ -185,8 +184,8 @@ const BlogDetails = () => {
                     <div
                       style={{
                         fontSize: 17,
-                        paddingTop: 10,
-                        paddingBottom: 50,
+                        
+                        paddingBottom: 20,
                         textAlign: "left"
                       }}
                     >
@@ -204,8 +203,8 @@ const BlogDetails = () => {
                     <div
                       style={{
                         fontSize: 17,
-                        paddingTop: 10,
-                        paddingBottom: 50,
+                        
+                        paddingBottom: 20,
                         textAlign: "left"
                       }}
                     >
@@ -223,8 +222,8 @@ const BlogDetails = () => {
                     <div
                       style={{
                         fontSize: 17,
-                        paddingTop: 10,
-                        paddingBottom: 50,
+                        
+                        paddingBottom: 20,
                         textAlign: "left"
                       }}
                     >

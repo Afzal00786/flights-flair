@@ -67,7 +67,7 @@ const DateRangeComp = ({
                 backgroundColor: "white",
                 fontSize: 12,
                 marginTop: 5,
-                width: "100%",
+                width: "100%"
               }}
               value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
                 range[0].endDate,
@@ -94,25 +94,30 @@ const DateRangeComp = ({
           <div
             style={{
               position: "absolute",
-              zIndex: 1,
+              zIndex: 1
             }}
             ref={refOne}
           >
             {open && (
-              <DateRange
-                className={"date_field"}
-                minDate={new Date()}
-                onChange={(item) => {
-                  setRange([item.selection]);
-                  setDateField(range);
-                }}
-                editableDateInputs={true}
-                moveRangeOnFirstSelection={false}
-                ranges={range}
-                months={2}
-                direction="horizontal"
-                name="date"
-              />
+              <>
+                <DateRange
+                  className={"date_field"}
+                  minDate={new Date()}
+                  onChange={(item) => {
+                    setRange([item.selection]);
+                    setDateField(range);
+                  }}
+                  editableDateInputs={true}
+                  moveRangeOnFirstSelection={false}
+                  ranges={range}
+                  months={2}
+                  direction="horizontal"
+                  name="date"
+                />
+                <div onClick={() => setOpen(!open)} className="done_range">
+                  <div className="doneButtonStyle2">Done</div>
+                </div>
+              </>
             )}
           </div>
         </>
@@ -133,7 +138,7 @@ const DateRangeComp = ({
                   marginTop: 5,
                   fontSize: 12,
                   width: "100%",
-                  backgroundColor: "white",
+                  backgroundColor: "white"
                 }}
                 value={calendar}
                 readOnly
@@ -156,13 +161,18 @@ const DateRangeComp = ({
             </div>
             <div style={{ position: "absolute", zIndex: 1 }}>
               {open && (
-                <Calendar
-                  minDate={new Date()}
-                  date={new Date()}
-                  editableDateInputs={true}
-                  onChange={handleSelect}
-                  className={"date_field"}
-                />
+                <>
+                  <Calendar
+                    minDate={new Date()}
+                    date={new Date()}
+                    editableDateInputs={true}
+                    onChange={handleSelect}
+                    className={"date_field2"}
+                  />
+                  <div onClick={() => setOpen(!open)} className="done_range">
+                    <div className="doneButtonStyle2">Done</div>
+                  </div>
+                </>
               )}
             </div>
           </>

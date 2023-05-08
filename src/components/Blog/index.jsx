@@ -11,6 +11,9 @@ const dummyTags = [
   "Vacations",
   "Solo Travel",
   "Stunning Beaches",
+  "Art of Tourism",
+  "Lahore",
+  "Karachi"
 ];
 
 function BookNow() {

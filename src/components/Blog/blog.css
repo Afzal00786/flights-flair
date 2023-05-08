@@ -1,5 +1,5 @@
 .blog_card_items {
-  /* height: 410px; */
+  height: 410px;
   margin: 20px;
   box-shadow: 1px 2px 12px gray;
   background-color: rgb(255, 255, 255);
@@ -15,7 +15,7 @@
   font-weight: 600;
 }
 .blog_detail_items {
-  /* height: 360px; */
+  /* height: ; */
   width: 90%;
   margin: 10px;
   box-shadow: 1px 2px 12px gray;
@@ -24,6 +24,7 @@
   justify-content: "center";
   align-items: "center";
   border-radius: 10px;
+  padding-bottom:0
 }
 .blog_container {
   background-color: whiteSmoke;
@@ -58,6 +59,7 @@
 .blog_wrapper {
   display: flex;
   justify-content: center;
+  
 }
 
 .blog_active_btn {
